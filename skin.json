@@ -16,7 +16,8 @@
         "css/steam.css",
         "css/library-game.css",
         "css/downloads.css",
-        "css/store.css"
+        "css/store.css",
+        "css/store-lists.css"
       ]
     }
   ]
