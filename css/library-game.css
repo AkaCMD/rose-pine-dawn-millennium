@@ -1,4 +1,13 @@
 /* Desktop library game details, distinct from the library home shelves. */
+/* OverflowBox review controls otherwise retain Steam's hard-coded white text. */
+._17qc0iT2Uzbk8umX0qMOMJ button.TextButton {
+  color: var(--rp-link) !important;
+  text-shadow: none !important;
+}
+._17qc0iT2Uzbk8umX0qMOMJ button.TextButton:is(:hover, :focus-visible, .gpfocus) {
+  color: var(--rp-link) !important;
+  text-decoration: underline;
+}
 ._2l416KfEtI4CL0mCUEmOBw, ._3FmxxjyWNHU1PrBGnBe6tm {
   background: var(--rp-base) !important; color: var(--rp-text) !important;
 }
