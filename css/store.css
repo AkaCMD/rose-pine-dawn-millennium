@@ -1,0 +1,268 @@
+/* Dawn surfaces for Steam's legacy store and its React navigation. */
+body.v6, body.v7 { --main-text-color: var(--rp-text); --main-light-blue: var(--rp-pine); }
+body.v6 :is(h1,h2,h3,h4), body.v7 :is(h1,h2,h3,h4) { color: var(--rp-text) !important; }
+:is(.home_page_body_ctn, .page_content, .page_content_ctn) :is(.title,.name,.subtitle,.heading,.text) {
+  color: var(--rp-text) !important;
+}
+:is(.store_main_capsule, .store_main_capsule .info, .store_main_capsule .app_name,
+    .store_main_capsule .reason, .store_main_capsule .reason .main,
+    .home_ctn, .home_ctn.dailydeal_ctn, .home_page_content, .home_tabs_content,
+    .home_tabs_row, .home_tabs_row .tab_content, .tab_content, .tab_preview,
+    .tab_preview_details, .home_discount_single_ctn, .home_discounts_ctn,
+    .spotlight_content, .spotlight_body, .spotlight_weeklong_ctn,
+    .store_capsule_frame, .store_capsule .capsule, .dailydeal_ctn,
+    .home_content.single, .curator_recommendation, .home_area_spotlight,
+    .recommendation_carousel_item, .carousel_container .price,
+    .game_purchase_action_bg, .game_purchase_discount, .game_purchase_action,
+    .search_results, .search_results_count, .search_pagination,
+    .search_pagination_left, .search_pagination_right, .search_collapse_block,
+    .search_collapse_block .block_content, .search_collapse_block .block_header,
+    .search_advanced, .searchbar, .searchbar_left, .searchbar_right,
+    .match, .search_suggest, .search_suggest .match,
+    .game_area_details_specs, .game_details, .game_area_purchase_not_refundable,
+    .game_area_comingsoon, .game_area_offsite_purchase, .game_area_already_owned,
+    .queue_overflow_ctn, .queue_actions_ctn, .queue_btn_menu,
+    .game_area_purchase_game_dropdown_selection, .game_area_purchase_game_dropdown_menu,
+    .user_reviews_summary_row, .user_reviews_filter_options, .review_box,
+    .review_box .leftcol, .review_box .rightcol, .early_access_header,
+    .early_access_banner, .game_area_bubble, .game_area_bubble .content,
+    .game_area_sys_req, .game_area_techinfo, .game_area_dlc_bubble,
+    .similar_grid_item, .similar_grid_capsule, .glance_tags.popular_tags,
+    .hover, .hover_box, .hover_body, .hover_top, .hover_bottom,
+    .hover_details_block, .hover_tag_row, .responsive_tab_control,
+    .popup_menu, .popup_menu2, .popup_body, .popup_block,
+    .popup_block_new, .popup_block_new .popup_body,
+    .supernav_content, .store_nav_content, .store_nav_content .popup_body,
+    .store_nav .tab.active, .store_nav .tab:hover, .tab_filler,
+    #review_histogram_rollup_section, #review_histograms_container,
+    .review_ctn, .review_controls, .review_award_ctn,
+    .game_page_autocollapse_ctn .game_page_autocollapse_fade) {
+  background-color: var(--rp-surface) !important;
+  background-image: none !important;
+  color: var(--rp-text) !important;
+  border-color: var(--rp-highlight-med) !important;
+  box-shadow: none !important;
+}
+:is(.home_page_takeover_sizer, .home_page_takeover_link, .home_page_takeover_ctn) {
+  background-color: var(--rp-base) !important;
+}
+:is(.store_main_capsule .app_name, .store_main_capsule .app_name > div,
+    .store_main_capsule .reason, .store_main_capsule .reason .main,
+    .store_main_capsule .reason .reason_text, .store_main_capsule .info,
+    .home_page_body_ctn h2, .home_page_body_ctn h3,
+    .home_page_body_ctn .home_section_title, .tab_item_name,
+    .tab_preview h2, .tab_preview .tab_review_summary,
+    .tab_preview .tab_review_summary .title, .tab_preview .tags,
+    .search_results_count, .search_pagination, .search_pagination a,
+    .search_collapse_block .block_header, .search_collapse_block .block_content,
+    .search_result_row, .search_result_row .title, .search_result_row .search_price,
+    .search_result_row .search_released, .search_result_row .discount_final_price,
+    .search_result_row .col, .tab_filter_control, .tab_filter_control_label,
+    .tab_filter_control_count, .game_purchase_price, .discount_final_price,
+    .game_purchase_action .game_purchase_price, .game_area_sys_req strong,
+    .game_area_sys_req ul, .game_area_sys_req li, .game_area_sys_req p,
+    .game_area_sys_req .game_area_sys_req_leftCol,
+    .game_area_sys_req .game_area_sys_req_rightCol,
+    .game_area_details_specs .name, .game_area_details_specs .label,
+    .review_box .content, .review_box .title, .review_box .posted,
+    .review_box .vote_header, .user_reviews_count,
+    .queue_btn_menu, .popup_menu a, .popup_menu2 a, .popup_menu .popup_menu_item,
+    .popup_menu2 .popup_menu_item, .popup_body .popup_menu_item,
+    .popup_block .popup_menu_item, .popup_block_new .popup_menu_item,
+    .hover h4, .hover p, .hover_body, .hover_body .hover_release,
+    .hover_body .hover_review_summary, .hover_body .game_hover_description,
+    .early_access_header .heading, .early_access_header p, .early_access_banner,
+    .early_access_banner .devnote, .early_access_banner .heading) {
+  color: var(--rp-text) !important; text-shadow: none !important;
+}
+:is(.search_result_row, .tab_item, .popup_menu_item, .popup_menu2 a,
+    .search_suggest .match, .store_nav_content a):hover {
+  background: var(--rp-overlay) !important; color: var(--rp-text) !important;
+}
+:is(.home_tab, .tab.active, .tab.active .tab_content, .tab_content.active,
+    .tab_filter_control.checked, .tab_filter_control.selected,
+    .game_area_purchase_game_dropdown_menu .active,
+    .user_reviews_filter_options .active, .btnv6_blue_hoverfade > span) {
+  background: var(--rp-highlight-med) !important; color: var(--rp-text) !important;
+}
+:is(.discount_original_price, .search_results_count, .game_review_summary,
+    .tab_item_details, .tab_item_details .tab_item_top_tags, .search_released,
+    .game_area_sys_req .note, .block .subtext, .glance_details .subtitle,
+    .release_date .subtitle, .date, .release_date .date,
+    .responsive_page_content .fine_print, .review_box .postedDate) {
+  color: var(--rp-secondary) !important;
+}
+:is(.game_area_description a, .game_area_details_specs a,
+    .game_area_sys_req a, .dev_row a, .details_block a, .glance_tags a,
+    .tab_preview a, .game_area_already_owned a, .review_box a,
+    .user_reviews_summary_row a, .early_access_header a,
+    .hover_body a, .game_purchase_action a) { color: var(--rp-pine) !important; }
+:is(.btnv6_blue_hoverfade, .btnv6_blue_hoverfade > span,
+    .btnv6_lightblue_blue, .btnv6_lightblue_blue > span,
+    .btnv6_white_transparent, .btnv6_white_transparent > span,
+    .btnv6_blue_blue_innerfade, .btnv6_blue_blue_innerfade > span,
+    .queue_control_button, .queue_control_button > span,
+    .game_area_purchase_game_dropdown_selection, .game_area_purchase_game_dropdown_selection > span) {
+  background: var(--rp-overlay) !important;
+  color: var(--rp-pine) !important; text-shadow: none !important;
+  border-color: var(--rp-highlight-med) !important;
+}
+:is(.btn_green_white_innerfade, .btn_green_white_innerfade > span,
+    .btnv6_green_white_innerfade, .btnv6_green_white_innerfade > span,
+    .btnv6_lightblue_blue.btn_medium, .btnv6_lightblue_blue.btn_medium > span) {
+  background: var(--rp-pine) !important; color: #fffaf3 !important;
+}
+body.v6 :is(.btn_green_white_innerfade,.btnv6_green_white_innerfade) a { color: #fffaf3 !important; }
+:is(.game_area_description h2, .block .block_header, .store_horizontal_autoslider_ctn h2) {
+  border-color: var(--rp-highlight-med) !important;
+}
+/* The 2026 React store navigation uses hashed module selectors. */
+._16jZ3HEbtaJTl80pQINN2Y, .h2B3SGR_w4RWdrnsRZEcD {
+  background: var(--rp-surface) !important; color: var(--rp-text) !important;
+  border-bottom: 1px solid var(--rp-highlight-med) !important;
+}
+._16jZ3HEbtaJTl80pQINN2Y :is(a,button,span),
+._175B12uOwmeGBNcSaQFe-Z, .vj9hwW9u0MpjH7MVjjNw0 {
+  color: var(--rp-text) !important;
+}
+._16jZ3HEbtaJTl80pQINN2Y input { background: var(--rp-base) !important; color: var(--rp-text) !important; }
+/* Small text, filtering controls and secondary menu items. */
+#global_header :is(.menuitem,.global_action_link,.persona,.playerAvatar),
+#global_actions, #global_actions a,
+#home_featured_and_recommended, .home_page_content_title,
+.home_page_content_title a, .home_page_body_ctn .title,
+.home_page_body_ctn .carousel_container > h2,
+.home_page_body_ctn .home_page_content > h2,
+.carousel_container .title, .home_page_content .title,
+.dselect_container .trigger, .dselect_container .dropdownvisible,
+.dselect_container .dropdownvisible a, .dselect_container .dropdownhidden a,
+.range_display, .range_container .range_display, .searchbar .sortbox,
+.searchbar .sortbox label, .home_page_body_ctn .carousel_thumbs,
+.home_page_body_ctn .home_tab .tab_content,
+.home_page_body_ctn .home_marketing_message,
+.tab_preview .tab_review_summary, .hover .hover_review_summary {
+  color: var(--rp-text) !important; text-shadow: none !important;
+}
+.dselect_container .trigger, .dselect_container .dropdownhidden,
+.dselect_container .dropdownvisible, .dselect_container .dropdown,
+.searchbar .sortbox, .search_result_row.ds_owned .ds_flag,
+.search_result_row.ds_wishlist .ds_flag, .searchtag,
+.searchtag.tag_dynamic, #searchTags, .searchtag.tag_dynamic a {
+  background: var(--rp-overlay) !important;
+  color: var(--rp-text) !important; border-color: var(--rp-highlight-med) !important;
+}
+.searchtag a, .searchtag.tag_dynamic a { color: var(--rp-pine) !important; }
+.tab_filter_control_checkbox {
+  background: var(--rp-surface) !important;
+  border: 1px solid var(--rp-secondary) !important; border-radius: 3px;
+}
+.tab_filter_control.checked .tab_filter_control_checkbox {
+  background-color: var(--rp-pine) !important; border-color: var(--rp-pine) !important;
+}
+.qqQDu9j0LIoK-w06-JxB5, .qqQDu9j0LIoK-w06-JxB5 :is(span,div,a),
+._16jZ3HEbtaJTl80pQINN2Y .qqQDu9j0LIoK-w06-JxB5 :is(span,div,a) {
+  background-color: var(--rp-pine) !important; color: #fffaf3 !important;
+}
+/* Carousel arrows and page dots need their own contrast on a cream background. */
+.carousel_container .arrow { background: var(--rp-overlay) !important; color: var(--rp-pine) !important; }
+.carousel_container .carousel_thumbs > div { background: var(--rp-highlight-high) !important; }
+.carousel_container .carousel_thumbs > div.focus { background: var(--rp-pine) !important; }
+/* Keep the full-screen menu positioning layer transparent; paint only its panel. */
+.h2B3SGR_w4RWdrnsRZEcD {
+  background: transparent !important; border: 0 !important;
+}
+._16jZ3HEbtaJTl80pQINN2Y :is(div,p,label,h2,h3),
+._3wkp8GaMeHBsrImd61r1X-, ._3ndoxZabNTcJ8NN50nQ4BM {
+  color: var(--rp-text) !important;
+}
+._16jZ3HEbtaJTl80pQINN2Y .qqQDu9j0LIoK-w06-JxB5 :is(div,p,label,span) {
+  color: #fffaf3 !important;
+}
+#footer, #footer .footer_content, .footer_content, .footer_content .rule {
+  background: var(--rp-surface) !important; color: var(--rp-text) !important;
+  border-color: var(--rp-highlight-med) !important;
+}
+#footer :is(a,p,div,span), .footer_content :is(a,p,div,span) { color: var(--rp-secondary) !important; }
+/* Game-page sidebar panels use gradients instead of background colours. */
+.game_meta_data .block, .game_meta_data .block > .block_content,
+.game_meta_data .block .block_content_inner, .Cek1s5Ixk2xYmkqjjESD0,
+.game_language_options, .game_language_options table,
+.game_area_metascore, .game_area_already_owned, .game_area_already_owned .ds_flag {
+  background: var(--rp-surface) !important; color: var(--rp-text) !important;
+  border-color: var(--rp-highlight-med) !important;
+}
+.game_meta_data .block :is(p,td,th,label,b,strong,span),
+.game_language_options :is(td,th), .game_area_details_specs .label,
+.details_block b, ._3yxJH3baj7mwTTYzBIyi_Z, ._29jK3MyNRDW7PAcrm59l_O,
+.game_area_details_specs a, .game_meta_data .block .block_header,
+.game_area_details_specs .name, .game_area_details_specs .name a {
+  color: var(--rp-text) !important; text-shadow: none !important;
+}
+.game_meta_data :is(.subtitle,.date,.language_list,.details_block b),
+.game_language_options .unsupported, .game_language_options .unsupported td {
+  color: var(--rp-secondary) !important;
+}
+._2gXzKgnqPNSUzBWEYvQ4OP, .score.high {
+  background: var(--rp-pine) !important; color: #fffaf3 !important;
+}
+.game_area_metascore .logo { background: var(--rp-pine) !important; border-radius: 4px; }
+.game_page_autocollapse_readmore {
+  background: var(--rp-overlay) !important; color: var(--rp-pine) !important;
+}
+.sysreq_tab { background: var(--rp-overlay) !important; color: var(--rp-pine) !important; }
+.sysreq_tab.active { background: var(--rp-pine) !important; color: #fffaf3 !important; }
+.game_meta_data a, .recommendation_reasons a, .reason a,
+.game_area_details_specs_ctn .label, .family_info a,
+.steam_curator_recommendation a, .steam_curator_followed_text.recommended {
+  color: var(--rp-pine) !important;
+}
+.family_info p, .steam_curator_recommendation, .steam_curator_selected,
+.steam_curator_recommendation_description { color: var(--rp-text) !important; }
+.game_meta_data a._2gXzKgnqPNSUzBWEYvQ4OP { color: #fffaf3 !important; }
+.blockbg, .blockbg a, .right a, .game_meta_data .block_title,
+._1mfBI5XbiaKU9vS5WkJALu, ._3FBEGAfvLQj4qYjstmZAPE,
+.game_area_metascore .metacritic {
+  color: var(--rp-text) !important;
+}
+.communitylink_achivement_plusmore {
+  background: var(--rp-overlay) !important; color: var(--rp-pine) !important;
+}
+.btn_green_steamui, .btn_green_steamui > span, .game_purchase_action a.btn_green_steamui,
+.game_purchase_action a.btn_green_steamui > span {
+  background: var(--rp-pine) !important; color: #fffaf3 !important;
+  text-shadow: none !important;
+}
+.btn_green_steamui:hover, .btn_green_steamui:hover > span { background: #20576d !important; }
+.game_area_dlc_row, .game_area_dlc_row .game_area_dlc_name,
+.game_area_dlc_row .game_area_dlc_price {
+  background: var(--rp-overlay) !important; color: var(--rp-text) !important;
+}
+.game_area_dlc_section .game_area_dlc_section_title, .game_area_dlc_section .gradientbg {
+  background: var(--rp-surface) !important; color: var(--rp-text) !important;
+}
+.game_area_purchase_platform .platform_img, .search_result_row .platform_img {
+  filter: brightness(0); opacity: .65;
+}
+.game_area_dlc_section .note a, .metacritic { color: var(--rp-text) !important; }
+/* React review summaries and their controls also use hard-coded white text. */
+.review_ctn :is(div,span,p,h1,h2,h3,h4,label,strong,b) {
+  color: var(--rp-text) !important; text-shadow: none !important;
+}
+.review_ctn div {
+  background-color: transparent !important; background-image: none !important;
+  box-shadow: none !important;
+}
+.review_ctn a, .review_ctn a span { color: var(--rp-pine) !important; }
+.review_ctn :is(button,select,[role="button"]) {
+  background: var(--rp-overlay) !important; color: var(--rp-text) !important;
+  border-color: var(--rp-highlight-med) !important;
+}
+._2BG1JKMgeqn_cr0rbRhRNA {
+  background: var(--rp-surface) !important; box-shadow: none !important;
+}
+._2BG1JKMgeqn_cr0rbRhRNA :is(div,a,span) { color: var(--rp-text) !important; }
+/* Legacy secondary buttons in the related-games carousel. */
+.btnv6_grey_black, .btnv6_grey_black > span {
+  background: var(--rp-overlay) !important; color: var(--rp-text) !important;
+  text-shadow: none !important;
+}

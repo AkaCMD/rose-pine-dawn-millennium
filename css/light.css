@@ -1,0 +1,39 @@
+/* Official Rosé Pine palette — https://rosepinetheme.com/palette/ */
+:root {
+  color-scheme: light;
+  --rp-base: #faf4ed;
+  --rp-surface: #fffaf3;
+  --rp-overlay: #f2e9e1;
+  --rp-muted: #9893a5;
+  --rp-subtle: #797593;
+  --rp-text: #464261;
+  --rp-love: #b4637a;
+  --rp-gold: #ea9d34;
+  --rp-rose: #d7827e;
+  --rp-pine: #286983;
+  --rp-foam: #56949f;
+  --rp-iris: #907aa9;
+  --rp-highlight-low: #f4ede8;
+  --rp-highlight-med: #dfdad9;
+  --rp-highlight-high: #cecacd;
+  --rp-accent: var(--rp-pine);
+  --rp-on-accent: #fffaf3;
+  --rp-link: var(--rp-pine);
+  --rp-secondary: #625e78;
+  --rp-shadow: 0 12px 36px #5752791a;
+  --gpSystemLightestGrey: var(--rp-text);
+  --gpSystemLighterGrey: var(--rp-secondary);
+  --gpSystemLightGrey: var(--rp-secondary);
+  --gpSystemGrey: var(--rp-muted);
+  --gpSystemDarkGrey: var(--rp-overlay);
+  --gpSystemDarkerGrey: var(--rp-surface);
+  --gpSystemDarkestGrey: var(--rp-base);
+  --gpStoreDarkGrey: var(--rp-surface);
+  --gpStoreDarkerGrey: var(--rp-base);
+  --gpColor-Blue: var(--rp-accent);
+  --gpColor-Green: var(--rp-foam);
+  --gpBackground-LightSofter: var(--rp-overlay);
+  --gpBackground-LightSoft: var(--rp-surface);
+  --gpBackground-DarkSofter: var(--rp-base);
+  --gpBackground-DarkSoft: var(--rp-base);
+}
