@@ -450,6 +450,32 @@ body.v6 :is(.btn_green_white_innerfade,.btnv6_green_white_innerfade) a { color: 
   background: var(--rp-surface) !important;
   box-shadow: none !important;
 }
+/* Homepage curator and creator capsules: Steam paints their footers with
+   dark gradients while the inherited theme ink is dark. Repaint the footer
+   and its copy instead of leaving dark-on-dark text. */
+:is(.curator_capsule_ctn, .creator_capsule_ctn) {
+  background: var(--rp-surface) !important;
+  background-image: none !important;
+  color: var(--rp-text) !important;
+  border-color: var(--rp-highlight-med) !important;
+}
+:is(.curator_capsule_link, .curator_capsule_name) {
+  color: var(--rp-text) !important;
+}
+.curator_capsule_blurb {
+  color: var(--rp-secondary) !important;
+}
+.creator_follow_btn {
+  background: var(--rp-overlay) !important;
+  border-color: var(--rp-highlight-med) !important;
+  color: var(--rp-text) !important;
+}
+.creator_follow_btn span {
+  color: var(--rp-text) !important;
+}
+.creator_follow_btn:hover {
+  background: var(--rp-highlight-med) !important;
+}
 ._3dOtcOnM_9WRN6GxZdYCy7 ._3g04q9TBG7sG8OlGceaKaI {
   color: var(--rp-text) !important;
 }
@@ -511,4 +537,27 @@ body.v6 :is(.btn_green_white_innerfade,.btnv6_green_white_innerfade) a { color: 
 }
 .home_pagecontent_ctn {
   background-color: var(--rp-base) !important;
+}
+
+/* The 2026 "New on Steam" rows keep Steam's white copy while the theme
+   repaints the row surface. Cover hashed text classes by scoping to the app
+   card instead of relying on the legacy tab_item_* names. */
+body.newonsteam :is([data-ds-appid], [data-appid], .tab_item, .search_result_row)
+    :is(div, span, p, h1, h2, h3, h4, strong, b, label)
+    :where(:not(.discount_pct, .discount_original_price, .discount_final_price,
+         .discount_aria_label, .ds_flag, .ds_flag *, .search_price,
+         .game_purchase_price, [data-discount], [data-discount] *,
+         [data-price-final], [data-price-final] *, .discount_block,
+         .discount_block *, [class*="broadcast"], [class*="broadcast"] *,
+         button, button *)) {
+  color: var(--rp-text) !important;
+  text-shadow: none !important;
+}
+body.newonsteam :is([data-ds-appid], [data-appid]) {
+  color: var(--rp-text) !important;
+  text-shadow: none !important;
+}
+body.newonsteam :is([data-ds-appid], [data-appid], .tab_item)
+    :is(.top_tag, .tab_item_release_date, .tab_item_details, .release_date, .date) {
+  color: var(--rp-secondary) !important;
 }
