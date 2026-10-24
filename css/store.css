@@ -266,3 +266,24 @@ body.v6 :is(.btn_green_white_innerfade,.btnv6_green_white_innerfade) a { color: 
   background: var(--rp-overlay) !important; color: var(--rp-text) !important;
   text-shadow: none !important;
 }
+
+/* Community recommendations and homepage section links on light surfaces. */
+.community_recommendation_app .right_col {
+  background: var(--rp-surface) !important;
+}
+.community_recommendation_app .app_name,
+.home_content h2 a,
+#discounts_and_events_title {
+  color: var(--rp-text) !important;
+  text-shadow: none !important;
+}
+.home_page_body_ctn .author_block .hours,
+.home_content h2 .header_inline {
+  color: var(--rp-secondary) !important;
+}
+.see_more_link .see_more_text {
+  color: var(--rp-pine) !important;
+}
+.store_main_capsule .topseller_title {
+  color: var(--rp-pine) !important;
+}

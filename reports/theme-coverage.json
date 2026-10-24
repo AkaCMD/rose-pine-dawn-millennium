@@ -1,0 +1,2564 @@
+{
+  "capturedAt": "2026-10-24T06:53:32.605Z",
+  "state": "installed-live-refresh",
+  "previewCssSha256": null,
+  "regions": [
+    {
+      "id": "frame",
+      "label": "主窗口",
+      "selectors": "[class*=\"steamdesktop_\"], [class*=\"bottombar_\"]",
+      "titles": [
+        "Steam"
+      ],
+      "status": "需人工复核",
+      "pages": 1,
+      "findings": 0,
+      "manualReview": 1
+    },
+    {
+      "id": "library-home",
+      "label": "库首页",
+      "selectors": "[class*=\"libraryhome_\"], [class*=\"libraryhomeshowcases_\"]",
+      "route": "/library/home",
+      "status": "未验证",
+      "pages": 0,
+      "findings": 0,
+      "manualReview": 0
+    },
+    {
+      "id": "collections",
+      "label": "收藏夹",
+      "selectors": "[class*=\"collectionview_\"], [class*=\"collectionspage_\"]",
+      "route": "/library/collection",
+      "status": "未验证",
+      "pages": 0,
+      "findings": 0,
+      "manualReview": 0
+    },
+    {
+      "id": "game-details",
+      "label": "游戏详情",
+      "selectors": "[class*=\"appdetails_\"], ._2l416KfEtI4CL0mCUEmOBw, ._3FmxxjyWNHU1PrBGnBe6tm",
+      "route": "/library/app/",
+      "status": "未验证",
+      "pages": 0,
+      "findings": 0,
+      "manualReview": 0
+    },
+    {
+      "id": "downloads",
+      "label": "下载",
+      "selectors": "[class*=\"downloads_DownloadsPage\"], [class*=\"downloads_\" ]",
+      "route": "/downloads",
+      "status": "未验证",
+      "pages": 0,
+      "findings": 0,
+      "manualReview": 0
+    },
+    {
+      "id": "settings",
+      "label": "设置",
+      "selectors": "[class*=\"SettingsDialog\"], [class*=\"desktopsettings_\"], [class*=\"settings_SettingsDialog\"]",
+      "status": "未验证",
+      "pages": 0,
+      "findings": 0,
+      "manualReview": 0
+    },
+    {
+      "id": "menus",
+      "label": "菜单",
+      "selectors": ".contextMenu, .contextMenuContents, .ContextMenuPopup, [class*=\"contextmenu_\"]",
+      "titles": [
+        "Account Menu",
+        "Notifications Menu",
+        "Help Root Menu",
+        "Games Root Menu",
+        "Friends Root Menu",
+        "Steam Root Menu",
+        "View Root Menu"
+      ],
+      "status": "未验证",
+      "pages": 0,
+      "findings": 0,
+      "manualReview": 0
+    },
+    {
+      "id": "store",
+      "label": "商店",
+      "selectors": "body.v6, body.v7, .home_page_body_ctn, .game_page_background, .search_results",
+      "origin": "https://store.steampowered.com",
+      "status": "疑似遗漏",
+      "pages": 1,
+      "findings": 2,
+      "manualReview": 62
+    }
+  ],
+  "pages": [
+    {
+      "title": "Library Supernav",
+      "location": "about:blank",
+      "visibility": "hidden",
+      "viewport": [
+        62,
+        100
+      ],
+      "themeBase": "#faf4ed",
+      "regions": [],
+      "totalElements": 38,
+      "visibleElements": 8,
+      "mediaSkipped": 0,
+      "limitations": [
+        "Current viewport only; no scrolling or interaction is performed.",
+        "Pseudo-elements, shadow DOM and child frames are not inspected.",
+        "Topmost center hit-testing approximates occlusion; partially exposed backgrounds and pointer-events:none elements may be missed.",
+        "Non-text containers with media at the sample point preserve artwork and skip background classification.",
+        "Renderer visibility does not prove a native popup window is displayed."
+      ],
+      "findings": [],
+      "manualReview": [],
+      "sampleCount": 7,
+      "eligible": false
+    },
+    {
+      "title": "Steam 上的 Call of Duty®: Modern Warfare® 4",
+      "location": "https://store.steampowered.com/app/4435490/Call_of_Duty_Modern_Warfare_4/",
+      "visibility": "visible",
+      "viewport": [
+        2526,
+        1218
+      ],
+      "themeBase": "#faf4ed",
+      "regions": [
+        "store"
+      ],
+      "totalElements": 989,
+      "visibleElements": 169,
+      "mediaSkipped": 16,
+      "limitations": [
+        "Current viewport only; no scrolling or interaction is performed.",
+        "Pseudo-elements, shadow DOM and child frames are not inspected.",
+        "Topmost center hit-testing approximates occlusion; partially exposed backgrounds and pointer-events:none elements may be missed.",
+        "Non-text containers with media at the sample point preserve artwork and skip background classification.",
+        "Renderer visibility does not prove a native popup window is displayed."
+      ],
+      "findings": [
+        {
+          "selector": "#purchase_note > div.notice_box_content:nth-child(2) > b:nth-child(1)",
+          "area": 5452,
+          "rect": [
+            677,
+            857,
+            321,
+            17
+          ],
+          "background": [
+            250,
+            244,
+            237,
+            1
+          ],
+          "foreground": [
+            244,
+            123,
+            32,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": null,
+          "kind": "low-contrast",
+          "ratio": 2.5,
+          "minimum": 4.5
+        },
+        {
+          "selector": "#purchase_note > div.notice_box_content:nth-child(2) > p:nth-child(3)",
+          "area": 29920,
+          "rect": [
+            677,
+            876,
+            748,
+            40
+          ],
+          "background": [
+            250,
+            244,
+            237,
+            1
+          ],
+          "foreground": [
+            172,
+            178,
+            184,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": null,
+          "kind": "low-contrast",
+          "ratio": 1.96,
+          "minimum": 4.5
+        }
+      ],
+      "manualReview": [
+        {
+          "selector": "html.responsive.client:nth-child(1) > body.v6.app:nth-child(2) > div.responsive_page_frame.no_header:nth-child(1) > div.responsive_page_content:nth-child(4) > div.StoreMenuLoadingPlaceholder:nth-child(3) > div.PlaceholderInner:nth-child(1)",
+          "area": 115506,
+          "rect": [
+            0,
+            0,
+            2511,
+            46
+          ],
+          "background": [
+            250,
+            244,
+            237,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": false,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#game_highlights",
+          "area": 674606,
+          "rect": [
+            656,
+            129,
+            1200,
+            562
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": false,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#game_highlights > div.rightcol:nth-child(1) > div.glance_ctn:nth-child(1)",
+          "area": 206314,
+          "rect": [
+            1481,
+            129,
+            375,
+            550
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": false,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#gameHeaderCtn > div.game_description_snippet:nth-child(2)",
+          "area": 14250,
+          "rect": [
+            1481,
+            155,
+            375,
+            38
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": true,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#userReviews > a.user_reviews_summary_row:nth-child(1)",
+          "area": 6750,
+          "rect": [
+            1481,
+            278,
+            375,
+            18
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": false,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#userReviews > a.user_reviews_summary_row:nth-child(1) > div.subtitle.column:nth-child(1)",
+          "area": 2543,
+          "rect": [
+            1481,
+            278,
+            141,
+            18
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 11,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#userReviews > a.user_reviews_summary_row:nth-child(1) > div.summary.column:nth-child(2) > span.game_review_summary.mixed:nth-child(1)",
+          "area": 780,
+          "rect": [
+            1622,
+            279,
+            52,
+            15
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            98,
+            94,
+            120,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#userReviews > a.user_reviews_summary_row:nth-child(1) > div.summary.column:nth-child(2) > span.responsive_hidden:nth-child(2)",
+          "area": 618,
+          "rect": [
+            1677,
+            279,
+            41,
+            15
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            98,
+            94,
+            120,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#glanceMidCtn > div.glance_ctn_responsive_left:nth-child(1) > div.release_date:nth-child(2) > div.subtitle.column:nth-child(1)",
+          "area": 2543,
+          "rect": [
+            1481,
+            305,
+            141,
+            18
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            98,
+            94,
+            120,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 11,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#glanceMidCtn > div.glance_ctn_responsive_left:nth-child(1) > div.release_date:nth-child(2) > div.date:nth-child(2)",
+          "area": 2068,
+          "rect": [
+            1622,
+            305,
+            115,
+            18
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            98,
+            94,
+            120,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#glanceMidCtn > div.glance_ctn_responsive_left:nth-child(1) > div.dev_row:nth-child(3) > div.subtitle.column:nth-child(1)",
+          "area": 2543,
+          "rect": [
+            1481,
+            336,
+            141,
+            18
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 11,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#developers_list",
+          "area": 3729,
+          "rect": [
+            1622,
+            336,
+            207,
+            18
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#developers_list > a:nth-child(1)",
+          "area": 1076,
+          "rect": [
+            1622,
+            337,
+            72,
+            15
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            40,
+            105,
+            131,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#developers_list > a:nth-child(2)",
+          "area": 661,
+          "rect": [
+            1701,
+            337,
+            44,
+            15
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            40,
+            105,
+            131,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#developers_list > a:nth-child(3)",
+          "area": 1344,
+          "rect": [
+            1752,
+            337,
+            90,
+            15
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            40,
+            105,
+            131,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#glanceMidCtn > div.glance_ctn_responsive_left:nth-child(1) > div.dev_row:nth-child(3) > div.more_btn:nth-child(3)",
+          "area": 234,
+          "rect": [
+            1832,
+            336,
+            16,
+            15
+          ],
+          "background": [
+            224.6,
+            238.6,
+            243.4,
+            1
+          ],
+          "foreground": [
+            103,
+            193,
+            245,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": true,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#glanceMidCtn > div.glance_ctn_responsive_left:nth-child(1) > div.dev_row:nth-child(4) > div.subtitle.column:nth-child(1)",
+          "area": 2543,
+          "rect": [
+            1481,
+            354,
+            141,
+            18
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 11,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#glanceMidCtn > div.glance_ctn_responsive_left:nth-child(1) > div.dev_row:nth-child(4) > div.summary.column:nth-child(2) > a:nth-child(1)",
+          "area": 824,
+          "rect": [
+            1622,
+            355,
+            55,
+            15
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            40,
+            105,
+            131,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#glanceCtnResponsiveRight > div.glance_tags_ctn.popular_tags_ctn:nth-child(2) > div.glance_tags_label:nth-child(1)",
+          "area": 7125,
+          "rect": [
+            1481,
+            553,
+            375,
+            19
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            85,
+            103,
+            114,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#glanceCtnResponsiveRight > div.glance_tags_ctn.popular_tags_ctn:nth-child(2) > div.glance_tags.popular_tags:nth-child(2)",
+          "area": 8250,
+          "rect": [
+            1481,
+            572,
+            375,
+            22
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": false,
+          "fontSize": 11,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#glanceCtnResponsiveRight > div.glance_tags_ctn.popular_tags_ctn:nth-child(2) > div.glance_tags.popular_tags:nth-child(2) > a.app_tag:nth-child(1)",
+          "area": 684,
+          "rect": [
+            1481,
+            572,
+            36,
+            19
+          ],
+          "background": [
+            242,
+            233,
+            225,
+            1
+          ],
+          "foreground": [
+            40,
+            105,
+            131,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": true,
+          "fontSize": 11,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#glanceCtnResponsiveRight > div.glance_tags_ctn.popular_tags_ctn:nth-child(2) > div.glance_tags.popular_tags:nth-child(2) > a.app_tag:nth-child(2)",
+          "area": 684,
+          "rect": [
+            1519,
+            572,
+            36,
+            19
+          ],
+          "background": [
+            242,
+            233,
+            225,
+            1
+          ],
+          "foreground": [
+            40,
+            105,
+            131,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": true,
+          "fontSize": 11,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#glanceCtnResponsiveRight > div.glance_tags_ctn.popular_tags_ctn:nth-child(2) > div.glance_tags.popular_tags:nth-child(2) > a.app_tag:nth-child(3)",
+          "area": 1520,
+          "rect": [
+            1557,
+            572,
+            80,
+            19
+          ],
+          "background": [
+            242,
+            233,
+            225,
+            1
+          ],
+          "foreground": [
+            40,
+            105,
+            131,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": true,
+          "fontSize": 11,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#glanceCtnResponsiveRight > div.glance_tags_ctn.popular_tags_ctn:nth-child(2) > div.glance_tags.popular_tags:nth-child(2) > a.app_tag:nth-child(4)",
+          "area": 684,
+          "rect": [
+            1639,
+            572,
+            36,
+            19
+          ],
+          "background": [
+            242,
+            233,
+            225,
+            1
+          ],
+          "foreground": [
+            40,
+            105,
+            131,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": true,
+          "fontSize": 11,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#glanceCtnResponsiveRight > div.glance_tags_ctn.popular_tags_ctn:nth-child(2) > div.glance_tags.popular_tags:nth-child(2) > a.app_tag:nth-child(5)",
+          "area": 684,
+          "rect": [
+            1677,
+            572,
+            36,
+            19
+          ],
+          "background": [
+            242,
+            233,
+            225,
+            1
+          ],
+          "foreground": [
+            40,
+            105,
+            131,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": true,
+          "fontSize": 11,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#glanceCtnResponsiveRight > div.glance_tags_ctn.popular_tags_ctn:nth-child(2) > div.glance_tags.popular_tags:nth-child(2) > a.app_tag:nth-child(6)",
+          "area": 1102,
+          "rect": [
+            1715,
+            572,
+            58,
+            19
+          ],
+          "background": [
+            242,
+            233,
+            225,
+            1
+          ],
+          "foreground": [
+            40,
+            105,
+            131,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": true,
+          "fontSize": 11,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#glanceCtnResponsiveRight > div.glance_tags_ctn.popular_tags_ctn:nth-child(2) > div.glance_tags.popular_tags:nth-child(2) > a.app_tag:nth-child(11)",
+          "area": 684,
+          "rect": [
+            1775,
+            572,
+            36,
+            19
+          ],
+          "background": [
+            242,
+            233,
+            225,
+            1
+          ],
+          "foreground": [
+            40,
+            105,
+            131,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": true,
+          "fontSize": 11,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#glanceCtnResponsiveRight > div.glance_tags_ctn.popular_tags_ctn:nth-child(2) > div.glance_tags.popular_tags:nth-child(2) > div.app_tag.add_button:nth-child(21)",
+          "area": 388,
+          "rect": [
+            1813,
+            572,
+            20,
+            19
+          ],
+          "background": [
+            242,
+            233,
+            225,
+            1
+          ],
+          "foreground": [
+            40,
+            105,
+            131,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": true,
+          "fontSize": 11,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#game_highlights > div.leftcol:nth-child(2) > div.highlight_ctn:nth-child(1) > div.highlight_overflow:nth-child(1) > div.gamehighlight_desktopskeleton:nth-child(1) > div.gamehighlight_desktopskeleton_itemview:nth-child(1)",
+          "area": 367779,
+          "rect": [
+            657,
+            129,
+            808,
+            455
+          ],
+          "background": [
+            204,
+            200,
+            194.4,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": false,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#game_highlights > div.leftcol:nth-child(2) > div.highlight_ctn:nth-child(1) > div.highlight_overflow:nth-child(1) > div.gamehighlight_desktopskeleton:nth-child(1) > div.gamehighlight_desktopskeleton_stripitems:nth-child(2)",
+          "area": 52520,
+          "rect": [
+            657,
+            590,
+            808,
+            65
+          ],
+          "background": [
+            204,
+            200,
+            194.4,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": false,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#game_highlights > div.leftcol:nth-child(2) > div.highlight_ctn:nth-child(1) > div.highlight_overflow:nth-child(1) > div.gamehighlight_desktopskeleton:nth-child(1) > div.gamehighlight_desktopskeleton_stripscrollbar:nth-child(3)",
+          "area": 14544,
+          "rect": [
+            657,
+            661,
+            808,
+            18
+          ],
+          "background": [
+            204,
+            200,
+            194.4,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": false,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#tabletGrid > div.page_content_ctn:nth-child(1) > div.page_content.middle_page:nth-child(5) > div.rightcol.game_meta_data:nth-child(1) > div.block.responsive_apppage_details_right:nth-child(4)",
+          "area": 15444,
+          "rect": [
+            1460,
+            771,
+            396,
+            39
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": true,
+          "fontSize": 16,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#tabletGrid > div.page_content_ctn:nth-child(1) > div.page_content.middle_page:nth-child(5) > div.rightcol.game_meta_data:nth-child(1) > div.block.responsive_apppage_details_right:nth-child(5)",
+          "area": 53064,
+          "rect": [
+            1460,
+            810,
+            396,
+            134
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": true,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#tabletGrid > div.page_content_ctn:nth-child(1) > div.page_content.middle_page:nth-child(5) > div.rightcol.game_meta_data:nth-child(1) > div.block.responsive_apppage_details_right:nth-child(5) > p:nth-child(1)",
+          "area": 16016,
+          "rect": [
+            1476,
+            826,
+            364,
+            44
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#tabletGrid > div.page_content_ctn:nth-child(1) > div.page_content.middle_page:nth-child(5) > div.rightcol.game_meta_data:nth-child(1) > div.block.responsive_apppage_details_right:nth-child(5) > a.btnv6_blue_hoverfade.btn_medium:nth-child(3)",
+          "area": 1985,
+          "rect": [
+            1476,
+            892,
+            62,
+            32
+          ],
+          "background": [
+            242,
+            233,
+            225,
+            1
+          ],
+          "foreground": [
+            40,
+            105,
+            131,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#tabletGrid > div.page_content_ctn:nth-child(1) > div.page_content.middle_page:nth-child(5) > div.rightcol.game_meta_data:nth-child(1) > div.block.responsive_apppage_details_right:nth-child(5) > a.btnv6_blue_hoverfade.btn_medium:nth-child(3) > span:nth-child(1)",
+          "area": 1800,
+          "rect": [
+            1477,
+            893,
+            60,
+            30
+          ],
+          "background": [
+            223,
+            218,
+            217,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": true,
+          "fontSize": 15,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#tabletGrid > div.page_content_ctn:nth-child(1) > div.page_content.middle_page:nth-child(5) > div.rightcol.game_meta_data:nth-child(1) > div.block.responsive_apppage_details_right:nth-child(5) > a.btnv6_blue_hoverfade.btn_medium:nth-child(4)",
+          "area": 4598,
+          "rect": [
+            1559,
+            892,
+            144,
+            32
+          ],
+          "background": [
+            242,
+            233,
+            225,
+            1
+          ],
+          "foreground": [
+            40,
+            105,
+            131,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#tabletGrid > div.page_content_ctn:nth-child(1) > div.page_content.middle_page:nth-child(5) > div.rightcol.game_meta_data:nth-child(1) > div.block.responsive_apppage_details_right:nth-child(5) > a.btnv6_blue_hoverfade.btn_medium:nth-child(4) > span:nth-child(1)",
+          "area": 4251,
+          "rect": [
+            1560,
+            893,
+            142,
+            30
+          ],
+          "background": [
+            223,
+            218,
+            217,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": true,
+          "fontSize": 15,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#category_block",
+          "area": 135036,
+          "rect": [
+            1460,
+            952,
+            396,
+            341
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": false,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#category_block > div.game_area_features_list_ctn:nth-child(1) > a.game_area_details_specs_ctn:nth-child(1)",
+          "area": 9828,
+          "rect": [
+            1476,
+            968,
+            364,
+            27
+          ],
+          "background": [
+            204,
+            200,
+            194.4,
+            1
+          ],
+          "foreground": [
+            40,
+            105,
+            131,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": false,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#category_block > div.game_area_features_list_ctn:nth-child(1) > a.game_area_details_specs_ctn:nth-child(1) > div.label:nth-child(2)",
+          "area": 8802,
+          "rect": [
+            1514,
+            968,
+            326,
+            27
+          ],
+          "background": [
+            193.9,
+            199.3,
+            199.45999999999998,
+            1
+          ],
+          "foreground": [
+            40,
+            105,
+            131,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": true,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#category_block > div.game_area_features_list_ctn:nth-child(1) > a.game_area_details_specs_ctn:nth-child(2)",
+          "area": 9828,
+          "rect": [
+            1476,
+            997,
+            364,
+            27
+          ],
+          "background": [
+            204,
+            200,
+            194.4,
+            1
+          ],
+          "foreground": [
+            40,
+            105,
+            131,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": false,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#category_block > div.game_area_features_list_ctn:nth-child(1) > a.game_area_details_specs_ctn:nth-child(2) > div.label:nth-child(2)",
+          "area": 8802,
+          "rect": [
+            1514,
+            997,
+            326,
+            27
+          ],
+          "background": [
+            193.9,
+            199.3,
+            199.45999999999998,
+            1
+          ],
+          "foreground": [
+            40,
+            105,
+            131,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": true,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#category_block > div.game_area_features_list_ctn:nth-child(1) > a.game_area_details_specs_ctn:nth-child(3)",
+          "area": 9828,
+          "rect": [
+            1476,
+            1026,
+            364,
+            27
+          ],
+          "background": [
+            204,
+            200,
+            194.4,
+            1
+          ],
+          "foreground": [
+            40,
+            105,
+            131,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": false,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#category_block > div.game_area_features_list_ctn:nth-child(1) > a.game_area_details_specs_ctn:nth-child(3) > div.label:nth-child(2)",
+          "area": 8802,
+          "rect": [
+            1514,
+            1026,
+            326,
+            27
+          ],
+          "background": [
+            193.9,
+            199.3,
+            199.45999999999998,
+            1
+          ],
+          "foreground": [
+            40,
+            105,
+            131,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": true,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#category_block > div.game_area_features_list_ctn:nth-child(1) > a.game_area_details_specs_ctn:nth-child(4)",
+          "area": 9828,
+          "rect": [
+            1476,
+            1055,
+            364,
+            27
+          ],
+          "background": [
+            204,
+            200,
+            194.4,
+            1
+          ],
+          "foreground": [
+            40,
+            105,
+            131,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": false,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#category_block > div.game_area_features_list_ctn:nth-child(1) > a.game_area_details_specs_ctn:nth-child(4) > div.label:nth-child(2)",
+          "area": 8802,
+          "rect": [
+            1514,
+            1055,
+            326,
+            27
+          ],
+          "background": [
+            193.9,
+            199.3,
+            199.45999999999998,
+            1
+          ],
+          "foreground": [
+            40,
+            105,
+            131,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": true,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#category_block > div.game_area_features_list_ctn:nth-child(1) > a.game_area_details_specs_ctn:nth-child(5)",
+          "area": 9828,
+          "rect": [
+            1476,
+            1084,
+            364,
+            27
+          ],
+          "background": [
+            204,
+            200,
+            194.4,
+            1
+          ],
+          "foreground": [
+            40,
+            105,
+            131,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": false,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#category_block > div.game_area_features_list_ctn:nth-child(1) > a.game_area_details_specs_ctn:nth-child(5) > div.label:nth-child(2)",
+          "area": 8802,
+          "rect": [
+            1514,
+            1084,
+            326,
+            27
+          ],
+          "background": [
+            193.9,
+            199.3,
+            199.45999999999998,
+            1
+          ],
+          "foreground": [
+            40,
+            105,
+            131,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": true,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#category_block > div.game_area_features_list_ctn:nth-child(1) > a.game_area_details_specs_ctn:nth-child(6)",
+          "area": 9828,
+          "rect": [
+            1476,
+            1113,
+            364,
+            27
+          ],
+          "background": [
+            204,
+            200,
+            194.4,
+            1
+          ],
+          "foreground": [
+            40,
+            105,
+            131,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": false,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#category_block > div.game_area_features_list_ctn:nth-child(1) > a.game_area_details_specs_ctn:nth-child(6) > div.label:nth-child(2)",
+          "area": 8802,
+          "rect": [
+            1514,
+            1113,
+            326,
+            27
+          ],
+          "background": [
+            193.9,
+            199.3,
+            199.45999999999998,
+            1
+          ],
+          "foreground": [
+            40,
+            105,
+            131,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": true,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#category_block > div.game_area_features_list_ctn:nth-child(1) > a.game_area_details_specs_ctn:nth-child(7)",
+          "area": 9828,
+          "rect": [
+            1476,
+            1142,
+            364,
+            27
+          ],
+          "background": [
+            204,
+            200,
+            194.4,
+            1
+          ],
+          "foreground": [
+            40,
+            105,
+            131,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": false,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#category_block > div.game_area_features_list_ctn:nth-child(1) > a.game_area_details_specs_ctn:nth-child(7) > div.label:nth-child(2)",
+          "area": 8802,
+          "rect": [
+            1514,
+            1142,
+            326,
+            27
+          ],
+          "background": [
+            193.9,
+            199.3,
+            199.45999999999998,
+            1
+          ],
+          "foreground": [
+            40,
+            105,
+            131,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": true,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#category_block > div.game_area_features_list_ctn:nth-child(1) > a.game_area_details_specs_ctn:nth-child(8)",
+          "area": 9828,
+          "rect": [
+            1476,
+            1171,
+            364,
+            27
+          ],
+          "background": [
+            204,
+            200,
+            194.4,
+            1
+          ],
+          "foreground": [
+            40,
+            105,
+            131,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": false,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#category_block > div.game_area_features_list_ctn:nth-child(1) > a.game_area_details_specs_ctn:nth-child(8) > div.label:nth-child(2)",
+          "area": 8802,
+          "rect": [
+            1514,
+            1171,
+            326,
+            27
+          ],
+          "background": [
+            193.9,
+            199.3,
+            199.45999999999998,
+            1
+          ],
+          "foreground": [
+            40,
+            105,
+            131,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": true,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#category_block > div.anticheat_section.DRM_notice:nth-child(3)",
+          "area": 24388,
+          "rect": [
+            1476,
+            1210,
+            364,
+            67
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            225,
+            196,
+            138,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": false,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "#category_block > div.anticheat_section.DRM_notice:nth-child(3) > div:nth-child(1)",
+          "area": 5916,
+          "rect": [
+            1484,
+            1214,
+            348,
+            17
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            225,
+            196,
+            138,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "#game_area_purchase > div.game_purchase_options_editions_header:nth-child(2)",
+          "area": 20280,
+          "rect": [
+            661,
+            947,
+            780,
+            26
+          ],
+          "background": [
+            250,
+            244,
+            237,
+            1
+          ],
+          "foreground": [
+            172,
+            178,
+            184,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "#game_area_purchase > div.game_purchase_options_editions_header:nth-child(2) > div.game_purchase_options_editions_header_title:nth-child(1)",
+          "area": 11968,
+          "rect": [
+            661,
+            952,
+            704,
+            17
+          ],
+          "background": [
+            250,
+            244,
+            237,
+            1
+          ],
+          "foreground": [
+            255,
+            255,
+            255,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "#game_area_purchase > div.game_purchase_options_editions_header:nth-child(2) > div.game_purchase_options_editions_header_compare_button_ctn:nth-child(2) > button.game_purchase_options_editions_header_compare_button:nth-child(1)",
+          "area": 1672,
+          "rect": [
+            1365,
+            947,
+            76,
+            22
+          ],
+          "background": [
+            250,
+            244,
+            237,
+            1
+          ],
+          "foreground": [
+            255,
+            255,
+            255,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 11,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "#game_area_purchase_section_add_to_cart_1641550 > div.game_area_purchase_platform:nth-child(2) > span.platform_img.win:nth-child(1)",
+          "area": 400,
+          "rect": [
+            1405,
+            993,
+            20,
+            20
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": false,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#game_area_purchase_section_add_to_cart_1641553 > div.game_area_purchase_platform:nth-child(2) > span.platform_img.win:nth-child(1)",
+          "area": 400,
+          "rect": [
+            1405,
+            1086,
+            20,
+            20
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": false,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        }
+      ],
+      "sampleCount": 110,
+      "eligible": true
+    },
+    {
+      "title": "Store Supernav",
+      "location": "about:blank",
+      "visibility": "hidden",
+      "viewport": [
+        88,
+        198
+      ],
+      "themeBase": "#faf4ed",
+      "regions": [],
+      "totalElements": 40,
+      "visibleElements": 11,
+      "mediaSkipped": 0,
+      "limitations": [
+        "Current viewport only; no scrolling or interaction is performed.",
+        "Pseudo-elements, shadow DOM and child frames are not inspected.",
+        "Topmost center hit-testing approximates occlusion; partially exposed backgrounds and pointer-events:none elements may be missed.",
+        "Non-text containers with media at the sample point preserve artwork and skip background classification.",
+        "Renderer visibility does not prove a native popup window is displayed."
+      ],
+      "findings": [],
+      "manualReview": [],
+      "sampleCount": 10,
+      "eligible": false
+    },
+    {
+      "title": "Community Supernav",
+      "location": "about:blank",
+      "visibility": "hidden",
+      "viewport": [
+        88,
+        165
+      ],
+      "themeBase": "#faf4ed",
+      "regions": [],
+      "totalElements": 39,
+      "visibleElements": 10,
+      "mediaSkipped": 0,
+      "limitations": [
+        "Current viewport only; no scrolling or interaction is performed.",
+        "Pseudo-elements, shadow DOM and child frames are not inspected.",
+        "Topmost center hit-testing approximates occlusion; partially exposed backgrounds and pointer-events:none elements may be missed.",
+        "Non-text containers with media at the sample point preserve artwork and skip background classification.",
+        "Renderer visibility does not prove a native popup window is displayed."
+      ],
+      "findings": [],
+      "manualReview": [],
+      "sampleCount": 9,
+      "eligible": false
+    },
+    {
+      "title": "Profile Supernav",
+      "location": "about:blank",
+      "visibility": "hidden",
+      "viewport": [
+        177,
+        264
+      ],
+      "themeBase": "#faf4ed",
+      "regions": [],
+      "totalElements": 42,
+      "visibleElements": 13,
+      "mediaSkipped": 0,
+      "limitations": [
+        "Current viewport only; no scrolling or interaction is performed.",
+        "Pseudo-elements, shadow DOM and child frames are not inspected.",
+        "Topmost center hit-testing approximates occlusion; partially exposed backgrounds and pointer-events:none elements may be missed.",
+        "Non-text containers with media at the sample point preserve artwork and skip background classification.",
+        "Renderer visibility does not prove a native popup window is displayed."
+      ],
+      "findings": [],
+      "manualReview": [],
+      "sampleCount": 12,
+      "eligible": false
+    },
+    {
+      "title": "Account Menu",
+      "location": "about:blank",
+      "visibility": "hidden",
+      "viewport": [
+        180,
+        199
+      ],
+      "themeBase": "#faf4ed",
+      "regions": [
+        "menus"
+      ],
+      "totalElements": 46,
+      "visibleElements": 15,
+      "mediaSkipped": 0,
+      "limitations": [
+        "Current viewport only; no scrolling or interaction is performed.",
+        "Pseudo-elements, shadow DOM and child frames are not inspected.",
+        "Topmost center hit-testing approximates occlusion; partially exposed backgrounds and pointer-events:none elements may be missed.",
+        "Non-text containers with media at the sample point preserve artwork and skip background classification.",
+        "Renderer visibility does not prove a native popup window is displayed."
+      ],
+      "findings": [
+        {
+          "selector": "#popup_target > div.PP7LM0Ow1K5qkR8WElLpt.visible:nth-child(1) > div._2EstNjFIIZm_WUSKm5Wt7n._3pofGqV0buiKAfMPEs3_82:nth-child(1) > div._2jXHP0742MyApMUVUM8IFn._2uiDecKkKjAq7nimy3uLhG:nth-child(2) > div._20oWF80IgHJr1BcEb1GgHL:nth-child(1) > div._11phBiBefcVQdzrnrezkKa:nth-child(1)",
+          "area": 1360,
+          "rect": [
+            87,
+            41,
+            80,
+            17
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            76,
+            180,
+            255,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": null,
+          "kind": "low-contrast",
+          "ratio": 2.18,
+          "minimum": 4.5
+        }
+      ],
+      "manualReview": [],
+      "sampleCount": 11,
+      "eligible": false
+    },
+    {
+      "title": "Notifications Menu",
+      "location": "about:blank",
+      "visibility": "hidden",
+      "viewport": [
+        300,
+        452
+      ],
+      "themeBase": "#faf4ed",
+      "regions": [
+        "menus"
+      ],
+      "totalElements": 57,
+      "visibleElements": 23,
+      "mediaSkipped": 2,
+      "limitations": [
+        "Current viewport only; no scrolling or interaction is performed.",
+        "Pseudo-elements, shadow DOM and child frames are not inspected.",
+        "Topmost center hit-testing approximates occlusion; partially exposed backgrounds and pointer-events:none elements may be missed.",
+        "Non-text containers with media at the sample point preserve artwork and skip background classification.",
+        "Renderer visibility does not prove a native popup window is displayed."
+      ],
+      "findings": [
+        {
+          "selector": "#popup_target > div.PP7LM0Ow1K5qkR8WElLpt.visible:nth-child(1) > div._2EstNjFIIZm_WUSKm5Wt7n._3pofGqV0buiKAfMPEs3_82:nth-child(1) > div:nth-child(1) > div.MCa4RMSvWJwwWjcZP2wTT:nth-child(1) > button._1oERP7bVictkby2hP4BBva:nth-child(2)",
+          "area": 2126,
+          "rect": [
+            220,
+            13,
+            73,
+            29
+          ],
+          "background": [
+            61,
+            68,
+            80,
+            1
+          ],
+          "foreground": [
+            255,
+            255,
+            255,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": true,
+          "fontSize": 13.3333,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": null,
+          "kind": "dark-surface"
+        },
+        {
+          "selector": "#popup_target > div.PP7LM0Ow1K5qkR8WElLpt.visible:nth-child(1) > div._2EstNjFIIZm_WUSKm5Wt7n._3pofGqV0buiKAfMPEs3_82:nth-child(1) > div:nth-child(1) > div._3sTMvhkGXqBzwhsP2-IA5P:nth-child(2) > div._3k90ug209sE23xAMqcM74s.Panel:nth-child(1)",
+          "area": 9900,
+          "rect": [
+            7,
+            52,
+            275,
+            36
+          ],
+          "background": [
+            61,
+            68,
+            80,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": null,
+          "kind": "dark-surface"
+        }
+      ],
+      "manualReview": [],
+      "sampleCount": 8,
+      "eligible": false
+    },
+    {
+      "title": "Help Root Menu",
+      "location": "about:blank",
+      "visibility": "hidden",
+      "viewport": [
+        142,
+        267
+      ],
+      "themeBase": "#faf4ed",
+      "regions": [
+        "menus"
+      ],
+      "totalElements": 45,
+      "visibleElements": 13,
+      "mediaSkipped": 0,
+      "limitations": [
+        "Current viewport only; no scrolling or interaction is performed.",
+        "Pseudo-elements, shadow DOM and child frames are not inspected.",
+        "Topmost center hit-testing approximates occlusion; partially exposed backgrounds and pointer-events:none elements may be missed.",
+        "Non-text containers with media at the sample point preserve artwork and skip background classification.",
+        "Renderer visibility does not prove a native popup window is displayed."
+      ],
+      "findings": [],
+      "manualReview": [],
+      "sampleCount": 12,
+      "eligible": false
+    },
+    {
+      "title": "Games Root Menu",
+      "location": "about:blank",
+      "visibility": "hidden",
+      "viewport": [
+        223,
+        166
+      ],
+      "themeBase": "#faf4ed",
+      "regions": [
+        "menus"
+      ],
+      "totalElements": 40,
+      "visibleElements": 10,
+      "mediaSkipped": 0,
+      "limitations": [
+        "Current viewport only; no scrolling or interaction is performed.",
+        "Pseudo-elements, shadow DOM and child frames are not inspected.",
+        "Topmost center hit-testing approximates occlusion; partially exposed backgrounds and pointer-events:none elements may be missed.",
+        "Non-text containers with media at the sample point preserve artwork and skip background classification.",
+        "Renderer visibility does not prove a native popup window is displayed."
+      ],
+      "findings": [],
+      "manualReview": [],
+      "sampleCount": 9,
+      "eligible": false
+    },
+    {
+      "title": "Friends Root Menu",
+      "location": "about:blank",
+      "visibility": "hidden",
+      "viewport": [
+        189,
+        233
+      ],
+      "themeBase": "#faf4ed",
+      "regions": [
+        "menus"
+      ],
+      "totalElements": 57,
+      "visibleElements": 25,
+      "mediaSkipped": 2,
+      "limitations": [
+        "Current viewport only; no scrolling or interaction is performed.",
+        "Pseudo-elements, shadow DOM and child frames are not inspected.",
+        "Topmost center hit-testing approximates occlusion; partially exposed backgrounds and pointer-events:none elements may be missed.",
+        "Non-text containers with media at the sample point preserve artwork and skip background classification.",
+        "Renderer visibility does not prove a native popup window is displayed."
+      ],
+      "findings": [],
+      "manualReview": [],
+      "sampleCount": 11,
+      "eligible": false
+    },
+    {
+      "title": "Steam Root Menu",
+      "location": "about:blank",
+      "visibility": "hidden",
+      "viewport": [
+        182,
+        302
+      ],
+      "themeBase": "#faf4ed",
+      "regions": [
+        "menus"
+      ],
+      "totalElements": 48,
+      "visibleElements": 14,
+      "mediaSkipped": 0,
+      "limitations": [
+        "Current viewport only; no scrolling or interaction is performed.",
+        "Pseudo-elements, shadow DOM and child frames are not inspected.",
+        "Topmost center hit-testing approximates occlusion; partially exposed backgrounds and pointer-events:none elements may be missed.",
+        "Non-text containers with media at the sample point preserve artwork and skip background classification.",
+        "Renderer visibility does not prove a native popup window is displayed."
+      ],
+      "findings": [],
+      "manualReview": [],
+      "sampleCount": 13,
+      "eligible": false
+    },
+    {
+      "title": "View Root Menu",
+      "location": "about:blank",
+      "visibility": "hidden",
+      "viewport": [
+        101,
+        399
+      ],
+      "themeBase": "#faf4ed",
+      "regions": [
+        "menus"
+      ],
+      "totalElements": 49,
+      "visibleElements": 17,
+      "mediaSkipped": 0,
+      "limitations": [
+        "Current viewport only; no scrolling or interaction is performed.",
+        "Pseudo-elements, shadow DOM and child frames are not inspected.",
+        "Topmost center hit-testing approximates occlusion; partially exposed backgrounds and pointer-events:none elements may be missed.",
+        "Non-text containers with media at the sample point preserve artwork and skip background classification.",
+        "Renderer visibility does not prove a native popup window is displayed."
+      ],
+      "findings": [],
+      "manualReview": [],
+      "sampleCount": 16,
+      "eligible": false
+    },
+    {
+      "title": "(Steam renderer)",
+      "location": "data: (Steam renderer)",
+      "visibility": "hidden",
+      "viewport": [
+        1,
+        1
+      ],
+      "themeBase": "#faf4ed",
+      "regions": [],
+      "totalElements": 4,
+      "visibleElements": 0,
+      "mediaSkipped": 0,
+      "limitations": [
+        "Current viewport only; no scrolling or interaction is performed.",
+        "Pseudo-elements, shadow DOM and child frames are not inspected.",
+        "Topmost center hit-testing approximates occlusion; partially exposed backgrounds and pointer-events:none elements may be missed.",
+        "Non-text containers with media at the sample point preserve artwork and skip background classification.",
+        "Renderer visibility does not prove a native popup window is displayed."
+      ],
+      "findings": [],
+      "manualReview": [],
+      "sampleCount": 0,
+      "eligible": false
+    },
+    {
+      "title": "Steam",
+      "location": "about:blank",
+      "visibility": "visible",
+      "viewport": [
+        2528,
+        1374
+      ],
+      "themeBase": "#faf4ed",
+      "regions": [
+        "frame"
+      ],
+      "totalElements": 2341,
+      "visibleElements": 113,
+      "mediaSkipped": 55,
+      "limitations": [
+        "Current viewport only; no scrolling or interaction is performed.",
+        "Pseudo-elements, shadow DOM and child frames are not inspected.",
+        "Topmost center hit-testing approximates occlusion; partially exposed backgrounds and pointer-events:none elements may be missed.",
+        "Non-text containers with media at the sample point preserve artwork and skip background classification.",
+        "Renderer visibility does not prove a native popup window is displayed."
+      ],
+      "findings": [],
+      "manualReview": [
+        {
+          "selector": "div:nth-child(1) > div._27qasW5wLU4h4nUgawpo1q:nth-child(1) > div._1ENHEsrSLcTRtPQFl1F-wL._1DvwQt0JN-Ogp_4tVZdkzX:nth-child(3) > div._3mz8wQ6Q44B8P7pzPP4Iyw:nth-child(2) > div._1_yS5UP7el0aN4vntx3dx:nth-child(3) > div._3vCzSrrXZzZjVJFZNg9SGu:nth-child(3) > div.window_resize_grip:nth-child(4)",
+          "area": 576,
+          "rect": [
+            2504,
+            1350,
+            24,
+            24
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": false,
+          "fontSize": 16,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        }
+      ],
+      "sampleCount": 28,
+      "eligible": true
+    },
+    {
+      "title": "(Steam renderer)",
+      "location": "data: (Steam renderer)",
+      "visibility": "hidden",
+      "viewport": [
+        2526,
+        1218
+      ],
+      "themeBase": "#faf4ed",
+      "regions": [
+        "collections"
+      ],
+      "totalElements": 7,
+      "visibleElements": 2,
+      "mediaSkipped": 0,
+      "limitations": [
+        "Current viewport only; no scrolling or interaction is performed.",
+        "Pseudo-elements, shadow DOM and child frames are not inspected.",
+        "Topmost center hit-testing approximates occlusion; partially exposed backgrounds and pointer-events:none elements may be missed.",
+        "Non-text containers with media at the sample point preserve artwork and skip background classification.",
+        "Renderer visibility does not prove a native popup window is displayed."
+      ],
+      "findings": [],
+      "manualReview": [],
+      "sampleCount": 2,
+      "eligible": false
+    },
+    {
+      "title": "(Steam renderer)",
+      "location": "data: (Steam renderer)",
+      "visibility": "hidden",
+      "viewport": [
+        1,
+        1
+      ],
+      "themeBase": "#faf4ed",
+      "regions": [],
+      "totalElements": 4,
+      "visibleElements": 0,
+      "mediaSkipped": 0,
+      "limitations": [
+        "Current viewport only; no scrolling or interaction is performed.",
+        "Pseudo-elements, shadow DOM and child frames are not inspected.",
+        "Topmost center hit-testing approximates occlusion; partially exposed backgrounds and pointer-events:none elements may be missed.",
+        "Non-text containers with media at the sample point preserve artwork and skip background classification.",
+        "Renderer visibility does not prove a native popup window is displayed."
+      ],
+      "findings": [],
+      "manualReview": [],
+      "sampleCount": 0,
+      "eligible": false
+    }
+  ]
+}

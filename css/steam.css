@@ -433,3 +433,29 @@ body.v6, body.v7, .page_background, .game_page_background,
   background: var(--rp-pine) !important; opacity: 1 !important;
 }
 ._15aGnszAf3gHD-PFdJBoFD svg polygon { fill: var(--rp-text) !important; }
+
+/* Vertical library resize gutter and desktop notification controls. */
+._276E6ijBpjMA2_iTxNhhjc {
+  background-color: var(--rp-highlight-med) !important;
+}
+._276E6ijBpjMA2_iTxNhhjc:hover {
+  background-color: var(--rp-highlight-high) !important;
+}
+._2Szzh5sKyGgnLUR870zbDE:is(.RtSv39ZoBOySnb8XQ5hJf, ._5wILZhsLODVwGfcJ0hKmJ) {
+  background-color: var(--rp-overlay) !important;
+  color: var(--rp-text) !important;
+}
+._2Szzh5sKyGgnLUR870zbDE:is(.RtSv39ZoBOySnb8XQ5hJf, ._5wILZhsLODVwGfcJ0hKmJ):hover {
+  background-color: var(--rp-highlight-med) !important;
+}
+.RtSv39ZoBOySnb8XQ5hJf._3L1c8C0o_xXzPy26aoLBFd,
+._5wILZhsLODVwGfcJ0hKmJ._1oEwirQksXfZ-3RWWslbAR {
+  background-color: var(--rp-pine) !important;
+  color: var(--rp-on-accent) !important;
+}
+.RtSv39ZoBOySnb8XQ5hJf._3L1c8C0o_xXzPy26aoLBFd:hover,
+._5wILZhsLODVwGfcJ0hKmJ._1oEwirQksXfZ-3RWWslbAR:hover {
+  background-color: var(--rp-pine) !important;
+  color: var(--rp-on-accent) !important;
+}
+._2Szzh5sKyGgnLUR870zbDE ._34bQcTHo5QKzuujoEyU1tm { color: inherit !important; }

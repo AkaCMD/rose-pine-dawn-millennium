@@ -67,6 +67,10 @@ Windows and macOS have not been tested. Big Picture, the in-game overlay, and al
 
 Steam updates can change the internal CSS classes used by this theme. When reporting a dark panel or unreadable label, include the page name, a screenshot, and your Steam and Millennium versions.
 
+## Coverage tests
+
+Run `npm test` with Node.js 22 or newer for local checks. With Steam's local CEF debugging endpoint available, run `npm run test:coverage` to generate a report of suspected theme gaps and unverified regions. See the [coverage testing guide](docs/theme-coverage.md) for state captures, strict mode, browser verification, and limitations, and the [coverage glossary](CONTEXT.md) for terminology.
+
 ## Restore the default appearance
 
 Select the default theme in Millennium and restart Steam. You can then remove `<Steam>/millennium/themes/rose-pine-dawn/`.
