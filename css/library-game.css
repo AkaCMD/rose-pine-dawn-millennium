@@ -111,6 +111,17 @@
   background: var(--rp-surface) !important;
   color: var(--rp-text) !important;
 }
+/* Patch notes / partner event rows in the activity feed. */
+:is(._1ujzuoxGhLunHZQqHAqRgg, ._1WX1kNsKXbF3qneCHh4kTv,
+    ._2OrhETq9wuxc0cGgVsmjm8, .ElNfQSVSKeMaOVHygQ4Nh) {
+  color: var(--rp-secondary) !important;
+}
+:is(._1Cva_kor3lWBIoeu9cQxJq, ._3ZUP3RJr6PRn6IzODoxZDx) {
+  color: var(--rp-text) !important;
+}
+._1-llQnFWxBo1kyWdkDFyXp svg path {
+  fill: var(--rp-secondary) !important;
+}
 /* Achievement summaries, badge headers and compact activity announcements. */
 :is(._2l416KfEtI4CL0mCUEmOBw, ._3FmxxjyWNHU1PrBGnBe6tm)
     :is(._38t1mljBjmJfqjpVzMT1CG, ._2mMT5wI35EZKZ_XeO7BfPu,
