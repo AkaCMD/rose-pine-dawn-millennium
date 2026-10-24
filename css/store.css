@@ -221,7 +221,19 @@ body.v6 :is(.btn_green_white_innerfade,.btnv6_green_white_innerfade) a { color: 
   background-color: var(--rp-pine) !important; color: #fffaf3 !important;
 }
 /* Carousel arrows and page dots need their own contrast on a cream background. */
-.carousel_container .arrow { background: var(--rp-overlay) !important; color: var(--rp-pine) !important; }
+.carousel_container .arrow {
+  background: var(--rp-overlay) !important;
+  color: var(--rp-pine) !important;
+  opacity: 1 !important;
+}
+/* Homepage arrows use a white background SVG, which cannot inherit color.
+   Keep Steam's sizing and LTR/RTL transforms; use its cut-arrow silhouette
+   as a mask so the visible ink matches the inline SVG carousel controls. */
+.home_page_body_ctn .carousel_container .arrow > div {
+  background: var(--rp-pine) !important;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 100'%3E%3Cpolygon points='0,0.093 0,25.702 24.323,50.026 0,74.349 0,99.955 49.929,50.026'/%3E%3C/svg%3E") center / contain no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 100'%3E%3Cpolygon points='0,0.093 0,25.702 24.323,50.026 0,74.349 0,99.955 49.929,50.026'/%3E%3C/svg%3E") center / contain no-repeat !important;
+}
 .carousel_container .carousel_thumbs > div { background: var(--rp-highlight-high) !important; }
 .carousel_container .carousel_thumbs > div.focus { background: var(--rp-pine) !important; }
 /* Keep the full-screen menu positioning layer transparent; paint only its panel. */
