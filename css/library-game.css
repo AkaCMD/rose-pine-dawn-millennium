@@ -79,6 +79,38 @@
 :is(._19LfMT7PFWg2xHOqNjR99q, ._3ygGwhh7ez8rniqAnS8BeW) {
   color: var(--rp-secondary) !important;
 }
+/* Global activity feed: achievement, review, news and patch-note cards. */
+.NEMXhMlqXOCJwfgWlHXhT,
+.NEMXhMlqXOCJwfgWlHXhT.Yo3XX_JHkn0gKBlBhDvyg {
+  background: var(--rp-surface) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  border-color: var(--rp-highlight-med) !important;
+  color: var(--rp-text) !important;
+}
+.UVeN0kaD3zv1feMj_mMw5 .NaIUAhNNISCMZymTaSPtz {
+  background: var(--rp-line) !important;
+}
+:is(.QCKBqF2k_sRLcXJ5qQIEl, .RYyD5fEHPeuLP7eKiYCce) {
+  color: var(--rp-secondary) !important;
+}
+:is(.gK1HBk7JSxeVVDT4FEdOj, ._2y-2VLgw8KpeOlvqXRvE9m,
+    .p8bs-3zEou4ZHLLrZozzu, ._3XQU8OYiF1A4HeocnI6sdV) {
+  color: var(--rp-text) !important;
+}
+:is(.I0sr90EArZw2mvxW7WgVV, ._2yGvZNxeAaVt8SbGgyGMbe,
+    ._2FYqqi_n7-zSIdmORuo2T9, ._3QUfKCz0a9_Z5Cb63tcotr) {
+  color: var(--rp-secondary) !important;
+}
+:is(._2vsDU46uDOtqK3-Kv9HFyo, ._1bbRSvrRrGtt9Yq1nKA_Gd) {
+  background: var(--rp-surface) !important;
+  color: var(--rp-text) !important;
+}
+._2aVnDeExEHiUFX0zwr_BTO,
+._38t1mljBjmJfqjpVzMT1CG {
+  background: var(--rp-surface) !important;
+  color: var(--rp-text) !important;
+}
 /* Achievement summaries, badge headers and compact activity announcements. */
 :is(._2l416KfEtI4CL0mCUEmOBw, ._3FmxxjyWNHU1PrBGnBe6tm)
     :is(._38t1mljBjmJfqjpVzMT1CG, ._2mMT5wI35EZKZ_XeO7BfPu,
