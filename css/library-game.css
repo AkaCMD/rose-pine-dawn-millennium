@@ -88,6 +88,25 @@
 :is(._2l416KfEtI4CL0mCUEmOBw, ._3FmxxjyWNHU1PrBGnBe6tm) ._2DUDvAhXoEOSsd8GTIsKLY {
   background-color: var(--rp-overlay) !important;
 }
+/* Community content cards and patch/update news rows. */
+._3QS6OBHpvI5bXsSQA2zQuW {
+  background: var(--rp-surface) !important;
+  border-color: var(--rp-highlight-med) !important;
+  box-shadow: none !important;
+}
+:is(._3eNE5TKtDTnfNBAsCqfcP0, ._1-An2oorO8mDpzICH9p0_S) {
+  background: var(--rp-surface) !important;
+  color: var(--rp-text) !important;
+}
+:is(._3eNE5TKtDTnfNBAsCqfcP0, ._1-An2oorO8mDpzICH9p0_S):hover {
+  background: var(--rp-overlay) !important;
+}
+:is(._3om6pVKUdxdBkypYpSroHM, .WNAUa4wz3B3UM6ujI_Sav) {
+  color: var(--rp-pine) !important;
+}
+.A6G1leLXs7Vqw45hoXg-l {
+  color: var(--rp-secondary) !important;
+}
 /* Achievements detail page: light list, rows, headers and unlock panels. */
 ._3FQHgRosfNJYE44Fsd_U6z {
   background: var(--rp-base) !important;
