@@ -122,9 +122,9 @@
 ._1-llQnFWxBo1kyWdkDFyXp svg path {
   fill: var(--rp-secondary) !important;
 }
-/* The patch-note banner itself. Steam paints these partner-event cards with
-   translucent dark gradients and luminous border images; replace the whole
-   frame so notes, updates and featured events read as light theme cards. */
+/* Partner-event cards own normal/hover surfaces and the hovered title.
+   Keep the selector list together so newly discovered variants receive all
+   states. Media descendants retain their own appearance. */
 :is(._3QRf-tp5VddAF00vWY5Gn8, ._1AYE16384J_ecLpN0sEYc5,
     .fmLfuqm0Lxq5iPS5EHCAW, ._39Zk32AvV5cr6g-83IVRVS,
     ._3xi-HLpFVHaakihoqhQ_6C) {
@@ -133,20 +133,16 @@
   border-image: none !important;
   box-shadow: none !important;
   color: var(--rp-text) !important;
+  &:hover {
+    background: var(--rp-overlay) !important;
+    background-image: none !important;
+  }
+  &:hover ._1Cva_kor3lWBIoeu9cQxJq {
+    color: var(--rp-text) !important;
+  }
 }
 ._3QRf-tp5VddAF00vWY5Gn8 {
   border-color: var(--rp-highlight-med) !important;
-}
-:is(._3QRf-tp5VddAF00vWY5Gn8, ._1AYE16384J_ecLpN0sEYc5,
-    .fmLfuqm0Lxq5iPS5EHCAW, ._39Zk32AvV5cr6g-83IVRVS,
-    ._3xi-HLpFVHaakihoqhQ_6C):hover {
-  background: var(--rp-overlay) !important;
-  background-image: none !important;
-}
-:is(._3QRf-tp5VddAF00vWY5Gn8, ._1AYE16384J_ecLpN0sEYc5,
-    .fmLfuqm0Lxq5iPS5EHCAW, ._39Zk32AvV5cr6g-83IVRVS,
-    ._3xi-HLpFVHaakihoqhQ_6C):hover ._1Cva_kor3lWBIoeu9cQxJq {
-  color: var(--rp-text) !important;
 }
 :is(._1WdC0YUP8FT0dYWZ-QIVZL, ._3oMUSjOFNB0E9LWcL2sE7) {
   background: var(--rp-pine) !important;

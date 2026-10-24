@@ -1,7 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFile } from 'node:fs/promises';
-import { connect } from '../scripts/cdp.mjs';
+import { withBrowserFixture } from './helpers/browser-fixture.mjs';
 import { probeExpression } from '../scripts/scan-page.mjs';
 import { classify } from '../scripts/coverage-rules.mjs';
 
@@ -57,16 +56,7 @@ const cases = [
 
 test('native light labels stay readable on themed surfaces in normal, hover and focus states',
   { skip: !process.env.STEAM_CDP_TEST, timeout: 30000 }, async () => {
-    const endpoint = 'http://127.0.0.1:8080';
-    const target = await (await fetch(`${endpoint}/json/new?about:blank`, { method: 'PUT' })).json();
-    let client;
-    try {
-      client = await connect(target.webSocketDebuggerUrl);
-      await client.call('Emulation.setDeviceMetricsOverride', { width: 1600, height: 1300, deviceScaleFactor: 1, mobile: false });
-      const manifest = JSON.parse(await readFile(new URL('../skin.json', import.meta.url), 'utf8'));
-      const css = (await Promise.all([...new Set(manifest.Patches.flatMap(p => p.TargetCss))].map(path =>
-        readFile(new URL(`../${path}`, import.meta.url), 'utf8')))).join('\n');
-      const html = `<style>
+    const nativeCss = `
         body { margin:0; } main { display:grid; grid-template-columns:repeat(5,1fr); gap:8px; }
         section { height:110px; padding:8px; background:#faf4ed; font:14px sans-serif; }
         section > * { display:block; padding:8px; } a { display:block; }
@@ -92,20 +82,11 @@ test('native light labels stay readable on themed surfaces in normal, hover and 
         .ChatTabs,._2XZq-_f6npaQdAgeRzKIkz { background:#3a3e46; } .chatHeader { background:linear-gradient(to right,#3a3e46,#2c3037); }
         ._3Ule3rolhZJiBN4yNNtk1s { background:#1b1c20; } .RVIs84dAE6wHcjH9tkinc { background:#2c3036; color:#c9c9c9; }
         .chatMessageBody { color:#dfe3e6; }
-        ${css}
-      </style><main>${cases.map(([id, content]) => `<section id="${id}">${content}</section>`).join('')}</main>`;
-      const evaluate = async expression => {
-        const result = await client.call('Runtime.evaluate', { expression, returnByValue: true });
-        assert.equal(result.exceptionDetails, undefined);
-        return result.result.value;
-      };
-      await evaluate(`document.open();document.write(${JSON.stringify(html)});document.close();true`);
-      await client.call('DOM.enable');
-      await client.call('CSS.enable');
-      const doc = await client.call('DOM.getDocument');
-      const { nodeIds } = await client.call('DOM.querySelectorAll', { nodeId: doc.root.nodeId, selector: 'section *,section' });
+    `;
+    const html = `<main>${cases.map(([id, content]) => `<section id="${id}">${content}</section>`).join('')}</main>`;
+    await withBrowserFixture({ html, nativeCss, viewport: { width: 1600, height: 1300 } }, async ({ evaluate, forcePseudoState }) => {
       for (const state of [[], ['hover'], ['focus', 'focus-visible']]) {
-        for (const nodeId of nodeIds) await client.call('CSS.forcePseudoState', { nodeId, forcedPseudoClasses: state });
+        await forcePseudoState('section *,section', state);
         const scan = await evaluate(probeExpression([]));
         const inspected = new Set(await evaluate(`(${JSON.stringify(scan.samples.filter(s => s.hasText).map(s => s.selector))}).map(selector => document.querySelector(selector).closest('section')?.id)`));
         assert.deepEqual(cases.map(([id]) => id).filter(id => !inspected.has(id)), [], 'each fixture must have a visible text sample');
@@ -113,8 +94,5 @@ test('native light labels stay readable on themed surfaces in normal, hover and 
           .map(issue => ({ selector: s.selector, ...issue })));
         assert.deepEqual(failures, [], `unreadable text in state ${state.join(',') || 'normal'}`);
       }
-    } finally {
-      client?.close();
-      await fetch(`${endpoint}/json/close/${target.id}`);
-    }
+    });
   });

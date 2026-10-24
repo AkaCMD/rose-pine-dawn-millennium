@@ -1,53 +1,31 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFile } from 'node:fs/promises';
-import { connect } from '../scripts/cdp.mjs';
+import { withBrowserFixture } from './helpers/browser-fixture.mjs';
 import { probeExpression } from '../scripts/scan-page.mjs';
 import { classify } from '../scripts/coverage-rules.mjs';
 
 test('browser loading surfaces stay light before the palette stylesheet arrives',
   { skip: !process.env.STEAM_CDP_TEST, timeout: 30000 }, async () => {
-    const endpoint = 'http://127.0.0.1:8080';
-    const target = await (await fetch(`${endpoint}/json/new?about:blank`, { method: 'PUT', signal: AbortSignal.timeout(5000) })).json();
-    let client;
-    try {
-      client = await connect(target.webSocketDebuggerUrl);
-      const steamCss = await readFile(new URL('../css/steam.css', import.meta.url), 'utf8');
-      const paletteCss = await readFile(new URL('../css/light.css', import.meta.url), 'utf8');
-      const html = `<html><head><style>
+    await withBrowserFixture({
+      styles: ['css/steam.css'],
+      nativeCss: `
         html,body { margin:0; height:100%; background:black; }
         ._1bGewp3tfzqAF6fVTFFUOz, ._29p1jfvZ-VdlXK24_7UGsK { width:100%; height:100%; background:black; }
-        ${steamCss}
-        </style></head><body><div class="_1bGewp3tfzqAF6fVTFFUOz"><div class="_29p1jfvZ-VdlXK24_7UGsK"></div></div></body></html>`;
-      const evaluate = async expression => {
-        const result = await client.call('Runtime.evaluate', { expression, returnByValue: true });
-        assert.equal(result.exceptionDetails, undefined);
-        return result.result.value;
-      };
-      await evaluate(`document.open();document.write(${JSON.stringify(html)});document.close();true`);
+      `,
+      html: '<html><body><div class="_1bGewp3tfzqAF6fVTFFUOz"><div class="_29p1jfvZ-VdlXK24_7UGsK"></div></div></body></html>',
+    }, async ({ evaluate, addStyles }) => {
       const surfaces = () => evaluate(`[document.documentElement,document.body,...document.querySelectorAll('._1bGewp3tfzqAF6fVTFFUOz,._29p1jfvZ-VdlXK24_7UGsK')].map(e=>getComputedStyle(e).backgroundColor)`);
       assert.deepEqual(await surfaces(), Array(4).fill('rgb(250, 244, 237)'), 'loading does not depend on palette fetch order');
-      await evaluate(`(()=>{const s=document.createElement('style');s.textContent=${JSON.stringify(paletteCss)};document.head.append(s);})()`);
+      await addStyles(['css/light.css']);
       assert.deepEqual(await surfaces(), Array(4).fill('rgb(250, 244, 237)'));
       await evaluate(`(()=>{const e=document.createElement('div');e.id='loaded-content';e.style.cssText='background:rgb(255,250,243);width:100%;height:100%';document.querySelector('._29p1jfvZ-VdlXK24_7UGsK').append(e);})()`);
       assert.equal(await evaluate("getComputedStyle(document.querySelector('#loaded-content')).backgroundColor"), 'rgb(255, 250, 243)', 'loaded page content keeps its own background');
-    } finally {
-      client?.close();
-      await fetch(`${endpoint}/json/close/${target.id}`, { signal: AbortSignal.timeout(5000) });
-    }
+    });
   });
 
 test('CEF scanner detects a real cascade gap and respects media, visibility and interaction states',
   { skip: !process.env.STEAM_CDP_TEST, timeout: 30000 }, async () => {
-    const endpoint = 'http://127.0.0.1:8080';
-    const target = await (await fetch(`${endpoint}/json/new?about:blank`, { method: 'PUT', signal: AbortSignal.timeout(5000) })).json();
-    let client;
-    try {
-      client = await connect(target.webSocketDebuggerUrl);
-      await client.call('Emulation.setDeviceMetricsOverride', { width: 1200, height: 900, deviceScaleFactor: 1, mobile: false });
-      const css = (await Promise.all(['light', 'steam', 'store', 'library-game'].map(name =>
-        readFile(new URL(`../css/${name}.css`, import.meta.url), 'utf8')))).join('\n');
-      const html = `<html><head><style>
+    const nativeCss = `
         body { margin: 0; } .fixture { display:block; width:180px; height:45px; margin:3px; }
         .game_language_options { background:#17191b; color:white; }
         #gap { background:#17191b; color:white; }
@@ -81,8 +59,8 @@ test('CEF scanner detects a real cascade gap and respects media, visibility and 
         ._2aVnDeExEHiUFX0zwr_BTO { background:#2c3138; color:white; }
         ._2DUDvAhXoEOSsd8GTIsKLY { background:#000; color:white; }
         ._3ns9185LizH61StaAXuAp6 { background:#000; }
-        ${css}
-        </style></head><body>
+    `;
+    const html = `<html><body>
         <div id="covered" class="fixture game_language_options">Readable themed panel</div>
         <div id="gap" class="fixture">Missed native dark panel</div>
         <div id="unreadable" class="fixture">Unreadable label</div>
@@ -114,19 +92,7 @@ test('CEF scanner detects a real cascade gap and respects media, visibility and 
           <div id="ach-strip" class="_3ns9185LizH61StaAXuAp6" style="width:200px;height:8px"></div>
         </section>
         </body></html>`;
-      const evaluate = async expression => {
-        const result = await client.call('Runtime.evaluate', { expression, returnByValue: true });
-        assert.equal(result.exceptionDetails, undefined);
-        return result.result.value;
-      };
-      await evaluate(`document.open(); document.write(${JSON.stringify(html)}); document.close(); true`);
-      await client.call('DOM.enable');
-      await client.call('CSS.enable');
-      const doc = await client.call('DOM.getDocument');
-      const pseudo = async (selector, pseudoClasses) => {
-        const { nodeId } = await client.call('DOM.querySelector', { nodeId: doc.root.nodeId, selector });
-        await client.call('CSS.forcePseudoState', { nodeId, forcedPseudoClasses: pseudoClasses });
-      };
+    await withBrowserFixture({ html, nativeCss }, async ({ evaluate, forcePseudoState: pseudo }) => {
       const scan = () => evaluate(probeExpression([]));
       const result = await scan();
       const byId = id => result.samples.find(s => s.selector === `#${id}`);
@@ -169,8 +135,5 @@ test('CEF scanner detects a real cascade gap and respects media, visibility and 
       assert.ok(classify(focus, allowed).some(i => i.kind === 'low-contrast'));
       await pseudo('#gutter', ['hover']);
       assert.deepEqual((await scan()).samples.find(s => s.selector === '#gutter').background, [206, 202, 205, 1]);
-    } finally {
-      client?.close();
-      await fetch(`${endpoint}/json/close/${target.id}`, { signal: AbortSignal.timeout(5000) });
-    }
+    });
   });
