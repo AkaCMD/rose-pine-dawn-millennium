@@ -161,7 +161,7 @@ button:disabled, .DialogButton.Disabled { opacity: .5 !important; }
 :is(.friend, .friendGroup):hover { background-color: var(--rp-overlay) !important; }
 .friend .friendName, .chatMessageBody, .chatEntry textarea { color: var(--rp-text) !important; }
 .friend.online .friendName { color: var(--rp-link) !important; }
-.friend.ingame .friendName { color: var(--rp-iris) !important; }
+.friend.ingame .friendName { color: var(--rp-status-game) !important; }
 .friend.offline .friendName { color: var(--rp-secondary) !important; }
 
 .contextMenuContents { box-shadow: var(--rp-shadow) !important; }
@@ -274,7 +274,7 @@ button:disabled, .DialogButton.Disabled { opacity: .5 !important; }
   background: var(--rp-highlight-med) !important; border-color: var(--rp-highlight-med) !important;
 }
 ._114nFoGF7tZ4PpremDP2w0, ._38-c8Lb-zCJc8GmvTzoyL1 {
-  color: var(--rp-pine) !important;
+  color: var(--rp-link) !important;
 }
 /* Text on library surfaces, including small shelf and news captions. */
 ._17uEBe5Ri8TMsnfELvs8-N :is(.aqYQCF7Ny9x3EKcjCOTRY, ._3YO5BpDmZERh_G8kaWbaSJ),
@@ -308,7 +308,7 @@ button:disabled, .DialogButton.Disabled { opacity: .5 !important; }
 ._2bl0iQ9xigbq4Zd1NI6NZl.yLrDAetGoWx0GYqA6ShfS,
 .yLrDAetGoWx0GYqA6ShfS ._2bl0iQ9xigbq4Zd1NI6NZl { background: var(--rp-pine) !important; }
 ._1PQppcgkuXQAiFPar9AGi- { background: var(--rp-surface) !important; }
-._1W1to_azoBRG95oNAFpf9Q a { color: var(--rp-pine) !important; }
+._1W1to_azoBRG95oNAFpf9Q a { color: var(--rp-link) !important; }
 
 /* Library collection pages: collection browser and individual category grids. */
 ._3VQUewWB8g6Z5qB4C7dGFr, ._38MncfB91VUpkDo8NSxAeV,
@@ -344,7 +344,7 @@ button:disabled, .DialogButton.Disabled { opacity: .5 !important; }
 }
 ._2oJt3qYLAqr6xMjnpmBFLN, ._2cTiGDjpUyBonh9hRHHcwz,
 ._1CA44fHFH68DkHIPoniGpz { color: var(--rp-text) !important; }
-._3iV2vMTw_vwWJ_gmiz1Q1k { color: var(--rp-pine) !important; }
+._3iV2vMTw_vwWJ_gmiz1Q1k { color: var(--rp-link) !important; }
 ._3gzh_NvTKey56JeHY7Q1WW {
   background: var(--rp-pine) !important; color: var(--rp-on-accent, #fffaf3) !important;
 }
@@ -489,11 +489,11 @@ button:disabled, .DialogButton.Disabled { opacity: .5 !important; }
 }
 ._3ENh9LzRnZgfTyfxp_J2rr :is(._3uSbhtY3vHtdj-3tpua_Pb, ._2XSwzNWGiJvW0zTgqT0DUI),
 ._2NdiftmP-B3C4LPWnNGTCB :is(.rN6p14MiFEoCZvdjnfpgQ, ._10165iFPxrqzt0kfV00tbu) {
-  color: var(--rp-foam) !important;
+  color: var(--rp-link) !important;
 }
 ._3ENh9LzRnZgfTyfxp_J2rr ._3bqD-bBMgrGwLsBY2L1gSL,
 ._2NdiftmP-B3C4LPWnNGTCB ._35uWYHT2zJoSv9PE_euqxo {
-  color: var(--rp-iris) !important;
+  color: var(--rp-status-game) !important;
 }
 ._3ENh9LzRnZgfTyfxp_J2rr :is(._2hs2ZR_wYkRHWdtlr681Z6, ._3fUrGm-WHq3qxIpSqRZDgc),
 ._2NdiftmP-B3C4LPWnNGTCB ._3m94SADycX0JIk8urdZQ2X,
@@ -525,7 +525,7 @@ button:disabled, .DialogButton.Disabled { opacity: .5 !important; }
 }
 .friendlist :is(.in-game, .ingame) :is(._2n0EiKMGRP-r_BI5tDtttu,
     ._2-pwJCHlrc7zxN4iup2TR7 ._1FgWIOIaRCAekjhGj0zFWq) {
-  color: var(--rp-foam) !important;
+  color: var(--rp-link) !important;
 }
 .friendlist .in-game ._1YdpXFoH7P9pEEXDMITSHu._1k5YkN8kx48i2TZ6kG9muA {
   background: var(--rp-foam) !important;
@@ -537,7 +537,7 @@ button:disabled, .DialogButton.Disabled { opacity: .5 !important; }
 }
 .friendlist .friendGroup.gameGroup:not(.OtherGamesGroup) .SteamPlayerGroupFooter.lastInGroup
     :is(.SteamPlayerGroupFooterLabel, .count) {
-  color: var(--rp-foam) !important;
+  color: var(--rp-link) !important;
 }
 
 /* Friends/chat retain native gradients unless the whole background is reset. */
@@ -572,7 +572,7 @@ button:disabled, .DialogButton.Disabled { opacity: .5 !important; }
   color: var(--rp-secondary) !important;
 }
 .friendsui-container :is(.in-game, .ingame) ._2n0EiKMGRP-r_BI5tDtttu {
-  color: var(--rp-pine) !important;
+  color: var(--rp-link) !important;
 }
 .friendsui-container .quickAccessFriendsMessageDismiss {
   background: var(--rp-pine) !important;
@@ -601,7 +601,7 @@ button:disabled, .DialogButton.Disabled { opacity: .5 !important; }
 .friendsui-container .chatHistory :is(.msg, .msgText, .chatMessageBody, .chatMessageContent) {
   color: var(--rp-text) !important;
 }
-.friendsui-container .chatHistory a { color: var(--rp-pine) !important; }
+.friendsui-container .chatHistory a { color: var(--rp-link) !important; }
 .friendsui-container :is(.timeDivision, .timestamp, .chatmsgtime, .FriendChatTypingNotification) {
   background: none !important;
   color: var(--rp-secondary) !important;

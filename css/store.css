@@ -153,7 +153,7 @@ body.v6 :is(h1,h2,h3,h4), body.v7 :is(h1,h2,h3,h4) { color: var(--rp-text) !impo
     .game_area_sys_req a, .dev_row a, .details_block a, .glance_tags a,
     .tab_preview a, .game_area_already_owned a, .review_box a,
     .user_reviews_summary_row a, .early_access_header a,
-    .hover_body a, .game_purchase_action a) { color: var(--rp-pine) !important; }
+    .hover_body a, .game_purchase_action a) { color: var(--rp-link) !important; }
 :is(.btnv6_blue_hoverfade, .btnv6_blue_hoverfade > span,
     .btnv6_lightblue_blue, .btnv6_lightblue_blue > span,
     .btnv6_white_transparent, .btnv6_white_transparent > span,
@@ -161,7 +161,7 @@ body.v6 :is(h1,h2,h3,h4), body.v7 :is(h1,h2,h3,h4) { color: var(--rp-text) !impo
     .queue_control_button, .queue_control_button > span,
     .game_area_purchase_game_dropdown_selection, .game_area_purchase_game_dropdown_selection > span) {
   background: var(--rp-overlay) !important;
-  color: var(--rp-pine) !important; text-shadow: none !important;
+  color: var(--rp-link) !important; text-shadow: none !important;
   border-color: var(--rp-highlight-med) !important;
 }
 :is(.btn_green_white_innerfade, .btn_green_white_innerfade > span,
@@ -208,7 +208,7 @@ body.v6 :is(.btn_green_white_innerfade,.btnv6_green_white_innerfade) a { color: 
   background: var(--rp-overlay) !important;
   color: var(--rp-text) !important; border-color: var(--rp-highlight-med) !important;
 }
-.searchtag a, .searchtag.tag_dynamic a { color: var(--rp-pine) !important; }
+.searchtag a, .searchtag.tag_dynamic a { color: var(--rp-link) !important; }
 .tab_filter_control_checkbox {
   background: var(--rp-surface) !important;
   border: 1px solid var(--rp-secondary) !important; border-radius: 3px;
@@ -223,7 +223,7 @@ body.v6 :is(.btn_green_white_innerfade,.btnv6_green_white_innerfade) a { color: 
 /* Carousel arrows and page dots need their own contrast on a cream background. */
 .carousel_container .arrow {
   background: var(--rp-overlay) !important;
-  color: var(--rp-pine) !important;
+  color: var(--rp-link) !important;
   opacity: 1 !important;
 }
 /* Homepage arrows use a white background SVG, which cannot inherit color.
@@ -276,14 +276,14 @@ body.v6 :is(.btn_green_white_innerfade,.btnv6_green_white_innerfade) a { color: 
 }
 .game_area_metascore .logo { background: var(--rp-pine) !important; border-radius: 4px; }
 .game_page_autocollapse_readmore {
-  background: var(--rp-overlay) !important; color: var(--rp-pine) !important;
+  background: var(--rp-overlay) !important; color: var(--rp-link) !important;
 }
-.sysreq_tab { background: var(--rp-overlay) !important; color: var(--rp-pine) !important; }
+.sysreq_tab { background: var(--rp-overlay) !important; color: var(--rp-link) !important; }
 .sysreq_tab.active { background: var(--rp-pine) !important; color: #fffaf3 !important; }
 .game_meta_data a, .recommendation_reasons a, .reason a,
 .game_area_details_specs_ctn .label, .family_info a,
 .steam_curator_recommendation a, .steam_curator_followed_text.recommended {
-  color: var(--rp-pine) !important;
+  color: var(--rp-link) !important;
 }
 .family_info p, .steam_curator_recommendation, .steam_curator_selected,
 .steam_curator_recommendation_description { color: var(--rp-text) !important; }
@@ -294,7 +294,7 @@ body.v6 :is(.btn_green_white_innerfade,.btnv6_green_white_innerfade) a { color: 
   color: var(--rp-text) !important;
 }
 .communitylink_achivement_plusmore {
-  background: var(--rp-overlay) !important; color: var(--rp-pine) !important;
+  background: var(--rp-overlay) !important; color: var(--rp-link) !important;
 }
 .btn_green_steamui, .btn_green_steamui > span, .game_purchase_action a.btn_green_steamui,
 .game_purchase_action a.btn_green_steamui > span {
@@ -321,7 +321,7 @@ body.v6 :is(.btn_green_white_innerfade,.btnv6_green_white_innerfade) a { color: 
   background-color: transparent !important; background-image: none !important;
   box-shadow: none !important;
 }
-.review_ctn a, .review_ctn a span { color: var(--rp-pine) !important; }
+.review_ctn a, .review_ctn a span { color: var(--rp-link) !important; }
 .review_ctn :is(button,select,[role="button"]) {
   background: var(--rp-overlay) !important; color: var(--rp-text) !important;
   border-color: var(--rp-highlight-med) !important;
@@ -351,10 +351,10 @@ body.v6 :is(.btn_green_white_innerfade,.btnv6_green_white_innerfade) a { color: 
   color: var(--rp-secondary) !important;
 }
 .see_more_link .see_more_text {
-  color: var(--rp-pine) !important;
+  color: var(--rp-link) !important;
 }
 .store_main_capsule .topseller_title {
-  color: var(--rp-pine) !important;
+  color: var(--rp-link) !important;
 }
 
 /* Homepage lists and product copy declare their own light foregrounds. */
@@ -410,7 +410,7 @@ body.v6 :is(.btn_green_white_innerfade,.btnv6_green_white_innerfade) a { color: 
 
 /* React store home: section titles, personal calendar and curator tiles. */
 :is(._2RxJB5bupbx0mkW8dYJQRE, ._2RnIwgy025bixjWk2UTw40,
-    ._7Qc_eWjn_s3VWDe79FmEq, y5728HUyiI5XdCDBm5D7A) {
+    ._7Qc_eWjn_s3VWDe79FmEq, .y5728HUyiI5XdCDBm5D7A) {
   color: var(--rp-text) !important;
 }
 ._326_uhqq2I-hJwNRSqIZK4 ._3RqS6vEZhqX3_4AIeJFajW {
@@ -437,7 +437,7 @@ body.v6 :is(.btn_green_white_innerfade,.btnv6_green_white_innerfade) a { color: 
   background: var(--rp-overlay) !important;
   color: var(--rp-text) !important;
 }
-._326_uhqq2I-hJwNRSqIZK4 ._1Vtz51wGyJHD9wpoDFNZ8M a { color: var(--rp-pine) !important; }
+._326_uhqq2I-hJwNRSqIZK4 ._1Vtz51wGyJHD9wpoDFNZ8M a { color: var(--rp-link) !important; }
 ._326_uhqq2I-hJwNRSqIZK4 ._1wt5Ne6MrJfPVdFz5fGlop {
   background: var(--rp-pine) !important;
   color: var(--rp-on-accent) !important;
@@ -451,7 +451,7 @@ body.v6 :is(.btn_green_white_innerfade,.btnv6_green_white_innerfade) a { color: 
 }
 :is(.CarouselBtnLeft, .CarouselBtnRight, ._13rGo4vexAbY9-CP7FsLOg,
     ._2sZ7DAljYV5Xd-nbhtlmyM, ._258hIVgneRO0dUbgnPZh_R) svg {
-  color: var(--rp-pine) !important;
+  color: var(--rp-link) !important;
   fill: var(--rp-pine) !important;
   opacity: 1 !important;
 }
@@ -491,9 +491,9 @@ body.v6 :is(.btn_green_white_innerfade,.btnv6_green_white_innerfade) a { color: 
   color: var(--rp-text) !important;
 }
 ._3dOtcOnM_9WRN6GxZdYCy7 :is(._3r5JsPI6ThzHIlTKWEG3hE, a) {
-  color: var(--rp-pine) !important;
+  color: var(--rp-link) !important;
 }
-.steam_curator_followed_text { color: var(--rp-pine) !important; }
+.steam_curator_followed_text { color: var(--rp-link) !important; }
 :is(.steam_curator_recommendation_readmore, .curator_review_date) {
   color: var(--rp-secondary) !important;
 }
@@ -514,7 +514,7 @@ body.v6 :is(.btn_green_white_innerfade,.btnv6_green_white_innerfade) a { color: 
   background: var(--rp-highlight-med) !important;
 }
 .game_area_purchase_game_wrapper.bundle .bundleTag {
-  color: var(--rp-pine) !important;
+  color: var(--rp-link) !important;
 }
 
 /* Store home tabs and the seasonal container gradients. */
@@ -582,7 +582,12 @@ body.newonsteam :is([data-ds-appid], [data-appid], .tab_item)
   :not(._1tOSyFfIWM42bIEwzvMp8v, ._1tOSyFfIWM42bIEwzvMp8v *,
       .discount_block, .discount_block *, .discount_pct, .discount_pct *,
       .discount_final_price, .discount_final_price *, .discount_original_price,
-      .discount_prices, .discount_aria_label, .ds_flag, .ds_flag *) {
+      .discount_prices, .discount_aria_label, .ds_flag, .ds_flag *,
+      .btn_green_white_innerfade, .btn_green_white_innerfade *,
+      .btnv6_green_white_innerfade, .btnv6_green_white_innerfade *,
+      .btn_green_steamui, .btn_green_steamui *,
+      .btnv6_lightblue_blue.btn_medium, .btnv6_lightblue_blue.btn_medium *,
+      .inqz7Zdx9Xg-, .inqz7Zdx9Xg- *, .oS2hPC3gY6k-, .oS2hPC3gY6k- *) {
     &:is(div, span, p, h1, h2, h3, h4, label, strong, b):is(
         [style*="color: white"], [style*="color:white"],
         [style*="color: rgb(255, 255, 255)"],
@@ -616,14 +621,14 @@ body.newonsteam :is([data-ds-appid], [data-appid], .tab_item)
 }
 .referring_curator :is(a, .review_title),
 [data-featuretarget="events-row"] :is(._2BWwVF5N-3fDuJRblB6gHb, ._11JXznGoylLSEmZXZbgcsq) {
-  color: var(--rp-pine) !important;
+  color: var(--rp-link) !important;
 }
-.referring_curator .color_not_recommended { color: var(--rp-love) !important; }
-.referring_curator .color_informational { color: var(--rp-pine) !important; }
+.referring_curator .color_not_recommended { color: var(--rp-negative) !important; }
+.referring_curator .color_informational { color: var(--rp-link) !important; }
 .referring_curator .readmore_button_ctn > span,
 [data-featuretarget="events-row"] ._3n8swQFM3I_ARVM_5bPhAs {
   background: var(--rp-overlay) !important;
-  color: var(--rp-pine) !important;
+  color: var(--rp-link) !important;
   border-color: var(--rp-line) !important;
   text-shadow: none !important;
 }
@@ -645,14 +650,14 @@ body.newonsteam :is([data-ds-appid], [data-appid], .tab_item)
 .game_area_details_specs .name,
 .game_meta_data .linkbar {
   background: var(--rp-overlay) !important;
-  color: var(--rp-pine) !important;
+  color: var(--rp-link) !important;
   text-shadow: none !important;
 }
 a.game_area_details_specs_ctn:is(:hover, :focus-visible) .label,
 .game_area_details_specs a.name:is(:hover, :focus-visible),
 .game_meta_data .linkbar:is(:hover, :focus-visible) {
   background: var(--rp-highlight-med) !important;
-  color: var(--rp-pine) !important;
+  color: var(--rp-link) !important;
 }
 .game_area_details_specs_ctn.learning_about .label {
   color: var(--rp-secondary) !important;
@@ -668,7 +673,7 @@ a.game_area_details_specs_ctn:is(:hover, :focus-visible) .label,
       ._3sRe2CGQBgablPBz9Bc9c2, ._3KAysk4dlhWETa6ixz7V2j,
       ._29jQMo9DGCmcSKyDIC3V7M, .dxuI55RF56-dzbuXjj2W0) {
     background: var(--rp-overlay) !important;
-    color: var(--rp-pine) !important;
+    color: var(--rp-link) !important;
   }
   :is(summary, ._1RmibngWLogcFmO93kGFgq, ._2xZaMR-NKc0LbkeM50cZq8):is(:hover, :focus-visible) {
     &, :is(._3sRe2CGQBgablPBz9Bc9c2, ._3KAysk4dlhWETa6ixz7V2j,
@@ -682,7 +687,7 @@ a.game_area_details_specs_ctn:is(:hover, :focus-visible) .label,
   ._2079QFhY02KJ4KxGMltDNJ { color: var(--rp-secondary) !important; }
   :is(._2xmH7agKi37v9kwFHi093S, ._3vt5rw82YhkhWtu5ld9QeP) {
     background: var(--rp-highlight-med) !important;
-    color: var(--rp-pine) !important;
+    color: var(--rp-link) !important;
   }
 }
 
@@ -695,7 +700,7 @@ a.game_area_details_specs_ctn:is(:hover, :focus-visible) .label,
   }
   :is(._1smYxH70zcX0D3CUQDwF3o, .IfnLtAVfojeH3V-6ObQjr) {
     background: var(--rp-overlay) !important;
-    color: var(--rp-pine) !important;
+    color: var(--rp-link) !important;
     box-shadow: none !important;
   }
   :is(span, a) { color: var(--rp-text) !important; }
@@ -703,13 +708,13 @@ a.game_area_details_specs_ctn:is(:hover, :focus-visible) .label,
   a:is(:hover, :focus-visible) {
     &, .IfnLtAVfojeH3V-6ObQjr, .Cgo8G5L7D0oP0OHVGcq_D {
       background: var(--rp-highlight-med) !important;
-      color: var(--rp-pine) !important;
+      color: var(--rp-link) !important;
     }
   }
 }
 a.communitylink_achivement_plusmore:is(:hover, :focus-visible) {
   background: var(--rp-highlight-med) !important;
-  color: var(--rp-pine) !important;
+  color: var(--rp-link) !important;
 }
 .game_meta_data .linkbar svg { fill: var(--rp-pine) !important; }
 .game_area_details_specs_ctn .tooltip img {

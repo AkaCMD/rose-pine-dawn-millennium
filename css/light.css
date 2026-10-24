@@ -18,7 +18,10 @@
   --rp-highlight-high: #cecacd;
   --rp-accent: var(--rp-pine);
   --rp-on-accent: #fffaf3;
-  --rp-link: var(--rp-pine);
+  /* Text accents stay readable on all six light surfaces, including selection. */
+  --rp-link: #20576d;
+  --rp-status-game: #604773;
+  --rp-negative: #91364f;
   /* Keep secondary labels readable even on the darkest light highlight. */
   --rp-secondary: #56526a;
   --rp-shadow: 0 12px 36px #5752791a;

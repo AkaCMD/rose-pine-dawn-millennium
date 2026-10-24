@@ -46,7 +46,7 @@ test('product curator and announcement panels use Dawn surfaces and readable cop
         assert.equal(await color(selector, 'color'), 'rgb(86, 82, 106)', selector);
       }
       for (const selector of ['.review_title', '.readmore_button_ctn a', '._3n8swQFM3I_ARVM_5bPhAs', '._2BWwVF5N-3fDuJRblB6gHb']) {
-        assert.equal(await color(selector, 'color'), 'rgb(40, 105, 131)', selector);
+        assert.equal(await color(selector, 'color'), 'rgb(32, 87, 109)', selector);
       }
       await forcePseudoState('.OtherEvents_EventCtn,._3n8swQFM3I_ARVM_5bPhAs,.readmore_button_ctn>span', ['hover']);
       assert.equal(await color('.OtherEvents_EventCtn', 'backgroundColor'), 'rgb(242, 233, 225)');

@@ -33,7 +33,7 @@ test('store feature rows use Dawn backgrounds in normal, hover and keyboard focu
         for (const selector of ['a.game_area_details_specs_ctn .label', 'a.name']) {
           assert.equal(await style(selector, 'backgroundColor'), 'rgb(223, 218, 217)', `${pseudo}: ${selector}`);
           assert.equal(await style(selector, 'backgroundImage'), 'none', `${pseudo}: ${selector}`);
-          assert.equal(await style(selector, 'color'), 'rgb(40, 105, 131)', `${pseudo}: ${selector}`);
+          assert.equal(await style(selector, 'color'), 'rgb(32, 87, 109)', `${pseudo}: ${selector}`);
         }
       }
       await evaluate(`document.documentElement.dir='rtl'`);

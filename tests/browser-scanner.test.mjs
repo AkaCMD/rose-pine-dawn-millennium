@@ -120,7 +120,7 @@ test('CEF scanner detects a real cascade gap and respects media, visibility and 
       assert.deepEqual(byId('review-prompt').background, [255, 250, 243, 1], 'review prompt uses the surface');
       assert.deepEqual(classify(byId('review-prompt'), allowed), []);
       assert.deepEqual(byId('review-yes').background, [242, 233, 225, 1], 'review buttons use the overlay');
-      assert.deepEqual(byId('review-yes').foreground, [40, 105, 131, 1], 'review buttons use the pine accent');
+      assert.deepEqual(byId('review-yes').foreground, [32, 87, 109, 1], 'review buttons use the readable link accent');
       assert.deepEqual(classify(byId('review-yes'), allowed), []);
       assert.deepEqual(byId('achievement-tile').background, [255, 250, 243, 1], 'achievement tiles use the surface');
       assert.deepEqual(classify(byId('achievement-tile'), allowed), []);

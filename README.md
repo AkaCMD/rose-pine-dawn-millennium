@@ -6,6 +6,10 @@ This is a CSS theme loaded by [Millennium](https://steambrew.app/). It has one l
 
 ## Preview
 
+![Rosé Pine Dawn theme on the Steam library home](docs/images/library-preview.png)
+
+Library home example from an earlier screenshot, with AI-assisted privacy edits. Account names, the account avatar, custom category names, and playtime statistics are obscured. Game artwork and the library list remain visible.
+
 ![Rosé Pine Dawn theme on the Steam store's Godot Engine page](docs/images/store-preview.png)
 
 Public store page shown while signed out, with no Steam account or personal library information.

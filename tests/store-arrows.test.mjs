@@ -5,7 +5,7 @@ import { connect } from '../scripts/cdp.mjs';
 
 test('homepage image and SVG carousel arrows share the pine color in both directions and on hover',
   { skip: !process.env.STEAM_CDP_TEST, timeout: 30000 }, async () => {
-    const endpoint = 'http://127.0.0.1:8080';
+    const endpoint = process.env.STEAM_CDP_ENDPOINT ?? 'http://127.0.0.1:8080';
     const target = await (await fetch(`${endpoint}/json/new?about:blank`, { method: 'PUT' })).json();
     let client;
     try {

@@ -36,8 +36,8 @@ body:has(.awGgT3ZKumU-, .cE9cj0nbqpY-, ._22xtsolKcQit92o-LBeRWD) {
   text-shadow: none !important;
 }
 :where(#wishlist_ctn, .awGgT3ZKumU-, .uTozs1Q00-o-,
-    .cE9cj0nbqpY-, ._22xtsolKcQit92o-LBeRWD) a:hover {
-  color: var(--rp-pine) !important;
+    .cE9cj0nbqpY-, ._22xtsolKcQit92o-LBeRWD) a:not(.inqz7Zdx9Xg-, .oS2hPC3gY6k-):hover {
+  color: var(--rp-link) !important;
 }
 
 /* Wishlist rows, cart items, totals and the Steam Points summary. */
@@ -126,7 +126,7 @@ body:has(.awGgT3ZKumU-, .cE9cj0nbqpY-, ._22xtsolKcQit92o-LBeRWD) {
 :is(.VZx5flX71DI- a, .p0Gsr94HawQ-, ._7AZI-0r5FAs-,
     ._7AZI-0r5FAs- > span, .z4nYR-MCfbI-) {
   background: var(--rp-overlay) !important;
-  color: var(--rp-pine) !important;
+  color: var(--rp-link) !important;
   text-shadow: none !important;
   box-shadow: none !important;
 }
@@ -170,8 +170,8 @@ body:has(.awGgT3ZKumU-, .cE9cj0nbqpY-, ._22xtsolKcQit92o-LBeRWD) {
     :is(.DialogButton, .btnv6_green_white_innerfade, .btn_green_steamui,
         .discount_pct, .StoreSaleDiscountBox, .rsMD9WnTopA-, .KY4Cd9W1L6Q-,
         .OgxPLTiqRYA-, .O7UR3Sc3EmM-, .kkZ9PsIE60o-, .inqz7Zdx9Xg-,
-        .oS2hPC3gY6k-)
-    :is(div, span, label) {
+        .oS2hPC3gY6k-, .X3eWtXr50WY-)
+    :is(div, span, label, b, strong, em) {
   color: inherit !important;
 }
 :where(.awGgT3ZKumU-, .cE9cj0nbqpY-, .uTozs1Q00-o-)
@@ -193,7 +193,7 @@ body:has(.awGgT3ZKumU-, .cE9cj0nbqpY-, ._22xtsolKcQit92o-LBeRWD) {
 }
 :is(._9pgNwsujvcE-, ._0EeqCzGG-eI- span) {
   background: var(--rp-overlay) !important;
-  color: var(--rp-pine) !important;
+  color: var(--rp-link) !important;
   box-shadow: none !important;
 }
 /* Cart warnings keep their meaning without bright yellow or red panels. */

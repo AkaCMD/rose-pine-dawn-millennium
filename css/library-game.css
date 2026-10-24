@@ -16,7 +16,7 @@
 }
 ._2l416KfEtI4CL0mCUEmOBw a, ._2l416KfEtI4CL0mCUEmOBw a span,
 ._3FmxxjyWNHU1PrBGnBe6tm a, ._3FmxxjyWNHU1PrBGnBe6tm a span {
-  color: var(--rp-pine) !important;
+  color: var(--rp-link) !important;
 }
 ._2l416KfEtI4CL0mCUEmOBw :is(.DialogButton,.DialogButton span,.DialogButton div) {
   color: var(--rp-text) !important;
@@ -45,14 +45,14 @@
   color: var(--rp-text) !important;
 }
 ._1xGH4bGLz6sI7erzB8VWff, ._2RggXvVkWMDvvxFegjtKso { color: var(--rp-secondary) !important; }
-._3uk3F1BmAJQR6rl1TPcaif { color: var(--rp-pine) !important; }
+._3uk3F1BmAJQR6rl1TPcaif { color: var(--rp-link) !important; }
 ._1vO6BoiVslZgs1kqDGdUs8 { background-color: transparent !important; }
 ._2-O4ZG0KrnSrzISHBKctFQ._1UBpAXP408Ez_L_mXhW5Q9,
 ._2-O4ZG0KrnSrzISHBKctFQ:has(._1UBpAXP408Ez_L_mXhW5Q9) {
   background: var(--rp-highlight-med) !important;
 }
 ._2JSyABqFEh-v_dwaTnBydR { background: var(--rp-overlay) !important; color: var(--rp-text) !important; }
-._3fLo166MlaNqP8r8tTyRz svg { color: var(--rp-pine) !important; fill: currentColor !important; }
+._3fLo166MlaNqP8r8tTyRz svg { color: var(--rp-link) !important; fill: currentColor !important; }
 ._3fLo166MlaNqP8r8tTyRz ._3ydigb6zZAjJ0JCDgHwSYA :is(div,span,svg) {
   color: #fffaf3 !important;
 }
@@ -149,7 +149,7 @@
   color: var(--rp-on-accent) !important;
 }
 :is(._29bW1yCn25VTm4bFameBaV, .ZzN4Se_gAvEeiHXFJBdVK) {
-  color: var(--rp-pine) !important;
+  color: var(--rp-link) !important;
 }
 ._23WVgstZsKQ-raKomi_HEj {
   background: var(--rp-overlay) !important;
@@ -191,7 +191,7 @@
   background: var(--rp-overlay) !important;
 }
 :is(._3om6pVKUdxdBkypYpSroHM, .WNAUa4wz3B3UM6ujI_Sav) {
-  color: var(--rp-pine) !important;
+  color: var(--rp-link) !important;
 }
 .A6G1leLXs7Vqw45hoXg-l {
   color: var(--rp-secondary) !important;
@@ -234,7 +234,7 @@
 }
 :is(._2l416KfEtI4CL0mCUEmOBw, ._3FmxxjyWNHU1PrBGnBe6tm) button._1kCN0pAntrcGCSmcc-vYdk {
   background: var(--rp-overlay) !important;
-  color: var(--rp-pine) !important;
+  color: var(--rp-link) !important;
   border: 1px solid var(--rp-highlight-med) !important;
   border-radius: 3px;
   text-shadow: none !important;
@@ -242,4 +242,12 @@
 :is(._2l416KfEtI4CL0mCUEmOBw, ._3FmxxjyWNHU1PrBGnBe6tm) button._1kCN0pAntrcGCSmcc-vYdk:hover {
   background: var(--rp-highlight-med) !important;
   color: var(--rp-text) !important;
+}
+
+/* Event actions and captions must override the details root's dark copy. */
+:is(._2l416KfEtI4CL0mCUEmOBw, ._3FmxxjyWNHU1PrBGnBe6tm)
+    :is(._1WdC0YUP8FT0dYWZ-QIVZL, ._3oMUSjOFNB0E9LWcL2sE7),
+:is(._2l416KfEtI4CL0mCUEmOBw, ._3FmxxjyWNHU1PrBGnBe6tm)
+    :is(._1WdC0YUP8FT0dYWZ-QIVZL, ._3oMUSjOFNB0E9LWcL2sE7) :is(div,span,label,b,strong,em) {
+  color: var(--rp-on-accent) !important;
 }
