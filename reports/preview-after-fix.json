@@ -1,0 +1,787 @@
+{
+  "capturedAt": "2026-10-24T07:51:26.355Z",
+  "state": "preview-after-fix",
+  "previewCssSha256": "eb8a747d2c61ca15f6f2dc7252cdb6c831973773bc5a3ed99f9d4e98025c7a14",
+  "regions": [
+    {
+      "id": "frame",
+      "label": "主窗口",
+      "selectors": "[class*=\"steamdesktop_\"], [class*=\"bottombar_\"]",
+      "titles": [
+        "Steam"
+      ],
+      "status": "需人工复核",
+      "pages": 1,
+      "findings": 0,
+      "manualReview": 22
+    },
+    {
+      "id": "library-home",
+      "label": "库首页",
+      "selectors": "[class*=\"libraryhome_\"], [class*=\"libraryhomeshowcases_\"]",
+      "route": "/library/home",
+      "status": "未验证",
+      "pages": 0,
+      "findings": 0,
+      "manualReview": 0
+    },
+    {
+      "id": "collections",
+      "label": "收藏夹",
+      "selectors": "[class*=\"collectionview_\"], [class*=\"collectionspage_\"]",
+      "route": "/library/collection",
+      "status": "未验证",
+      "pages": 0,
+      "findings": 0,
+      "manualReview": 0
+    },
+    {
+      "id": "game-details",
+      "label": "游戏详情",
+      "selectors": "[class*=\"appdetails_\"], ._2l416KfEtI4CL0mCUEmOBw, ._3FmxxjyWNHU1PrBGnBe6tm",
+      "route": "/library/app/",
+      "status": "需人工复核",
+      "pages": 1,
+      "findings": 0,
+      "manualReview": 22
+    },
+    {
+      "id": "downloads",
+      "label": "下载",
+      "selectors": "[class*=\"downloads_DownloadsPage\"], [class*=\"downloads_\" ]",
+      "route": "/downloads",
+      "status": "未验证",
+      "pages": 0,
+      "findings": 0,
+      "manualReview": 0
+    },
+    {
+      "id": "settings",
+      "label": "设置",
+      "selectors": "[class*=\"SettingsDialog\"], [class*=\"desktopsettings_\"], [class*=\"settings_SettingsDialog\"]",
+      "status": "未验证",
+      "pages": 0,
+      "findings": 0,
+      "manualReview": 0
+    },
+    {
+      "id": "menus",
+      "label": "菜单",
+      "selectors": ".contextMenu, .contextMenuContents, .ContextMenuPopup, [class*=\"contextmenu_\"]",
+      "titles": [
+        "Account Menu",
+        "Notifications Menu",
+        "Help Root Menu",
+        "Games Root Menu",
+        "Friends Root Menu",
+        "Steam Root Menu",
+        "View Root Menu"
+      ],
+      "status": "未验证",
+      "pages": 0,
+      "findings": 0,
+      "manualReview": 0
+    },
+    {
+      "id": "store",
+      "label": "商店",
+      "selectors": "body.v6, body.v7, .home_page_body_ctn, .game_page_background, .search_results",
+      "origin": "https://store.steampowered.com",
+      "status": "未验证",
+      "pages": 0,
+      "findings": 0,
+      "manualReview": 0
+    }
+  ],
+  "pages": [
+    {
+      "title": "Steam",
+      "location": "about:blank",
+      "visibility": "visible",
+      "viewport": [
+        2528,
+        1374
+      ],
+      "themeBase": "#faf4ed",
+      "regions": [
+        "frame",
+        "game-details"
+      ],
+      "totalElements": 3981,
+      "visibleElements": 861,
+      "mediaSkipped": 290,
+      "limitations": [
+        "Current viewport only; no scrolling or interaction is performed.",
+        "Pseudo-elements, shadow DOM and child frames are not inspected.",
+        "Topmost center hit-testing approximates occlusion; partially exposed backgrounds and pointer-events:none elements may be missed.",
+        "Non-text containers with media at the sample point preserve artwork and skip background classification.",
+        "Renderer visibility does not prove a native popup window is displayed."
+      ],
+      "findings": [],
+      "manualReview": [
+        {
+          "selector": "div._3VQUewWB8g6Z5qB4C7dGFr._2iE-78WxX2Pj4GHbq7YJiA:nth-child(2) > div._3lDczhulqraStjCitLYJ1K._2l416KfEtI4CL0mCUEmOBw:nth-child(1) > div._1SvpjsckP9cPRxO6gCBHrw.Panel:nth-child(1) > div._2gZXhRmKUk68pA28-5ZmGQ.tXlLvuTxOVL1w3aVPX4bm:nth-child(1) > div.NZMJ6g2iVnFsOOp-lDmIP:nth-child(3) > div._2b6WkTnmJxMuX1biL7aS3C.Panel:nth-child(4) > div._1HS4twEHtDJ_8MWgJT4VBd.Focusable:nth-child(1)",
+          "area": 705,
+          "rect": [
+            2317,
+            96,
+            37,
+            19
+          ],
+          "background": [
+            225,
+            219.6,
+            213.3,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": true,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "div._3VQUewWB8g6Z5qB4C7dGFr._2iE-78WxX2Pj4GHbq7YJiA:nth-child(2) > div._3lDczhulqraStjCitLYJ1K._2l416KfEtI4CL0mCUEmOBw:nth-child(1) > div._1SvpjsckP9cPRxO6gCBHrw.Panel:nth-child(1) > div._2gZXhRmKUk68pA28-5ZmGQ.tXlLvuTxOVL1w3aVPX4bm:nth-child(1) > div.NZMJ6g2iVnFsOOp-lDmIP:nth-child(3) > div._2b6WkTnmJxMuX1biL7aS3C.Panel:nth-child(4) > div._1HS4twEHtDJ_8MWgJT4VBd.Focusable:nth-child(2)",
+          "area": 2580,
+          "rect": [
+            2360,
+            96,
+            136,
+            19
+          ],
+          "background": [
+            225,
+            219.6,
+            213.3,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": true,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "div._3VQUewWB8g6Z5qB4C7dGFr._2iE-78WxX2Pj4GHbq7YJiA:nth-child(2) > div._3lDczhulqraStjCitLYJ1K._2l416KfEtI4CL0mCUEmOBw:nth-child(1) > div._1SvpjsckP9cPRxO6gCBHrw.Panel:nth-child(1) > div._1_cYNJSvS6IXs9vLTEYjy5.Panel:nth-child(2) > div._27RcNu8aXKBpYkHcNNrt-X._2OOzYVWIHaKXm6_7sscT9i:nth-child(1) > div._2r4TK4BAuU-J4FuF_O7v_5._3-V8vjmrwuJM6Ws3tsjFJj:nth-child(5) > div._31ptFGGMZrSQc5BCX1e5lm._3KfxIwlXEvum7FCD_AM2_t:nth-child(1)",
+          "area": 85683,
+          "rect": [
+            295,
+            472,
+            2197,
+            39
+          ],
+          "background": [
+            250,
+            244,
+            237,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": false,
+          "fontSize": 16,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "div._31ptFGGMZrSQc5BCX1e5lm._3KfxIwlXEvum7FCD_AM2_t:nth-child(1) > div._5uvIN6jXDXzzck59F-nhv._25f0fX6qbgdB7O_lMrbhCN:nth-child(1) > div.DgVQapkBmhAW6oPY5rPZo.Panel:nth-child(1) > div._7k4qmaN8SUMvv6u-L81uk:nth-child(1) > div.DY4_wSF8h9T5o46hO5I9V.Panel:nth-child(1) > div._1b6LYWVijW-9E4YV0keDWZ:nth-child(1) > span._2sNDjgK9EWiPLdNGkjun-w:nth-child(1)",
+          "area": 832,
+          "rect": [
+            317,
+            483,
+            52,
+            16
+          ],
+          "background": [
+            250,
+            244,
+            237,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "div._31ptFGGMZrSQc5BCX1e5lm._3KfxIwlXEvum7FCD_AM2_t:nth-child(1) > div._5uvIN6jXDXzzck59F-nhv._25f0fX6qbgdB7O_lMrbhCN:nth-child(1) > div.DgVQapkBmhAW6oPY5rPZo.Panel:nth-child(1) > div._7k4qmaN8SUMvv6u-L81uk:nth-child(2) > div.DY4_wSF8h9T5o46hO5I9V.Panel:nth-child(1) > div._1b6LYWVijW-9E4YV0keDWZ:nth-child(1) > span._2sNDjgK9EWiPLdNGkjun-w:nth-child(1)",
+          "area": 383,
+          "rect": [
+            437,
+            483,
+            24,
+            16
+          ],
+          "background": [
+            250,
+            244,
+            237,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "div._31ptFGGMZrSQc5BCX1e5lm._3KfxIwlXEvum7FCD_AM2_t:nth-child(1) > div._5uvIN6jXDXzzck59F-nhv._25f0fX6qbgdB7O_lMrbhCN:nth-child(1) > div.DgVQapkBmhAW6oPY5rPZo.Panel:nth-child(1) > div._7k4qmaN8SUMvv6u-L81uk:nth-child(3) > div.DY4_wSF8h9T5o46hO5I9V.Panel:nth-child(1) > div._1b6LYWVijW-9E4YV0keDWZ:nth-child(1) > span._2sNDjgK9EWiPLdNGkjun-w:nth-child(1)",
+          "area": 832,
+          "rect": [
+            529,
+            483,
+            52,
+            16
+          ],
+          "background": [
+            250,
+            244,
+            237,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "div._31ptFGGMZrSQc5BCX1e5lm._3KfxIwlXEvum7FCD_AM2_t:nth-child(1) > div._5uvIN6jXDXzzck59F-nhv._25f0fX6qbgdB7O_lMrbhCN:nth-child(1) > div.DgVQapkBmhAW6oPY5rPZo.Panel:nth-child(1) > div._7k4qmaN8SUMvv6u-L81uk:nth-child(4) > div.DY4_wSF8h9T5o46hO5I9V.Panel:nth-child(1) > div._1b6LYWVijW-9E4YV0keDWZ:nth-child(1) > span._2sNDjgK9EWiPLdNGkjun-w:nth-child(1)",
+          "area": 832,
+          "rect": [
+            649,
+            483,
+            52,
+            16
+          ],
+          "background": [
+            250,
+            244,
+            237,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "div._31ptFGGMZrSQc5BCX1e5lm._3KfxIwlXEvum7FCD_AM2_t:nth-child(1) > div._5uvIN6jXDXzzck59F-nhv._25f0fX6qbgdB7O_lMrbhCN:nth-child(1) > div.DgVQapkBmhAW6oPY5rPZo.Panel:nth-child(1) > div._7k4qmaN8SUMvv6u-L81uk:nth-child(5) > div.DY4_wSF8h9T5o46hO5I9V.Panel:nth-child(1) > div._1b6LYWVijW-9E4YV0keDWZ:nth-child(1) > span._2sNDjgK9EWiPLdNGkjun-w:nth-child(1)",
+          "area": 624,
+          "rect": [
+            769,
+            483,
+            39,
+            16
+          ],
+          "background": [
+            250,
+            244,
+            237,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "div._31ptFGGMZrSQc5BCX1e5lm._3KfxIwlXEvum7FCD_AM2_t:nth-child(1) > div._5uvIN6jXDXzzck59F-nhv._25f0fX6qbgdB7O_lMrbhCN:nth-child(1) > div.DgVQapkBmhAW6oPY5rPZo.Panel:nth-child(1) > div._7k4qmaN8SUMvv6u-L81uk:nth-child(6) > div.DY4_wSF8h9T5o46hO5I9V.Panel:nth-child(1) > div._1b6LYWVijW-9E4YV0keDWZ:nth-child(1) > span._2sNDjgK9EWiPLdNGkjun-w:nth-child(1)",
+          "area": 416,
+          "rect": [
+            876,
+            483,
+            26,
+            16
+          ],
+          "background": [
+            250,
+            244,
+            237,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "div._31ptFGGMZrSQc5BCX1e5lm._3KfxIwlXEvum7FCD_AM2_t:nth-child(1) > div._5uvIN6jXDXzzck59F-nhv._25f0fX6qbgdB7O_lMrbhCN:nth-child(1) > div.DgVQapkBmhAW6oPY5rPZo.Panel:nth-child(1) > div._7k4qmaN8SUMvv6u-L81uk:nth-child(7) > div.DY4_wSF8h9T5o46hO5I9V.Panel:nth-child(1) > div._1b6LYWVijW-9E4YV0keDWZ:nth-child(1) > span._2sNDjgK9EWiPLdNGkjun-w:nth-child(1)",
+          "area": 416,
+          "rect": [
+            970,
+            483,
+            26,
+            16
+          ],
+          "background": [
+            250,
+            244,
+            237,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "div._39bm0CkBxBjJsnPpAzoZlv:nth-child(1) > div._1umjft7ymqKrhhjDroeBUO:nth-child(2) > div._17qc0iT2Uzbk8umX0qMOMJ._2Pe0MXMGg27aY9edPtTIC7:nth-child(1) > div._3C0istohNAM4_kDuBULbcw._3gj9A13VQyuW_6wr_Io8Xz:nth-child(1) > div.Panel:nth-child(1) > div.nibodjvvrm86uCfnnAn4g.avatarHolder:nth-child(1) > div._3xUpb5DWXPFNcHHIcv-9pe.avatarStatus:nth-child(1)",
+          "area": 53,
+          "rect": [
+            1793,
+            646,
+            31,
+            2
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": false,
+          "fontSize": 0,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "div._39bm0CkBxBjJsnPpAzoZlv:nth-child(2) > div._1umjft7ymqKrhhjDroeBUO:nth-child(2) > div._17qc0iT2Uzbk8umX0qMOMJ._2Pe0MXMGg27aY9edPtTIC7:nth-child(1) > div._3C0istohNAM4_kDuBULbcw._3gj9A13VQyuW_6wr_Io8Xz:nth-child(1) > div.Panel:nth-child(3) > div.nibodjvvrm86uCfnnAn4g.avatarHolder:nth-child(1) > div._3xUpb5DWXPFNcHHIcv-9pe.avatarStatus:nth-child(1)",
+          "area": 53,
+          "rect": [
+            1865,
+            721,
+            31,
+            2
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": false,
+          "fontSize": 0,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "div._39bm0CkBxBjJsnPpAzoZlv:nth-child(2) > div._1umjft7ymqKrhhjDroeBUO:nth-child(2) > div._17qc0iT2Uzbk8umX0qMOMJ._2Pe0MXMGg27aY9edPtTIC7:nth-child(1) > div._3C0istohNAM4_kDuBULbcw._3gj9A13VQyuW_6wr_Io8Xz:nth-child(1) > div.Panel:nth-child(4) > div.nibodjvvrm86uCfnnAn4g.avatarHolder:nth-child(1) > div._3xUpb5DWXPFNcHHIcv-9pe.avatarStatus:nth-child(1)",
+          "area": 53,
+          "rect": [
+            1901,
+            721,
+            31,
+            2
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": false,
+          "fontSize": 0,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "div._39bm0CkBxBjJsnPpAzoZlv:nth-child(2) > div._1umjft7ymqKrhhjDroeBUO:nth-child(2) > div._17qc0iT2Uzbk8umX0qMOMJ._2Pe0MXMGg27aY9edPtTIC7:nth-child(1) > div._3C0istohNAM4_kDuBULbcw._3gj9A13VQyuW_6wr_Io8Xz:nth-child(1) > div.Panel:nth-child(5) > div.nibodjvvrm86uCfnnAn4g.avatarHolder:nth-child(1) > div._3xUpb5DWXPFNcHHIcv-9pe.avatarStatus:nth-child(1)",
+          "area": 53,
+          "rect": [
+            1937,
+            721,
+            31,
+            2
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": false,
+          "fontSize": 0,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "div._39bm0CkBxBjJsnPpAzoZlv:nth-child(2) > div._1umjft7ymqKrhhjDroeBUO:nth-child(2) > div._17qc0iT2Uzbk8umX0qMOMJ._2Pe0MXMGg27aY9edPtTIC7:nth-child(1) > div._3C0istohNAM4_kDuBULbcw._3gj9A13VQyuW_6wr_Io8Xz:nth-child(1) > div.Panel:nth-child(6) > div.nibodjvvrm86uCfnnAn4g.avatarHolder:nth-child(1) > div._3xUpb5DWXPFNcHHIcv-9pe.avatarStatus:nth-child(1)",
+          "area": 53,
+          "rect": [
+            1973,
+            721,
+            31,
+            2
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": false,
+          "fontSize": 0,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#«r2c5» > div._3pcPRPvuGH7hEM33zLknZO:nth-child(1)",
+          "area": 1345,
+          "rect": [
+            383,
+            750,
+            1345,
+            1
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "div.S2Fu9HxHCA5MaCLGrN2ib:nth-child(1) > div:nth-child(2) > div.UVeN0kaD3zv1feMj_mMw5.x6i4rYK9jE1wTSBpJaZSB:nth-child(1) > div.QCKBqF2k_sRLcXJ5qQIEl.Panel:nth-child(1) > div._1gVy5n_zNp3tXpwU2aV9k8.Panel:nth-child(1) > div.nibodjvvrm86uCfnnAn4g.avatarHolder:nth-child(1) > div._3xUpb5DWXPFNcHHIcv-9pe.avatarStatus:nth-child(1)",
+          "area": 53,
+          "rect": [
+            338,
+            771,
+            2,
+            31
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#«r2h2» > div._3pcPRPvuGH7hEM33zLknZO:nth-child(1)",
+          "area": 1346,
+          "rect": [
+            382,
+            840,
+            1346,
+            1
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "div._31ptFGGMZrSQc5BCX1e5lm._2G5B7o_YoI__u11--EFjal:nth-child(2) > div._5uvIN6jXDXzzck59F-nhv._2EEApFUXB7aWXBtitgV5dk:nth-child(1) > div.Panel:nth-child(2) > div.S2Fu9HxHCA5MaCLGrN2ib:nth-child(2) > div:nth-child(2) > div.UVeN0kaD3zv1feMj_mMw5._2CB_RqM2eU0opie2AJ3Eow:nth-child(1) > div.NEMXhMlqXOCJwfgWlHXhT:nth-child(2)",
+          "area": 191874,
+          "rect": [
+            318,
+            898,
+            1409,
+            136
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": false,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "#«r2h6» > div._3pcPRPvuGH7hEM33zLknZO:nth-child(1)",
+          "area": 1344,
+          "rect": [
+            383,
+            1066,
+            1344,
+            1
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "div._31ptFGGMZrSQc5BCX1e5lm._2G5B7o_YoI__u11--EFjal:nth-child(2) > div._5uvIN6jXDXzzck59F-nhv._2EEApFUXB7aWXBtitgV5dk:nth-child(1) > div.Panel:nth-child(2) > div.S2Fu9HxHCA5MaCLGrN2ib:nth-child(3) > div:nth-child(2) > div.UVeN0kaD3zv1feMj_mMw5._2CB_RqM2eU0opie2AJ3Eow:nth-child(1) > div.NEMXhMlqXOCJwfgWlHXhT:nth-child(2)",
+          "area": 191874,
+          "rect": [
+            318,
+            1124,
+            1409,
+            136
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": false,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "div:nth-child(1) > div._27qasW5wLU4h4nUgawpo1q:nth-child(1) > div._1ENHEsrSLcTRtPQFl1F-wL._1DvwQt0JN-Ogp_4tVZdkzX:nth-child(3) > div._3mz8wQ6Q44B8P7pzPP4Iyw:nth-child(2) > div._1_yS5UP7el0aN4vntx3dx:nth-child(3) > div._3vCzSrrXZzZjVJFZNg9SGu:nth-child(3) > div.window_resize_grip:nth-child(4)",
+          "area": 576,
+          "rect": [
+            2504,
+            1350,
+            24,
+            24
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": false,
+          "fontSize": 16,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        }
+      ],
+      "sampleCount": 186,
+      "eligible": true
+    }
+  ]
+}

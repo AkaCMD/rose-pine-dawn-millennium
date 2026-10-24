@@ -1,0 +1,1991 @@
+{
+  "capturedAt": "2026-10-24T07:46:31.703Z",
+  "state": "library-app-2651280-current",
+  "previewCssSha256": null,
+  "regions": [
+    {
+      "id": "frame",
+      "label": "主窗口",
+      "selectors": "[class*=\"steamdesktop_\"], [class*=\"bottombar_\"]",
+      "titles": [
+        "Steam"
+      ],
+      "status": "疑似遗漏",
+      "pages": 1,
+      "findings": 19,
+      "manualReview": 29
+    },
+    {
+      "id": "library-home",
+      "label": "库首页",
+      "selectors": "[class*=\"libraryhome_\"], [class*=\"libraryhomeshowcases_\"]",
+      "route": "/library/home",
+      "status": "未验证",
+      "pages": 0,
+      "findings": 0,
+      "manualReview": 0
+    },
+    {
+      "id": "collections",
+      "label": "收藏夹",
+      "selectors": "[class*=\"collectionview_\"], [class*=\"collectionspage_\"]",
+      "route": "/library/collection",
+      "status": "未验证",
+      "pages": 0,
+      "findings": 0,
+      "manualReview": 0
+    },
+    {
+      "id": "game-details",
+      "label": "游戏详情",
+      "selectors": "[class*=\"appdetails_\"], ._2l416KfEtI4CL0mCUEmOBw, ._3FmxxjyWNHU1PrBGnBe6tm",
+      "route": "/library/app/",
+      "status": "疑似遗漏",
+      "pages": 1,
+      "findings": 19,
+      "manualReview": 29
+    },
+    {
+      "id": "downloads",
+      "label": "下载",
+      "selectors": "[class*=\"downloads_DownloadsPage\"], [class*=\"downloads_\" ]",
+      "route": "/downloads",
+      "status": "未验证",
+      "pages": 0,
+      "findings": 0,
+      "manualReview": 0
+    },
+    {
+      "id": "settings",
+      "label": "设置",
+      "selectors": "[class*=\"SettingsDialog\"], [class*=\"desktopsettings_\"], [class*=\"settings_SettingsDialog\"]",
+      "status": "未验证",
+      "pages": 0,
+      "findings": 0,
+      "manualReview": 0
+    },
+    {
+      "id": "menus",
+      "label": "菜单",
+      "selectors": ".contextMenu, .contextMenuContents, .ContextMenuPopup, [class*=\"contextmenu_\"]",
+      "titles": [
+        "Account Menu",
+        "Notifications Menu",
+        "Help Root Menu",
+        "Games Root Menu",
+        "Friends Root Menu",
+        "Steam Root Menu",
+        "View Root Menu"
+      ],
+      "status": "未验证",
+      "pages": 0,
+      "findings": 0,
+      "manualReview": 0
+    },
+    {
+      "id": "store",
+      "label": "商店",
+      "selectors": "body.v6, body.v7, .home_page_body_ctn, .game_page_background, .search_results",
+      "origin": "https://store.steampowered.com",
+      "status": "未验证",
+      "pages": 0,
+      "findings": 0,
+      "manualReview": 0
+    }
+  ],
+  "pages": [
+    {
+      "title": "Store Supernav",
+      "location": "about:blank",
+      "visibility": "hidden",
+      "viewport": [
+        88,
+        198
+      ],
+      "themeBase": "#faf4ed",
+      "regions": [],
+      "totalElements": 39,
+      "visibleElements": 11,
+      "mediaSkipped": 0,
+      "limitations": [
+        "Current viewport only; no scrolling or interaction is performed.",
+        "Pseudo-elements, shadow DOM and child frames are not inspected.",
+        "Topmost center hit-testing approximates occlusion; partially exposed backgrounds and pointer-events:none elements may be missed.",
+        "Non-text containers with media at the sample point preserve artwork and skip background classification.",
+        "Renderer visibility does not prove a native popup window is displayed."
+      ],
+      "findings": [],
+      "manualReview": [],
+      "sampleCount": 10,
+      "eligible": false
+    },
+    {
+      "title": "Community Supernav",
+      "location": "about:blank",
+      "visibility": "hidden",
+      "viewport": [
+        88,
+        165
+      ],
+      "themeBase": "#faf4ed",
+      "regions": [],
+      "totalElements": 38,
+      "visibleElements": 10,
+      "mediaSkipped": 0,
+      "limitations": [
+        "Current viewport only; no scrolling or interaction is performed.",
+        "Pseudo-elements, shadow DOM and child frames are not inspected.",
+        "Topmost center hit-testing approximates occlusion; partially exposed backgrounds and pointer-events:none elements may be missed.",
+        "Non-text containers with media at the sample point preserve artwork and skip background classification.",
+        "Renderer visibility does not prove a native popup window is displayed."
+      ],
+      "findings": [],
+      "manualReview": [],
+      "sampleCount": 9,
+      "eligible": false
+    },
+    {
+      "title": "Library Supernav",
+      "location": "about:blank",
+      "visibility": "hidden",
+      "viewport": [
+        62,
+        100
+      ],
+      "themeBase": "#faf4ed",
+      "regions": [],
+      "totalElements": 37,
+      "visibleElements": 8,
+      "mediaSkipped": 0,
+      "limitations": [
+        "Current viewport only; no scrolling or interaction is performed.",
+        "Pseudo-elements, shadow DOM and child frames are not inspected.",
+        "Topmost center hit-testing approximates occlusion; partially exposed backgrounds and pointer-events:none elements may be missed.",
+        "Non-text containers with media at the sample point preserve artwork and skip background classification.",
+        "Renderer visibility does not prove a native popup window is displayed."
+      ],
+      "findings": [],
+      "manualReview": [],
+      "sampleCount": 7,
+      "eligible": false
+    },
+    {
+      "title": "(Steam renderer)",
+      "location": "data: (Steam renderer)",
+      "visibility": "hidden",
+      "viewport": [
+        1254,
+        1218
+      ],
+      "themeBase": "",
+      "regions": [
+        "game-details"
+      ],
+      "totalElements": 6,
+      "visibleElements": 2,
+      "mediaSkipped": 0,
+      "limitations": [
+        "Current viewport only; no scrolling or interaction is performed.",
+        "Pseudo-elements, shadow DOM and child frames are not inspected.",
+        "Topmost center hit-testing approximates occlusion; partially exposed backgrounds and pointer-events:none elements may be missed.",
+        "Non-text containers with media at the sample point preserve artwork and skip background classification.",
+        "Renderer visibility does not prove a native popup window is displayed."
+      ],
+      "findings": [],
+      "manualReview": [],
+      "sampleCount": 0,
+      "eligible": false
+    },
+    {
+      "title": "Profile Supernav",
+      "location": "about:blank",
+      "visibility": "hidden",
+      "viewport": [
+        103,
+        264
+      ],
+      "themeBase": "#faf4ed",
+      "regions": [],
+      "totalElements": 41,
+      "visibleElements": 13,
+      "mediaSkipped": 0,
+      "limitations": [
+        "Current viewport only; no scrolling or interaction is performed.",
+        "Pseudo-elements, shadow DOM and child frames are not inspected.",
+        "Topmost center hit-testing approximates occlusion; partially exposed backgrounds and pointer-events:none elements may be missed.",
+        "Non-text containers with media at the sample point preserve artwork and skip background classification.",
+        "Renderer visibility does not prove a native popup window is displayed."
+      ],
+      "findings": [],
+      "manualReview": [],
+      "sampleCount": 12,
+      "eligible": false
+    },
+    {
+      "title": "Account Menu",
+      "location": "about:blank",
+      "visibility": "hidden",
+      "viewport": [
+        180,
+        199
+      ],
+      "themeBase": "#faf4ed",
+      "regions": [
+        "menus"
+      ],
+      "totalElements": 45,
+      "visibleElements": 15,
+      "mediaSkipped": 0,
+      "limitations": [
+        "Current viewport only; no scrolling or interaction is performed.",
+        "Pseudo-elements, shadow DOM and child frames are not inspected.",
+        "Topmost center hit-testing approximates occlusion; partially exposed backgrounds and pointer-events:none elements may be missed.",
+        "Non-text containers with media at the sample point preserve artwork and skip background classification.",
+        "Renderer visibility does not prove a native popup window is displayed."
+      ],
+      "findings": [
+        {
+          "selector": "#popup_target > div.PP7LM0Ow1K5qkR8WElLpt.visible:nth-child(1) > div._2EstNjFIIZm_WUSKm5Wt7n._3pofGqV0buiKAfMPEs3_82:nth-child(1) > div._2jXHP0742MyApMUVUM8IFn._2uiDecKkKjAq7nimy3uLhG:nth-child(2) > div._20oWF80IgHJr1BcEb1GgHL:nth-child(1) > div._11phBiBefcVQdzrnrezkKa:nth-child(1)",
+          "area": 1360,
+          "rect": [
+            87,
+            41,
+            80,
+            17
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            76,
+            180,
+            255,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": null,
+          "kind": "low-contrast",
+          "ratio": 2.18,
+          "minimum": 4.5
+        }
+      ],
+      "manualReview": [],
+      "sampleCount": 11,
+      "eligible": false
+    },
+    {
+      "title": "Notifications Menu",
+      "location": "about:blank",
+      "visibility": "hidden",
+      "viewport": [
+        300,
+        420
+      ],
+      "themeBase": "#faf4ed",
+      "regions": [
+        "menus"
+      ],
+      "totalElements": 49,
+      "visibleElements": 18,
+      "mediaSkipped": 0,
+      "limitations": [
+        "Current viewport only; no scrolling or interaction is performed.",
+        "Pseudo-elements, shadow DOM and child frames are not inspected.",
+        "Topmost center hit-testing approximates occlusion; partially exposed backgrounds and pointer-events:none elements may be missed.",
+        "Non-text containers with media at the sample point preserve artwork and skip background classification.",
+        "Renderer visibility does not prove a native popup window is displayed."
+      ],
+      "findings": [
+        {
+          "selector": "#popup_target > div.PP7LM0Ow1K5qkR8WElLpt.visible:nth-child(1) > div._2EstNjFIIZm_WUSKm5Wt7n._3pofGqV0buiKAfMPEs3_82:nth-child(1) > div:nth-child(1) > div.MCa4RMSvWJwwWjcZP2wTT:nth-child(1) > button._1oERP7bVictkby2hP4BBva:nth-child(2)",
+          "area": 2126,
+          "rect": [
+            220,
+            13,
+            73,
+            29
+          ],
+          "background": [
+            61,
+            68,
+            80,
+            1
+          ],
+          "foreground": [
+            255,
+            255,
+            255,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": true,
+          "fontSize": 13.3333,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": null,
+          "kind": "dark-surface"
+        }
+      ],
+      "manualReview": [],
+      "sampleCount": 6,
+      "eligible": false
+    },
+    {
+      "title": "Help Root Menu",
+      "location": "about:blank",
+      "visibility": "hidden",
+      "viewport": [
+        142,
+        267
+      ],
+      "themeBase": "#faf4ed",
+      "regions": [
+        "menus"
+      ],
+      "totalElements": 44,
+      "visibleElements": 13,
+      "mediaSkipped": 0,
+      "limitations": [
+        "Current viewport only; no scrolling or interaction is performed.",
+        "Pseudo-elements, shadow DOM and child frames are not inspected.",
+        "Topmost center hit-testing approximates occlusion; partially exposed backgrounds and pointer-events:none elements may be missed.",
+        "Non-text containers with media at the sample point preserve artwork and skip background classification.",
+        "Renderer visibility does not prove a native popup window is displayed."
+      ],
+      "findings": [],
+      "manualReview": [],
+      "sampleCount": 12,
+      "eligible": false
+    },
+    {
+      "title": "Games Root Menu",
+      "location": "about:blank",
+      "visibility": "hidden",
+      "viewport": [
+        223,
+        166
+      ],
+      "themeBase": "#faf4ed",
+      "regions": [
+        "menus"
+      ],
+      "totalElements": 39,
+      "visibleElements": 10,
+      "mediaSkipped": 0,
+      "limitations": [
+        "Current viewport only; no scrolling or interaction is performed.",
+        "Pseudo-elements, shadow DOM and child frames are not inspected.",
+        "Topmost center hit-testing approximates occlusion; partially exposed backgrounds and pointer-events:none elements may be missed.",
+        "Non-text containers with media at the sample point preserve artwork and skip background classification.",
+        "Renderer visibility does not prove a native popup window is displayed."
+      ],
+      "findings": [],
+      "manualReview": [],
+      "sampleCount": 9,
+      "eligible": false
+    },
+    {
+      "title": "Friends Root Menu",
+      "location": "about:blank",
+      "visibility": "hidden",
+      "viewport": [
+        189,
+        233
+      ],
+      "themeBase": "#faf4ed",
+      "regions": [
+        "menus"
+      ],
+      "totalElements": 56,
+      "visibleElements": 25,
+      "mediaSkipped": 2,
+      "limitations": [
+        "Current viewport only; no scrolling or interaction is performed.",
+        "Pseudo-elements, shadow DOM and child frames are not inspected.",
+        "Topmost center hit-testing approximates occlusion; partially exposed backgrounds and pointer-events:none elements may be missed.",
+        "Non-text containers with media at the sample point preserve artwork and skip background classification.",
+        "Renderer visibility does not prove a native popup window is displayed."
+      ],
+      "findings": [],
+      "manualReview": [],
+      "sampleCount": 11,
+      "eligible": false
+    },
+    {
+      "title": "Steam Root Menu",
+      "location": "about:blank",
+      "visibility": "hidden",
+      "viewport": [
+        182,
+        302
+      ],
+      "themeBase": "#faf4ed",
+      "regions": [
+        "menus"
+      ],
+      "totalElements": 47,
+      "visibleElements": 14,
+      "mediaSkipped": 0,
+      "limitations": [
+        "Current viewport only; no scrolling or interaction is performed.",
+        "Pseudo-elements, shadow DOM and child frames are not inspected.",
+        "Topmost center hit-testing approximates occlusion; partially exposed backgrounds and pointer-events:none elements may be missed.",
+        "Non-text containers with media at the sample point preserve artwork and skip background classification.",
+        "Renderer visibility does not prove a native popup window is displayed."
+      ],
+      "findings": [],
+      "manualReview": [],
+      "sampleCount": 13,
+      "eligible": false
+    },
+    {
+      "title": "View Root Menu",
+      "location": "about:blank",
+      "visibility": "hidden",
+      "viewport": [
+        101,
+        399
+      ],
+      "themeBase": "#faf4ed",
+      "regions": [
+        "menus"
+      ],
+      "totalElements": 48,
+      "visibleElements": 17,
+      "mediaSkipped": 0,
+      "limitations": [
+        "Current viewport only; no scrolling or interaction is performed.",
+        "Pseudo-elements, shadow DOM and child frames are not inspected.",
+        "Topmost center hit-testing approximates occlusion; partially exposed backgrounds and pointer-events:none elements may be missed.",
+        "Non-text containers with media at the sample point preserve artwork and skip background classification.",
+        "Renderer visibility does not prove a native popup window is displayed."
+      ],
+      "findings": [],
+      "manualReview": [],
+      "sampleCount": 16,
+      "eligible": false
+    },
+    {
+      "title": "Steam",
+      "location": "about:blank",
+      "visibility": "visible",
+      "viewport": [
+        2528,
+        1374
+      ],
+      "themeBase": "#faf4ed",
+      "regions": [
+        "frame",
+        "game-details"
+      ],
+      "totalElements": 3977,
+      "visibleElements": 879,
+      "mediaSkipped": 294,
+      "limitations": [
+        "Current viewport only; no scrolling or interaction is performed.",
+        "Pseudo-elements, shadow DOM and child frames are not inspected.",
+        "Topmost center hit-testing approximates occlusion; partially exposed backgrounds and pointer-events:none elements may be missed.",
+        "Non-text containers with media at the sample point preserve artwork and skip background classification.",
+        "Renderer visibility does not prove a native popup window is displayed."
+      ],
+      "findings": [
+        {
+          "selector": "div._1SvpjsckP9cPRxO6gCBHrw.Panel:nth-child(1) > div._1_cYNJSvS6IXs9vLTEYjy5.Panel:nth-child(2) > div._27RcNu8aXKBpYkHcNNrt-X._2OOzYVWIHaKXm6_7sscT9i:nth-child(1) > div.OhSdLYuggDtBcWjYP0j_9:nth-child(6) > div._11kuVRYZvWXn-3rBJ_6yL8._3wbndu1paxHkciYr4rFJH5:nth-child(1) > div:nth-child(1) > div._3LE-6w1ItIAB4CKJFCa3Od:nth-child(1)",
+          "area": 101036,
+          "rect": [
+            295,
+            437,
+            1443,
+            70
+          ],
+          "background": [
+            67,
+            73,
+            83,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": false,
+          "fontSize": 13,
+          "fontWeight": 200,
+          "disabled": false,
+          "uncertain": null,
+          "kind": "dark-surface"
+        },
+        {
+          "selector": "div._11kuVRYZvWXn-3rBJ_6yL8._3wbndu1paxHkciYr4rFJH5:nth-child(1) > div:nth-child(1) > div._3LE-6w1ItIAB4CKJFCa3Od:nth-child(1) > div._2z8Na_s9JosX48wHF4HPiA:nth-child(1) > div._2SAb6geDpe6toA1GaP0GjH._1E_ENwpaym7n3ke0XFpczv:nth-child(1) > div._2aeAnRfwltWfd9Hb9M_1uE:nth-child(1) > div.qX4kNo6O0M-mYntdErKSJ:nth-child(1)",
+          "area": 4200,
+          "rect": [
+            318,
+            452,
+            210,
+            20
+          ],
+          "background": [
+            67,
+            73,
+            83,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 14,
+          "fontWeight": 200,
+          "disabled": false,
+          "uncertain": null,
+          "kind": "low-contrast",
+          "ratio": 1.05,
+          "minimum": 4.5
+        },
+        {
+          "selector": "div._11kuVRYZvWXn-3rBJ_6yL8._3wbndu1paxHkciYr4rFJH5:nth-child(1) > div:nth-child(1) > div._3LE-6w1ItIAB4CKJFCa3Od:nth-child(1) > div._2z8Na_s9JosX48wHF4HPiA:nth-child(1) > div._2SAb6geDpe6toA1GaP0GjH._1E_ENwpaym7n3ke0XFpczv:nth-child(1) > div._2aeAnRfwltWfd9Hb9M_1uE:nth-child(1) > div.My1beniJXh9pXud8rxYLK:nth-child(2)",
+          "area": 4200,
+          "rect": [
+            318,
+            472,
+            210,
+            20
+          ],
+          "background": [
+            67,
+            73,
+            83,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 14,
+          "fontWeight": 200,
+          "disabled": false,
+          "uncertain": null,
+          "kind": "low-contrast",
+          "ratio": 1.05,
+          "minimum": 4.5
+        },
+        {
+          "selector": "div._11kuVRYZvWXn-3rBJ_6yL8._3wbndu1paxHkciYr4rFJH5:nth-child(1) > div:nth-child(1) > div._3LE-6w1ItIAB4CKJFCa3Od:nth-child(1) > div._2z8Na_s9JosX48wHF4HPiA:nth-child(1) > div._2SAb6geDpe6toA1GaP0GjH._1E_ENwpaym7n3ke0XFpczv:nth-child(1) > div._1E6Ivnp3A4apXqQYtlQHEc.Panel:nth-child(2) > button._1kCN0pAntrcGCSmcc-vYdk:nth-child(1)",
+          "area": 3072,
+          "rect": [
+            547,
+            452,
+            83,
+            37
+          ],
+          "background": [
+            74.2,
+            97,
+            115.4,
+            1
+          ],
+          "foreground": [
+            103,
+            193,
+            245,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": false,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": null,
+          "kind": "dark-surface"
+        },
+        {
+          "selector": "div:nth-child(1) > div._3LE-6w1ItIAB4CKJFCa3Od:nth-child(1) > div._2z8Na_s9JosX48wHF4HPiA:nth-child(1) > div._2SAb6geDpe6toA1GaP0GjH._1E_ENwpaym7n3ke0XFpczv:nth-child(1) > div._1E6Ivnp3A4apXqQYtlQHEc.Panel:nth-child(2) > button._1kCN0pAntrcGCSmcc-vYdk:nth-child(1) > span:nth-child(2)",
+          "area": 368,
+          "rect": [
+            577,
+            461,
+            23,
+            16
+          ],
+          "background": [
+            74.2,
+            97,
+            115.4,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": null,
+          "kind": "low-contrast",
+          "ratio": 1.47,
+          "minimum": 4.5
+        },
+        {
+          "selector": "div._11kuVRYZvWXn-3rBJ_6yL8._3wbndu1paxHkciYr4rFJH5:nth-child(1) > div:nth-child(1) > div._3LE-6w1ItIAB4CKJFCa3Od:nth-child(1) > div._2z8Na_s9JosX48wHF4HPiA:nth-child(1) > div._2SAb6geDpe6toA1GaP0GjH._1E_ENwpaym7n3ke0XFpczv:nth-child(1) > div._1E6Ivnp3A4apXqQYtlQHEc.Panel:nth-child(2) > button._1kCN0pAntrcGCSmcc-vYdk:nth-child(2)",
+          "area": 3072,
+          "rect": [
+            636,
+            452,
+            83,
+            37
+          ],
+          "background": [
+            74.2,
+            97,
+            115.4,
+            1
+          ],
+          "foreground": [
+            103,
+            193,
+            245,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": false,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": null,
+          "kind": "dark-surface"
+        },
+        {
+          "selector": "div:nth-child(1) > div._3LE-6w1ItIAB4CKJFCa3Od:nth-child(1) > div._2z8Na_s9JosX48wHF4HPiA:nth-child(1) > div._2SAb6geDpe6toA1GaP0GjH._1E_ENwpaym7n3ke0XFpczv:nth-child(1) > div._1E6Ivnp3A4apXqQYtlQHEc.Panel:nth-child(2) > button._1kCN0pAntrcGCSmcc-vYdk:nth-child(2) > span:nth-child(2)",
+          "area": 368,
+          "rect": [
+            666,
+            461,
+            23,
+            16
+          ],
+          "background": [
+            74.2,
+            97,
+            115.4,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": null,
+          "kind": "low-contrast",
+          "ratio": 1.47,
+          "minimum": 4.5
+        },
+        {
+          "selector": "div._11kuVRYZvWXn-3rBJ_6yL8._3wbndu1paxHkciYr4rFJH5:nth-child(1) > div:nth-child(1) > div._3LE-6w1ItIAB4CKJFCa3Od:nth-child(1) > div._2z8Na_s9JosX48wHF4HPiA:nth-child(1) > div._2SAb6geDpe6toA1GaP0GjH._1E_ENwpaym7n3ke0XFpczv:nth-child(1) > div._1E6Ivnp3A4apXqQYtlQHEc.Panel:nth-child(2) > button._1kCN0pAntrcGCSmcc-vYdk._2bF4k-NqETM87LmHPN-Jp3:nth-child(3)",
+          "area": 3109,
+          "rect": [
+            725,
+            452,
+            84,
+            37
+          ],
+          "background": [
+            74.2,
+            97,
+            115.4,
+            1
+          ],
+          "foreground": [
+            103,
+            193,
+            245,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": false,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": null,
+          "kind": "dark-surface"
+        },
+        {
+          "selector": "div:nth-child(1) > div._3LE-6w1ItIAB4CKJFCa3Od:nth-child(1) > div._2z8Na_s9JosX48wHF4HPiA:nth-child(1) > div._2SAb6geDpe6toA1GaP0GjH._1E_ENwpaym7n3ke0XFpczv:nth-child(1) > div._1E6Ivnp3A4apXqQYtlQHEc.Panel:nth-child(2) > button._1kCN0pAntrcGCSmcc-vYdk._2bF4k-NqETM87LmHPN-Jp3:nth-child(3) > span:nth-child(1)",
+          "area": 832,
+          "rect": [
+            741,
+            461,
+            52,
+            16
+          ],
+          "background": [
+            74.2,
+            97,
+            115.4,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": null,
+          "kind": "low-contrast",
+          "ratio": 1.47,
+          "minimum": 4.5
+        },
+        {
+          "selector": "div.OhSdLYuggDtBcWjYP0j_9:nth-child(6) > div._2aor4XVOYzN1PBSREk0UbO:nth-child(2) > div.vzLedtsu3TtTlKLEKzIhH:nth-child(3) > div._2r4TK4BAuU-J4FuF_O7v_5.Panel:nth-child(1) > div._31ptFGGMZrSQc5BCX1e5lm._2G5B7o_YoI__u11--EFjal:nth-child(2) > div._38t1mljBjmJfqjpVzMT1CG._2xTb6N-jUUQ-mIkMB6OVMm:nth-child(1) > div._3ns9185LizH61StaAXuAp6:nth-child(2)",
+          "area": 5533,
+          "rect": [
+            1790,
+            767,
+            692,
+            8
+          ],
+          "background": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": false,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": null,
+          "kind": "dark-surface"
+        },
+        {
+          "selector": "div._31ptFGGMZrSQc5BCX1e5lm._2G5B7o_YoI__u11--EFjal:nth-child(2) > div._5uvIN6jXDXzzck59F-nhv:nth-child(2) > div._3ca11X3AK6npLS3emMa5Lr._3i6PczGBBYzCDZXkCDbJAD:nth-child(2) > div._3eVREaIAGyRjbf0bkFjR9Y:nth-child(2) > div._1IIKwlQaVZU6bIeEQJvmTK:nth-child(1) > div._2H_ytAwp5tfeou0kdWjLl4:nth-child(12) > div._2aVnDeExEHiUFX0zwr_BTO.lZ2c49vTWJ60klQOY9l2K:nth-child(1)",
+          "area": 2304,
+          "rect": [
+            2406,
+            903,
+            48,
+            48
+          ],
+          "background": [
+            44,
+            49,
+            56,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": false,
+          "fontSize": 0,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": null,
+          "kind": "dark-surface"
+        },
+        {
+          "selector": "div._3ca11X3AK6npLS3emMa5Lr._3i6PczGBBYzCDZXkCDbJAD:nth-child(2) > div._3eVREaIAGyRjbf0bkFjR9Y:nth-child(2) > div._1IIKwlQaVZU6bIeEQJvmTK:nth-child(1) > div._2H_ytAwp5tfeou0kdWjLl4:nth-child(12) > div._2aVnDeExEHiUFX0zwr_BTO.lZ2c49vTWJ60klQOY9l2K:nth-child(1) > div._2gISWIeEzZ9PNuAzVuMaWd:nth-child(1) > div._1-H7tKj_QcGHLUbx5wVsGg:nth-child(1)",
+          "area": 2304,
+          "rect": [
+            2406,
+            903,
+            48,
+            48
+          ],
+          "background": [
+            44,
+            49,
+            56,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 15,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": null,
+          "kind": "low-contrast",
+          "ratio": 1.38,
+          "minimum": 4.5
+        },
+        {
+          "selector": "div:nth-child(2) > div.UVeN0kaD3zv1feMj_mMw5._2CB_RqM2eU0opie2AJ3Eow:nth-child(1) > div.NEMXhMlqXOCJwfgWlHXhT:nth-child(2) > div._2IS7ZQo16varVLcyuFh4sY:nth-child(1) > div._20mFRtBlmlH4r-Nhl4P2kO._2uDS75qS46-mk12qdXsilF:nth-child(1) > div._3rqAfWDPLKWG1JA_bdIt3A._1WsOngnf2RD4f5N-38rPLZ:nth-child(1) > div._2DUDvAhXoEOSsd8GTIsKLY:nth-child(1)",
+          "area": 14418,
+          "rect": [
+            326,
+            786,
+            111,
+            129
+          ],
+          "background": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": false,
+          "fontSize": 0.1,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": null,
+          "kind": "dark-surface"
+        },
+        {
+          "selector": "div:nth-child(2) > div.UVeN0kaD3zv1feMj_mMw5._2CB_RqM2eU0opie2AJ3Eow:nth-child(1) > div.NEMXhMlqXOCJwfgWlHXhT:nth-child(2) > div._2IS7ZQo16varVLcyuFh4sY:nth-child(1) > div._20mFRtBlmlH4r-Nhl4P2kO._2uDS75qS46-mk12qdXsilF:nth-child(2) > div._3rqAfWDPLKWG1JA_bdIt3A._1WsOngnf2RD4f5N-38rPLZ:nth-child(1) > div._2DUDvAhXoEOSsd8GTIsKLY:nth-child(1)",
+          "area": 14418,
+          "rect": [
+            436,
+            786,
+            111,
+            129
+          ],
+          "background": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": false,
+          "fontSize": 0.1,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": null,
+          "kind": "dark-surface"
+        },
+        {
+          "selector": "div:nth-child(2) > div.UVeN0kaD3zv1feMj_mMw5._2CB_RqM2eU0opie2AJ3Eow:nth-child(1) > div.NEMXhMlqXOCJwfgWlHXhT:nth-child(2) > div._2IS7ZQo16varVLcyuFh4sY:nth-child(1) > div._20mFRtBlmlH4r-Nhl4P2kO._2uDS75qS46-mk12qdXsilF:nth-child(1) > div._3rqAfWDPLKWG1JA_bdIt3A._1WsOngnf2RD4f5N-38rPLZ:nth-child(1) > div._2DUDvAhXoEOSsd8GTIsKLY:nth-child(1)",
+          "area": 14418,
+          "rect": [
+            326,
+            1012,
+            111,
+            130
+          ],
+          "background": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": false,
+          "fontSize": 0.1,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": null,
+          "kind": "dark-surface"
+        },
+        {
+          "selector": "div:nth-child(2) > div.UVeN0kaD3zv1feMj_mMw5._2CB_RqM2eU0opie2AJ3Eow:nth-child(1) > div.NEMXhMlqXOCJwfgWlHXhT:nth-child(2) > div._2IS7ZQo16varVLcyuFh4sY:nth-child(1) > div._20mFRtBlmlH4r-Nhl4P2kO._2uDS75qS46-mk12qdXsilF:nth-child(2) > div._3rqAfWDPLKWG1JA_bdIt3A._1WsOngnf2RD4f5N-38rPLZ:nth-child(1) > div._2DUDvAhXoEOSsd8GTIsKLY:nth-child(1)",
+          "area": 14418,
+          "rect": [
+            436,
+            1012,
+            111,
+            130
+          ],
+          "background": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": false,
+          "fontSize": 0.1,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": null,
+          "kind": "dark-surface"
+        },
+        {
+          "selector": "div:nth-child(2) > div.UVeN0kaD3zv1feMj_mMw5._2CB_RqM2eU0opie2AJ3Eow:nth-child(1) > div.NEMXhMlqXOCJwfgWlHXhT:nth-child(2) > div._2IS7ZQo16varVLcyuFh4sY:nth-child(1) > div._20mFRtBlmlH4r-Nhl4P2kO._2uDS75qS46-mk12qdXsilF:nth-child(3) > div._3rqAfWDPLKWG1JA_bdIt3A._1WsOngnf2RD4f5N-38rPLZ:nth-child(1) > div._2DUDvAhXoEOSsd8GTIsKLY:nth-child(1)",
+          "area": 14418,
+          "rect": [
+            546,
+            1012,
+            111,
+            130
+          ],
+          "background": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": false,
+          "fontSize": 0.1,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": null,
+          "kind": "dark-surface"
+        },
+        {
+          "selector": "div:nth-child(2) > div.UVeN0kaD3zv1feMj_mMw5._2CB_RqM2eU0opie2AJ3Eow:nth-child(1) > div.NEMXhMlqXOCJwfgWlHXhT:nth-child(2) > div._2IS7ZQo16varVLcyuFh4sY:nth-child(1) > div._20mFRtBlmlH4r-Nhl4P2kO._2uDS75qS46-mk12qdXsilF:nth-child(4) > div._3rqAfWDPLKWG1JA_bdIt3A._1WsOngnf2RD4f5N-38rPLZ:nth-child(1) > div._2DUDvAhXoEOSsd8GTIsKLY:nth-child(1)",
+          "area": 14418,
+          "rect": [
+            656,
+            1012,
+            111,
+            130
+          ],
+          "background": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": false,
+          "fontSize": 0.1,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": null,
+          "kind": "dark-surface"
+        },
+        {
+          "selector": "div:nth-child(2) > div.UVeN0kaD3zv1feMj_mMw5._2CB_RqM2eU0opie2AJ3Eow:nth-child(1) > div.NEMXhMlqXOCJwfgWlHXhT:nth-child(2) > div._2IS7ZQo16varVLcyuFh4sY:nth-child(1) > div._20mFRtBlmlH4r-Nhl4P2kO._2uDS75qS46-mk12qdXsilF:nth-child(5) > div._3rqAfWDPLKWG1JA_bdIt3A._1WsOngnf2RD4f5N-38rPLZ:nth-child(1) > div._2DUDvAhXoEOSsd8GTIsKLY:nth-child(1)",
+          "area": 14418,
+          "rect": [
+            766,
+            1012,
+            111,
+            130
+          ],
+          "background": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": true,
+          "hasText": false,
+          "fontSize": 0.1,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": null,
+          "kind": "dark-surface"
+        }
+      ],
+      "manualReview": [
+        {
+          "selector": "div._3VQUewWB8g6Z5qB4C7dGFr._2iE-78WxX2Pj4GHbq7YJiA:nth-child(2) > div._3lDczhulqraStjCitLYJ1K._2l416KfEtI4CL0mCUEmOBw:nth-child(1) > div._1SvpjsckP9cPRxO6gCBHrw.Panel:nth-child(1) > div._1_cYNJSvS6IXs9vLTEYjy5.Panel:nth-child(2) > div._27RcNu8aXKBpYkHcNNrt-X._2OOzYVWIHaKXm6_7sscT9i:nth-child(1) > div._2r4TK4BAuU-J4FuF_O7v_5._3-V8vjmrwuJM6Ws3tsjFJj:nth-child(5) > div._31ptFGGMZrSQc5BCX1e5lm._3KfxIwlXEvum7FCD_AM2_t:nth-child(1)",
+          "area": 85683,
+          "rect": [
+            295,
+            352,
+            2197,
+            39
+          ],
+          "background": [
+            250,
+            244,
+            237,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": false,
+          "fontSize": 16,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "div._31ptFGGMZrSQc5BCX1e5lm._3KfxIwlXEvum7FCD_AM2_t:nth-child(1) > div._5uvIN6jXDXzzck59F-nhv._25f0fX6qbgdB7O_lMrbhCN:nth-child(1) > div.DgVQapkBmhAW6oPY5rPZo.Panel:nth-child(1) > div._7k4qmaN8SUMvv6u-L81uk:nth-child(1) > div.DY4_wSF8h9T5o46hO5I9V.Panel:nth-child(1) > div._1b6LYWVijW-9E4YV0keDWZ:nth-child(1) > span._2sNDjgK9EWiPLdNGkjun-w:nth-child(1)",
+          "area": 832,
+          "rect": [
+            317,
+            363,
+            52,
+            16
+          ],
+          "background": [
+            250,
+            244,
+            237,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "div._31ptFGGMZrSQc5BCX1e5lm._3KfxIwlXEvum7FCD_AM2_t:nth-child(1) > div._5uvIN6jXDXzzck59F-nhv._25f0fX6qbgdB7O_lMrbhCN:nth-child(1) > div.DgVQapkBmhAW6oPY5rPZo.Panel:nth-child(1) > div._7k4qmaN8SUMvv6u-L81uk:nth-child(2) > div.DY4_wSF8h9T5o46hO5I9V.Panel:nth-child(1) > div._1b6LYWVijW-9E4YV0keDWZ:nth-child(1) > span._2sNDjgK9EWiPLdNGkjun-w:nth-child(1)",
+          "area": 383,
+          "rect": [
+            437,
+            363,
+            24,
+            16
+          ],
+          "background": [
+            250,
+            244,
+            237,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "div._31ptFGGMZrSQc5BCX1e5lm._3KfxIwlXEvum7FCD_AM2_t:nth-child(1) > div._5uvIN6jXDXzzck59F-nhv._25f0fX6qbgdB7O_lMrbhCN:nth-child(1) > div.DgVQapkBmhAW6oPY5rPZo.Panel:nth-child(1) > div._7k4qmaN8SUMvv6u-L81uk:nth-child(3) > div.DY4_wSF8h9T5o46hO5I9V.Panel:nth-child(1) > div._1b6LYWVijW-9E4YV0keDWZ:nth-child(1) > span._2sNDjgK9EWiPLdNGkjun-w:nth-child(1)",
+          "area": 832,
+          "rect": [
+            529,
+            363,
+            52,
+            16
+          ],
+          "background": [
+            250,
+            244,
+            237,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "div._31ptFGGMZrSQc5BCX1e5lm._3KfxIwlXEvum7FCD_AM2_t:nth-child(1) > div._5uvIN6jXDXzzck59F-nhv._25f0fX6qbgdB7O_lMrbhCN:nth-child(1) > div.DgVQapkBmhAW6oPY5rPZo.Panel:nth-child(1) > div._7k4qmaN8SUMvv6u-L81uk:nth-child(4) > div.DY4_wSF8h9T5o46hO5I9V.Panel:nth-child(1) > div._1b6LYWVijW-9E4YV0keDWZ:nth-child(1) > span._2sNDjgK9EWiPLdNGkjun-w:nth-child(1)",
+          "area": 832,
+          "rect": [
+            649,
+            363,
+            52,
+            16
+          ],
+          "background": [
+            250,
+            244,
+            237,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "div._31ptFGGMZrSQc5BCX1e5lm._3KfxIwlXEvum7FCD_AM2_t:nth-child(1) > div._5uvIN6jXDXzzck59F-nhv._25f0fX6qbgdB7O_lMrbhCN:nth-child(1) > div.DgVQapkBmhAW6oPY5rPZo.Panel:nth-child(1) > div._7k4qmaN8SUMvv6u-L81uk:nth-child(5) > div.DY4_wSF8h9T5o46hO5I9V.Panel:nth-child(1) > div._1b6LYWVijW-9E4YV0keDWZ:nth-child(1) > span._2sNDjgK9EWiPLdNGkjun-w:nth-child(1)",
+          "area": 624,
+          "rect": [
+            769,
+            363,
+            39,
+            16
+          ],
+          "background": [
+            250,
+            244,
+            237,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "div._31ptFGGMZrSQc5BCX1e5lm._3KfxIwlXEvum7FCD_AM2_t:nth-child(1) > div._5uvIN6jXDXzzck59F-nhv._25f0fX6qbgdB7O_lMrbhCN:nth-child(1) > div.DgVQapkBmhAW6oPY5rPZo.Panel:nth-child(1) > div._7k4qmaN8SUMvv6u-L81uk:nth-child(6) > div.DY4_wSF8h9T5o46hO5I9V.Panel:nth-child(1) > div._1b6LYWVijW-9E4YV0keDWZ:nth-child(1) > span._2sNDjgK9EWiPLdNGkjun-w:nth-child(1)",
+          "area": 416,
+          "rect": [
+            876,
+            363,
+            26,
+            16
+          ],
+          "background": [
+            250,
+            244,
+            237,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "div._31ptFGGMZrSQc5BCX1e5lm._3KfxIwlXEvum7FCD_AM2_t:nth-child(1) > div._5uvIN6jXDXzzck59F-nhv._25f0fX6qbgdB7O_lMrbhCN:nth-child(1) > div.DgVQapkBmhAW6oPY5rPZo.Panel:nth-child(1) > div._7k4qmaN8SUMvv6u-L81uk:nth-child(7) > div.DY4_wSF8h9T5o46hO5I9V.Panel:nth-child(1) > div._1b6LYWVijW-9E4YV0keDWZ:nth-child(1) > span._2sNDjgK9EWiPLdNGkjun-w:nth-child(1)",
+          "area": 416,
+          "rect": [
+            970,
+            363,
+            26,
+            16
+          ],
+          "background": [
+            250,
+            244,
+            237,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "div._39bm0CkBxBjJsnPpAzoZlv:nth-child(1) > div._1umjft7ymqKrhhjDroeBUO:nth-child(2) > div._17qc0iT2Uzbk8umX0qMOMJ._2Pe0MXMGg27aY9edPtTIC7:nth-child(1) > div._3C0istohNAM4_kDuBULbcw._3gj9A13VQyuW_6wr_Io8Xz:nth-child(1) > div.Panel:nth-child(1) > div.nibodjvvrm86uCfnnAn4g.avatarHolder:nth-child(1) > div._3xUpb5DWXPFNcHHIcv-9pe.avatarStatus:nth-child(1)",
+          "area": 53,
+          "rect": [
+            1793,
+            526,
+            31,
+            2
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": false,
+          "fontSize": 0,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "div._39bm0CkBxBjJsnPpAzoZlv:nth-child(2) > div._1umjft7ymqKrhhjDroeBUO:nth-child(2) > div._17qc0iT2Uzbk8umX0qMOMJ._2Pe0MXMGg27aY9edPtTIC7:nth-child(1) > div._3C0istohNAM4_kDuBULbcw._3gj9A13VQyuW_6wr_Io8Xz:nth-child(1) > div.Panel:nth-child(3) > div.nibodjvvrm86uCfnnAn4g.avatarHolder:nth-child(1) > div._3xUpb5DWXPFNcHHIcv-9pe.avatarStatus:nth-child(1)",
+          "area": 53,
+          "rect": [
+            1865,
+            601,
+            31,
+            2
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": false,
+          "fontSize": 0,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "div._39bm0CkBxBjJsnPpAzoZlv:nth-child(2) > div._1umjft7ymqKrhhjDroeBUO:nth-child(2) > div._17qc0iT2Uzbk8umX0qMOMJ._2Pe0MXMGg27aY9edPtTIC7:nth-child(1) > div._3C0istohNAM4_kDuBULbcw._3gj9A13VQyuW_6wr_Io8Xz:nth-child(1) > div.Panel:nth-child(4) > div.nibodjvvrm86uCfnnAn4g.avatarHolder:nth-child(1) > div._3xUpb5DWXPFNcHHIcv-9pe.avatarStatus:nth-child(1)",
+          "area": 53,
+          "rect": [
+            1901,
+            601,
+            31,
+            2
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": false,
+          "fontSize": 0,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "div._39bm0CkBxBjJsnPpAzoZlv:nth-child(2) > div._1umjft7ymqKrhhjDroeBUO:nth-child(2) > div._17qc0iT2Uzbk8umX0qMOMJ._2Pe0MXMGg27aY9edPtTIC7:nth-child(1) > div._3C0istohNAM4_kDuBULbcw._3gj9A13VQyuW_6wr_Io8Xz:nth-child(1) > div.Panel:nth-child(5) > div.nibodjvvrm86uCfnnAn4g.avatarHolder:nth-child(1) > div._3xUpb5DWXPFNcHHIcv-9pe.avatarStatus:nth-child(1)",
+          "area": 53,
+          "rect": [
+            1937,
+            601,
+            31,
+            2
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": false,
+          "fontSize": 0,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "div._39bm0CkBxBjJsnPpAzoZlv:nth-child(2) > div._1umjft7ymqKrhhjDroeBUO:nth-child(2) > div._17qc0iT2Uzbk8umX0qMOMJ._2Pe0MXMGg27aY9edPtTIC7:nth-child(1) > div._3C0istohNAM4_kDuBULbcw._3gj9A13VQyuW_6wr_Io8Xz:nth-child(1) > div.Panel:nth-child(6) > div.nibodjvvrm86uCfnnAn4g.avatarHolder:nth-child(1) > div._3xUpb5DWXPFNcHHIcv-9pe.avatarStatus:nth-child(1)",
+          "area": 53,
+          "rect": [
+            1973,
+            601,
+            31,
+            2
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": false,
+          "fontSize": 0,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "div._27RcNu8aXKBpYkHcNNrt-X._2OOzYVWIHaKXm6_7sscT9i:nth-child(1) > div.OhSdLYuggDtBcWjYP0j_9:nth-child(6) > div._2aor4XVOYzN1PBSREk0UbO:nth-child(2) > div.vzLedtsu3TtTlKLEKzIhH:nth-child(3) > div._2r4TK4BAuU-J4FuF_O7v_5.Panel:nth-child(1) > div._31ptFGGMZrSQc5BCX1e5lm._2G5B7o_YoI__u11--EFjal:nth-child(2) > div._38t1mljBjmJfqjpVzMT1CG._2xTb6N-jUUQ-mIkMB6OVMm:nth-child(1)",
+          "area": 41985,
+          "rect": [
+            1780,
+            732,
+            712,
+            59
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": false,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "div._2aor4XVOYzN1PBSREk0UbO:nth-child(2) > div.vzLedtsu3TtTlKLEKzIhH:nth-child(3) > div._2r4TK4BAuU-J4FuF_O7v_5.Panel:nth-child(1) > div._31ptFGGMZrSQc5BCX1e5lm._2G5B7o_YoI__u11--EFjal:nth-child(2) > div._38t1mljBjmJfqjpVzMT1CG._2xTb6N-jUUQ-mIkMB6OVMm:nth-child(1) > div._3jC8om-5Sci_dkUB-6VYiU:nth-child(1) > span:nth-child(1)",
+          "area": 1341,
+          "rect": [
+            1790,
+            743,
+            84,
+            16
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "div._2aor4XVOYzN1PBSREk0UbO:nth-child(2) > div.vzLedtsu3TtTlKLEKzIhH:nth-child(3) > div._2r4TK4BAuU-J4FuF_O7v_5.Panel:nth-child(1) > div._31ptFGGMZrSQc5BCX1e5lm._2G5B7o_YoI__u11--EFjal:nth-child(2) > div._38t1mljBjmJfqjpVzMT1CG._2xTb6N-jUUQ-mIkMB6OVMm:nth-child(1) > div._3jC8om-5Sci_dkUB-6VYiU:nth-child(1) > span._14kZVEyaz7WX57N47z4Yr1:nth-child(2)",
+          "area": 503,
+          "rect": [
+            1874,
+            743,
+            31,
+            16
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "div._27RcNu8aXKBpYkHcNNrt-X._2OOzYVWIHaKXm6_7sscT9i:nth-child(1) > div.OhSdLYuggDtBcWjYP0j_9:nth-child(6) > div._2aor4XVOYzN1PBSREk0UbO:nth-child(2) > div.vzLedtsu3TtTlKLEKzIhH:nth-child(5) > div._2r4TK4BAuU-J4FuF_O7v_5._3iIro38Q-z5F_75QwHtFuc:nth-child(1) > div._31ptFGGMZrSQc5BCX1e5lm._2G5B7o_YoI__u11--EFjal:nth-child(2) > div._38t1mljBjmJfqjpVzMT1CG._3g3jmTgyAQZeyo10abbOmV:nth-child(1)",
+          "area": 59775,
+          "rect": [
+            1780,
+            1179,
+            712,
+            84
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": false,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "div._2aor4XVOYzN1PBSREk0UbO:nth-child(2) > div.vzLedtsu3TtTlKLEKzIhH:nth-child(5) > div._2r4TK4BAuU-J4FuF_O7v_5._3iIro38Q-z5F_75QwHtFuc:nth-child(1) > div._31ptFGGMZrSQc5BCX1e5lm._2G5B7o_YoI__u11--EFjal:nth-child(2) > div._38t1mljBjmJfqjpVzMT1CG._3g3jmTgyAQZeyo10abbOmV:nth-child(1) > div._3QrX3TTEetJIRvEW1x2Af2:nth-child(2) > div._3ca2d1qaIzPNm79jqRbi0J:nth-child(1)",
+          "area": 1443,
+          "rect": [
+            1862,
+            1201,
+            72,
+            20
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 14,
+          "fontWeight": 300,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "div._2aor4XVOYzN1PBSREk0UbO:nth-child(2) > div.vzLedtsu3TtTlKLEKzIhH:nth-child(5) > div._2r4TK4BAuU-J4FuF_O7v_5._3iIro38Q-z5F_75QwHtFuc:nth-child(1) > div._31ptFGGMZrSQc5BCX1e5lm._2G5B7o_YoI__u11--EFjal:nth-child(2) > div._38t1mljBjmJfqjpVzMT1CG._3g3jmTgyAQZeyo10abbOmV:nth-child(1) > div._3QrX3TTEetJIRvEW1x2Af2:nth-child(2) > div._2PMlMbFfEmv1xThuy6Vgqv:nth-child(2)",
+          "area": 1443,
+          "rect": [
+            1862,
+            1221,
+            72,
+            20
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "#«r1ev» > div._3pcPRPvuGH7hEM33zLknZO:nth-child(1)",
+          "area": 1345,
+          "rect": [
+            383,
+            630,
+            1345,
+            1
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "div.S2Fu9HxHCA5MaCLGrN2ib:nth-child(1) > div:nth-child(2) > div.UVeN0kaD3zv1feMj_mMw5.x6i4rYK9jE1wTSBpJaZSB:nth-child(1) > div.QCKBqF2k_sRLcXJ5qQIEl.Panel:nth-child(1) > div._1gVy5n_zNp3tXpwU2aV9k8.Panel:nth-child(1) > div.nibodjvvrm86uCfnnAn4g.avatarHolder:nth-child(1) > div._3xUpb5DWXPFNcHHIcv-9pe.avatarStatus:nth-child(1)",
+          "area": 53,
+          "rect": [
+            338,
+            651,
+            2,
+            31
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        },
+        {
+          "selector": "#«r1f2» > div._3pcPRPvuGH7hEM33zLknZO:nth-child(1)",
+          "area": 1346,
+          "rect": [
+            382,
+            720,
+            1346,
+            1
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "div._31ptFGGMZrSQc5BCX1e5lm._2G5B7o_YoI__u11--EFjal:nth-child(2) > div._5uvIN6jXDXzzck59F-nhv._2EEApFUXB7aWXBtitgV5dk:nth-child(1) > div.Panel:nth-child(2) > div.S2Fu9HxHCA5MaCLGrN2ib:nth-child(2) > div:nth-child(2) > div.UVeN0kaD3zv1feMj_mMw5._2CB_RqM2eU0opie2AJ3Eow:nth-child(1) > div.NEMXhMlqXOCJwfgWlHXhT:nth-child(2)",
+          "area": 191874,
+          "rect": [
+            318,
+            778,
+            1409,
+            136
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": false,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "#«r1f6» > div._3pcPRPvuGH7hEM33zLknZO:nth-child(1)",
+          "area": 1344,
+          "rect": [
+            383,
+            946,
+            1344,
+            1
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "div._31ptFGGMZrSQc5BCX1e5lm._2G5B7o_YoI__u11--EFjal:nth-child(2) > div._5uvIN6jXDXzzck59F-nhv._2EEApFUXB7aWXBtitgV5dk:nth-child(1) > div.Panel:nth-child(2) > div.S2Fu9HxHCA5MaCLGrN2ib:nth-child(3) > div:nth-child(2) > div.UVeN0kaD3zv1feMj_mMw5._2CB_RqM2eU0opie2AJ3Eow:nth-child(1) > div.NEMXhMlqXOCJwfgWlHXhT:nth-child(2)",
+          "area": 191874,
+          "rect": [
+            318,
+            1004,
+            1409,
+            136
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": false,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "div._31ptFGGMZrSQc5BCX1e5lm._2G5B7o_YoI__u11--EFjal:nth-child(2) > div._5uvIN6jXDXzzck59F-nhv._2EEApFUXB7aWXBtitgV5dk:nth-child(1) > div.Panel:nth-child(2) > div.S2Fu9HxHCA5MaCLGrN2ib:nth-child(3) > div:nth-child(2) > div.UVeN0kaD3zv1feMj_mMw5.Panel:nth-child(2) > div.NEMXhMlqXOCJwfgWlHXhT:nth-child(2)",
+          "area": 101464,
+          "rect": [
+            318,
+            1198,
+            1409,
+            72
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": false,
+          "fontSize": 13,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "div.UVeN0kaD3zv1feMj_mMw5.Panel:nth-child(2) > div.NEMXhMlqXOCJwfgWlHXhT:nth-child(2) > div.yJLy7HDLJT44C1fcm6lPI.Panel:nth-child(1) > div:nth-child(1) > div._26QliGU0MSP6WN4r-RtI5q.MGoYUyIslJerluzgnU7z9:nth-child(1) > div._1s_9cSxUjb4609MSH0EjWH:nth-child(2) > div._39Y01uSRcLiDg5DneTTR0m:nth-child(1)",
+          "area": 9948,
+          "rect": [
+            387,
+            1218,
+            622,
+            16
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 14,
+          "fontWeight": 300,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "div.UVeN0kaD3zv1feMj_mMw5.Panel:nth-child(2) > div.NEMXhMlqXOCJwfgWlHXhT:nth-child(2) > div.yJLy7HDLJT44C1fcm6lPI.Panel:nth-child(1) > div:nth-child(1) > div._26QliGU0MSP6WN4r-RtI5q.MGoYUyIslJerluzgnU7z9:nth-child(1) > div._1s_9cSxUjb4609MSH0EjWH:nth-child(2) > div._2gLHbXukQBdrIKhqEYVvOe:nth-child(2)",
+          "area": 9948,
+          "rect": [
+            387,
+            1234,
+            622,
+            16
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": true,
+          "fontSize": 13,
+          "fontWeight": 300,
+          "disabled": false,
+          "uncertain": "background image or gradient",
+          "kind": "manual-review",
+          "reason": "background image or gradient"
+        },
+        {
+          "selector": "div:nth-child(1) > div._27qasW5wLU4h4nUgawpo1q:nth-child(1) > div._1ENHEsrSLcTRtPQFl1F-wL._1DvwQt0JN-Ogp_4tVZdkzX:nth-child(3) > div._3mz8wQ6Q44B8P7pzPP4Iyw:nth-child(2) > div._1_yS5UP7el0aN4vntx3dx:nth-child(3) > div._3vCzSrrXZzZjVJFZNg9SGu:nth-child(3) > div.window_resize_grip:nth-child(4)",
+          "area": 576,
+          "rect": [
+            2504,
+            1350,
+            24,
+            24
+          ],
+          "background": [
+            255,
+            250,
+            243,
+            1
+          ],
+          "foreground": [
+            70,
+            66,
+            97,
+            1
+          ],
+          "ownBackground": false,
+          "hasText": false,
+          "fontSize": 16,
+          "fontWeight": 400,
+          "disabled": false,
+          "uncertain": "opacity/filter/blending",
+          "kind": "manual-review",
+          "reason": "opacity/filter/blending"
+        }
+      ],
+      "sampleCount": 192,
+      "eligible": true
+    },
+    {
+      "title": "(Steam renderer)",
+      "location": "data: (Steam renderer)",
+      "visibility": "hidden",
+      "viewport": [
+        2526,
+        1218
+      ],
+      "themeBase": "#faf4ed",
+      "regions": [
+        "collections"
+      ],
+      "totalElements": 7,
+      "visibleElements": 2,
+      "mediaSkipped": 0,
+      "limitations": [
+        "Current viewport only; no scrolling or interaction is performed.",
+        "Pseudo-elements, shadow DOM and child frames are not inspected.",
+        "Topmost center hit-testing approximates occlusion; partially exposed backgrounds and pointer-events:none elements may be missed.",
+        "Non-text containers with media at the sample point preserve artwork and skip background classification.",
+        "Renderer visibility does not prove a native popup window is displayed."
+      ],
+      "findings": [],
+      "manualReview": [],
+      "sampleCount": 2,
+      "eligible": false
+    },
+    {
+      "title": "(Steam renderer)",
+      "location": "data: (Steam renderer)",
+      "visibility": "hidden",
+      "viewport": [
+        1,
+        1
+      ],
+      "themeBase": "#faf4ed",
+      "regions": [],
+      "totalElements": 4,
+      "visibleElements": 0,
+      "mediaSkipped": 0,
+      "limitations": [
+        "Current viewport only; no scrolling or interaction is performed.",
+        "Pseudo-elements, shadow DOM and child frames are not inspected.",
+        "Topmost center hit-testing approximates occlusion; partially exposed backgrounds and pointer-events:none elements may be missed.",
+        "Non-text containers with media at the sample point preserve artwork and skip background classification.",
+        "Renderer visibility does not prove a native popup window is displayed."
+      ],
+      "findings": [],
+      "manualReview": [],
+      "sampleCount": 0,
+      "eligible": false
+    }
+  ]
+}

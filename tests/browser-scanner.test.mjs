@@ -76,6 +76,11 @@ test('CEF scanner detects a real cascade gap and respects media, visibility and 
         .home_content h2 .header_inline { color:#999; }
         .topseller_title { color:#a1cd44; }
         #discounts_and_events_title { color:white; }
+        ._2SAb6geDpe6toA1GaP0GjH, ._3LE-6w1ItIAB4CKJFCa3Od, ._2z8Na_s9JosX48wHF4HPiA { background:#17191b; color:white; }
+        button._1kCN0pAntrcGCSmcc-vYdk { background:rgba(103,193,245,.2); color:rgb(103,193,245); }
+        ._2aVnDeExEHiUFX0zwr_BTO { background:#2c3138; color:white; }
+        ._2DUDvAhXoEOSsd8GTIsKLY { background:#000; color:white; }
+        ._3ns9185LizH61StaAXuAp6 { background:#000; }
         ${css}
         </style></head><body>
         <div id="covered" class="fixture game_language_options">Readable themed panel</div>
@@ -100,6 +105,13 @@ test('CEF scanner detects a real cascade gap and respects media, visibility and 
           <div class="home_content"><h2><a id="section-link">Category</a><span id="section-secondary" class="header_inline">Description</span></h2></div>
           <div class="store_main_capsule"><div id="topseller" class="topseller_title">Top seller</div></div>
           <div id="discounts_and_events_title">Discounts and events</div>
+        </section>
+        <section id="library-game-regressions" class="_2l416KfEtI4CL0mCUEmOBw" style="position:absolute;left:0;top:620px;width:600px;">
+          <div id="review-prompt" class="_2SAb6geDpe6toA1GaP0GjH _1E_ENwpaym7n3ke0XFpczv">Recommend?</div>
+          <button id="review-yes" class="_1kCN0pAntrcGCSmcc-vYdk">Yes</button>
+          <div id="achievement-tile" class="_2aVnDeExEHiUFX0zwr_BTO _3llpbyrXsfwsh1apqHhPfB Panel" style="display:inline-block;width:48px;height:48px">+31</div>
+          <div id="character-card" class="_2DUDvAhXoEOSsd8GTIsKLY" style="display:inline-block;width:110px;height:128px"><div id="character-name" class="AVDXBqSa_LSoeGgEXKml8">Black Cat</div></div>
+          <div id="ach-strip" class="_3ns9185LizH61StaAXuAp6" style="width:200px;height:8px"></div>
         </section>
         </body></html>`;
       const evaluate = async expression => {
@@ -139,6 +151,15 @@ test('CEF scanner detects a real cascade gap and respects media, visibility and 
         assert.ok(byId(id), `${id} is inspected`);
         assert.deepEqual(classify(byId(id), allowed), [], `${id} remains readable on a light store surface`);
       }
+      assert.deepEqual(byId('review-prompt').background, [255, 250, 243, 1], 'review prompt uses the surface');
+      assert.deepEqual(classify(byId('review-prompt'), allowed), []);
+      assert.deepEqual(byId('review-yes').background, [242, 233, 225, 1], 'review buttons use the overlay');
+      assert.deepEqual(byId('review-yes').foreground, [40, 105, 131, 1], 'review buttons use the pine accent');
+      assert.deepEqual(classify(byId('review-yes'), allowed), []);
+      assert.deepEqual(byId('achievement-tile').background, [255, 250, 243, 1], 'achievement tiles use the surface');
+      assert.deepEqual(classify(byId('achievement-tile'), allowed), []);
+      assert.deepEqual(byId('character-card').background, [242, 233, 225, 1], 'character cards use the overlay');
+      assert.deepEqual(byId('ach-strip').background, [206, 202, 205, 1], 'achievement strips use the highlight');
       await pseudo('#state', ['hover']);
       const hover = (await scan()).samples.find(s => s.selector === '#state');
       assert.ok(classify(hover, allowed).some(i => i.kind === 'dark-surface'));

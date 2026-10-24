@@ -88,3 +88,22 @@
 :is(._2l416KfEtI4CL0mCUEmOBw, ._3FmxxjyWNHU1PrBGnBe6tm) ._2DUDvAhXoEOSsd8GTIsKLY {
   background-color: var(--rp-overlay) !important;
 }
+/* Review prompt (recommend this game): light surface and pine buttons, not Steam blue. */
+:is(._2l416KfEtI4CL0mCUEmOBw, ._3FmxxjyWNHU1PrBGnBe6tm)
+    :is(._2SAb6geDpe6toA1GaP0GjH, ._3LE-6w1ItIAB4CKJFCa3Od, ._2z8Na_s9JosX48wHF4HPiA) {
+  background: var(--rp-surface) !important;
+  color: var(--rp-text) !important;
+  border-color: var(--rp-highlight-med) !important;
+  box-shadow: none !important;
+}
+:is(._2l416KfEtI4CL0mCUEmOBw, ._3FmxxjyWNHU1PrBGnBe6tm) button._1kCN0pAntrcGCSmcc-vYdk {
+  background: var(--rp-overlay) !important;
+  color: var(--rp-pine) !important;
+  border: 1px solid var(--rp-highlight-med) !important;
+  border-radius: 3px;
+  text-shadow: none !important;
+}
+:is(._2l416KfEtI4CL0mCUEmOBw, ._3FmxxjyWNHU1PrBGnBe6tm) button._1kCN0pAntrcGCSmcc-vYdk:hover {
+  background: var(--rp-highlight-med) !important;
+  color: var(--rp-text) !important;
+}
