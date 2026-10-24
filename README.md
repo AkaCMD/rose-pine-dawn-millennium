@@ -49,8 +49,21 @@ Check that these paths exist before enabling the theme:
     ├── light.css
     ├── steam.css
     ├── store.css
-    └── library-game.css
+    ├── library-game.css
+    ├── downloads.css
+    └── store-lists.css
 ```
+
+### Windows
+
+1. Install Millennium using the Windows installer linked in the [official installation guide](https://docs.steambrew.app/users/getting-started/installation). Follow the installer prompts to complete setup.
+2. Exit Steam completely using **Steam → Exit** before copying the theme files.
+3. Download this repository using **Code → Download ZIP**, then choose **Extract All** in File Explorer.
+4. Open your Steam installation folder, the folder containing `steam.exe`. For example, if Steam is installed at `C:\Program Files (x86)\Steam`, open `C:\Program Files (x86)\Steam\millennium\themes`. Create the `themes` folder if it does not exist. Use your actual Steam installation path if it differs from the example. The [official directory reference](https://docs.steambrew.app/users/getting-started/structure) documents this location.
+5. Copy the extracted repository folder into `themes` and rename it to `rose-pine-dawn`. Ensure `skin.json` is directly inside `rose-pine-dawn`, with the `css` folder beside it, as shown in [Manual installation](#manual-installation). Avoid an extra nested repository folder.
+6. Start Steam and follow [Enable and use](#enable-and-use) to select the theme and restart Steam.
+
+Windows uses the manual installation method; `install.sh` is the Linux installer. To update on Windows, exit Steam, replace the `rose-pine-dawn` folder with the newly extracted copy, and start Steam again. If the theme is missing from the list, check the folder name and the location of `skin.json`.
 
 ## Enable and use
 
