@@ -396,3 +396,86 @@ body.v6 :is(.btn_green_white_innerfade,.btnv6_green_white_innerfade) a { color: 
   background: var(--rp-pine) !important;
   color: var(--rp-on-accent) !important;
 }
+
+/* React store home: section titles, personal calendar and curator tiles. */
+:is(._2RxJB5bupbx0mkW8dYJQRE, ._2RnIwgy025bixjWk2UTw40,
+    ._7Qc_eWjn_s3VWDe79FmEq, y5728HUyiI5XdCDBm5D7A) {
+  color: var(--rp-text) !important;
+}
+._326_uhqq2I-hJwNRSqIZK4 ._3RqS6vEZhqX3_4AIeJFajW {
+  color: var(--rp-text) !important;
+}
+._326_uhqq2I-hJwNRSqIZK4 :is(._1qbTrTsvR9qbMi-Navsk-D, ._3cnfRW-1ajM2MW96f4sTXj) {
+  color: var(--rp-secondary) !important;
+}
+._326_uhqq2I-hJwNRSqIZK4 :is(._1pMe55FBPBDyaWssCZrawa, ._1iXgQQI5ZT9D1DgDCwVW_T) {
+  color: var(--rp-text) !important;
+}
+._326_uhqq2I-hJwNRSqIZK4 ._1iXgQQI5ZT9D1DgDCwVW_T {
+  border-color: var(--rp-line) !important;
+}
+._326_uhqq2I-hJwNRSqIZK4 .tqaXEuWN2wV5_8lmSkMng {
+  background: var(--rp-surface) !important;
+  background-image: none !important;
+}
+._326_uhqq2I-hJwNRSqIZK4 .tqaXEuWN2wV5_8lmSkMng:is(._8UPO4fZBxxerbhcRBpAcc, ._1beaDtCHZ3Kn9oAHWEKXMe) {
+  background: var(--rp-overlay) !important;
+  background-image: none !important;
+}
+._326_uhqq2I-hJwNRSqIZK4 ._1Vtz51wGyJHD9wpoDFNZ8M {
+  background: var(--rp-overlay) !important;
+  color: var(--rp-text) !important;
+}
+._326_uhqq2I-hJwNRSqIZK4 ._1Vtz51wGyJHD9wpoDFNZ8M a { color: var(--rp-pine) !important; }
+._326_uhqq2I-hJwNRSqIZK4 ._1wt5Ne6MrJfPVdFz5fGlop {
+  background: var(--rp-pine) !important;
+  color: var(--rp-on-accent) !important;
+  box-shadow: none !important;
+}
+
+/* Store carousel arrows stay visible on light surfaces. */
+.CarouselBtnLeft, .CarouselBtnRight {
+  background-color: var(--rp-overlay) !important;
+  opacity: 1 !important;
+}
+:is(.CarouselBtnLeft, .CarouselBtnRight, ._13rGo4vexAbY9-CP7FsLOg,
+    ._2sZ7DAljYV5Xd-nbhtlmyM, ._258hIVgneRO0dUbgnPZh_R) svg {
+  color: var(--rp-pine) !important;
+  fill: var(--rp-pine) !important;
+  opacity: 1 !important;
+}
+
+/* React curator tiles and legacy curator text. */
+._3dOtcOnM_9WRN6GxZdYCy7 {
+  background: var(--rp-surface) !important;
+  box-shadow: none !important;
+}
+._3dOtcOnM_9WRN6GxZdYCy7 ._3g04q9TBG7sG8OlGceaKaI {
+  color: var(--rp-text) !important;
+}
+._3dOtcOnM_9WRN6GxZdYCy7 :is(._3r5JsPI6ThzHIlTKWEG3hE, a) {
+  color: var(--rp-pine) !important;
+}
+.steam_curator_followed_text { color: var(--rp-pine) !important; }
+:is(.steam_curator_recommendation_readmore, .curator_review_date) {
+  color: var(--rp-secondary) !important;
+}
+
+/* Bundle purchase area: package content rows, previews and dropdowns. */
+:is(.game_area_purchase_game div.package_contents_capsules_ctn,
+    .bundle_contents_preview) {
+  background: var(--rp-overlay) !important;
+}
+:is(.game_area_purchase_game_dropdown_menu_container,
+    .game_area_purchase_game_dropdown_menu_item_no_discount) {
+  background: var(--rp-surface) !important;
+}
+.game_area_purchase_game_dropdown_menu_items_container tr {
+  color: var(--rp-text) !important;
+}
+.game_area_purchase_game_dropdown_menu_items_container tr:hover {
+  background: var(--rp-highlight-med) !important;
+}
+.game_area_purchase_game_wrapper.bundle .bundleTag {
+  color: var(--rp-pine) !important;
+}
