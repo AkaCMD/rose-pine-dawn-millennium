@@ -358,7 +358,7 @@ body.v6 :is(.btn_green_white_innerfade,.btnv6_green_white_innerfade) a { color: 
 }
 
 /* Homepage lists and product copy declare their own light foregrounds. */
-.tab_item .tab_item_title,
+:is(.tab_item, .tab_row_item) :is(.tab_item_title, .tab_item_rank),
 .home_page_body_ctn .home_title,
 .home_page_body_ctn .home_title :is(b,strong,span),
 .tab_preview .tab_title,
@@ -370,8 +370,7 @@ body.v6 :is(.btn_green_white_innerfade,.btnv6_green_white_innerfade) a { color: 
 }
 .home_page_body_ctn .home_section_subtitle,
 .tab_preview .review_anomaly_icon,
-.tab_item .tab_item_tags, .tab_item .top_tag,
-.tab_item .tab_item_release_date,
+:is(.tab_item, .tab_row_item) :is(.tab_item_tags, .top_tag, .tab_item_release_date),
 .game_area_purchase_game .bundle_label_tooltip,
 .game_area_purchase_game .package_contents,
 .game_area_purchase_game .package_contents :is(div,span,p),
