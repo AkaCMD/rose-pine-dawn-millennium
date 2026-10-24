@@ -463,6 +463,82 @@ button:disabled, .DialogButton.Disabled { opacity: .5 !important; }
 ._3B8wRA4H7e_oSksYNqpSPv ._3hEeummFKRey8l5VXxZwxz span {
   color: var(--rp-secondary) !important;
 }
+/* Notification menu shell and desktop toast popups (achievement, card drop, friend events). */
+._1UgM1Pm8SbTWX7_2f-crGt,
+._1OOQPJx0nCNP9ME9toCmV7 {
+  background: var(--rp-surface) !important;
+  background-image: none !important;
+  color: var(--rp-text) !important;
+  box-shadow: none !important;
+}
+._1OOQPJx0nCNP9ME9toCmV7::before { background: none !important; }
+._1OOQPJx0nCNP9ME9toCmV7 ._3RkGkNRNheAkoRA3migph5 { opacity: .08 !important; }
+._1xvIUtLkTrdEk2Ob1MqFcQ,
+._3Ak7cNRtzpDWtFgnn6n0-J {
+  background: var(--rp-overlay) !important;
+  color: var(--rp-text) !important;
+}
+._1xvIUtLkTrdEk2Ob1MqFcQ:hover,
+._3Ak7cNRtzpDWtFgnn6n0-J:hover {
+  background: var(--rp-highlight-med) !important;
+}
+._1xvIUtLkTrdEk2Ob1MqFcQ._1YAQHDHv4hsPaauccvAFtn,
+._3Ak7cNRtzpDWtFgnn6n0-J._1X5wHQgKhsyFOBfnka56DP {
+  background: var(--rp-surface) !important;
+  border-color: var(--rp-line) !important;
+}
+._3ENh9LzRnZgfTyfxp_J2rr :is(._3uSbhtY3vHtdj-3tpua_Pb, ._2XSwzNWGiJvW0zTgqT0DUI),
+._2NdiftmP-B3C4LPWnNGTCB :is(.rN6p14MiFEoCZvdjnfpgQ, ._10165iFPxrqzt0kfV00tbu) {
+  color: var(--rp-foam) !important;
+}
+._3ENh9LzRnZgfTyfxp_J2rr ._3bqD-bBMgrGwLsBY2L1gSL,
+._2NdiftmP-B3C4LPWnNGTCB ._35uWYHT2zJoSv9PE_euqxo {
+  color: var(--rp-iris) !important;
+}
+._3ENh9LzRnZgfTyfxp_J2rr :is(._2hs2ZR_wYkRHWdtlr681Z6, ._3fUrGm-WHq3qxIpSqRZDgc),
+._2NdiftmP-B3C4LPWnNGTCB ._3m94SADycX0JIk8urdZQ2X,
+._1xvIUtLkTrdEk2Ob1MqFcQ ._3fUrGm-WHq3qxIpSqRZDgc,
+._3Ak7cNRtzpDWtFgnn6n0-J .zB56AM55vMjPKSZPL0A24 {
+  color: var(--rp-text) !important;
+}
+._3ENh9LzRnZgfTyfxp_J2rr :is(._3AbCrY-d5NpL5E5DUfgdQ8, ._2yUEtF_eCucoxdu85zlOCp),
+._2NdiftmP-B3C4LPWnNGTCB ._1XTFkmspXcukxWSFz5Fn61,
+._1xvIUtLkTrdEk2Ob1MqFcQ ._2yUEtF_eCucoxdu85zlOCp,
+._3Ak7cNRtzpDWtFgnn6n0-J .EVwRp-YAbTHPb2cfgH-Mu {
+  color: var(--rp-secondary) !important;
+}
+
+/* React friends list: light rows and theme status colours. */
+.friendlist {
+  background-color: var(--rp-base) !important;
+  background-image: none !important;
+  border-color: var(--rp-line) !important;
+}
+.friendlist :is(.friend, .friendGroup) {
+  background: var(--rp-surface) !important;
+}
+.friendlist :is(.friend:hover, .friend.gpfocus) {
+  background: var(--rp-overlay) !important;
+}
+.friendlist :is(.nOdcT-MoOaXGePXLyPe0H, ._2saJTAocZ9TnYXTGvnqUMC) {
+  color: var(--rp-text) !important;
+}
+.friendlist :is(.in-game, .ingame) :is(._2n0EiKMGRP-r_BI5tDtttu,
+    ._2-pwJCHlrc7zxN4iup2TR7 ._1FgWIOIaRCAekjhGj0zFWq) {
+  color: var(--rp-foam) !important;
+}
+.friendlist .in-game ._1YdpXFoH7P9pEEXDMITSHu._1k5YkN8kx48i2TZ6kG9muA {
+  background: var(--rp-foam) !important;
+}
+.friendlist :is(.friend.inGroup .SteamPlayerGroupLines,
+    .friend.firstInGroup .SteamPlayerGroupLines,
+    .friend.lastInGroup .SteamPlayerGroupLines) {
+  border-color: var(--rp-foam) !important;
+}
+.friendlist .friendGroup.gameGroup:not(.OtherGamesGroup) .SteamPlayerGroupFooter.lastInGroup
+    :is(.SteamPlayerGroupFooterLabel, .count) {
+  color: var(--rp-foam) !important;
+}
 
 /* Friends/chat retain native gradients unless the whole background is reset. */
 .friendsui-container :is(.friendlistListContainer, .chatRoomListContainer,

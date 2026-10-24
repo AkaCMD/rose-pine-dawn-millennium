@@ -88,6 +88,34 @@
 :is(._2l416KfEtI4CL0mCUEmOBw, ._3FmxxjyWNHU1PrBGnBe6tm) ._2DUDvAhXoEOSsd8GTIsKLY {
   background-color: var(--rp-overlay) !important;
 }
+/* Achievements detail page: light list, rows, headers and unlock panels. */
+._3FQHgRosfNJYE44Fsd_U6z {
+  background: var(--rp-base) !important;
+  color: var(--rp-text) !important;
+}
+._3FQHgRosfNJYE44Fsd_U6z ._1UXC2lGcmNTGepRJTwtuH0 {
+  background: var(--rp-base) !important;
+}
+._3FQHgRosfNJYE44Fsd_U6z :is(._2Kmn7fJOkLT4KyWl467a9M, ._2cIsMgTamV-qptkDKO0XNC,
+    ._316Uo4SBrQ_beBdSYn2HNO, ._3SGC6De_ZUjSViw20mnvYv,
+    ._1tTuIhabs4uQQmR2udzw_P, ._3a1Y1FB5NkaJJ0iV5-qUbJ) {
+  background: var(--rp-surface) !important;
+  border-color: var(--rp-highlight-med) !important;
+  box-shadow: none !important;
+}
+._3FQHgRosfNJYE44Fsd_U6z :is(._17dhGq-FsL8xZBes7dOOlN, ._1hCng1RGOB0Usr_3Uz2ZXg,
+    ._2UpV2ekLOgBRHsAaqcedCB ._2LSKtMWWMT5Pne2vGJOtiF) {
+  color: var(--rp-text) !important;
+}
+._3FQHgRosfNJYE44Fsd_U6z :is(._1WP2YDDWrL5LPHoS04AKx8, ._1i7oUcMQndXEBMEQz2zZ-r,
+    ._1tovDR9RyxNMtzFMg-b0th, ._1rEINS_x88uR8c9xJLSb0,
+    ._2fFW2raBfeDt3WOPB-aQAq, ._1PNTIaYP5MitCv6-KjtfBB) {
+  color: var(--rp-secondary) !important;
+}
+._3FQHgRosfNJYE44Fsd_U6z :is(.OAV6QqJuXaBPRBW9RaPA6, .IM0uEBPVo6MDEDQLGzeZr,
+    ._268UOozK_ngE44tdI3eG35) {
+  color: var(--rp-secondary) !important;
+}
 /* Review prompt (recommend this game): light surface and pine buttons, not Steam blue. */
 :is(._2l416KfEtI4CL0mCUEmOBw, ._3FmxxjyWNHU1PrBGnBe6tm)
     :is(._2SAb6geDpe6toA1GaP0GjH, ._3LE-6w1ItIAB4CKJFCa3Od, ._2z8Na_s9JosX48wHF4HPiA) {
