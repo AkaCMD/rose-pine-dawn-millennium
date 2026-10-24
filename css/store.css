@@ -561,3 +561,28 @@ body.newonsteam :is([data-ds-appid], [data-appid], .tab_item)
     :is(.top_tag, .tab_item_release_date, .tab_item_details, .release_date, .date) {
   color: var(--rp-secondary) !important;
 }
+
+/* Steam's 2026 store cards write white copy as inline styles. Keep white
+   where the element paints its own (dark) surface, but use theme ink inside
+   the light page content. */
+:is(body.search_page, body.sale_page_n_section, body.sale_page_background,
+    body.newonsteam)
+    :is(div, span, p, h1, h2, h3, h4, label, strong, b):is([style*="color: white"],
+        [style*="color:white"], [style*="color: rgb(255, 255, 255)"],
+        [style*="color: rgb(255,255,255)"]):not(._1tOSyFfIWM42bIEwzvMp8v,
+        ._1tOSyFfIWM42bIEwzvMp8v *, .discount_block, .discount_block *,
+        .discount_pct, .discount_pct *, .discount_final_price,
+        .discount_final_price *, .discount_original_price, .discount_prices,
+        .discount_aria_label, .ds_flag, .ds_flag *) {
+  color: var(--rp-text) !important;
+  text-shadow: none !important;
+}
+:is(body.search_page, body.sale_page_n_section, body.sale_page_background,
+    body.newonsteam)
+    a:where(:not(.noOpinionatedGlobalStyles a)):not(._1tOSyFfIWM42bIEwzvMp8v,
+    ._1tOSyFfIWM42bIEwzvMp8v *, .discount_block, .discount_block *,
+    .discount_pct, .discount_pct *, .discount_final_price,
+    .discount_final_price *, .discount_original_price, .discount_prices,
+    .discount_aria_label, .ds_flag, .ds_flag *) {
+  color: var(--rp-text) !important;
+}
