@@ -14,8 +14,13 @@
       "TargetCss": [
         "css/light.css",
         "css/steam.css",
-        "css/store.css",
         "css/library-game.css"
+      ]
+    },
+    {
+      "MatchRegexString": "^https?://(?:[^/]+\\.)?(?:steampowered\\.com|steamcommunity\\.com|steamchina\\.com)(?::\\d+)?(?:/|$)",
+      "TargetCss": [
+        "css/store.css"
       ]
     }
   ]

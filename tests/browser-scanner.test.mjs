@@ -5,6 +5,38 @@ import { connect } from '../scripts/cdp.mjs';
 import { scanPage } from '../scripts/scan-page.mjs';
 import { classify } from '../scripts/coverage-rules.mjs';
 
+test('browser loading surfaces stay light before the palette stylesheet arrives',
+  { skip: !process.env.STEAM_CDP_TEST, timeout: 30000 }, async () => {
+    const endpoint = 'http://127.0.0.1:8080';
+    const target = await (await fetch(`${endpoint}/json/new?about:blank`, { method: 'PUT', signal: AbortSignal.timeout(5000) })).json();
+    let client;
+    try {
+      client = await connect(target.webSocketDebuggerUrl);
+      const steamCss = await readFile(new URL('../css/steam.css', import.meta.url), 'utf8');
+      const paletteCss = await readFile(new URL('../css/light.css', import.meta.url), 'utf8');
+      const html = `<html><head><style>
+        html,body { margin:0; height:100%; background:black; }
+        ._1bGewp3tfzqAF6fVTFFUOz, ._29p1jfvZ-VdlXK24_7UGsK { width:100%; height:100%; background:black; }
+        ${steamCss}
+        </style></head><body><div class="_1bGewp3tfzqAF6fVTFFUOz"><div class="_29p1jfvZ-VdlXK24_7UGsK"></div></div></body></html>`;
+      const evaluate = async expression => {
+        const result = await client.call('Runtime.evaluate', { expression, returnByValue: true });
+        assert.equal(result.exceptionDetails, undefined);
+        return result.result.value;
+      };
+      await evaluate(`document.open();document.write(${JSON.stringify(html)});document.close();true`);
+      const surfaces = () => evaluate(`[document.documentElement,document.body,...document.querySelectorAll('._1bGewp3tfzqAF6fVTFFUOz,._29p1jfvZ-VdlXK24_7UGsK')].map(e=>getComputedStyle(e).backgroundColor)`);
+      assert.deepEqual(await surfaces(), Array(4).fill('rgb(250, 244, 237)'), 'loading does not depend on palette fetch order');
+      await evaluate(`(()=>{const s=document.createElement('style');s.textContent=${JSON.stringify(paletteCss)};document.head.append(s);})()`);
+      assert.deepEqual(await surfaces(), Array(4).fill('rgb(250, 244, 237)'));
+      await evaluate(`(()=>{const e=document.createElement('div');e.id='loaded-content';e.style.cssText='background:rgb(255,250,243);width:100%;height:100%';document.querySelector('._29p1jfvZ-VdlXK24_7UGsK').append(e);})()`);
+      assert.equal(await evaluate("getComputedStyle(document.querySelector('#loaded-content')).backgroundColor"), 'rgb(255, 250, 243)', 'loaded page content keeps its own background');
+    } finally {
+      client?.close();
+      await fetch(`${endpoint}/json/close/${target.id}`, { signal: AbortSignal.timeout(5000) });
+    }
+  });
+
 test('CEF scanner detects a real cascade gap and respects media, visibility and interaction states',
   { skip: !process.env.STEAM_CDP_TEST, timeout: 30000 }, async () => {
     const endpoint = 'http://127.0.0.1:8080';
