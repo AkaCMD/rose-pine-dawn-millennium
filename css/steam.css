@@ -25,7 +25,7 @@ html, body {
 }
 :focus-visible { outline: 2px solid var(--rp-accent) !important; outline-offset: 2px; }
 a { color: var(--rp-link); }
-a:hover { color: var(--rp-iris); }
+a:hover { color: var(--rp-text); }
 
 /* Desktop frame, navigation and status bar. */
 :is(.steamdesktop_RootMenuBar_3s0lk, ._3s0lkohH8wU2do0K1il28Y,
@@ -50,7 +50,7 @@ a:hover { color: var(--rp-iris); }
 }
 :is(._19axKcqYRuaJ8vdYKYmtTQ._1gqEjB5QsKT_NftD1dEsdZ,
     [class*="supernav_MenuButton"][class*="Selected"]) {
-  color: var(--rp-iris) !important;
+  color: var(--rp-text) !important;
   text-decoration-color: var(--rp-iris) !important;
 }
 :is(.UkR3sY319PuaUNuUWks2K, [class*="steamdesktop_URLBar"]) {
@@ -410,3 +410,126 @@ button:disabled, .DialogButton.Disabled { opacity: .5 !important; }
   color: var(--rp-on-accent) !important;
 }
 ._2Szzh5sKyGgnLUR870zbDE ._34bQcTHo5QKzuujoEyU1tm { color: inherit !important; }
+
+/* Collection creation cards use translucent white text in the native theme. */
+._34I5HgBL6QP2CcuI4emtaM {
+  background: var(--rp-overlay) !important;
+  color: var(--rp-text) !important;
+}
+._34I5HgBL6QP2CcuI4emtaM:hover {
+  background: var(--rp-highlight-med) !important;
+}
+._34I5HgBL6QP2CcuI4emtaM ._2890MptFADbe-IUQFQ8L1O {
+  color: var(--rp-secondary) !important;
+}
+/* Nested labels follow the control's foreground, including selected states. */
+:is(.contextMenuItem, .ContextMenuItem, .DialogDropDown, .DialogDropDownMenu_Item,
+    [class*="contextmenu_contextMenuItem"], [role="menuitem"], [role="option"],
+    ._2Szzh5sKyGgnLUR870zbDE) :where(div,span,label,b,strong,em) {
+  color: inherit !important;
+  text-shadow: none !important;
+}
+.DialogButton.Primary ._3Wb9yDmYPUJksCr7HmaT9H {
+  color: inherit !important;
+}
+/* Collection labels need an opaque surface above the cover collage. */
+._3IWn-2rn7x98o5fDd0rAxb {
+  background: var(--rp-overlay) !important;
+  color: var(--rp-text) !important;
+}
+._3IWn-2rn7x98o5fDd0rAxb ._1J1LQ0vGtpM3n0xw7XwQM6 {
+  background: var(--rp-surface) !important;
+  color: var(--rp-text) !important;
+  text-shadow: none !important;
+  border-radius: 4px;
+}
+
+/* Notification center: summary, item cards, timestamps and nested prices. */
+._1oERP7bVictkby2hP4BBva, ._3k90ug209sE23xAMqcM74s,
+._3B8wRA4H7e_oSksYNqpSPv {
+  background: var(--rp-overlay) !important;
+  color: var(--rp-text) !important;
+  box-shadow: none !important;
+}
+._1oERP7bVictkby2hP4BBva:hover, ._3k90ug209sE23xAMqcM74s:hover,
+._3B8wRA4H7e_oSksYNqpSPv:hover {
+  background: var(--rp-highlight-med) !important;
+}
+._3k90ug209sE23xAMqcM74s .h-lNlCUnCRbIcn38-Oqaw,
+._3B8wRA4H7e_oSksYNqpSPv ._26v9mHAi56x63OwY-jxett {
+  color: var(--rp-text) !important;
+}
+._3B8wRA4H7e_oSksYNqpSPv :is(._2MGSmn9lIFnmLVIX49POSx, ._1N5mcKPHLaAfi4MA2HzjuQ, ._3hEeummFKRey8l5VXxZwxz),
+._3B8wRA4H7e_oSksYNqpSPv ._3hEeummFKRey8l5VXxZwxz span {
+  color: var(--rp-secondary) !important;
+}
+
+/* Friends/chat retain native gradients unless the whole background is reset. */
+.friendsui-container :is(.friendlistListContainer, .chatRoomListContainer,
+    .friendGroup, .friendListFooter, .chatHistoryScroll, .chatWindow,
+    .chatRoom, .chatEntry, .chatRoomHeader, .ChatRoomGroupHeader,
+    .ChatRoomGroupAvatar, .socialListTab, .friendsListSectionTitle) {
+  background: var(--rp-surface) !important;
+  color: var(--rp-text) !important;
+  border-color: var(--rp-highlight-med) !important;
+}
+.friendsui-container :is(.activeTab, .friend:hover, .ChatRoomListGroupItem:hover) {
+  background: var(--rp-overlay) !important;
+}
+.friendsui-container :is(.title-area-highlight, .singleWindowFocusBar) {
+  background: var(--rp-pine) !important;
+}
+.friendsui-container :is(._1osHa9KHOmdCDNrA232z4N, ._2OoTJwlWvzvAysWOOEQaXS) {
+  background: none !important;
+}
+.friendsui-container :is(.groupName, .groupCount, .gameGroupContainer, .tabLabel,
+    .groupChatSectionTitle, .chatRoomName, .ChatRoomGroupAvatar_initials,
+    .chatMessageBody, .chatEntry textarea, .quickAccessFriendsMessage) {
+  color: var(--rp-text) !important;
+  text-shadow: none !important;
+}
+.friendsui-container .ChatRoomGroupAvatar_initials {
+  background: none !important;
+  -webkit-text-fill-color: var(--rp-text) !important;
+}
+.friendsui-container :is(._1cB0qtF0paHWWyj1XNcnbG, ._2saJTAocZ9TnYXTGvnqUMC) {
+  color: var(--rp-secondary) !important;
+}
+.friendsui-container :is(.in-game, .ingame) ._2n0EiKMGRP-r_BI5tDtttu {
+  color: var(--rp-pine) !important;
+}
+.friendsui-container .quickAccessFriendsMessageDismiss {
+  background: var(--rp-pine) !important;
+  color: var(--rp-on-accent) !important;
+}
+/* Private/group chat tabs, composer toolbar and history decorations. */
+.friendsui-container :is(.ChatTabs, .chatDialogs, .chatHeader,
+    ._2XZq-_f6npaQdAgeRzKIkz, ._3Ule3rolhZJiBN4yNNtk1s,
+    ._2WfNoLBdfKwyutA6ho4aSH, .ChatMessageEntryVoice,
+    .inviteAnotherFriendButton) {
+  background: var(--rp-surface) !important;
+  color: var(--rp-text) !important;
+  border-color: var(--rp-highlight-med) !important;
+  box-shadow: none !important;
+}
+.friendsui-container :is(.RVIs84dAE6wHcjH9tkinc, .VoiceToggle) {
+  background: var(--rp-overlay) !important;
+  color: var(--rp-text) !important;
+}
+.friendsui-container :is(.RVIs84dAE6wHcjH9tkinc, .VoiceToggle):hover {
+  background: var(--rp-highlight-med) !important;
+}
+.friendsui-container :is(.RVIs84dAE6wHcjH9tkinc, .VoiceToggle) svg {
+  color: var(--rp-text) !important;
+}
+.friendsui-container .chatHistory :is(.msg, .msgText, .chatMessageBody, .chatMessageContent) {
+  color: var(--rp-text) !important;
+}
+.friendsui-container .chatHistory a { color: var(--rp-pine) !important; }
+.friendsui-container :is(.timeDivision, .timestamp, .chatmsgtime, .FriendChatTypingNotification) {
+  background: none !important;
+  color: var(--rp-secondary) !important;
+}
+.friendsui-container :is(.preHorizDivider, .horizDivider) {
+  background: var(--rp-highlight-med) !important;
+}

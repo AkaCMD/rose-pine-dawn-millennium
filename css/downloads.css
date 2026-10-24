@@ -1,0 +1,46 @@
+/* Desktop downloads: statistics, queue, completion list and graph. */
+:is(._1bq4x9pa4-9RLY-dXWUZTp, [class*="downloads_DownloadsPage"]) {
+  background: var(--rp-base) !important;
+  color: var(--rp-text) !important;
+}
+:is(._1bq4x9pa4-9RLY-dXWUZTp, [class*="downloads_DownloadsPage"]) :is(div,span,p,a,label,h1,h2,h3) {
+  color: var(--rp-text) !important;
+  text-shadow: none !important;
+}
+._1bq4x9pa4-9RLY-dXWUZTp :is(._3Mbhnlk1Go2j8yCdjthzc7, ._32eLZRkdi_FgZPoefB5zMS,
+    ._1CTr1yKRkOXnJ4gSS1-1A3) {
+  background: var(--rp-surface) !important;
+  border-color: var(--rp-highlight-med) !important;
+  box-shadow: none !important;
+}
+._1bq4x9pa4-9RLY-dXWUZTp ._3Mbhnlk1Go2j8yCdjthzc7:hover {
+  background: var(--rp-overlay) !important;
+}
+._1bq4x9pa4-9RLY-dXWUZTp :is(._1iulCOMUxV6sBbqoKo_yXw, ._1CGnw50aAma6AYKF51Qzsm,
+    ._117rQTHH1RIewY7sSlvg3Z, ._1dHjjSl-57o1KQsQ1m1HSA, ._1SyggnJY6qbRSmbZpkK3-H),
+._1bq4x9pa4-9RLY-dXWUZTp ._1SyggnJY6qbRSmbZpkK3-H span {
+  color: var(--rp-secondary) !important;
+}
+._1bq4x9pa4-9RLY-dXWUZTp :is(.SEmVpmXrYVl3OxL1sDFTg, ._3mZ2rKd2RECK4q4ufmsDYX) {
+  background: var(--rp-pine) !important;
+}
+._1bq4x9pa4-9RLY-dXWUZTp ._3H2JWLH8rucdSC1XVZ7Xdk {
+  stroke: var(--rp-iris) !important;
+}
+._1bq4x9pa4-9RLY-dXWUZTp ._3PLc4OJQTCKFtmy81QMYv5._1QHr4A7EN2DgQfJIdu3rTh {
+  background: var(--rp-iris) !important;
+}
+._1bq4x9pa4-9RLY-dXWUZTp ._3PLc4OJQTCKFtmy81QMYv5._33jqEbo2sBXJZ08w9BkdEM {
+  color: var(--rp-pine) !important;
+}
+._1bq4x9pa4-9RLY-dXWUZTp ._3PLc4OJQTCKFtmy81QMYv5._33jqEbo2sBXJZ08w9BkdEM svg path {
+  fill: currentColor !important;
+}
+._1bq4x9pa4-9RLY-dXWUZTp :is(.DialogDropDown_Arrow, ._14DhZoqwtCm4l0yDeN6QZe) svg {
+  color: var(--rp-text) !important;
+}
+/* General label rules must preserve the light foreground of primary actions. */
+._1bq4x9pa4-9RLY-dXWUZTp .DialogButton.Primary,
+._1bq4x9pa4-9RLY-dXWUZTp .DialogButton.Primary :is(div,span,label) {
+  color: var(--rp-on-accent) !important;
+}

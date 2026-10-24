@@ -23,3 +23,15 @@ test('the theme palette matches the repository palette data', async () => {
     assert.match(css, new RegExp(`--rp-${key}:\\s*${value}\\s*;`, 'i'));
   }
 });
+
+test('semantic text colors meet normal-text contrast on every light palette surface', async () => {
+  const { contrast } = await import('../scripts/coverage-rules.mjs');
+  const tokens = new Map([...css.matchAll(/(--rp-[\w-]+):\s*(#[a-f\d]{6})\s*;/gi)].map(m => [m[1], m[2]]));
+  const rgb = name => tokens.get(name).slice(1).match(/../g).map(c => parseInt(c, 16));
+  for (const foreground of ['--rp-text', '--rp-secondary']) {
+    for (const background of ['--rp-base', '--rp-surface', '--rp-overlay', '--rp-highlight-low', '--rp-highlight-med', '--rp-highlight-high']) {
+      assert.ok(contrast(rgb(foreground), rgb(background)) >= 4.5, `${foreground} on ${background}`);
+    }
+  }
+  assert.ok(contrast(rgb('--rp-on-accent'), rgb('--rp-pine')) >= 4.5);
+});

@@ -59,3 +59,32 @@
 ._2l416KfEtI4CL0mCUEmOBw ._1cB0qtF0paHWWyj1XNcnbG ._1xGH4bGLz6sI7erzB8VWff {
   color: var(--rp-secondary) !important;
 }
+/* Primary actions must override the details panel's general dark text rules. */
+:is(._2l416KfEtI4CL0mCUEmOBw, ._3FmxxjyWNHU1PrBGnBe6tm) .DialogButton.Primary,
+:is(._2l416KfEtI4CL0mCUEmOBw, ._3FmxxjyWNHU1PrBGnBe6tm) .DialogButton.Primary :is(div,span,label,b,strong,em) {
+  color: var(--rp-on-accent) !important;
+}
+/* Activity cards need a light surface under the panel's dark text. */
+:is(._2l416KfEtI4CL0mCUEmOBw, ._3FmxxjyWNHU1PrBGnBe6tm) ._2aVnDeExEHiUFX0zwr_BTO {
+  background: var(--rp-surface) !important;
+}
+/* Achievement summaries, badge headers and compact activity announcements. */
+:is(._2l416KfEtI4CL0mCUEmOBw, ._3FmxxjyWNHU1PrBGnBe6tm)
+    :is(._38t1mljBjmJfqjpVzMT1CG, ._2mMT5wI35EZKZ_XeO7BfPu,
+        ._3A_c3YHYd4YIjA8Y-olnPl._2lNdDLgjQdeBXmMlPO8lvq) {
+  background: var(--rp-overlay) !important;
+  box-shadow: none !important;
+  border-color: var(--rp-highlight-med) !important;
+}
+:is(._2l416KfEtI4CL0mCUEmOBw, ._3FmxxjyWNHU1PrBGnBe6tm)
+    :is(._3ns9185LizH61StaAXuAp6, ._25YVDTaClw6Y2COPsU0UaV) {
+  background: var(--rp-highlight-high) !important;
+}
+:is(._2l416KfEtI4CL0mCUEmOBw, ._3FmxxjyWNHU1PrBGnBe6tm)
+    :is(._3Rm36_oeAhvIg6ZYP9l1Jj, ._1FnTqlsi2_-TJf1d5apoS6) {
+  background: var(--rp-pine) !important;
+}
+/* Preserve achievement images while giving overflow counts a readable tile. */
+:is(._2l416KfEtI4CL0mCUEmOBw, ._3FmxxjyWNHU1PrBGnBe6tm) ._2DUDvAhXoEOSsd8GTIsKLY {
+  background-color: var(--rp-overlay) !important;
+}

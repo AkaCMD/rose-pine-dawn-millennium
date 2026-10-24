@@ -19,7 +19,8 @@
   --rp-accent: var(--rp-pine);
   --rp-on-accent: #fffaf3;
   --rp-link: var(--rp-pine);
-  --rp-secondary: #625e78;
+  /* Keep secondary labels readable even on the darkest light highlight. */
+  --rp-secondary: #56526a;
   --rp-shadow: 0 12px 36px #5752791a;
   --gpSystemLightestGrey: var(--rp-text);
   --gpSystemLighterGrey: var(--rp-secondary);

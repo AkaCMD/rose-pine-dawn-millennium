@@ -344,3 +344,55 @@ body.v6 :is(.btn_green_white_innerfade,.btnv6_green_white_innerfade) a { color: 
 .store_main_capsule .topseller_title {
   color: var(--rp-pine) !important;
 }
+
+/* Homepage lists and product copy declare their own light foregrounds. */
+.tab_item .tab_item_title,
+.home_page_body_ctn .home_title,
+.home_page_body_ctn .home_title :is(b,strong,span),
+.tab_preview .tab_title,
+.game_area_purchase_game .bundle_label,
+.early_access_banner p,
+.early_access_announcements ._1TRFtE8IfXpDQ_loHnB_bU {
+  color: var(--rp-text) !important;
+  text-shadow: none !important;
+}
+.home_page_body_ctn .home_section_subtitle,
+.tab_preview .review_anomaly_icon,
+.tab_item .tab_item_tags, .tab_item .top_tag,
+.tab_item .tab_item_release_date,
+.game_area_purchase_game .bundle_label_tooltip,
+.game_area_purchase_game .package_contents,
+.game_area_purchase_game .package_contents :is(div,span,p),
+#devnotes_expander {
+  color: var(--rp-secondary) !important;
+  text-shadow: none !important;
+}
+/* React price widgets must repaint the surface together with the text. */
+.CapsuleBottomBar, .StoreSalePriceWidgetContainer {
+  background: var(--rp-overlay) !important;
+  color: var(--rp-text) !important;
+}
+.StoreSalePriceWidgetContainer :is(.kauOU9QnW8Fs0QpxzTBph, ._2L23Sk2CNSFCplu_7mMmQx) {
+  color: var(--rp-text) !important;
+}
+.StoreSalePriceWidgetContainer ._1odBXcjq8-Q8SFXViJa7c6 {
+  color: var(--rp-secondary) !important;
+}
+.StoreSalePriceWidgetContainer .StoreSaleDiscountBox {
+  background: var(--rp-pine) !important;
+  color: var(--rp-on-accent) !important;
+}
+#search_results_filtered_warning_persistent,
+#search_results_filtered_warning,
+._3PAP1PfUymQrLEveRsxQxP {
+  background: var(--rp-surface) !important;
+  color: var(--rp-text) !important;
+}
+#search_results_filtered_warning_persistent :is(div,span,a),
+#search_results_filtered_warning :is(div,span,a) {
+  color: var(--rp-text) !important;
+}
+._3PAP1PfUymQrLEveRsxQxP ._3u1HeR7JRPiiuKIT78j2Cc {
+  background: var(--rp-pine) !important;
+  color: var(--rp-on-accent) !important;
+}

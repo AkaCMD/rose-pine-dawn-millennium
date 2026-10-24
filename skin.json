@@ -14,7 +14,8 @@
       "TargetCss": [
         "css/light.css",
         "css/steam.css",
-        "css/library-game.css"
+        "css/library-game.css",
+        "css/downloads.css"
       ]
     },
     {
