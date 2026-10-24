@@ -4,6 +4,12 @@ A light theme for the Steam desktop client, built with the [Rosé Pine Dawn pale
 
 This is a CSS theme loaded by [Millennium](https://steambrew.app/). It has one light appearance and requires no additional plugin or build step.
 
+## Preview
+
+![Rosé Pine Dawn theme on the Steam store's Godot Engine page](docs/images/store-preview.png)
+
+Public store page shown while signed out, with no Steam account or personal library information.
+
 ## Install
 
 Install Millennium before installing this theme. The theme package contains `skin.json` and the CSS files that Millennium loads; see the [Millennium theme structure documentation](https://docs.steambrew.app/themes/basics/structure).
