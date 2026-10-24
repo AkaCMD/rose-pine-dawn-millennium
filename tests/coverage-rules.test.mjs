@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { rgba, composite, contrast, classify, summarize } from '../scripts/coverage-rules.mjs';
+import { classify, summarize } from '../scripts/coverage-rules.mjs';
+import { rgba, composite, contrast } from '../scripts/color.mjs';
 
 const cream = [250, 244, 237, 1], pine = [40, 105, 131, 1];
 const sample = { background: cream, foreground: [70, 66, 97, 1], ownBackground: true,

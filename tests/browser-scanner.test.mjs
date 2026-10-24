@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { connect } from '../scripts/cdp.mjs';
-import { scanPage } from '../scripts/scan-page.mjs';
+import { probeExpression } from '../scripts/scan-page.mjs';
 import { classify } from '../scripts/coverage-rules.mjs';
 
 test('browser loading surfaces stay light before the palette stylesheet arrives',
@@ -127,7 +127,7 @@ test('CEF scanner detects a real cascade gap and respects media, visibility and 
         const { nodeId } = await client.call('DOM.querySelector', { nodeId: doc.root.nodeId, selector });
         await client.call('CSS.forcePseudoState', { nodeId, forcedPseudoClasses: pseudoClasses });
       };
-      const scan = () => evaluate(`(${scanPage.toString()})([])`);
+      const scan = () => evaluate(probeExpression([]));
       const result = await scan();
       const byId = id => result.samples.find(s => s.selector === `#${id}`);
       const allowed = [[40, 105, 131, 1]];

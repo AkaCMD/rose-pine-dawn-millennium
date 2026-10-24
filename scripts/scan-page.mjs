@@ -1,15 +1,8 @@
-// This function is serialized into the selected Steam renderer. Keep it self-contained.
+// scanPage is serialized into the selected Steam renderer. It calls the shared
+// color helpers by name; probeExpression injects their source into the eval scope.
+import { rgba, composite } from './color.mjs';
+
 export function scanPage(regionDefinitions) {
-  const parse = value => {
-    const m = value.match(/^rgba?\(([^)]+)\)$/);
-    if (!m) return null;
-    const p = m[1].split(/[,\s/]+/).filter(Boolean).map(Number);
-    return [...p.slice(0, 3), p[3] ?? 1];
-  };
-  const blend = (a, b) => {
-    const alpha = a[3] + b[3] * (1 - a[3]);
-    return alpha ? [...a.slice(0, 3).map((v, i) => (v * a[3] + b[i] * b[3] * (1 - a[3])) / alpha), alpha] : [0, 0, 0, 0];
-  };
   const styleCache = new WeakMap();
   const style = el => {
     if (!styleCache.has(el)) styleCache.set(el, getComputedStyle(el));
@@ -45,7 +38,7 @@ export function scanPage(regionDefinitions) {
     visibleElements++;
     if (el.closest('img, video, canvas, svg, picture')) { mediaSkipped++; continue; }
     const s = style(el), r = el.getBoundingClientRect();
-    const own = parse(s.backgroundColor);
+    const own = rgba(s.backgroundColor);
     const hasText = [...el.childNodes].some(n => n.nodeType === Node.TEXT_NODE && n.textContent.trim());
     const x = (Math.max(0, r.left) + Math.min(innerWidth, r.right)) / 2;
     const y = (Math.max(0, r.top) + Math.min(innerHeight, r.bottom)) / 2;
@@ -54,7 +47,7 @@ export function scanPage(regionDefinitions) {
       mediaSkipped++;
       continue;
     }
-    const foreground = parse(s.color);
+    const foreground = rgba(s.color);
     if (!foreground || !own || (!hasText && own[3] === 0 && s.backgroundImage === 'none')) continue;
     let background = [0, 0, 0, 0], uncertain = null;
     for (let parent = el; parent; parent = parent.parentElement) {
@@ -62,8 +55,8 @@ export function scanPage(regionDefinitions) {
       if (Number(ps.opacity) < 1 || ps.filter !== 'none' || ps.mixBlendMode !== 'normal' || ps.backdropFilter !== 'none') uncertain ||= 'opacity/filter/blending';
       if (background[3] < .999) {
         if (ps.backgroundImage !== 'none') uncertain ||= 'background image or gradient';
-        const color = parse(ps.backgroundColor);
-        if (color) background = blend(background, color);
+        const color = rgba(ps.backgroundColor);
+        if (color) background = composite(background, color);
       }
     }
     if (background[3] < .999) uncertain ||= 'transparent canvas background';
@@ -88,4 +81,15 @@ export function scanPage(regionDefinitions) {
       'Topmost center hit-testing approximates occlusion; partially exposed backgrounds and pointer-events:none elements may be missed.',
       'Non-text containers with media at the sample point preserve artwork and skip background classification.',
       'Renderer visibility does not prove a native popup window is displayed.'] };
+}
+
+// Self-contained probe expression for Runtime.evaluate: the shared color helpers
+// are spliced into the eval scope so the renderer runs the exact implementation
+// that classification rules and tests use.
+export function probeExpression(regionDefinitions) {
+  return `(() => {
+    const rgba = ${rgba.toString()};
+    const composite = ${composite.toString()};
+    return (${scanPage.toString()})(${JSON.stringify(regionDefinitions)});
+  })()`;
 }

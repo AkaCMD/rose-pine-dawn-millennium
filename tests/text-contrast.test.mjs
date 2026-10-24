@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { connect } from '../scripts/cdp.mjs';
-import { scanPage } from '../scripts/scan-page.mjs';
+import { probeExpression } from '../scripts/scan-page.mjs';
 import { classify } from '../scripts/coverage-rules.mjs';
 
 // Native light labels paired with the surfaces the theme actually repaints.
@@ -106,7 +106,7 @@ test('native light labels stay readable on themed surfaces in normal, hover and 
       const { nodeIds } = await client.call('DOM.querySelectorAll', { nodeId: doc.root.nodeId, selector: 'section *,section' });
       for (const state of [[], ['hover'], ['focus', 'focus-visible']]) {
         for (const nodeId of nodeIds) await client.call('CSS.forcePseudoState', { nodeId, forcedPseudoClasses: state });
-        const scan = await evaluate(`(${scanPage.toString()})([])`);
+        const scan = await evaluate(probeExpression([]));
         const inspected = new Set(await evaluate(`(${JSON.stringify(scan.samples.filter(s => s.hasText).map(s => s.selector))}).map(selector => document.querySelector(selector).closest('section')?.id)`));
         assert.deepEqual(cases.map(([id]) => id).filter(id => !inspected.has(id)), [], 'each fixture must have a visible text sample');
         const failures = scan.samples.filter(s => s.hasText).flatMap(s => classify(s, [[40,105,131,1]])
