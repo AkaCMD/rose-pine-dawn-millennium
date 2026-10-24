@@ -122,6 +122,44 @@
 ._1-llQnFWxBo1kyWdkDFyXp svg path {
   fill: var(--rp-secondary) !important;
 }
+/* The patch-note banner itself. Steam paints these partner-event cards with
+   translucent dark gradients and luminous border images; replace the whole
+   frame so notes, updates and featured events read as light theme cards. */
+:is(._3QRf-tp5VddAF00vWY5Gn8, ._1AYE16384J_ecLpN0sEYc5,
+    .fmLfuqm0Lxq5iPS5EHCAW, ._39Zk32AvV5cr6g-83IVRVS,
+    ._3xi-HLpFVHaakihoqhQ_6C) {
+  background: var(--rp-surface) !important;
+  background-image: none !important;
+  border-image: none !important;
+  box-shadow: none !important;
+  color: var(--rp-text) !important;
+}
+._3QRf-tp5VddAF00vWY5Gn8 {
+  border-color: var(--rp-highlight-med) !important;
+}
+:is(._3QRf-tp5VddAF00vWY5Gn8, ._1AYE16384J_ecLpN0sEYc5,
+    .fmLfuqm0Lxq5iPS5EHCAW, ._39Zk32AvV5cr6g-83IVRVS,
+    ._3xi-HLpFVHaakihoqhQ_6C):hover {
+  background: var(--rp-overlay) !important;
+  background-image: none !important;
+}
+:is(._3QRf-tp5VddAF00vWY5Gn8, ._1AYE16384J_ecLpN0sEYc5,
+    .fmLfuqm0Lxq5iPS5EHCAW, ._39Zk32AvV5cr6g-83IVRVS,
+    ._3xi-HLpFVHaakihoqhQ_6C):hover ._1Cva_kor3lWBIoeu9cQxJq {
+  color: var(--rp-text) !important;
+}
+:is(._1WdC0YUP8FT0dYWZ-QIVZL, ._3oMUSjOFNB0E9LWcL2sE7) {
+  background: var(--rp-pine) !important;
+  color: var(--rp-on-accent) !important;
+}
+:is(._29bW1yCn25VTm4bFameBaV, .ZzN4Se_gAvEeiHXFJBdVK) {
+  color: var(--rp-pine) !important;
+}
+._23WVgstZsKQ-raKomi_HEj {
+  background: var(--rp-overlay) !important;
+  border: 1px solid var(--rp-highlight-med) !important;
+  color: var(--rp-secondary) !important;
+}
 /* Achievement summaries, badge headers and compact activity announcements. */
 :is(._2l416KfEtI4CL0mCUEmOBw, ._3FmxxjyWNHU1PrBGnBe6tm)
     :is(._38t1mljBjmJfqjpVzMT1CG, ._2mMT5wI35EZKZ_XeO7BfPu,
