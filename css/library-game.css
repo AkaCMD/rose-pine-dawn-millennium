@@ -67,12 +67,24 @@
 /* Activity cards need a light surface under the panel's dark text. */
 :is(._2l416KfEtI4CL0mCUEmOBw, ._3FmxxjyWNHU1PrBGnBe6tm) ._2aVnDeExEHiUFX0zwr_BTO {
   background: var(--rp-surface) !important;
+  color: var(--rp-text) !important;
+}
+:is(._2l416KfEtI4CL0mCUEmOBw, ._3FmxxjyWNHU1PrBGnBe6tm)
+    :is(._3yTl3RiWfo-Itg-xp967wP, ._39nnaT_CLE0m_WXVIrAwaG) {
+  color: var(--rp-text) !important;
+}
+:is(._2l416KfEtI4CL0mCUEmOBw, ._3FmxxjyWNHU1PrBGnBe6tm) ._39nnaT_CLE0m_WXVIrAwaG {
+  background: var(--rp-overlay) !important;
+}
+:is(._19LfMT7PFWg2xHOqNjR99q, ._3ygGwhh7ez8rniqAnS8BeW) {
+  color: var(--rp-secondary) !important;
 }
 /* Achievement summaries, badge headers and compact activity announcements. */
 :is(._2l416KfEtI4CL0mCUEmOBw, ._3FmxxjyWNHU1PrBGnBe6tm)
     :is(._38t1mljBjmJfqjpVzMT1CG, ._2mMT5wI35EZKZ_XeO7BfPu,
         ._3A_c3YHYd4YIjA8Y-olnPl._2lNdDLgjQdeBXmMlPO8lvq) {
   background: var(--rp-overlay) !important;
+  color: var(--rp-text) !important;
   box-shadow: none !important;
   border-color: var(--rp-highlight-med) !important;
 }

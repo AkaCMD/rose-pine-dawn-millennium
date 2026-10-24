@@ -479,3 +479,36 @@ body.v6 :is(.btn_green_white_innerfade,.btnv6_green_white_innerfade) a { color: 
 .game_area_purchase_game_wrapper.bundle .bundleTag {
   color: var(--rp-pine) !important;
 }
+
+/* Store home tabs and the seasonal container gradients. */
+:root {
+  --light-ctn-bg: var(--rp-overlay) !important;
+  --light-ctn-bg-hover: var(--rp-highlight-med) !important;
+  --light-ctn-bg-gradient: linear-gradient(0deg, rgba(250, 244, 237, 0) 10%, var(--rp-overlay) 65%, var(--rp-overlay) 100%) !important;
+  --light-ctn-bg-gradient-top-color: var(--rp-surface) !important;
+  --dark-ctn-bg: var(--rp-overlay) !important;
+  --dark-ctn-bg-gradient: linear-gradient(180deg, var(--rp-overlay) 0%, rgba(250, 244, 237, 0) 100%) !important;
+  --blue-translucent: var(--rp-highlight-med) !important;
+  --seasonal-dark: var(--rp-overlay) !important;
+  --seasonal-light: var(--rp-highlight-med) !important;
+  --seasonal-translucent: var(--rp-highlight-med) !important;
+  --seasonal-gradient-2: var(--rp-overlay) !important;
+  --seasonal-gradient-3: var(--rp-overlay) !important;
+}
+.home_tab_button {
+  color: var(--rp-text) !important;
+  opacity: 1 !important;
+}
+.home_tab_button.active {
+  background: var(--rp-highlight-med) !important;
+}
+.home_tabs_row {
+  color: var(--rp-text) !important;
+}
+.home_tab_bg_ctn {
+  background: var(--rp-base) !important;
+  background-image: none !important;
+}
+.home_pagecontent_ctn {
+  background-color: var(--rp-base) !important;
+}
