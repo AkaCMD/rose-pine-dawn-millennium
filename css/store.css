@@ -639,3 +639,80 @@ body.newonsteam :is([data-ds-appid], [data-appid], .tab_item)
 [data-featuretarget="events-row"] .OtherEvents_EventCtn:is(:hover, :focus-visible) {
   background: var(--rp-overlay) !important;
 }
+
+/* Product sidebar: legacy feature rows and their React replacements. */
+.game_area_details_specs_ctn,
+.game_area_details_specs_ctn .label,
+.game_area_details_specs .name,
+.game_meta_data .linkbar {
+  background: var(--rp-overlay) !important;
+  color: var(--rp-pine) !important;
+  text-shadow: none !important;
+}
+a.game_area_details_specs_ctn:is(:hover, :focus-visible) .label,
+.game_area_details_specs a.name:is(:hover, :focus-visible),
+.game_meta_data .linkbar:is(:hover, :focus-visible) {
+  background: var(--rp-highlight-med) !important;
+  color: var(--rp-pine) !important;
+}
+.game_area_details_specs_ctn.learning_about .label {
+  color: var(--rp-secondary) !important;
+}
+/* Steam supplies white raster glyphs for legacy feature rows. Only recolor
+   these monochrome icons; achievement art and controller SVGs stay intact. */
+:is(.game_area_details_specs_ctn, .game_area_details_specs) .icon img {
+  filter: brightness(0) saturate(100%) invert(35%) sepia(18%) saturate(1471%) hue-rotate(151deg) brightness(93%) contrast(89%);
+}
+:is([data-featuretarget="store-sidebar-accessibility-info"],
+    [data-featuretarget="store-sidebar-controller-support-info"]) {
+  :is(summary, ._1RmibngWLogcFmO93kGFgq, ._2xZaMR-NKc0LbkeM50cZq8,
+      ._3sRe2CGQBgablPBz9Bc9c2, ._3KAysk4dlhWETa6ixz7V2j,
+      ._29jQMo9DGCmcSKyDIC3V7M, .dxuI55RF56-dzbuXjj2W0) {
+    background: var(--rp-overlay) !important;
+    color: var(--rp-pine) !important;
+  }
+  :is(summary, ._1RmibngWLogcFmO93kGFgq, ._2xZaMR-NKc0LbkeM50cZq8):is(:hover, :focus-visible) {
+    &, :is(._3sRe2CGQBgablPBz9Bc9c2, ._3KAysk4dlhWETa6ixz7V2j,
+        ._29jQMo9DGCmcSKyDIC3V7M, .dxuI55RF56-dzbuXjj2W0) {
+      background: var(--rp-highlight-med) !important;
+    }
+  }
+  :is(.ny6hWVK6ii05H200KRhds, ._3FBEGAfvLQj4qYjstmZAPE) {
+    color: var(--rp-text) !important;
+  }
+  ._2079QFhY02KJ4KxGMltDNJ { color: var(--rp-secondary) !important; }
+  :is(._2xmH7agKi37v9kwFHi093S, ._3vt5rw82YhkhWtu5ld9QeP) {
+    background: var(--rp-highlight-med) !important;
+    color: var(--rp-pine) !important;
+  }
+}
+
+/* React achievements paint a gradient around the card, a separate question
+   tile, and a dark "view all" tile via inline design-system variables. */
+[data-featuretarget="achievements"] {
+  :is(.lqD2vDqW515szC9Dt3o8c, .Cgo8G5L7D0oP0OHVGcq_D) {
+    background: var(--rp-surface) !important;
+    color: var(--rp-text) !important;
+  }
+  :is(._1smYxH70zcX0D3CUQDwF3o, .IfnLtAVfojeH3V-6ObQjr) {
+    background: var(--rp-overlay) !important;
+    color: var(--rp-pine) !important;
+    box-shadow: none !important;
+  }
+  :is(span, a) { color: var(--rp-text) !important; }
+  :is(a, ._1smYxH70zcX0D3CUQDwF3o) { box-shadow: none !important; }
+  a:is(:hover, :focus-visible) {
+    &, .IfnLtAVfojeH3V-6ObQjr, .Cgo8G5L7D0oP0OHVGcq_D {
+      background: var(--rp-highlight-med) !important;
+      color: var(--rp-pine) !important;
+    }
+  }
+}
+a.communitylink_achivement_plusmore:is(:hover, :focus-visible) {
+  background: var(--rp-highlight-med) !important;
+  color: var(--rp-pine) !important;
+}
+.game_meta_data .linkbar svg { fill: var(--rp-pine) !important; }
+.game_area_details_specs_ctn .tooltip img {
+  filter: brightness(0) saturate(100%) invert(35%) sepia(18%) saturate(1471%) hue-rotate(151deg) brightness(93%) contrast(89%);
+}
