@@ -1,0 +1,7 @@
+@forward "tokens";
+
+// Expand declarations in place to preserve selector specificity and cascade order.
+@mixin surface($background: surface, $foreground: text, $property: background) {
+  #{$property}: var(--rp-#{$background}) !important;
+  color: var(--rp-#{$foreground}) !important;
+}

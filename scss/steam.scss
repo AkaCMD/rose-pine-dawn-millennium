@@ -1,0 +1,11 @@
+// Module order preserves Steam overrides in the CSS cascade.
+@use "steam/base";
+@use "steam/frame";
+@use "steam/library";
+@use "steam/dialogs";
+@use "steam/friends-base";
+@use "steam/client-modules";
+@use "steam/menus-settings";
+@use "steam/collections-controls";
+@use "steam/notifications";
+@use "steam/friends-chat";

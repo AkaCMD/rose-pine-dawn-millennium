@@ -1,0 +1,32 @@
+@use "../shared/theme";
+
+/* Library: keep artwork, video and achievement images in their original colours. */
+:is([class*="gamelistbar_Container"], [class*="gamelist_Container"],
+    [class*="gamelistbar_GameListHomeAndSearch"], [class*="gamelistsectionheader_Container"],
+    [class*="gamelistsearchbar_Container"], [class*="library_LeftList"] ) {
+  @include theme.surface(surface, text);
+}
+:is([class*="libraryhome_Container"], [class*="libraryhome_LibraryHome"],
+    [class*="libraryhome_LibraryHomeContent"], [class*="libraryhomeshowcases_Container"],
+    [class*="appdetails_Overview"], [class*="appdetails_InnerContainer"],
+    [class*="appdetails_GameInfo"], [class*="appdetailssection_Container"],
+    [class*="appdetailsplaysection_PlayBar"], [class*="downloads_DownloadsPage"]) {
+  @include theme.surface(base, text);
+}
+:is([class*="appportrait_LibraryItemBox"], [class*="libraryassetimage_Container"] ) {
+  border-radius: var(--rp-radius) !important;
+}
+:is([class*="gamelistentry_GameListEntry"], [class*="gamelistentry_Container"]) {
+  color: var(--rp-text) !important; border-radius: 5px;
+}
+:is([class*="gamelistentry_GameListEntry"], [class*="gamelistentry_Container"]):hover {
+  background: var(--rp-overlay) !important;
+}
+:is([class*="gamelistentry_Selected"], [class*="gamelistentry_Container"][class*="Selected"]) {
+  @include theme.surface(highlight-med, text);
+  box-shadow: inset 3px 0 var(--rp-iris) !important;
+}
+:is([class*="gamelistentry_GameListEntry"] [class*="GameName"],
+    [class*="appportrait_AppName"], [class*="libraryhome_SectionHeader"],
+    [class*="appdetailssection_Title"]) { color: var(--rp-text) !important; }
+:is([class*="gamelistentry_Playing"], [class*="gamelistentry_Downloading"]) { color: var(--rp-link) !important; }

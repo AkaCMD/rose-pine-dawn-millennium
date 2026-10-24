@@ -1,0 +1,106 @@
+@use "../shared/theme";
+
+/* Game-page sidebar panels use gradients instead of background colours. */
+.game_meta_data .block, .game_meta_data .block > .block_content,
+.game_meta_data .block .block_content_inner, .Cek1s5Ixk2xYmkqjjESD0,
+.game_language_options, .game_language_options table,
+.game_area_metascore, .game_area_already_owned, .game_area_already_owned .ds_flag {
+  @include theme.surface(surface, text);
+  border-color: var(--rp-highlight-med) !important;
+}
+.game_meta_data .block :is(p,td,th,label,b,strong,span),
+.game_language_options :is(td,th), .game_area_details_specs .label,
+.details_block b, ._3yxJH3baj7mwTTYzBIyi_Z, ._29jK3MyNRDW7PAcrm59l_O,
+.game_area_details_specs a, .game_meta_data .block .block_header,
+.game_area_details_specs .name, .game_area_details_specs .name a {
+  color: var(--rp-text) !important; text-shadow: none !important;
+}
+.game_meta_data :is(.subtitle,.date,.language_list,.details_block b),
+.game_language_options .unsupported, .game_language_options .unsupported td {
+  color: var(--rp-secondary) !important;
+}
+._2gXzKgnqPNSUzBWEYvQ4OP, .score.high {
+  background: var(--rp-pine) !important; color: theme.color("surface") !important;
+}
+.game_area_metascore .logo { background: var(--rp-pine) !important; border-radius: 4px; }
+.game_page_autocollapse_readmore {
+  @include theme.surface(overlay, link);
+}
+.sysreq_tab { @include theme.surface(overlay, link); }
+.sysreq_tab.active { background: var(--rp-pine) !important; color: theme.color("surface") !important; }
+.game_meta_data a, .recommendation_reasons a, .reason a,
+.game_area_details_specs_ctn .label, .family_info a,
+.steam_curator_recommendation a, .steam_curator_followed_text.recommended {
+  color: var(--rp-link) !important;
+}
+.family_info p, .steam_curator_recommendation, .steam_curator_selected,
+.steam_curator_recommendation_description { color: var(--rp-text) !important; }
+.game_meta_data a._2gXzKgnqPNSUzBWEYvQ4OP { color: theme.color("surface") !important; }
+.blockbg, .blockbg a, .right a, .game_meta_data .block_title,
+._1mfBI5XbiaKU9vS5WkJALu, ._3FBEGAfvLQj4qYjstmZAPE,
+.game_area_metascore .metacritic {
+  color: var(--rp-text) !important;
+}
+.communitylink_achivement_plusmore {
+  @include theme.surface(overlay, link);
+}
+.btn_green_steamui, .btn_green_steamui > span, .game_purchase_action a.btn_green_steamui,
+.game_purchase_action a.btn_green_steamui > span {
+  background: var(--rp-pine) !important; color: theme.color("surface") !important;
+  text-shadow: none !important;
+}
+.btn_green_steamui:hover, .btn_green_steamui:hover > span { background: #20576d !important; }
+.game_area_dlc_row, .game_area_dlc_row .game_area_dlc_name,
+.game_area_dlc_row .game_area_dlc_price {
+  @include theme.surface(overlay, text);
+}
+.game_area_dlc_section .game_area_dlc_section_title, .game_area_dlc_section .gradientbg {
+  @include theme.surface(surface, text);
+}
+.game_area_purchase_platform .platform_img, .search_result_row .platform_img {
+  filter: brightness(0); opacity: .65;
+}
+.game_area_dlc_section .note a, .metacritic { color: var(--rp-text) !important; }
+/* React review summaries and their controls also use hard-coded white text. */
+.review_ctn :is(div,span,p,h1,h2,h3,h4,label,strong,b) {
+  color: var(--rp-text) !important; text-shadow: none !important;
+}
+.review_ctn div {
+  background-color: transparent !important; background-image: none !important;
+  box-shadow: none !important;
+}
+.review_ctn a, .review_ctn a span { color: var(--rp-link) !important; }
+.review_ctn :is(button,select,[role="button"]) {
+  @include theme.surface(overlay, text);
+  border-color: var(--rp-highlight-med) !important;
+}
+._2BG1JKMgeqn_cr0rbRhRNA {
+  background: var(--rp-surface) !important; box-shadow: none !important;
+}
+._2BG1JKMgeqn_cr0rbRhRNA :is(div,a,span) { color: var(--rp-text) !important; }
+/* Legacy secondary buttons in the related-games carousel. */
+.btnv6_grey_black, .btnv6_grey_black > span {
+  @include theme.surface(overlay, text);
+  text-shadow: none !important;
+}
+
+/* Community recommendations and homepage section links on light surfaces. */
+.community_recommendation_app .right_col {
+  background: var(--rp-surface) !important;
+}
+.community_recommendation_app .app_name,
+.home_content h2 a,
+#discounts_and_events_title {
+  color: var(--rp-text) !important;
+  text-shadow: none !important;
+}
+.home_page_body_ctn .author_block .hours,
+.home_content h2 .header_inline {
+  color: var(--rp-secondary) !important;
+}
+.see_more_link .see_more_text {
+  color: var(--rp-link) !important;
+}
+.store_main_capsule .topseller_title {
+  color: var(--rp-link) !important;
+}

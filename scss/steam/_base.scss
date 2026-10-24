@@ -1,0 +1,30 @@
+@use "../shared/theme";
+
+/* Rosé Pine for Millennium 3.x. No external assets, scripts, or filters.
+   Semantic Steam selectors plus the desktop shell's current module classes. */
+:root {
+  color-scheme: light;
+  --rp-radius: 8px;
+  --rp-line: var(--rp-highlight-med);
+  --rp-panel: var(--rp-surface);
+}
+html, body {
+  background-color: var(--rp-base, theme.color("base")) !important;
+  color: var(--rp-text, theme.color("text")) !important;
+  accent-color: var(--rp-accent);
+  scrollbar-color: var(--rp-highlight-high) var(--rp-base);
+}
+/* Paint the browser host while the embedded page and palette are loading. */
+._1bGewp3tfzqAF6fVTFFUOz,
+._1bGewp3tfzqAF6fVTFFUOz ._29p1jfvZ-VdlXK24_7UGsK {
+  background-color: var(--rp-base, theme.color("base")) !important;
+}
+::selection { background: var(--rp-highlight-high); color: var(--rp-text); }
+::-webkit-scrollbar { width: 9px; height: 9px; }
+::-webkit-scrollbar-track { background: var(--rp-base); }
+::-webkit-scrollbar-thumb {
+  background: var(--rp-highlight-high); border: 2px solid var(--rp-base); border-radius: 8px;
+}
+:focus-visible { outline: 2px solid var(--rp-accent) !important; outline-offset: 2px; }
+a { color: var(--rp-link); }
+a:hover { color: var(--rp-text); }

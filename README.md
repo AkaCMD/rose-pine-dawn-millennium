@@ -2,7 +2,7 @@
 
 A light theme for the Steam desktop client, built with the [Rosé Pine Dawn palette](https://rosepinetheme.com/palette/). It uses warm cream surfaces, purple-gray text, and pine-blue accents across the library and store.
 
-This is a CSS theme loaded by [Millennium](https://steambrew.app/). It has one light appearance and requires no additional plugin or build step.
+This theme is loaded by [Millennium](https://steambrew.app/). It has one light appearance and includes compiled CSS, so installation requires no additional plugin or build step.
 
 ## Preview
 
@@ -90,9 +90,24 @@ Windows and macOS have not been tested. Big Picture, the in-game overlay, and al
 
 Steam updates can change the internal CSS classes used by this theme. When reporting a dark panel or unreadable label, include the page name, a screenshot, and your Steam and Millennium versions.
 
+## Theme development
+
+Edit the Sass sources in [`scss/`](scss/), then commit both the sources and the generated files in `css/`. Millennium loads the compiled CSS paths listed in [`skin.json`](skin.json).
+
+Use Node.js 22 or newer to install the development dependencies and compile the theme:
+
+```bash
+npm ci
+npm run build
+```
+
+Run `npm run watch` to compile changes as you edit. Run `npm run build:check` to check that the committed CSS matches the Sass sources without writing files.
+
+The six `.scss` entry points match the six CSS files in the manifest. The `steam/` and `store/` directories group rules by interface area; their entry points preserve module order because later rules override earlier ones. The shared palette lives in [`scss/shared/_tokens.scss`](scss/shared/_tokens.scss), with consistency checks against `palette.json`. The shared `surface` mixin emits background and foreground declarations in place, preserving selectors and specificity. Keep the runtime `--rp-*` custom properties when adding rules.
+
 ## Coverage tests
 
-Run `npm test` with Node.js 22 or newer for local checks. With Steam's local CEF debugging endpoint available, run `npm run test:coverage` to generate a report of suspected theme gaps and unverified regions. See the [coverage testing guide](docs/theme-coverage.md) for state captures, strict mode, browser verification, and limitations, and the [coverage glossary](CONTEXT.md) for terminology.
+After installing the development dependencies, run `npm test` for local checks, including verification that the generated CSS matches its Sass sources. With Steam's local CEF debugging endpoint available, run `npm run test:coverage` to generate a report of suspected theme gaps and unverified regions. See the [coverage testing guide](docs/theme-coverage.md) for state captures, strict mode, browser verification, and limitations, and the [coverage glossary](CONTEXT.md) for terminology.
 
 ## Restore the default appearance
 

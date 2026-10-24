@@ -1,0 +1,127 @@
+@use "../shared/theme";
+
+/* Library collection pages: collection browser and individual category grids. */
+._3VQUewWB8g6Z5qB4C7dGFr, ._38MncfB91VUpkDo8NSxAeV,
+._1TBJ1lK-VmJ2h1lXzBtGxA, .u1xD3KJEgksF_J_5TLZzO,
+.rz1mrOnj9WN6UErES7qsq, ._11p6Fm47YPaY-YjtuLYMMJ {
+  @include theme.surface(base, text);
+}
+._1UuM8B1MkiPFqJqO5XkYeZ, ._2Th-vimU76KOpmdy45yu52,
+.BpxCzVzPf5Y8EFlz5bZrP, ._3bWISeqP3H2j6YJnFwVEwu {
+  @include theme.surface(base, text);
+}
+._3VQUewWB8g6Z5qB4C7dGFr :is(h1,h2,h3),
+._3ONu7-h8EhRcUI72YoSVbD, ._1J1LQ0vGtpM3n0xw7XwQM6,
+._2hvQbTq62AjXQS4tZqVepi, ._36QQLBgXFUVTOhU9jMkCWD,
+._1ljKTq3H58WbDZGNPfM0TY, .Vl8Ft_SzabXluAKbqE-vN,
+._15p_9xq6fzy0U3pCRV0mAC {
+  color: var(--rp-text) !important; text-shadow: none !important;
+}
+._2wbrxC_eBJa8BqRcsMJhlb, ._3pJqXMYgfG8Emi3vn6e2WV {
+  background: var(--rp-highlight-high) !important;
+}
+._1tBzypb5E2AwNuBuVns9Hl, ._1ZtpSq62fy_8W-_0pMn5cu {
+  @include theme.surface(surface, text);
+}
+._2rlKqvybYupc-uk64cdQ8D, ._1ANYFgwMyPpwJjIndAdGSr,
+.DVBcpUzJ0x6kaRMfug0OJ, ._1kdinbVqPuXSbJRQa_pAuw,
+._13fGPw2BaM5wWIahr2xNKt, ._2qm05e8tWSAb-_fAHytQCP {
+  color: var(--rp-text) !important; text-shadow: none !important;
+}
+._26RbFDzzMplRhf211ujl5A, ._5PJElx6vly7dqkwVaao_b,
+.N8aJrSpxQ6II4CY_aFdYI {
+  @include theme.surface(overlay, text);
+}
+._2oJt3qYLAqr6xMjnpmBFLN, ._2cTiGDjpUyBonh9hRHHcwz,
+._1CA44fHFH68DkHIPoniGpz { color: var(--rp-text) !important; }
+._3iV2vMTw_vwWJ_gmiz1Q1k { color: var(--rp-link) !important; }
+._3gzh_NvTKey56JeHY7Q1WW {
+  background: var(--rp-pine) !important; color: var(--rp-on-accent, theme.color("surface")) !important;
+}
+._3gzh_NvTKey56JeHY7Q1WW div { color: inherit !important; }
+/* Horizontal library resize gutter below the main navigation. */
+._2CmrnGY-Amtd83ScJkFvx2 {
+  background: var(--rp-base) !important;
+  box-shadow: none !important;
+}
+/* Sidebar type selector and adjacent sorting control. */
+._2PF_m-I5yte3WnQhpcz8RC, .uE7Pj4tb2n3_Bx4vjEX0a {
+  @include theme.surface(overlay, text);
+  box-shadow: none !important;
+  border-color: var(--rp-highlight-high) !important;
+}
+._2PF_m-I5yte3WnQhpcz8RC:hover, .uE7Pj4tb2n3_Bx4vjEX0a:hover {
+  background: var(--rp-highlight-med) !important;
+}
+._3kSh7qVSTDcPDePx9kya8C, ._15aGnszAf3gHD-PFdJBoFD {
+  color: var(--rp-text) !important; opacity: 1 !important;
+}
+._15aGnszAf3gHD-PFdJBoFD svg { fill: var(--rp-text) !important; }
+.uE7Pj4tb2n3_Bx4vjEX0a svg { opacity: 1 !important; }
+.uE7Pj4tb2n3_Bx4vjEX0a svg polyline { stroke: var(--rp-text) !important; }
+/* Collections shortcut beside Library Home, including its four tile glyphs. */
+.xeuK3OqQYpIbPs1mCIS0k a._3pSPluBgf0NeR1kkCLWMhR {
+  @include theme.surface(overlay, text);
+  box-shadow: none !important;
+}
+.xeuK3OqQYpIbPs1mCIS0k a._3pSPluBgf0NeR1kkCLWMhR:hover,
+.xeuK3OqQYpIbPs1mCIS0k a._3pSPluBgf0NeR1kkCLWMhR:focus-visible {
+  background: var(--rp-highlight-med) !important;
+}
+.nC-pL16iUnIRcaj1UVnwq ._2tyaVs9BpqcW068aaOrO56 {
+  background: var(--rp-pine) !important; opacity: 1 !important;
+}
+._15aGnszAf3gHD-PFdJBoFD svg polygon { fill: var(--rp-text) !important; }
+
+/* Vertical library resize gutter and desktop notification controls. */
+._276E6ijBpjMA2_iTxNhhjc {
+  background-color: var(--rp-highlight-med) !important;
+}
+._276E6ijBpjMA2_iTxNhhjc:hover {
+  background-color: var(--rp-highlight-high) !important;
+}
+._2Szzh5sKyGgnLUR870zbDE:is(.RtSv39ZoBOySnb8XQ5hJf, ._5wILZhsLODVwGfcJ0hKmJ) {
+  @include theme.surface(overlay, text, $property: background-color);
+}
+._2Szzh5sKyGgnLUR870zbDE:is(.RtSv39ZoBOySnb8XQ5hJf, ._5wILZhsLODVwGfcJ0hKmJ):hover {
+  background-color: var(--rp-highlight-med) !important;
+}
+.RtSv39ZoBOySnb8XQ5hJf._3L1c8C0o_xXzPy26aoLBFd,
+._5wILZhsLODVwGfcJ0hKmJ._1oEwirQksXfZ-3RWWslbAR {
+  @include theme.surface(pine, on-accent, $property: background-color);
+}
+.RtSv39ZoBOySnb8XQ5hJf._3L1c8C0o_xXzPy26aoLBFd:hover,
+._5wILZhsLODVwGfcJ0hKmJ._1oEwirQksXfZ-3RWWslbAR:hover {
+  @include theme.surface(pine, on-accent, $property: background-color);
+}
+._2Szzh5sKyGgnLUR870zbDE ._34bQcTHo5QKzuujoEyU1tm { color: inherit !important; }
+
+/* Collection creation cards use translucent white text in the native theme. */
+._34I5HgBL6QP2CcuI4emtaM {
+  @include theme.surface(overlay, text);
+}
+._34I5HgBL6QP2CcuI4emtaM:hover {
+  background: var(--rp-highlight-med) !important;
+}
+._34I5HgBL6QP2CcuI4emtaM ._2890MptFADbe-IUQFQ8L1O {
+  color: var(--rp-secondary) !important;
+}
+/* Nested labels follow the control's foreground, including selected states. */
+:is(.contextMenuItem, .ContextMenuItem, .DialogDropDown, .DialogDropDownMenu_Item,
+    [class*="contextmenu_contextMenuItem"], [role="menuitem"], [role="option"],
+    ._2Szzh5sKyGgnLUR870zbDE) :where(div,span,label,b,strong,em) {
+  color: inherit !important;
+  text-shadow: none !important;
+}
+.DialogButton.Primary ._3Wb9yDmYPUJksCr7HmaT9H {
+  color: inherit !important;
+}
+/* Collection labels need an opaque surface above the cover collage. */
+._3IWn-2rn7x98o5fDd0rAxb {
+  @include theme.surface(overlay, text);
+}
+._3IWn-2rn7x98o5fDd0rAxb ._1J1LQ0vGtpM3n0xw7XwQM6 {
+  @include theme.surface(surface, text);
+  text-shadow: none !important;
+  border-radius: 4px;
+}

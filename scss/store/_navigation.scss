@@ -1,0 +1,79 @@
+@use "../shared/theme";
+
+/* The 2026 React store navigation uses hashed module selectors. */
+._16jZ3HEbtaJTl80pQINN2Y, .h2B3SGR_w4RWdrnsRZEcD {
+  @include theme.surface(surface, text);
+  border-bottom: 1px solid var(--rp-highlight-med) !important;
+}
+._16jZ3HEbtaJTl80pQINN2Y :is(a,button,span),
+._175B12uOwmeGBNcSaQFe-Z, .vj9hwW9u0MpjH7MVjjNw0 {
+  color: var(--rp-text) !important;
+}
+._16jZ3HEbtaJTl80pQINN2Y input { @include theme.surface(base, text); }
+/* Small text, filtering controls and secondary menu items. */
+#global_header :is(.menuitem,.global_action_link,.persona,.playerAvatar),
+#global_actions, #global_actions a,
+#home_featured_and_recommended, .home_page_content_title,
+.home_page_content_title a, .home_page_body_ctn .title,
+.home_page_body_ctn .carousel_container > h2,
+.home_page_body_ctn .home_page_content > h2,
+.carousel_container .title, .home_page_content .title,
+.dselect_container .trigger, .dselect_container .dropdownvisible,
+.dselect_container .dropdownvisible a, .dselect_container .dropdownhidden a,
+.range_display, .range_container .range_display, .searchbar .sortbox,
+.searchbar .sortbox label, .home_page_body_ctn .carousel_thumbs,
+.home_page_body_ctn .home_tab .tab_content,
+.home_page_body_ctn .home_marketing_message,
+.tab_preview .tab_review_summary, .hover .hover_review_summary {
+  color: var(--rp-text) !important; text-shadow: none !important;
+}
+.dselect_container .trigger, .dselect_container .dropdownhidden,
+.dselect_container .dropdownvisible, .dselect_container .dropdown,
+.searchbar .sortbox, .search_result_row.ds_owned .ds_flag,
+.search_result_row.ds_wishlist .ds_flag, .searchtag,
+.searchtag.tag_dynamic, #searchTags, .searchtag.tag_dynamic a {
+  @include theme.surface(overlay, text); border-color: var(--rp-highlight-med) !important;
+}
+.searchtag a, .searchtag.tag_dynamic a { color: var(--rp-link) !important; }
+.tab_filter_control_checkbox {
+  background: var(--rp-surface) !important;
+  border: 1px solid var(--rp-secondary) !important; border-radius: 3px;
+}
+.tab_filter_control.checked .tab_filter_control_checkbox {
+  background-color: var(--rp-pine) !important; border-color: var(--rp-pine) !important;
+}
+.qqQDu9j0LIoK-w06-JxB5, .qqQDu9j0LIoK-w06-JxB5 :is(span,div,a),
+._16jZ3HEbtaJTl80pQINN2Y .qqQDu9j0LIoK-w06-JxB5 :is(span,div,a) {
+  background-color: var(--rp-pine) !important; color: theme.color("surface") !important;
+}
+/* Carousel arrows and page dots need their own contrast on a cream background. */
+.carousel_container .arrow {
+  @include theme.surface(overlay, link);
+  opacity: 1 !important;
+}
+/* Homepage arrows use a white background SVG, which cannot inherit color.
+   Keep Steam's sizing and LTR/RTL transforms; use its cut-arrow silhouette
+   as a mask so the visible ink matches the inline SVG carousel controls. */
+.home_page_body_ctn .carousel_container .arrow > div {
+  background: var(--rp-pine) !important;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 100'%3E%3Cpolygon points='0,0.093 0,25.702 24.323,50.026 0,74.349 0,99.955 49.929,50.026'/%3E%3C/svg%3E") center / contain no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 100'%3E%3Cpolygon points='0,0.093 0,25.702 24.323,50.026 0,74.349 0,99.955 49.929,50.026'/%3E%3C/svg%3E") center / contain no-repeat !important;
+}
+.carousel_container .carousel_thumbs > div { background: var(--rp-highlight-high) !important; }
+.carousel_container .carousel_thumbs > div.focus { background: var(--rp-pine) !important; }
+/* Keep the full-screen menu positioning layer transparent; paint only its panel. */
+.h2B3SGR_w4RWdrnsRZEcD {
+  background: transparent !important; border: 0 !important;
+}
+._16jZ3HEbtaJTl80pQINN2Y :is(div,p,label,h2,h3),
+._3wkp8GaMeHBsrImd61r1X-, ._3ndoxZabNTcJ8NN50nQ4BM {
+  color: var(--rp-text) !important;
+}
+._16jZ3HEbtaJTl80pQINN2Y .qqQDu9j0LIoK-w06-JxB5 :is(div,p,label,span) {
+  color: theme.color("surface") !important;
+}
+#footer, #footer .footer_content, .footer_content, .footer_content .rule {
+  @include theme.surface(surface, text);
+  border-color: var(--rp-highlight-med) !important;
+}
+#footer :is(a,p,div,span), .footer_content :is(a,p,div,span) { color: var(--rp-secondary) !important; }

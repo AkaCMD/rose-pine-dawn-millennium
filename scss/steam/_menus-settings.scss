@@ -1,0 +1,61 @@
+@use "../shared/theme";
+
+/* Context menus, nested popouts and dropdowns are separate Steam documents. */
+.PP7LM0Ow1K5qkR8WElLpt, ._2EstNjFIIZm_WUSKm5Wt7n,
+._14wqdluDeDnnEcg3OSLEmd, ._3pofGqV0buiKAfMPEs3_82,
+.Baq37ml_4RsqEDikF0aIo, ._2fZ_eG4hoUgJoNBzVAW8wq,
+.DialogDropDownMenu, .DialogDropDownMenu_Item,
+.DialogDropDownMenu_Contents, [role="listbox"], [role="menu"] {
+  @include theme.surface(surface, text); border-color: var(--rp-highlight-med) !important;
+  box-shadow: var(--rp-shadow) !important;
+}
+._1n7Wloe5jZ6fSuvV18NNWI, ._2jXHP0742MyApMUVUM8IFn,
+._2qdHlYPUfe_wwwtyPIu7m3, ._2Bb4JC5n6anf32WgmTfeMP,
+._2uiDecKkKjAq7nimy3uLhG, .DialogDropDownMenu_Item,
+[role="menuitem"], [role="option"] {
+  color: var(--rp-text) !important; text-shadow: none !important;
+}
+._1n7Wloe5jZ6fSuvV18NNWI:hover, ._1n7Wloe5jZ6fSuvV18NNWI._18z-3vkWndCBO5WJgFldRK,
+._2jXHP0742MyApMUVUM8IFn:hover, .DialogDropDownMenu_Item:hover,
+[role="option"][aria-selected="true"], [role="menuitem"]:hover {
+  @include theme.surface(highlight-med, text);
+}
+.WUOrULWKkGLl3ZUQdDXg8, .IjIBR_wDDi2N77Oz4KAT4, ._21GPYlKBCLsHQpTsHw_RL_ {
+  background: var(--rp-highlight-med) !important; border-color: var(--rp-highlight-med) !important;
+}
+._114nFoGF7tZ4PpremDP2w0, ._38-c8Lb-zCJc8GmvTzoyL1 {
+  color: var(--rp-link) !important;
+}
+/* Text on library surfaces, including small shelf and news captions. */
+._17uEBe5Ri8TMsnfELvs8-N :is(.aqYQCF7Ny9x3EKcjCOTRY, ._3YO5BpDmZERh_G8kaWbaSJ),
+._3SkuN_ykQuWGF94fclHdhJ, ._1ljKTq3H58WbDZGNPfM0TY {
+  color: var(--rp-secondary) !important; opacity: 1 !important;
+}
+/* Labels inside secondary settings buttons must not keep Steam's white text. */
+.DialogButton :is(div,span,label), .DialogButton .DialogLabel {
+  color: inherit !important;
+}
+.DialogButton ._3Wb9yDmYPUJksCr7HmaT9H { color: var(--rp-secondary) !important; }
+.nOdcT-MoOaXGePXLyPe0H { color: var(--rp-text) !important; }
+/* Current Steam settings fields and their dropdown portal. */
+.eKmEXJCm_lgme24Fp_HWt, ._2CCdODv0vfzOMrEBUzZwfI,
+._30wJO3MC4x-I1OWpy1TAeE, ._2oAiZidGyUxL-hfupFDQ2m {
+  @include theme.surface(surface, text);
+  box-shadow: none !important; border-color: var(--rp-highlight-med) !important;
+}
+.eKmEXJCm_lgme24Fp_HWt { border-bottom: 1px solid var(--rp-highlight-med) !important; }
+._3jMlJm4PQCA8SfNlUR99Fo, .KGS2r2ext4jvDYa-MAFLD,
+._2oAiZidGyUxL-hfupFDQ2m :is(div,span), ._3pteVMTgNRdIzZreR6HnTp {
+  color: var(--rp-text) !important; text-shadow: none !important;
+}
+._1W1to_azoBRG95oNAFpf9Q, ._1W1to_azoBRG95oNAFpf9Q :is(div,span) {
+  color: var(--rp-secondary) !important;
+}
+._2oAiZidGyUxL-hfupFDQ2m:hover, ._2oAiZidGyUxL-hfupFDQ2m[aria-selected="true"] {
+  background: var(--rp-highlight-med) !important;
+}
+._2bl0iQ9xigbq4Zd1NI6NZl { background: var(--rp-highlight-high) !important; }
+._2bl0iQ9xigbq4Zd1NI6NZl.yLrDAetGoWx0GYqA6ShfS,
+.yLrDAetGoWx0GYqA6ShfS ._2bl0iQ9xigbq4Zd1NI6NZl { background: var(--rp-pine) !important; }
+._1PQppcgkuXQAiFPar9AGi- { background: var(--rp-surface) !important; }
+._1W1to_azoBRG95oNAFpf9Q a { color: var(--rp-link) !important; }

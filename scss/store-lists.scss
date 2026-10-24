@@ -1,0 +1,196 @@
+@use "shared/theme";
+
+/* Wishlist and cart. Hashed selectors come from Steam's store CSS modules;
+   keep legacy selectors for clients still serving the previous pages. */
+body:is(.wishlist, .wishlist_page, .ShoppingCart),
+body:has(.awGgT3ZKumU-, .cE9cj0nbqpY-, ._22xtsolKcQit92o-LBeRWD) {
+  @include theme.surface(base, text);
+}
+
+/* These routes also serve the new store header instead of #global_header. */
+:where(body:has(.awGgT3ZKumU-, .cE9cj0nbqpY-))
+    :is(._7urhuKLYiUk-, .WCG-2-OYepA-, .t-LlQicBZjE-) {
+  @include theme.surface(surface, text);
+  border-color: var(--rp-line) !important;
+  box-shadow: none !important;
+}
+:where(body:has(.awGgT3ZKumU-, .cE9cj0nbqpY-))
+    :is(._7urhuKLYiUk-, .WCG-2-OYepA-, #footer)
+    :is(a, button, div, span, h3) {
+  color: var(--rp-text) !important;
+  text-shadow: none !important;
+}
+
+/* Page roots, including the empty and signed-out states. */
+:is(#wishlist_ctn, .wishlist_header, .wishlist_content, .awGgT3ZKumU-,
+    .uTozs1Q00-o-, .cE9cj0nbqpY-, ._22xtsolKcQit92o-LBeRWD) {
+  color: var(--rp-text) !important;
+  --original-price-color: var(--rp-secondary);
+  --final-price-color: var(--rp-text);
+}
+:where(#wishlist_ctn, .wishlist_header, .wishlist_content, .awGgT3ZKumU-,
+    .uTozs1Q00-o-, .cE9cj0nbqpY-, ._22xtsolKcQit92o-LBeRWD,
+    .cart_item, .cart_totals_area)
+    :is(div, span, p, h1, h2, h3, h4, label, strong, b, a, button) {
+  color: var(--rp-text) !important;
+  text-shadow: none !important;
+}
+:where(#wishlist_ctn, .awGgT3ZKumU-, .uTozs1Q00-o-,
+    .cE9cj0nbqpY-, ._22xtsolKcQit92o-LBeRWD) a:not(.inqz7Zdx9Xg-, .oS2hPC3gY6k-):hover {
+  color: var(--rp-link) !important;
+}
+
+/* Wishlist rows, cart items, totals and the Steam Points summary. */
+:is(.wishlist_row, .PE-3oq-yIvg-, .cart_item, .cart_row,
+    .checkout_content, .cart_totals_area, .cart_status_message,
+    .i-xXuvHLioU-, .i1XZFikuzME-, .nfxC9n3FRVE-, .A5wvDuCfNCI-,
+    .JJeoxQhS3oE-, ._5mUkJC0jc7E-, ._2mBlJQwZ-EM-,
+    .stgG7UvoANg-, ._8ga4kbwi7P8-, .O7rfjzZeRG4-, ._7U-iEpa-b3E-,
+    .ikD1i-Sr-yY-, .XjPmFc2t_i1DAuEXEbIX, ._2bIzQo07mxubFvscA8RIA8,
+    .jY9l4aHTdQLHeTWfPonTr, .tVR7nCVynuzImpvF9viMI,
+    ._3s8SimT1ZQwPeXXdDFPQLK, ._1MfAwU630QwDv6FuV9c_Dr,
+    ._2w0ZEap3hR1c0K0_DxJDdN, ._4SG2MjCMpIRt6W-Zj4Oxm) {
+  @include theme.surface(surface, text);
+  border-color: var(--rp-line) !important;
+  box-shadow: none !important;
+}
+:is(.wishlist_row, .PE-3oq-yIvg-):hover {
+  background: var(--rp-overlay) !important;
+}
+
+/* Release dates, ranks, review labels, original prices and tax notes. */
+:is(.wishlist_row .addedon, .wishlist_row .release_date,
+    .wishlist_row .platforms, .wishlist_row .value,
+    .cart_item .remove_link, .cart_item .cart_item_price_container,
+    .uQ8Li0MwEhQ-, .uQ8Li0MwEhQ- .Q6G2tkjGQKw-, .ZdGB16lKY0I-,
+    .BKhk6CZ5ib0-, .Eed0wvMRyic-, ._1-Xw1ot0vCY-, .-rdmiROdf2A-,
+    .bi47TlP7SSw-, .OgjhAXUXuQw-, .l3tXfL5lEk0-, .QQ50n6yPgT4-,
+    .BFDdk5e7x8k-, ._8IaR06zcRE4-, ._5BH7TDomMoc-, .VlO2XVO6mXQ-,
+    ._31DQWsrdb_9oV-vMOaaPqI, ._2FKdJT3nRLNX_ue4Zj-qdK,
+    ._3TtUDn-J9j6rkwHqjT-i4Y, ._2Agry3evdkG3gKPyhNf7Hz,
+    ._3YCgcpoCojlbS6DvkNsG2J, ._2qvlyUCwtTBUslo1Z7-RlG,
+    ._2HO_qGTXtEZz_EF60S6hfS, ._1j8t9ZjX3tyKrSBnkY6IeG) {
+  color: var(--rp-secondary) !important;
+}
+
+/* Filters, tags, purchase-option dropdowns and their detached menus. */
+:is(#wishlist_search, .wishlist_row .tag, .wishlist_row .purchase_area,
+    .PzuczM6OUSY-, .RRaSHSVb5-E-, .cDJOlrqyRq8-, .U3ndjc3qoW8-,
+    ._6QzykeEsckc-, .sNExYpOoTBo-, ._7QIKO2z7kiQ-, .QoJP0e0vzFA-,
+    .NPn6COdfSNw-, ._8SeGvT1Jess-, .CZqGJG5-v8g-,
+    .S0wqxLQ48rE-, .hsI8X6LpJM0-, .tDRvrE5Zz-w-,
+    ._3wfeHGptWCHP2ctMNwtAr8, ._3pw4q_MAfhjbHBkGJVrYyz,
+    .tKoWmz4HQdpU6S-Fq6IEh) {
+  @include theme.surface(overlay, text);
+  border-color: var(--rp-line) !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+:is(.PzuczM6OUSY-, .RRaSHSVb5-E-, .U3ndjc3qoW8-,
+    .hsI8X6LpJM0-, .tDRvrE5Zz-w-, ._3pw4q_MAfhjbHBkGJVrYyz):hover,
+._8SeGvT1Jess- button:is(:hover, .pGjJvIOjeeU-) {
+  @include theme.surface(highlight-med, text);
+}
+._8SeGvT1Jess- button,
+.IShbIXSFzbI- :is(h3, label, input),
+:is(.sNExYpOoTBo-, .CZqGJG5-v8g-, .tKoWmz4HQdpU6S-Fq6IEh)
+    :is(div, span) {
+  color: var(--rp-text) !important;
+}
+:is(.IShbIXSFzbI-, .tPinc5p8M44-, .dxGRQwKaz98-) {
+  @include theme.surface(surface, text);
+}
+:is(.RRaSHSVb5-E-, .E0AZ1CRvqNk- .Ndh5LdeIG9s- > input) {
+  @include theme.surface(base, text);
+  box-shadow: none !important;
+}
+:is(.RRaSHSVb5-E-, .PzuczM6OUSY-, .U3ndjc3qoW8-,
+    ._8SeGvT1Jess- button, .p0Gsr94HawQ-, .SJQdNn4TmE8-):focus-visible {
+  outline: 2px solid var(--rp-pine) !important;
+  outline-offset: 2px;
+}
+.cDJOlrqyRq8-.n5jTCXrzS8A-::after {
+  @include theme.surface(highlight-high, text);
+}
+.E0AZ1CRvqNk-, .TRWhWHbPvhU-, .wPcLjaJPSko- {
+  border-color: var(--rp-line) !important;
+}
+
+/* Secondary actions and remove controls retain readable hover states. */
+:is(.VZx5flX71DI- a, .p0Gsr94HawQ-, ._7AZI-0r5FAs-,
+    ._7AZI-0r5FAs- > span, .z4nYR-MCfbI-) {
+  @include theme.surface(overlay, link);
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+:is(.VZx5flX71DI- a, .p0Gsr94HawQ-, ._7AZI-0r5FAs- > span):hover,
+._7AZI-0r5FAs-:hover > span {
+  @include theme.surface(highlight-med, text);
+}
+.p0Gsr94HawQ- svg {
+  fill: var(--rp-love) !important;
+}
+:is(.PzuczM6OUSY-, .P8g8lT95CGk-, ._2FgjpNRRiZkDXAB53vFFOh) svg {
+  color: var(--rp-secondary) !important;
+  fill: currentColor !important;
+}
+
+/* Price widgets share these modules with product pages. Scope overrides to
+   the lists so other store layouts keep their existing rules. */
+:where(.awGgT3ZKumU-, .cE9cj0nbqpY-, ._22xtsolKcQit92o-LBeRWD)
+    :is(.Cj7J5QHbL-0-, .-OkCLv-56oQ-, .K2UfkCIuEhY-,
+        .YHonIqDIZys-, ._-54SS2-Bx9o-) {
+  background: var(--rp-overlay) !important;
+  --original-price-color: var(--rp-secondary) !important;
+  --final-price-color: var(--rp-text) !important;
+}
+:where(.awGgT3ZKumU-, .cE9cj0nbqpY-, ._22xtsolKcQit92o-LBeRWD)
+    :is(._9Rf9BwU0xAQ-, .Y9w82-bhx7g-, .gXsTTmkhkp8-) {
+  color: var(--rp-secondary) !important;
+  opacity: 1 !important;
+}
+:where(.awGgT3ZKumU-, .cE9cj0nbqpY-, ._22xtsolKcQit92o-LBeRWD)
+    :is(.rsMD9WnTopA-, .KY4Cd9W1L6Q-, .OgxPLTiqRYA-,
+        .O7UR3Sc3EmM-, .kkZ9PsIE60o-, .X3eWtXr50WY-) {
+  @include theme.surface(pine, on-accent);
+  text-shadow: none !important;
+}
+/* Descendant text must inherit the foreground of primary buttons/badges. */
+:where(#wishlist_ctn, .awGgT3ZKumU-, .uTozs1Q00-o-,
+    .cE9cj0nbqpY-, ._22xtsolKcQit92o-LBeRWD)
+    :is(.DialogButton, .btnv6_green_white_innerfade, .btn_green_steamui,
+        .discount_pct, .StoreSaleDiscountBox, .rsMD9WnTopA-, .KY4Cd9W1L6Q-,
+        .OgxPLTiqRYA-, .O7UR3Sc3EmM-, .kkZ9PsIE60o-, .inqz7Zdx9Xg-,
+        .oS2hPC3gY6k-, .X3eWtXr50WY-)
+    :is(div, span, label, b, strong, em) {
+  color: inherit !important;
+}
+:where(.awGgT3ZKumU-, .cE9cj0nbqpY-, .uTozs1Q00-o-)
+    :is(.inqz7Zdx9Xg-, .oS2hPC3gY6k-, .oS2hPC3gY6k- > span) {
+  @include theme.surface(pine, on-accent);
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+:where(.awGgT3ZKumU-, .cE9cj0nbqpY-)
+    .inqz7Zdx9Xg-[data-accent-color="dull"] {
+  @include theme.surface(overlay, text);
+}
+:where(.awGgT3ZKumU-, .cE9cj0nbqpY-)
+    :is(.inqz7Zdx9Xg-, .oS2hPC3gY6k-):focus-visible {
+  outline: 2px solid var(--rp-pine) !important;
+  outline-offset: 2px;
+}
+:is(._9pgNwsujvcE-, ._0EeqCzGG-eI- span) {
+  @include theme.surface(overlay, link);
+  box-shadow: none !important;
+}
+/* Cart warnings keep their meaning without bright yellow or red panels. */
+:is(.Px5OaOH5lTc-, ._2BtczALVCY2zzCLnj8oga9) {
+  @include theme.surface(overlay, text);
+  border-inline-start: 3px solid var(--rp-gold);
+}
+:is(.JgMSk3YkOPs-, .QXWymsIStf0-, .TxVkADLALj4-, ._3IHMp-zjjxc-,
+    ._2LPurUnl-MyMX6q6B0uNX, ._3y4BqvBTwDLWUl1TCNqWp9) {
+  color: var(--rp-text) !important;
+  text-decoration: underline dotted var(--rp-love);
+}

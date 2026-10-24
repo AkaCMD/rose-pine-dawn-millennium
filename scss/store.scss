@@ -1,0 +1,10 @@
+// Module order preserves Steam overrides in the CSS cascade.
+@use "store/base";
+@use "store/legacy-surfaces";
+@use "store/navigation";
+@use "store/product-panels";
+@use "store/copy-prices";
+@use "store/home";
+@use "store/purchase-lists";
+@use "store/recommendations";
+@use "store/sidebar";

@@ -1,0 +1,48 @@
+@use "../shared/theme";
+
+/* Homepage lists and product copy declare their own light foregrounds. */
+:is(.tab_item, .tab_row_item) :is(.tab_item_title, .tab_item_rank),
+.home_page_body_ctn .home_title,
+.home_page_body_ctn .home_title :is(b,strong,span),
+.tab_preview .tab_title,
+.game_area_purchase_game .bundle_label,
+.early_access_banner p,
+.early_access_announcements ._1TRFtE8IfXpDQ_loHnB_bU {
+  color: var(--rp-text) !important;
+  text-shadow: none !important;
+}
+.home_page_body_ctn .home_section_subtitle,
+.tab_preview .review_anomaly_icon,
+:is(.tab_item, .tab_row_item) :is(.tab_item_tags, .top_tag, .tab_item_release_date),
+.game_area_purchase_game .bundle_label_tooltip,
+.game_area_purchase_game .package_contents,
+.game_area_purchase_game .package_contents :is(div,span,p),
+#devnotes_expander {
+  color: var(--rp-secondary) !important;
+  text-shadow: none !important;
+}
+/* React price widgets must repaint the surface together with the text. */
+.CapsuleBottomBar, .StoreSalePriceWidgetContainer {
+  @include theme.surface(overlay, text);
+}
+.StoreSalePriceWidgetContainer :is(.kauOU9QnW8Fs0QpxzTBph, ._2L23Sk2CNSFCplu_7mMmQx) {
+  color: var(--rp-text) !important;
+}
+.StoreSalePriceWidgetContainer ._1odBXcjq8-Q8SFXViJa7c6 {
+  color: var(--rp-secondary) !important;
+}
+.StoreSalePriceWidgetContainer .StoreSaleDiscountBox {
+  @include theme.surface(pine, on-accent);
+}
+#search_results_filtered_warning_persistent,
+#search_results_filtered_warning,
+._3PAP1PfUymQrLEveRsxQxP {
+  @include theme.surface(surface, text);
+}
+#search_results_filtered_warning_persistent :is(div,span,a),
+#search_results_filtered_warning :is(div,span,a) {
+  color: var(--rp-text) !important;
+}
+._3PAP1PfUymQrLEveRsxQxP ._3u1HeR7JRPiiuKIT78j2Cc {
+  @include theme.surface(pine, on-accent);
+}

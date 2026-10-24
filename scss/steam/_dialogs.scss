@@ -1,0 +1,60 @@
+@use "../shared/theme";
+
+/* Settings, Millennium, dialogs and menus. */
+:is(.DialogContent, .DialogContent_InnerWidth, .DialogBody, .DialogFooter,
+    .DialogHeader, .ModalPosition_Content, .ModalPosition_Dismiss, .PopupFullWindow,
+    .contextMenu, .contextMenuContents, .ContextMenuPopup,
+    [class*="contextmenu_contextMenu"], [class*="contextmenu_ContextMenu"],
+    [class*="SettingsDialog"], [class*="settings_SettingsDialog"],
+    [class*="DialogContent"], [class*="ModalDialogPopup"] ) {
+  background-color: var(--rp-surface) !important;
+  background-image: none !important; color: var(--rp-text) !important;
+}
+:is(.DialogHeader, .DialogLabel, .DialogBodyText, .DialogBody, .DialogCheckbox_Container,
+    .contextMenuItem, .ContextMenuItem, [class*="contextmenu_Label"],
+    [class*="settings_FieldLabel"], [class*="DialogHeader"]) {
+  color: var(--rp-text) !important;
+}
+:is(.DialogBodyText .subtext, .DialogLabelExplainer, .DialogSubHeader,
+    [class*="FieldDescription"], [class*="settings_FieldDescription"]) {
+  color: var(--rp-secondary) !important;
+}
+:is(.contextMenuContents, [class*="contextmenu_contextMenuContents"], .DialogContent) {
+  border-radius: var(--rp-radius); border-color: var(--rp-line) !important;
+}
+:is(.contextMenuItem, .ContextMenuItem, [class*="contextmenu_contextMenuItem"]):hover {
+  @include theme.surface(highlight-med, text);
+}
+:is([class*="settings_LeftNav"], [class*="settings_LeftNavPane"],
+    [class*="desktopsettings_NavPanel"], [class*="MillenniumDesktopSidebar"]) {
+  background: var(--rp-base) !important;
+}
+:is([class*="settings_Tab"], [class*="desktopsettings_NavItem"]):hover {
+  @include theme.surface(overlay, text);
+}
+:is(.DialogInput, .DialogTextInputBase, input[type="text"], input[type="search"],
+    input[type="password"], input[type="number"], textarea, select, .DialogDropDown) {
+  background-color: var(--rp-base) !important; background-image: none !important;
+  color: var(--rp-text) !important; border: 1px solid var(--rp-line) !important;
+  border-radius: 6px !important; box-shadow: none !important;
+}
+input::placeholder, textarea::placeholder { color: var(--rp-secondary) !important; opacity: 1; }
+:is(.DialogInput, input, textarea, select):focus {
+  border-color: var(--rp-iris) !important;
+}
+button.DialogButton, .DialogButton {
+  @include theme.surface(overlay, text);
+  border: 1px solid var(--rp-line) !important; border-radius: 6px !important;
+  box-shadow: none !important; text-shadow: none !important;
+}
+button.DialogButton:hover, .DialogButton:hover {
+  background: var(--rp-highlight-med) !important; border-color: var(--rp-iris) !important;
+}
+button.DialogButton.Primary, .DialogButton.Primary {
+  @include theme.surface(accent, on-accent);
+  border-color: var(--rp-accent) !important;
+}
+button:disabled, .DialogButton.Disabled { opacity: .5 !important; }
+:is([role="switch"][aria-checked="true"], input[type="checkbox"]:checked) {
+  accent-color: var(--rp-iris); background-color: var(--rp-iris);
+}

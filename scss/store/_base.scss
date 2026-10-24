@@ -1,0 +1,58 @@
+@use "../shared/theme";
+
+/* Store and community: explicit surface/text rules, never a page-wide colour filter. */
+:is(body.v6, body.v7, body.flat_page, .responsive_page_frame, .responsive_page_content,
+    .responsive_page_template_content, .page_background, .home_page_body_ctn,
+    .game_page_background, .game_background_glow, .game_background_glow_center,
+    .community_home_content, .profile_page) {
+  @include theme.surface(base, text, $property: background-color);
+}
+body.v6, body.v7, .page_background, .game_page_background,
+.game_background_glow, .game_background_glow_center { background-image: none !important; }
+:is(#global_header, #global_header .content, #store_header, .store_nav,
+    .store_header_btn_gray, .supernav_content, .game_meta_data,
+    .game_description_snippet, .game_area_purchase_game, .game_area_purchase_game_wrapper,
+    .game_area_dlc_section, .game_area_sys_req, .glance_ctn, .block_content,
+    .block_content_inner, .review_box, .review_ctn, .user_reviews_summary_row,
+    .user_reviews_filter_options, .home_area_spotlight, .sale_capsule,
+    .search_result_row, .tab_item, .store_capsule, .newmodal,
+    .newmodal_content, .newmodal_content_border, .newmodal_header_border,
+    .aiwarning_container .newmodal, .aiwarning_container .newmodal_content) {
+  background-color: var(--rp-surface) !important; background-image: none !important;
+  color: var(--rp-text) !important; border-color: var(--rp-line) !important;
+}
+:is(.search_result_row, .tab_item, .store_capsule):hover {
+  background-color: var(--rp-overlay) !important;
+}
+:is(.apphub_AppName, .game_description_snippet, .game_area_description,
+    .game_area_description h2, .game_area_description p, .game_area_description ul,
+    .game_area_sys_req, .game_area_sys_req strong, .game_area_sys_req ul,
+    .tab_item_name, .search_name .title, .block .block_header, .review_content,
+    .user_reviews_count, .newmodal_header, .newmodal_prompt_description,
+    #global_header .supernav, .store_nav .tab > span, .game_area_purchase_game h1,
+    .game_purchase_price, .discount_final_price) { color: var(--rp-text) !important; }
+:is(.subtitle, .release_date, .glance_tags, .search_released, .search_price,
+    .responsive_hidden, .game_review_summary, .dev_row .subtitle,
+    .discount_original_price, .game_area_details_specs) { color: var(--rp-secondary) !important; }
+:is(.game_area_description a, .dev_row a, .glance_tags a, .app_tag,
+    .game_area_details_specs a, .review_box a, .aiwarning_container a) {
+  color: var(--rp-link) !important;
+}
+:is(.app_tag, .game_area_details_specs .name, .btnv6_blue_hoverfade,
+    .btnv6_blue_hoverfade > span) {
+  @include theme.surface(overlay, link);
+  border-radius: 4px;
+}
+:is(.btn_green_white_innerfade, .btn_green_white_innerfade > span,
+    .btnv6_green_white_innerfade, .btnv6_green_white_innerfade > span) {
+  @include theme.surface(accent, on-accent);
+  text-shadow: none !important;
+}
+:is(.discount_pct, .discount_block .discount_pct) {
+  background: var(--rp-pine) !important; color: theme.color("surface") !important;
+}
+:is(.discount_prices, .game_purchase_action_bg, .game_purchase_price) {
+  background: var(--rp-overlay) !important;
+}
+.newmodal { box-shadow: var(--rp-shadow) !important; }
+.aiwarning_container .modal_top_bar { background: var(--rp-gold) !important; }

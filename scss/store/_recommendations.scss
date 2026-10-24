@@ -1,0 +1,42 @@
+@use "../shared/theme";
+
+/* Product-page curator referrals and React announcement cards. */
+.referring_curator,
+[data-featuretarget="events-row"] .OtherEvents_EventCtn {
+  @include theme.surface(surface, text);
+  border-color: var(--rp-line) !important;
+  box-shadow: none !important;
+}
+.referring_curator .blurb,
+.referring_curator .blurb p,
+[data-featuretarget="events-row"] :is(._2jc1DpJ_WzFtigRh5qDWce, .ENbI1gFgvIca6HSKAbfiJ) {
+  color: var(--rp-text) !important;
+  text-shadow: none !important;
+}
+.referring_curator :is(.referringSteamCurator, .curator_review_date, .referring_curator_note),
+[data-featuretarget="events-row"] .HZ6b2d4r4EFnT_1BeU5vo {
+  color: var(--rp-secondary) !important;
+}
+.referring_curator :is(a, .review_title),
+[data-featuretarget="events-row"] :is(._2BWwVF5N-3fDuJRblB6gHb, ._11JXznGoylLSEmZXZbgcsq) {
+  color: var(--rp-link) !important;
+}
+.referring_curator .color_not_recommended { color: var(--rp-negative) !important; }
+.referring_curator .color_informational { color: var(--rp-link) !important; }
+.referring_curator .readmore_button_ctn > span,
+[data-featuretarget="events-row"] ._3n8swQFM3I_ARVM_5bPhAs {
+  @include theme.surface(overlay, link);
+  border-color: var(--rp-line) !important;
+  text-shadow: none !important;
+}
+.referring_curator .readmore_button_ctn > span:hover,
+[data-featuretarget="events-row"] ._3n8swQFM3I_ARVM_5bPhAs:is(:hover, :focus-visible) {
+  background: var(--rp-highlight-med) !important;
+}
+/* This layer paints a separate image/gradient behind the card content. */
+[data-featuretarget="events-row"] ._2pPj9UWoWM6h318uBN0-8X {
+  background: transparent !important;
+}
+[data-featuretarget="events-row"] .OtherEvents_EventCtn:is(:hover, :focus-visible) {
+  background: var(--rp-overlay) !important;
+}

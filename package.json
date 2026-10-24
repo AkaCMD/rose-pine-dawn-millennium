@@ -2,9 +2,18 @@
   "name": "rose-pine-dawn-coverage",
   "private": true,
   "type": "module",
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
+    "build": "node scripts/build-css.mjs",
+    "build:check": "node scripts/build-css.mjs --check",
+    "watch": "sass --watch --no-source-map --no-charset scss:css",
+    "pretest": "npm run build:check",
     "test": "node --test",
     "test:coverage": "node scripts/theme-coverage.mjs"
+  },
+  "devDependencies": {
+    "sass": "1.106.1"
   }
 }

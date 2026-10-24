@@ -1,0 +1,119 @@
+@use "../shared/theme";
+
+/* Dawn surfaces for Steam's legacy store and its React navigation. */
+body.v6, body.v7 { --main-text-color: var(--rp-text); --main-light-blue: var(--rp-pine); }
+body.v6 :is(h1,h2,h3,h4), body.v7 :is(h1,h2,h3,h4) { color: var(--rp-text) !important; }
+:is(.home_page_body_ctn, .page_content, .page_content_ctn) :is(.title,.name,.subtitle,.heading,.text) {
+  color: var(--rp-text) !important;
+}
+:is(.store_main_capsule, .store_main_capsule .info, .store_main_capsule .app_name,
+    .store_main_capsule .reason, .store_main_capsule .reason .main,
+    .home_ctn, .home_ctn.dailydeal_ctn, .home_page_content, .home_tabs_content,
+    .home_tabs_row, .home_tabs_row .tab_content, .tab_content, .tab_preview,
+    .tab_preview_details, .home_discount_single_ctn, .home_discounts_ctn,
+    .spotlight_content, .spotlight_body, .spotlight_weeklong_ctn,
+    .store_capsule_frame, .store_capsule .capsule, .dailydeal_ctn,
+    .home_content.single, .curator_recommendation, .home_area_spotlight,
+    .recommendation_carousel_item, .carousel_container .price,
+    .game_purchase_action_bg, .game_purchase_discount, .game_purchase_action,
+    .search_results, .search_results_count, .search_pagination,
+    .search_pagination_left, .search_pagination_right, .search_collapse_block,
+    .search_collapse_block .block_content, .search_collapse_block .block_header,
+    .search_advanced, .searchbar, .searchbar_left, .searchbar_right,
+    .match, .search_suggest, .search_suggest .match,
+    .game_area_details_specs, .game_details, .game_area_purchase_not_refundable,
+    .game_area_comingsoon, .game_area_offsite_purchase, .game_area_already_owned,
+    .queue_overflow_ctn, .queue_actions_ctn, .queue_btn_menu,
+    .game_area_purchase_game_dropdown_selection, .game_area_purchase_game_dropdown_menu,
+    .user_reviews_summary_row, .user_reviews_filter_options, .review_box,
+    .review_box .leftcol, .review_box .rightcol, .early_access_header,
+    .early_access_banner, .game_area_bubble, .game_area_bubble .content,
+    .game_area_sys_req, .game_area_techinfo, .game_area_dlc_bubble,
+    .similar_grid_item, .similar_grid_capsule, .glance_tags.popular_tags,
+    .hover, .hover_box, .hover_body, .hover_top, .hover_bottom,
+    .hover_details_block, .hover_tag_row, .responsive_tab_control,
+    .popup_menu, .popup_menu2, .popup_body, .popup_block,
+    .popup_block_new, .popup_block_new .popup_body,
+    .supernav_content, .store_nav_content, .store_nav_content .popup_body,
+    .store_nav .tab.active, .store_nav .tab:hover, .tab_filler,
+    #review_histogram_rollup_section, #review_histograms_container,
+    .review_ctn, .review_controls, .review_award_ctn,
+    .game_page_autocollapse_ctn .game_page_autocollapse_fade) {
+  background-color: var(--rp-surface) !important;
+  background-image: none !important;
+  color: var(--rp-text) !important;
+  border-color: var(--rp-highlight-med) !important;
+  box-shadow: none !important;
+}
+:is(.home_page_takeover_sizer, .home_page_takeover_link, .home_page_takeover_ctn) {
+  background-color: var(--rp-base) !important;
+}
+:is(.store_main_capsule .app_name, .store_main_capsule .app_name > div,
+    .store_main_capsule .reason, .store_main_capsule .reason .main,
+    .store_main_capsule .reason .reason_text, .store_main_capsule .info,
+    .home_page_body_ctn h2, .home_page_body_ctn h3,
+    .home_page_body_ctn .home_section_title, .tab_item_name,
+    .tab_preview h2, .tab_preview .tab_review_summary,
+    .tab_preview .tab_review_summary .title, .tab_preview .tags,
+    .search_results_count, .search_pagination, .search_pagination a,
+    .search_collapse_block .block_header, .search_collapse_block .block_content,
+    .search_result_row, .search_result_row .title, .search_result_row .search_price,
+    .search_result_row .search_released, .search_result_row .discount_final_price,
+    .search_result_row .col, .tab_filter_control, .tab_filter_control_label,
+    .tab_filter_control_count, .game_purchase_price, .discount_final_price,
+    .game_purchase_action .game_purchase_price, .game_area_sys_req strong,
+    .game_area_sys_req ul, .game_area_sys_req li, .game_area_sys_req p,
+    .game_area_sys_req .game_area_sys_req_leftCol,
+    .game_area_sys_req .game_area_sys_req_rightCol,
+    .game_area_details_specs .name, .game_area_details_specs .label,
+    .review_box .content, .review_box .title, .review_box .posted,
+    .review_box .vote_header, .user_reviews_count,
+    .queue_btn_menu, .popup_menu a, .popup_menu2 a, .popup_menu .popup_menu_item,
+    .popup_menu2 .popup_menu_item, .popup_body .popup_menu_item,
+    .popup_block .popup_menu_item, .popup_block_new .popup_menu_item,
+    .hover h4, .hover p, .hover_body, .hover_body .hover_release,
+    .hover_body .hover_review_summary, .hover_body .game_hover_description,
+    .early_access_header .heading, .early_access_header p, .early_access_banner,
+    .early_access_banner .devnote, .early_access_banner .heading) {
+  color: var(--rp-text) !important; text-shadow: none !important;
+}
+:is(.search_result_row, .tab_item, .popup_menu_item, .popup_menu2 a,
+    .search_suggest .match, .store_nav_content a):hover {
+  @include theme.surface(overlay, text);
+}
+:is(.home_tab, .tab.active, .tab.active .tab_content, .tab_content.active,
+    .tab_filter_control.checked, .tab_filter_control.selected,
+    .game_area_purchase_game_dropdown_menu .active,
+    .user_reviews_filter_options .active, .btnv6_blue_hoverfade > span) {
+  @include theme.surface(highlight-med, text);
+}
+:is(.discount_original_price, .search_results_count, .game_review_summary,
+    .tab_item_details, .tab_item_details .tab_item_top_tags, .search_released,
+    .game_area_sys_req .note, .block .subtext, .glance_details .subtitle,
+    .release_date .subtitle, .date, .release_date .date,
+    .responsive_page_content .fine_print, .review_box .postedDate) {
+  color: var(--rp-secondary) !important;
+}
+:is(.game_area_description a, .game_area_details_specs a,
+    .game_area_sys_req a, .dev_row a, .details_block a, .glance_tags a,
+    .tab_preview a, .game_area_already_owned a, .review_box a,
+    .user_reviews_summary_row a, .early_access_header a,
+    .hover_body a, .game_purchase_action a) { color: var(--rp-link) !important; }
+:is(.btnv6_blue_hoverfade, .btnv6_blue_hoverfade > span,
+    .btnv6_lightblue_blue, .btnv6_lightblue_blue > span,
+    .btnv6_white_transparent, .btnv6_white_transparent > span,
+    .btnv6_blue_blue_innerfade, .btnv6_blue_blue_innerfade > span,
+    .queue_control_button, .queue_control_button > span,
+    .game_area_purchase_game_dropdown_selection, .game_area_purchase_game_dropdown_selection > span) {
+  @include theme.surface(overlay, link); text-shadow: none !important;
+  border-color: var(--rp-highlight-med) !important;
+}
+:is(.btn_green_white_innerfade, .btn_green_white_innerfade > span,
+    .btnv6_green_white_innerfade, .btnv6_green_white_innerfade > span,
+    .btnv6_lightblue_blue.btn_medium, .btnv6_lightblue_blue.btn_medium > span) {
+  background: var(--rp-pine) !important; color: theme.color("surface") !important;
+}
+body.v6 :is(.btn_green_white_innerfade,.btnv6_green_white_innerfade) a { color: theme.color("surface") !important; }
+:is(.game_area_description h2, .block .block_header, .store_horizontal_autoslider_ctn h2) {
+  border-color: var(--rp-highlight-med) !important;
+}

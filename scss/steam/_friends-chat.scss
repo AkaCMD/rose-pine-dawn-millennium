@@ -1,0 +1,99 @@
+@use "../shared/theme";
+
+/* React friends list: light rows and theme status colours. */
+.friendlist {
+  background-color: var(--rp-base) !important;
+  background-image: none !important;
+  border-color: var(--rp-line) !important;
+}
+.friendlist :is(.friend, .friendGroup) {
+  background: var(--rp-surface) !important;
+}
+.friendlist :is(.friend:hover, .friend.gpfocus) {
+  background: var(--rp-overlay) !important;
+}
+.friendlist :is(.nOdcT-MoOaXGePXLyPe0H, ._2saJTAocZ9TnYXTGvnqUMC) {
+  color: var(--rp-text) !important;
+}
+.friendlist :is(.in-game, .ingame) :is(._2n0EiKMGRP-r_BI5tDtttu,
+    ._2-pwJCHlrc7zxN4iup2TR7 ._1FgWIOIaRCAekjhGj0zFWq) {
+  color: var(--rp-link) !important;
+}
+.friendlist .in-game ._1YdpXFoH7P9pEEXDMITSHu._1k5YkN8kx48i2TZ6kG9muA {
+  background: var(--rp-foam) !important;
+}
+.friendlist :is(.friend.inGroup .SteamPlayerGroupLines,
+    .friend.firstInGroup .SteamPlayerGroupLines,
+    .friend.lastInGroup .SteamPlayerGroupLines) {
+  border-color: var(--rp-foam) !important;
+}
+.friendlist .friendGroup.gameGroup:not(.OtherGamesGroup) .SteamPlayerGroupFooter.lastInGroup
+    :is(.SteamPlayerGroupFooterLabel, .count) {
+  color: var(--rp-link) !important;
+}
+
+/* Friends/chat retain native gradients unless the whole background is reset. */
+.friendsui-container :is(.friendlistListContainer, .chatRoomListContainer,
+    .friendGroup, .friendListFooter, .chatHistoryScroll, .chatWindow,
+    .chatRoom, .chatEntry, .chatRoomHeader, .ChatRoomGroupHeader,
+    .ChatRoomGroupAvatar, .socialListTab, .friendsListSectionTitle) {
+  @include theme.surface(surface, text);
+  border-color: var(--rp-highlight-med) !important;
+}
+.friendsui-container :is(.activeTab, .friend:hover, .ChatRoomListGroupItem:hover) {
+  background: var(--rp-overlay) !important;
+}
+.friendsui-container :is(.title-area-highlight, .singleWindowFocusBar) {
+  background: var(--rp-pine) !important;
+}
+.friendsui-container :is(._1osHa9KHOmdCDNrA232z4N, ._2OoTJwlWvzvAysWOOEQaXS) {
+  background: none !important;
+}
+.friendsui-container :is(.groupName, .groupCount, .gameGroupContainer, .tabLabel,
+    .groupChatSectionTitle, .chatRoomName, .ChatRoomGroupAvatar_initials,
+    .chatMessageBody, .chatEntry textarea, .quickAccessFriendsMessage) {
+  color: var(--rp-text) !important;
+  text-shadow: none !important;
+}
+.friendsui-container .ChatRoomGroupAvatar_initials {
+  background: none !important;
+  -webkit-text-fill-color: var(--rp-text) !important;
+}
+.friendsui-container :is(._1cB0qtF0paHWWyj1XNcnbG, ._2saJTAocZ9TnYXTGvnqUMC) {
+  color: var(--rp-secondary) !important;
+}
+.friendsui-container :is(.in-game, .ingame) ._2n0EiKMGRP-r_BI5tDtttu {
+  color: var(--rp-link) !important;
+}
+.friendsui-container .quickAccessFriendsMessageDismiss {
+  @include theme.surface(pine, on-accent);
+}
+/* Private/group chat tabs, composer toolbar and history decorations. */
+.friendsui-container :is(.ChatTabs, .chatDialogs, .chatHeader,
+    ._2XZq-_f6npaQdAgeRzKIkz, ._3Ule3rolhZJiBN4yNNtk1s,
+    ._2WfNoLBdfKwyutA6ho4aSH, .ChatMessageEntryVoice,
+    .inviteAnotherFriendButton) {
+  @include theme.surface(surface, text);
+  border-color: var(--rp-highlight-med) !important;
+  box-shadow: none !important;
+}
+.friendsui-container :is(.RVIs84dAE6wHcjH9tkinc, .VoiceToggle) {
+  @include theme.surface(overlay, text);
+}
+.friendsui-container :is(.RVIs84dAE6wHcjH9tkinc, .VoiceToggle):hover {
+  background: var(--rp-highlight-med) !important;
+}
+.friendsui-container :is(.RVIs84dAE6wHcjH9tkinc, .VoiceToggle) svg {
+  color: var(--rp-text) !important;
+}
+.friendsui-container .chatHistory :is(.msg, .msgText, .chatMessageBody, .chatMessageContent) {
+  color: var(--rp-text) !important;
+}
+.friendsui-container .chatHistory a { color: var(--rp-link) !important; }
+.friendsui-container :is(.timeDivision, .timestamp, .chatmsgtime, .FriendChatTypingNotification) {
+  background: none !important;
+  color: var(--rp-secondary) !important;
+}
+.friendsui-container :is(.preHorizDivider, .horizDivider) {
+  background: var(--rp-highlight-med) !important;
+}

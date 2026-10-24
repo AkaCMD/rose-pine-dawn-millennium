@@ -1,0 +1,32 @@
+@use "../shared/theme";
+
+/* Desktop frame, navigation and status bar. */
+:is(.steamdesktop_RootMenuBar_3s0lk, ._3s0lkohH8wU2do0K1il28Y,
+    ._3Z7VQ1IMk4E3HsHvrkLNgo, ._39oUCO1OuizVPwcnnv88no,
+    ._3Z3ohQ8-1NKnCZkbS6fvy, ._1rDh5rXSFZJOqCa4UpnI4z,
+    ._3WJCt_OkjPA6npxOtguSt5, .RGNMWtyj73_-WdhflrmuY,
+    [class*="steamdesktop_TopBar"], [class*="steamdesktop_TitleBar"],
+    [class*="steamdesktop_SuperNavBar"], [class*="steamdesktop_ContentFrame"],
+    [class*="libraryroot_LibraryRoot"], [class*="bottombar_BottomBar"]) {
+  @include theme.surface(base, text);
+  box-shadow: none !important;
+}
+:is(._3Z3ohQ8-1NKnCZkbS6fvy, [class*="steamdesktop_SuperNavBar"]) {
+  border-bottom: 1px solid var(--rp-line) !important;
+}
+:is(._2D64jIEK7wpUR_NlObDW76, ._19axKcqYRuaJ8vdYKYmtTQ,
+    [class*="supernav_MenuButton"], [class*="rootmenu_RootMenuButton"]) {
+  color: var(--rp-secondary) !important;
+}
+:is(._19axKcqYRuaJ8vdYKYmtTQ, [class*="supernav_MenuButton"]):hover {
+  color: var(--rp-text) !important;
+}
+:is(._19axKcqYRuaJ8vdYKYmtTQ._1gqEjB5QsKT_NftD1dEsdZ,
+    [class*="supernav_MenuButton"][class*="Selected"]) {
+  color: var(--rp-text) !important;
+  text-decoration-color: var(--rp-iris) !important;
+}
+:is(.UkR3sY319PuaUNuUWks2K, [class*="steamdesktop_URLBar"]) {
+  @include theme.surface(surface, secondary);
+}
+:is(._2m_orETo6AghzAnc0sISCt, .MZPxEZcxAGtPDf1NYtouS) { color: var(--rp-secondary) !important; }

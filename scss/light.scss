@@ -1,0 +1,33 @@
+@use "shared/theme";
+
+/* Official Rosé Pine palette — https://rosepinetheme.com/palette/ */
+:root {
+  color-scheme: light;
+  @each $name, $value in theme.$dawn {
+    --rp-#{$name}: #{$value};
+  }
+  --rp-accent: var(--rp-pine);
+  --rp-on-accent: #{theme.color("surface")};
+  /* Text accents stay readable on all six light surfaces, including selection. */
+  --rp-link: #20576d;
+  --rp-status-game: #604773;
+  --rp-negative: #91364f;
+  /* Keep secondary labels readable even on the darkest light highlight. */
+  --rp-secondary: #56526a;
+  --rp-shadow: 0 12px 36px #5752791a;
+  --gpSystemLightestGrey: var(--rp-text);
+  --gpSystemLighterGrey: var(--rp-secondary);
+  --gpSystemLightGrey: var(--rp-secondary);
+  --gpSystemGrey: var(--rp-muted);
+  --gpSystemDarkGrey: var(--rp-overlay);
+  --gpSystemDarkerGrey: var(--rp-surface);
+  --gpSystemDarkestGrey: var(--rp-base);
+  --gpStoreDarkGrey: var(--rp-surface);
+  --gpStoreDarkerGrey: var(--rp-base);
+  --gpColor-Blue: var(--rp-accent);
+  --gpColor-Green: var(--rp-foam);
+  --gpBackground-LightSofter: var(--rp-overlay);
+  --gpBackground-LightSoft: var(--rp-surface);
+  --gpBackground-DarkSofter: var(--rp-base);
+  --gpBackground-DarkSoft: var(--rp-base);
+}

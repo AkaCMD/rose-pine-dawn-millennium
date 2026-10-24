@@ -1,0 +1,22 @@
+@use "../shared/theme";
+
+/* Friends and chat. */
+:is(.friendsui-container, .friendlist, .friendListHeaderContainer, .friendlistListContainer,
+    .chatWindow, .chatRoom, .chatEntry, .chatHistoryScroll, .friendGroup,
+    [class*="friendslist_FriendsList"], [class*="chatwindow_ChatWindow"],
+    [class*="chatroom_ChatRoom"], [class*="chathistory_ChatHistory"]) {
+  @include theme.surface(base, text, $property: background-color);
+}
+:is(.friendListHeaderContainer, .chatRoomHeader, .chatEntry, .ChatRoomGroupHeader) {
+  background: var(--rp-surface) !important; border-color: var(--rp-line) !important;
+}
+:is(.friend, .friendGroup):hover { background-color: var(--rp-overlay) !important; }
+.friend .friendName, .chatMessageBody, .chatEntry textarea { color: var(--rp-text) !important; }
+.friend.online .friendName { color: var(--rp-link) !important; }
+.friend.ingame .friendName { color: var(--rp-status-game) !important; }
+.friend.offline .friendName { color: var(--rp-secondary) !important; }
+
+.contextMenuContents { box-shadow: var(--rp-shadow) !important; }
+@media (prefers-reduced-motion: reduce) {
+  .DialogButton, .contextMenuItem { transition: none !important; }
+}

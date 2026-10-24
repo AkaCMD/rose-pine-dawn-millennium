@@ -1,0 +1,104 @@
+@use "../shared/theme";
+
+/* Bundle purchase area: package content rows, previews and dropdowns. */
+:is(.game_area_purchase_game div.package_contents_capsules_ctn,
+    .bundle_contents_preview) {
+  background: var(--rp-overlay) !important;
+}
+:is(.game_area_purchase_game_dropdown_menu_container,
+    .game_area_purchase_game_dropdown_menu_item_no_discount) {
+  background: var(--rp-surface) !important;
+}
+.game_area_purchase_game_dropdown_menu_items_container tr {
+  color: var(--rp-text) !important;
+}
+.game_area_purchase_game_dropdown_menu_items_container tr:hover {
+  background: var(--rp-highlight-med) !important;
+}
+.game_area_purchase_game_wrapper.bundle .bundleTag {
+  color: var(--rp-link) !important;
+}
+
+/* Store home tabs and the seasonal container gradients. */
+:root {
+  --light-ctn-bg: var(--rp-overlay) !important;
+  --light-ctn-bg-hover: var(--rp-highlight-med) !important;
+  --light-ctn-bg-gradient: linear-gradient(0deg, rgba(250, 244, 237, 0) 10%, var(--rp-overlay) 65%, var(--rp-overlay) 100%) !important;
+  --light-ctn-bg-gradient-top-color: var(--rp-surface) !important;
+  --dark-ctn-bg: var(--rp-overlay) !important;
+  --dark-ctn-bg-gradient: linear-gradient(180deg, var(--rp-overlay) 0%, rgba(250, 244, 237, 0) 100%) !important;
+  --blue-translucent: var(--rp-highlight-med) !important;
+  --seasonal-dark: var(--rp-overlay) !important;
+  --seasonal-light: var(--rp-highlight-med) !important;
+  --seasonal-translucent: var(--rp-highlight-med) !important;
+  --seasonal-gradient-2: var(--rp-overlay) !important;
+  --seasonal-gradient-3: var(--rp-overlay) !important;
+}
+.home_tab_button {
+  color: var(--rp-text) !important;
+  opacity: 1 !important;
+}
+.home_tab_button.active {
+  background: var(--rp-highlight-med) !important;
+}
+.home_tabs_row {
+  color: var(--rp-text) !important;
+}
+.home_tab_bg_ctn {
+  background: var(--rp-base) !important;
+  background-image: none !important;
+}
+.home_pagecontent_ctn {
+  background-color: var(--rp-base) !important;
+}
+
+/* The 2026 "New on Steam" rows keep Steam's white copy while the theme
+   repaints the row surface. Cover hashed text classes by scoping to the app
+   card instead of relying on the legacy tab_item_* names. */
+body.newonsteam :is([data-ds-appid], [data-appid], .tab_item, .search_result_row)
+    :is(div, span, p, h1, h2, h3, h4, strong, b, label)
+    :where(:not(.discount_pct, .discount_original_price, .discount_final_price,
+         .discount_aria_label, .ds_flag, .ds_flag *, .search_price,
+         .game_purchase_price, [data-discount], [data-discount] *,
+         [data-price-final], [data-price-final] *, .discount_block,
+         .discount_block *, [class*="broadcast"], [class*="broadcast"] *,
+         button, button *)) {
+  color: var(--rp-text) !important;
+  text-shadow: none !important;
+}
+body.newonsteam :is([data-ds-appid], [data-appid]) {
+  color: var(--rp-text) !important;
+  text-shadow: none !important;
+}
+body.newonsteam :is([data-ds-appid], [data-appid], .tab_item)
+    :is(.top_tag, .tab_item_release_date, .tab_item_details, .release_date, .date) {
+  color: var(--rp-secondary) !important;
+}
+
+/* Own the exceptions once for inline white copy and links. Dark broadcast,
+   discount and price surfaces keep their existing foregrounds. Nesting keeps
+   each text selector's specificity, including the noOpinionatedGlobalStyles
+   link opt-out; the exclusion list contributes exactly as before. */
+:is(body.search_page, body.sale_page_n_section, body.sale_page_background,
+    body.newonsteam) {
+  :not(._1tOSyFfIWM42bIEwzvMp8v, ._1tOSyFfIWM42bIEwzvMp8v *,
+      .discount_block, .discount_block *, .discount_pct, .discount_pct *,
+      .discount_final_price, .discount_final_price *, .discount_original_price,
+      .discount_prices, .discount_aria_label, .ds_flag, .ds_flag *,
+      .btn_green_white_innerfade, .btn_green_white_innerfade *,
+      .btnv6_green_white_innerfade, .btnv6_green_white_innerfade *,
+      .btn_green_steamui, .btn_green_steamui *,
+      .btnv6_lightblue_blue.btn_medium, .btnv6_lightblue_blue.btn_medium *,
+      .inqz7Zdx9Xg-, .inqz7Zdx9Xg- *, .oS2hPC3gY6k-, .oS2hPC3gY6k- *) {
+    &:is(div, span, p, h1, h2, h3, h4, label, strong, b):is(
+        [style*="color: white"], [style*="color:white"],
+        [style*="color: rgb(255, 255, 255)"],
+        [style*="color: rgb(255,255,255)"]) {
+      color: var(--rp-text) !important;
+      text-shadow: none !important;
+    }
+    &:is(a):where(:not(.noOpinionatedGlobalStyles a)) {
+      color: var(--rp-text) !important;
+    }
+  }
+}

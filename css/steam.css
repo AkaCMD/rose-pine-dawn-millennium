@@ -6,173 +6,282 @@
   --rp-line: var(--rp-highlight-med);
   --rp-panel: var(--rp-surface);
 }
+
 html, body {
   background-color: var(--rp-base, #faf4ed) !important;
   color: var(--rp-text, #464261) !important;
   accent-color: var(--rp-accent);
   scrollbar-color: var(--rp-highlight-high) var(--rp-base);
 }
+
 /* Paint the browser host while the embedded page and palette are loading. */
 ._1bGewp3tfzqAF6fVTFFUOz,
 ._1bGewp3tfzqAF6fVTFFUOz ._29p1jfvZ-VdlXK24_7UGsK {
   background-color: var(--rp-base, #faf4ed) !important;
 }
-::selection { background: var(--rp-highlight-high); color: var(--rp-text); }
-::-webkit-scrollbar { width: 9px; height: 9px; }
-::-webkit-scrollbar-track { background: var(--rp-base); }
-::-webkit-scrollbar-thumb {
-  background: var(--rp-highlight-high); border: 2px solid var(--rp-base); border-radius: 8px;
+
+::selection {
+  background: var(--rp-highlight-high);
+  color: var(--rp-text);
 }
-:focus-visible { outline: 2px solid var(--rp-accent) !important; outline-offset: 2px; }
-a { color: var(--rp-link); }
-a:hover { color: var(--rp-text); }
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--rp-base);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--rp-highlight-high);
+  border: 2px solid var(--rp-base);
+  border-radius: 8px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--rp-accent) !important;
+  outline-offset: 2px;
+}
+
+a {
+  color: var(--rp-link);
+}
+
+a:hover {
+  color: var(--rp-text);
+}
 
 /* Desktop frame, navigation and status bar. */
 :is(.steamdesktop_RootMenuBar_3s0lk, ._3s0lkohH8wU2do0K1il28Y,
-    ._3Z7VQ1IMk4E3HsHvrkLNgo, ._39oUCO1OuizVPwcnnv88no,
-    ._3Z3ohQ8-1NKnCZkbS6fvy, ._1rDh5rXSFZJOqCa4UpnI4z,
-    ._3WJCt_OkjPA6npxOtguSt5, .RGNMWtyj73_-WdhflrmuY,
-    [class*="steamdesktop_TopBar"], [class*="steamdesktop_TitleBar"],
-    [class*="steamdesktop_SuperNavBar"], [class*="steamdesktop_ContentFrame"],
-    [class*="libraryroot_LibraryRoot"], [class*="bottombar_BottomBar"]) {
-  background: var(--rp-base) !important; color: var(--rp-text) !important;
+._3Z7VQ1IMk4E3HsHvrkLNgo, ._39oUCO1OuizVPwcnnv88no,
+._3Z3ohQ8-1NKnCZkbS6fvy, ._1rDh5rXSFZJOqCa4UpnI4z,
+._3WJCt_OkjPA6npxOtguSt5, .RGNMWtyj73_-WdhflrmuY,
+[class*=steamdesktop_TopBar], [class*=steamdesktop_TitleBar],
+[class*=steamdesktop_SuperNavBar], [class*=steamdesktop_ContentFrame],
+[class*=libraryroot_LibraryRoot], [class*=bottombar_BottomBar]) {
+  background: var(--rp-base) !important;
+  color: var(--rp-text) !important;
   box-shadow: none !important;
 }
-:is(._3Z3ohQ8-1NKnCZkbS6fvy, [class*="steamdesktop_SuperNavBar"]) {
+
+:is(._3Z3ohQ8-1NKnCZkbS6fvy, [class*=steamdesktop_SuperNavBar]) {
   border-bottom: 1px solid var(--rp-line) !important;
 }
+
 :is(._2D64jIEK7wpUR_NlObDW76, ._19axKcqYRuaJ8vdYKYmtTQ,
-    [class*="supernav_MenuButton"], [class*="rootmenu_RootMenuButton"]) {
+[class*=supernav_MenuButton], [class*=rootmenu_RootMenuButton]) {
   color: var(--rp-secondary) !important;
 }
-:is(._19axKcqYRuaJ8vdYKYmtTQ, [class*="supernav_MenuButton"]):hover {
+
+:is(._19axKcqYRuaJ8vdYKYmtTQ, [class*=supernav_MenuButton]):hover {
   color: var(--rp-text) !important;
 }
+
 :is(._19axKcqYRuaJ8vdYKYmtTQ._1gqEjB5QsKT_NftD1dEsdZ,
-    [class*="supernav_MenuButton"][class*="Selected"]) {
+[class*=supernav_MenuButton][class*=Selected]) {
   color: var(--rp-text) !important;
   text-decoration-color: var(--rp-iris) !important;
 }
-:is(.UkR3sY319PuaUNuUWks2K, [class*="steamdesktop_URLBar"]) {
-  background: var(--rp-surface) !important; color: var(--rp-secondary) !important;
+
+:is(.UkR3sY319PuaUNuUWks2K, [class*=steamdesktop_URLBar]) {
+  background: var(--rp-surface) !important;
+  color: var(--rp-secondary) !important;
 }
-:is(._2m_orETo6AghzAnc0sISCt, .MZPxEZcxAGtPDf1NYtouS) { color: var(--rp-secondary) !important; }
+
+:is(._2m_orETo6AghzAnc0sISCt, .MZPxEZcxAGtPDf1NYtouS) {
+  color: var(--rp-secondary) !important;
+}
 
 /* Library: keep artwork, video and achievement images in their original colours. */
-:is([class*="gamelistbar_Container"], [class*="gamelist_Container"],
-    [class*="gamelistbar_GameListHomeAndSearch"], [class*="gamelistsectionheader_Container"],
-    [class*="gamelistsearchbar_Container"], [class*="library_LeftList"] ) {
-  background: var(--rp-surface) !important; color: var(--rp-text) !important;
+:is([class*=gamelistbar_Container], [class*=gamelist_Container],
+[class*=gamelistbar_GameListHomeAndSearch], [class*=gamelistsectionheader_Container],
+[class*=gamelistsearchbar_Container], [class*=library_LeftList]) {
+  background: var(--rp-surface) !important;
+  color: var(--rp-text) !important;
 }
-:is([class*="libraryhome_Container"], [class*="libraryhome_LibraryHome"],
-    [class*="libraryhome_LibraryHomeContent"], [class*="libraryhomeshowcases_Container"],
-    [class*="appdetails_Overview"], [class*="appdetails_InnerContainer"],
-    [class*="appdetails_GameInfo"], [class*="appdetailssection_Container"],
-    [class*="appdetailsplaysection_PlayBar"], [class*="downloads_DownloadsPage"]) {
-  background: var(--rp-base) !important; color: var(--rp-text) !important;
+
+:is([class*=libraryhome_Container], [class*=libraryhome_LibraryHome],
+[class*=libraryhome_LibraryHomeContent], [class*=libraryhomeshowcases_Container],
+[class*=appdetails_Overview], [class*=appdetails_InnerContainer],
+[class*=appdetails_GameInfo], [class*=appdetailssection_Container],
+[class*=appdetailsplaysection_PlayBar], [class*=downloads_DownloadsPage]) {
+  background: var(--rp-base) !important;
+  color: var(--rp-text) !important;
 }
-:is([class*="appportrait_LibraryItemBox"], [class*="libraryassetimage_Container"] ) {
+
+:is([class*=appportrait_LibraryItemBox], [class*=libraryassetimage_Container]) {
   border-radius: var(--rp-radius) !important;
 }
-:is([class*="gamelistentry_GameListEntry"], [class*="gamelistentry_Container"]) {
-  color: var(--rp-text) !important; border-radius: 5px;
+
+:is([class*=gamelistentry_GameListEntry], [class*=gamelistentry_Container]) {
+  color: var(--rp-text) !important;
+  border-radius: 5px;
 }
-:is([class*="gamelistentry_GameListEntry"], [class*="gamelistentry_Container"]):hover {
+
+:is([class*=gamelistentry_GameListEntry], [class*=gamelistentry_Container]):hover {
   background: var(--rp-overlay) !important;
 }
-:is([class*="gamelistentry_Selected"], [class*="gamelistentry_Container"][class*="Selected"]) {
-  background: var(--rp-highlight-med) !important; color: var(--rp-text) !important;
+
+:is([class*=gamelistentry_Selected], [class*=gamelistentry_Container][class*=Selected]) {
+  background: var(--rp-highlight-med) !important;
+  color: var(--rp-text) !important;
   box-shadow: inset 3px 0 var(--rp-iris) !important;
 }
-:is([class*="gamelistentry_GameListEntry"] [class*="GameName"],
-    [class*="appportrait_AppName"], [class*="libraryhome_SectionHeader"],
-    [class*="appdetailssection_Title"]) { color: var(--rp-text) !important; }
-:is([class*="gamelistentry_Playing"], [class*="gamelistentry_Downloading"]) { color: var(--rp-link) !important; }
+
+:is([class*=gamelistentry_GameListEntry] [class*=GameName],
+[class*=appportrait_AppName], [class*=libraryhome_SectionHeader],
+[class*=appdetailssection_Title]) {
+  color: var(--rp-text) !important;
+}
+
+:is([class*=gamelistentry_Playing], [class*=gamelistentry_Downloading]) {
+  color: var(--rp-link) !important;
+}
 
 /* Settings, Millennium, dialogs and menus. */
 :is(.DialogContent, .DialogContent_InnerWidth, .DialogBody, .DialogFooter,
-    .DialogHeader, .ModalPosition_Content, .ModalPosition_Dismiss, .PopupFullWindow,
-    .contextMenu, .contextMenuContents, .ContextMenuPopup,
-    [class*="contextmenu_contextMenu"], [class*="contextmenu_ContextMenu"],
-    [class*="SettingsDialog"], [class*="settings_SettingsDialog"],
-    [class*="DialogContent"], [class*="ModalDialogPopup"] ) {
+.DialogHeader, .ModalPosition_Content, .ModalPosition_Dismiss, .PopupFullWindow,
+.contextMenu, .contextMenuContents, .ContextMenuPopup,
+[class*=contextmenu_contextMenu], [class*=contextmenu_ContextMenu],
+[class*=SettingsDialog], [class*=settings_SettingsDialog],
+[class*=DialogContent], [class*=ModalDialogPopup]) {
   background-color: var(--rp-surface) !important;
-  background-image: none !important; color: var(--rp-text) !important;
-}
-:is(.DialogHeader, .DialogLabel, .DialogBodyText, .DialogBody, .DialogCheckbox_Container,
-    .contextMenuItem, .ContextMenuItem, [class*="contextmenu_Label"],
-    [class*="settings_FieldLabel"], [class*="DialogHeader"]) {
+  background-image: none !important;
   color: var(--rp-text) !important;
 }
+
+:is(.DialogHeader, .DialogLabel, .DialogBodyText, .DialogBody, .DialogCheckbox_Container,
+.contextMenuItem, .ContextMenuItem, [class*=contextmenu_Label],
+[class*=settings_FieldLabel], [class*=DialogHeader]) {
+  color: var(--rp-text) !important;
+}
+
 :is(.DialogBodyText .subtext, .DialogLabelExplainer, .DialogSubHeader,
-    [class*="FieldDescription"], [class*="settings_FieldDescription"]) {
+[class*=FieldDescription], [class*=settings_FieldDescription]) {
   color: var(--rp-secondary) !important;
 }
-:is(.contextMenuContents, [class*="contextmenu_contextMenuContents"], .DialogContent) {
-  border-radius: var(--rp-radius); border-color: var(--rp-line) !important;
+
+:is(.contextMenuContents, [class*=contextmenu_contextMenuContents], .DialogContent) {
+  border-radius: var(--rp-radius);
+  border-color: var(--rp-line) !important;
 }
-:is(.contextMenuItem, .ContextMenuItem, [class*="contextmenu_contextMenuItem"]):hover {
-  background: var(--rp-highlight-med) !important; color: var(--rp-text) !important;
+
+:is(.contextMenuItem, .ContextMenuItem, [class*=contextmenu_contextMenuItem]):hover {
+  background: var(--rp-highlight-med) !important;
+  color: var(--rp-text) !important;
 }
-:is([class*="settings_LeftNav"], [class*="settings_LeftNavPane"],
-    [class*="desktopsettings_NavPanel"], [class*="MillenniumDesktopSidebar"]) {
+
+:is([class*=settings_LeftNav], [class*=settings_LeftNavPane],
+[class*=desktopsettings_NavPanel], [class*=MillenniumDesktopSidebar]) {
   background: var(--rp-base) !important;
 }
-:is([class*="settings_Tab"], [class*="desktopsettings_NavItem"]):hover {
-  background: var(--rp-overlay) !important; color: var(--rp-text) !important;
+
+:is([class*=settings_Tab], [class*=desktopsettings_NavItem]):hover {
+  background: var(--rp-overlay) !important;
+  color: var(--rp-text) !important;
 }
-:is(.DialogInput, .DialogTextInputBase, input[type="text"], input[type="search"],
-    input[type="password"], input[type="number"], textarea, select, .DialogDropDown) {
-  background-color: var(--rp-base) !important; background-image: none !important;
-  color: var(--rp-text) !important; border: 1px solid var(--rp-line) !important;
-  border-radius: 6px !important; box-shadow: none !important;
+
+:is(.DialogInput, .DialogTextInputBase, input[type=text], input[type=search],
+input[type=password], input[type=number], textarea, select, .DialogDropDown) {
+  background-color: var(--rp-base) !important;
+  background-image: none !important;
+  color: var(--rp-text) !important;
+  border: 1px solid var(--rp-line) !important;
+  border-radius: 6px !important;
+  box-shadow: none !important;
 }
-input::placeholder, textarea::placeholder { color: var(--rp-secondary) !important; opacity: 1; }
+
+input::placeholder, textarea::placeholder {
+  color: var(--rp-secondary) !important;
+  opacity: 1;
+}
+
 :is(.DialogInput, input, textarea, select):focus {
   border-color: var(--rp-iris) !important;
 }
+
 button.DialogButton, .DialogButton {
-  background: var(--rp-overlay) !important; color: var(--rp-text) !important;
-  border: 1px solid var(--rp-line) !important; border-radius: 6px !important;
-  box-shadow: none !important; text-shadow: none !important;
+  background: var(--rp-overlay) !important;
+  color: var(--rp-text) !important;
+  border: 1px solid var(--rp-line) !important;
+  border-radius: 6px !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
 }
+
 button.DialogButton:hover, .DialogButton:hover {
-  background: var(--rp-highlight-med) !important; border-color: var(--rp-iris) !important;
+  background: var(--rp-highlight-med) !important;
+  border-color: var(--rp-iris) !important;
 }
+
 button.DialogButton.Primary, .DialogButton.Primary {
-  background: var(--rp-accent) !important; color: var(--rp-on-accent) !important;
+  background: var(--rp-accent) !important;
+  color: var(--rp-on-accent) !important;
   border-color: var(--rp-accent) !important;
 }
-button:disabled, .DialogButton.Disabled { opacity: .5 !important; }
-:is([role="switch"][aria-checked="true"], input[type="checkbox"]:checked) {
-  accent-color: var(--rp-iris); background-color: var(--rp-iris);
+
+button:disabled, .DialogButton.Disabled {
+  opacity: 0.5 !important;
+}
+
+:is([role=switch][aria-checked=true], input[type=checkbox]:checked) {
+  accent-color: var(--rp-iris);
+  background-color: var(--rp-iris);
 }
 
 /* Friends and chat. */
 :is(.friendsui-container, .friendlist, .friendListHeaderContainer, .friendlistListContainer,
-    .chatWindow, .chatRoom, .chatEntry, .chatHistoryScroll, .friendGroup,
-    [class*="friendslist_FriendsList"], [class*="chatwindow_ChatWindow"],
-    [class*="chatroom_ChatRoom"], [class*="chathistory_ChatHistory"]) {
-  background-color: var(--rp-base) !important; color: var(--rp-text) !important;
+.chatWindow, .chatRoom, .chatEntry, .chatHistoryScroll, .friendGroup,
+[class*=friendslist_FriendsList], [class*=chatwindow_ChatWindow],
+[class*=chatroom_ChatRoom], [class*=chathistory_ChatHistory]) {
+  background-color: var(--rp-base) !important;
+  color: var(--rp-text) !important;
 }
+
 :is(.friendListHeaderContainer, .chatRoomHeader, .chatEntry, .ChatRoomGroupHeader) {
-  background: var(--rp-surface) !important; border-color: var(--rp-line) !important;
+  background: var(--rp-surface) !important;
+  border-color: var(--rp-line) !important;
 }
-:is(.friend, .friendGroup):hover { background-color: var(--rp-overlay) !important; }
-.friend .friendName, .chatMessageBody, .chatEntry textarea { color: var(--rp-text) !important; }
-.friend.online .friendName { color: var(--rp-link) !important; }
-.friend.ingame .friendName { color: var(--rp-status-game) !important; }
-.friend.offline .friendName { color: var(--rp-secondary) !important; }
 
-.contextMenuContents { box-shadow: var(--rp-shadow) !important; }
+:is(.friend, .friendGroup):hover {
+  background-color: var(--rp-overlay) !important;
+}
+
+.friend .friendName, .chatMessageBody, .chatEntry textarea {
+  color: var(--rp-text) !important;
+}
+
+.friend.online .friendName {
+  color: var(--rp-link) !important;
+}
+
+.friend.ingame .friendName {
+  color: var(--rp-status-game) !important;
+}
+
+.friend.offline .friendName {
+  color: var(--rp-secondary) !important;
+}
+
+.contextMenuContents {
+  box-shadow: var(--rp-shadow) !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .DialogButton, .contextMenuItem { transition: none !important; }
+  .DialogButton, .contextMenuItem {
+    transition: none !important;
+  }
 }
-
 /* Steam desktop module selectors, verified against client build 1792618285. */
 ._3x1HklzyDs4TEjACrRO2tB,
 ._2TKEazUUS3TlniZfpc8OOe,
-._3AhYljPF4e4E8LaBt-FoY0 { background: var(--rp-surface) !important; color: var(--rp-text) !important; }
+._3AhYljPF4e4E8LaBt-FoY0 {
+  background: var(--rp-surface) !important;
+  color: var(--rp-text) !important;
+}
+
 ._3xRRJfD2xy95i9NhJxLTp0,
 ._3BFcmjAaMyP6GTPwc0VyWi,
 ._2Dd4T78PcCTUVgOtDGFY5j,
@@ -185,66 +294,145 @@ button:disabled, .DialogButton.Disabled { opacity: .5 !important; }
 ._17iCvVAxnC3dSA3LKShx_t,
 ._2-ns_GqXzymHk0jsXBBWJ1,
 .pzBMdSbGpu7XfypZMU6PK,
-._3scbHORkYB7utTUGfkMCC_ { background: var(--rp-base) !important; color: var(--rp-text) !important; }
-._34CqrAnD-hs0Fl08rfvoF5 { background: none !important; }
+._3scbHORkYB7utTUGfkMCC_ {
+  background: var(--rp-base) !important;
+  color: var(--rp-text) !important;
+}
+
+._34CqrAnD-hs0Fl08rfvoF5 {
+  background: none !important;
+}
+
 ._2-O4ZG0KrnSrzISHBKctFQ,
 ._1vO6BoiVslZgs1kqDGdUs8,
-._2SXJM0PeFEi3gbC7V3S5pE { color: var(--rp-text) !important; }
-._2-O4ZG0KrnSrzISHBKctFQ { border-radius: 5px; }
-._2-O4ZG0KrnSrzISHBKctFQ:hover { background: var(--rp-overlay) !important; }
-._2-O4ZG0KrnSrzISHBKctFQ._1UBpAXP408Ez_L_mXhW5Q9 { background: var(--rp-highlight-med) !important; box-shadow: inset 3px 0 var(--rp-iris); }
-._2-O4ZG0KrnSrzISHBKctFQ._5YTBr7WwIfzVU_3nUtAph ._2SXJM0PeFEi3gbC7V3S5pE { color: var(--rp-secondary) !important; }
-._2-O4ZG0KrnSrzISHBKctFQ._10GdoB3tQXXGFToQ3yY_SK ._2SXJM0PeFEi3gbC7V3S5pE { color: var(--rp-link) !important; }
+._2SXJM0PeFEi3gbC7V3S5pE {
+  color: var(--rp-text) !important;
+}
+
+._2-O4ZG0KrnSrzISHBKctFQ {
+  border-radius: 5px;
+}
+
+._2-O4ZG0KrnSrzISHBKctFQ:hover {
+  background: var(--rp-overlay) !important;
+}
+
+._2-O4ZG0KrnSrzISHBKctFQ._1UBpAXP408Ez_L_mXhW5Q9 {
+  background: var(--rp-highlight-med) !important;
+  box-shadow: inset 3px 0 var(--rp-iris);
+}
+
+._2-O4ZG0KrnSrzISHBKctFQ._5YTBr7WwIfzVU_3nUtAph ._2SXJM0PeFEi3gbC7V3S5pE {
+  color: var(--rp-secondary) !important;
+}
+
+._2-O4ZG0KrnSrzISHBKctFQ._10GdoB3tQXXGFToQ3yY_SK ._2SXJM0PeFEi3gbC7V3S5pE {
+  color: var(--rp-link) !important;
+}
+
 ._1QOqxv1IVU4TSd_6unnCY0,
-._1p4KV0LZCs0tnDlcOahdCN { color: var(--rp-text) !important; }
-._1MYMREA5xYFsdsMnorH64r { background: var(--rp-line) !important; }
+._1p4KV0LZCs0tnDlcOahdCN {
+  color: var(--rp-text) !important;
+}
+
+._1MYMREA5xYFsdsMnorH64r {
+  background: var(--rp-line) !important;
+}
+
 ._2sssIwe0duyIrFvat2oXzH,
 .OX7USkJ5dDP_icD00Gal6,
-.CFTLX2wIKOK3hNV-fS7_V { background: var(--rp-surface) !important; color: var(--rp-text) !important; }
+.CFTLX2wIKOK3hNV-fS7_V {
+  background: var(--rp-surface) !important;
+  color: var(--rp-text) !important;
+}
+
 ._2kwFFHckg8jvnwJfg9-la8,
-._18QCu-7MTzd51UpVbYysDy { background: var(--rp-base) !important; color: var(--rp-text) !important; }
+._18QCu-7MTzd51UpVbYysDy {
+  background: var(--rp-base) !important;
+  color: var(--rp-text) !important;
+}
+
 ._1-vlriAtKYDViAEunue4VO,
 ._2PPbMrzl8PKBwpkjYs9b0i,
-._2rjVTGz8aLvqOdz5v2gq5C { color: var(--rp-text) !important; }
-._1-vlriAtKYDViAEunue4VO._2DpXjzK3WWsOtUWUrcuOG7 { background: var(--rp-highlight-med) !important; color: var(--rp-text) !important; border-radius: 6px; }
-._1ENHEsrSLcTRtPQFl1F-wL, ._3mz8wQ6Q44B8P7pzPP4Iyw { background: var(--rp-base) !important; }
+._2rjVTGz8aLvqOdz5v2gq5C {
+  color: var(--rp-text) !important;
+}
+
+._1-vlriAtKYDViAEunue4VO._2DpXjzK3WWsOtUWUrcuOG7 {
+  background: var(--rp-highlight-med) !important;
+  color: var(--rp-text) !important;
+  border-radius: 6px;
+}
+
+._1ENHEsrSLcTRtPQFl1F-wL, ._3mz8wQ6Q44B8P7pzPP4Iyw {
+  background: var(--rp-base) !important;
+}
 
 /* Library surfaces that Steam still paints with fixed blue/grey gradients. */
 ._17uEBe5Ri8TMsnfELvs8-N, ._3vCzSrrXZzZjVJFZNg9SGu,
 ._2sYIghGVXJr6tsQVvcryy8, .Woh0kBQCmatzC1daBX9i6,
 ._20QAC4WMXm8qFE8waUT5oo, ._3AhYljPF4e4E8LaBt-FoY0 > *,
 ._2CEKFex6JMsAse2lqMMjUp {
-  background: var(--rp-surface) !important; color: var(--rp-text) !important;
+  background: var(--rp-surface) !important;
+  color: var(--rp-text) !important;
   box-shadow: none !important;
 }
-._2sYIghGVXJr6tsQVvcryy8 { border-bottom: 1px solid var(--rp-line); }
+
+._2sYIghGVXJr6tsQVvcryy8 {
+  border-bottom: 1px solid var(--rp-line);
+}
+
 ._2sYIghGVXJr6tsQVvcryy8 *, ._2TKEazUUS3TlniZfpc8OOe *,
 ._3vCzSrrXZzZjVJFZNg9SGu *, ._2o5c89vAnrXN8C60QTSMqO,
 ._1tBzypb5E2AwNuBuVns9Hl, ._23SnllqT_AqZ1C_QHcNQ4Z {
   color: var(--rp-text) !important;
 }
+
 ._3SkuN_ykQuWGF94fclHdhJ, ._1ljKTq3H58WbDZGNPfM0TY {
-  color: var(--rp-secondary) !important; opacity: 1 !important;
+  color: var(--rp-secondary) !important;
+  opacity: 1 !important;
 }
+
 /* Remove decorative cover glare; never tint or invert game artwork. */
-.MyNb5dG3FsBnKdp8j_ntk { background: none !important; }
-._3xRRJfD2xy95i9NhJxLTp0 { border-color: var(--rp-line) !important; }
-._3vCzSrrXZzZjVJFZNg9SGu { border-top: 1px solid var(--rp-line); }
+.MyNb5dG3FsBnKdp8j_ntk {
+  background: none !important;
+}
+
+._3xRRJfD2xy95i9NhJxLTp0 {
+  border-color: var(--rp-line) !important;
+}
+
+._3vCzSrrXZzZjVJFZNg9SGu {
+  border-top: 1px solid var(--rp-line);
+}
+
 /* News descriptions and library controls must stay legible in Dawn. */
 .aqYQCF7Ny9x3EKcjCOTRY, ._3_xMyCJAh_Dv99KgZ54P3j,
 ._3_xMyCJAh_Dv99KgZ54P3j *, ._3SkuN_ykQuWGF94fclHdhJ,
-._20QAC4WMXm8qFE8waUT5oo * { color: var(--rp-secondary) !important; }
+._20QAC4WMXm8qFE8waUT5oo * {
+  color: var(--rp-secondary) !important;
+}
+
 ._3_xMyCJAh_Dv99KgZ54P3j {
-  background: var(--rp-overlay) !important; border-radius: 4px;
+  background: var(--rp-overlay) !important;
+  border-radius: 4px;
 }
-._1gqEjB5QsKT_NftD1dEsdZ::after { background: var(--rp-iris) !important; }
+
+._1gqEjB5QsKT_NftD1dEsdZ::after {
+  background: var(--rp-iris) !important;
+}
+
 ._3ydigb6zZAjJ0JCDgHwSYA, ._3ydigb6zZAjJ0JCDgHwSYA ._2AzIX5kl9k6JnxLfR5H4kX {
-  background: var(--rp-accent) !important; color: var(--rp-on-accent) !important;
-  border-radius: 6px; box-shadow: none !important;
+  background: var(--rp-accent) !important;
+  color: var(--rp-on-accent) !important;
+  border-radius: 6px;
+  box-shadow: none !important;
 }
+
 ._3ydigb6zZAjJ0JCDgHwSYA ._33cnXIqTRgRr49_FNXIHj6 {
   color: var(--rp-on-accent) !important;
 }
+
 ._1WVYDQv_srgKP95rVG1cX-, ._3vjBUK7Fcah-oXzIxcxadz {
   background: var(--rp-love) !important;
 }
@@ -254,106 +442,170 @@ button:disabled, .DialogButton.Disabled { opacity: .5 !important; }
 ._14wqdluDeDnnEcg3OSLEmd, ._3pofGqV0buiKAfMPEs3_82,
 .Baq37ml_4RsqEDikF0aIo, ._2fZ_eG4hoUgJoNBzVAW8wq,
 .DialogDropDownMenu, .DialogDropDownMenu_Item,
-.DialogDropDownMenu_Contents, [role="listbox"], [role="menu"] {
+.DialogDropDownMenu_Contents, [role=listbox], [role=menu] {
   background: var(--rp-surface) !important;
-  color: var(--rp-text) !important; border-color: var(--rp-highlight-med) !important;
+  color: var(--rp-text) !important;
+  border-color: var(--rp-highlight-med) !important;
   box-shadow: var(--rp-shadow) !important;
 }
+
 ._1n7Wloe5jZ6fSuvV18NNWI, ._2jXHP0742MyApMUVUM8IFn,
 ._2qdHlYPUfe_wwwtyPIu7m3, ._2Bb4JC5n6anf32WgmTfeMP,
 ._2uiDecKkKjAq7nimy3uLhG, .DialogDropDownMenu_Item,
-[role="menuitem"], [role="option"] {
-  color: var(--rp-text) !important; text-shadow: none !important;
+[role=menuitem], [role=option] {
+  color: var(--rp-text) !important;
+  text-shadow: none !important;
 }
+
 ._1n7Wloe5jZ6fSuvV18NNWI:hover, ._1n7Wloe5jZ6fSuvV18NNWI._18z-3vkWndCBO5WJgFldRK,
 ._2jXHP0742MyApMUVUM8IFn:hover, .DialogDropDownMenu_Item:hover,
-[role="option"][aria-selected="true"], [role="menuitem"]:hover {
-  background: var(--rp-highlight-med) !important; color: var(--rp-text) !important;
+[role=option][aria-selected=true], [role=menuitem]:hover {
+  background: var(--rp-highlight-med) !important;
+  color: var(--rp-text) !important;
 }
+
 .WUOrULWKkGLl3ZUQdDXg8, .IjIBR_wDDi2N77Oz4KAT4, ._21GPYlKBCLsHQpTsHw_RL_ {
-  background: var(--rp-highlight-med) !important; border-color: var(--rp-highlight-med) !important;
+  background: var(--rp-highlight-med) !important;
+  border-color: var(--rp-highlight-med) !important;
 }
+
 ._114nFoGF7tZ4PpremDP2w0, ._38-c8Lb-zCJc8GmvTzoyL1 {
   color: var(--rp-link) !important;
 }
+
 /* Text on library surfaces, including small shelf and news captions. */
 ._17uEBe5Ri8TMsnfELvs8-N :is(.aqYQCF7Ny9x3EKcjCOTRY, ._3YO5BpDmZERh_G8kaWbaSJ),
 ._3SkuN_ykQuWGF94fclHdhJ, ._1ljKTq3H58WbDZGNPfM0TY {
-  color: var(--rp-secondary) !important; opacity: 1 !important;
+  color: var(--rp-secondary) !important;
+  opacity: 1 !important;
 }
+
 /* Labels inside secondary settings buttons must not keep Steam's white text. */
-.DialogButton :is(div,span,label), .DialogButton .DialogLabel {
+.DialogButton :is(div, span, label), .DialogButton .DialogLabel {
   color: inherit !important;
 }
-.DialogButton ._3Wb9yDmYPUJksCr7HmaT9H { color: var(--rp-secondary) !important; }
-.nOdcT-MoOaXGePXLyPe0H { color: var(--rp-text) !important; }
+
+.DialogButton ._3Wb9yDmYPUJksCr7HmaT9H {
+  color: var(--rp-secondary) !important;
+}
+
+.nOdcT-MoOaXGePXLyPe0H {
+  color: var(--rp-text) !important;
+}
+
 /* Current Steam settings fields and their dropdown portal. */
 .eKmEXJCm_lgme24Fp_HWt, ._2CCdODv0vfzOMrEBUzZwfI,
 ._30wJO3MC4x-I1OWpy1TAeE, ._2oAiZidGyUxL-hfupFDQ2m {
-  background: var(--rp-surface) !important; color: var(--rp-text) !important;
-  box-shadow: none !important; border-color: var(--rp-highlight-med) !important;
+  background: var(--rp-surface) !important;
+  color: var(--rp-text) !important;
+  box-shadow: none !important;
+  border-color: var(--rp-highlight-med) !important;
 }
-.eKmEXJCm_lgme24Fp_HWt { border-bottom: 1px solid var(--rp-highlight-med) !important; }
+
+.eKmEXJCm_lgme24Fp_HWt {
+  border-bottom: 1px solid var(--rp-highlight-med) !important;
+}
+
 ._3jMlJm4PQCA8SfNlUR99Fo, .KGS2r2ext4jvDYa-MAFLD,
-._2oAiZidGyUxL-hfupFDQ2m :is(div,span), ._3pteVMTgNRdIzZreR6HnTp {
-  color: var(--rp-text) !important; text-shadow: none !important;
+._2oAiZidGyUxL-hfupFDQ2m :is(div, span), ._3pteVMTgNRdIzZreR6HnTp {
+  color: var(--rp-text) !important;
+  text-shadow: none !important;
 }
-._1W1to_azoBRG95oNAFpf9Q, ._1W1to_azoBRG95oNAFpf9Q :is(div,span) {
+
+._1W1to_azoBRG95oNAFpf9Q, ._1W1to_azoBRG95oNAFpf9Q :is(div, span) {
   color: var(--rp-secondary) !important;
 }
-._2oAiZidGyUxL-hfupFDQ2m:hover, ._2oAiZidGyUxL-hfupFDQ2m[aria-selected="true"] {
+
+._2oAiZidGyUxL-hfupFDQ2m:hover, ._2oAiZidGyUxL-hfupFDQ2m[aria-selected=true] {
   background: var(--rp-highlight-med) !important;
 }
-._2bl0iQ9xigbq4Zd1NI6NZl { background: var(--rp-highlight-high) !important; }
+
+._2bl0iQ9xigbq4Zd1NI6NZl {
+  background: var(--rp-highlight-high) !important;
+}
+
 ._2bl0iQ9xigbq4Zd1NI6NZl.yLrDAetGoWx0GYqA6ShfS,
-.yLrDAetGoWx0GYqA6ShfS ._2bl0iQ9xigbq4Zd1NI6NZl { background: var(--rp-pine) !important; }
-._1PQppcgkuXQAiFPar9AGi- { background: var(--rp-surface) !important; }
-._1W1to_azoBRG95oNAFpf9Q a { color: var(--rp-link) !important; }
+.yLrDAetGoWx0GYqA6ShfS ._2bl0iQ9xigbq4Zd1NI6NZl {
+  background: var(--rp-pine) !important;
+}
+
+._1PQppcgkuXQAiFPar9AGi- {
+  background: var(--rp-surface) !important;
+}
+
+._1W1to_azoBRG95oNAFpf9Q a {
+  color: var(--rp-link) !important;
+}
 
 /* Library collection pages: collection browser and individual category grids. */
 ._3VQUewWB8g6Z5qB4C7dGFr, ._38MncfB91VUpkDo8NSxAeV,
 ._1TBJ1lK-VmJ2h1lXzBtGxA, .u1xD3KJEgksF_J_5TLZzO,
 .rz1mrOnj9WN6UErES7qsq, ._11p6Fm47YPaY-YjtuLYMMJ {
-  background: var(--rp-base) !important; color: var(--rp-text) !important;
+  background: var(--rp-base) !important;
+  color: var(--rp-text) !important;
 }
+
 ._1UuM8B1MkiPFqJqO5XkYeZ, ._2Th-vimU76KOpmdy45yu52,
 .BpxCzVzPf5Y8EFlz5bZrP, ._3bWISeqP3H2j6YJnFwVEwu {
-  background: var(--rp-base) !important; color: var(--rp-text) !important;
+  background: var(--rp-base) !important;
+  color: var(--rp-text) !important;
 }
-._3VQUewWB8g6Z5qB4C7dGFr :is(h1,h2,h3),
+
+._3VQUewWB8g6Z5qB4C7dGFr :is(h1, h2, h3),
 ._3ONu7-h8EhRcUI72YoSVbD, ._1J1LQ0vGtpM3n0xw7XwQM6,
 ._2hvQbTq62AjXQS4tZqVepi, ._36QQLBgXFUVTOhU9jMkCWD,
 ._1ljKTq3H58WbDZGNPfM0TY, .Vl8Ft_SzabXluAKbqE-vN,
 ._15p_9xq6fzy0U3pCRV0mAC {
-  color: var(--rp-text) !important; text-shadow: none !important;
+  color: var(--rp-text) !important;
+  text-shadow: none !important;
 }
+
 ._2wbrxC_eBJa8BqRcsMJhlb, ._3pJqXMYgfG8Emi3vn6e2WV {
   background: var(--rp-highlight-high) !important;
 }
+
 ._1tBzypb5E2AwNuBuVns9Hl, ._1ZtpSq62fy_8W-_0pMn5cu {
-  background: var(--rp-surface) !important; color: var(--rp-text) !important;
+  background: var(--rp-surface) !important;
+  color: var(--rp-text) !important;
 }
+
 ._2rlKqvybYupc-uk64cdQ8D, ._1ANYFgwMyPpwJjIndAdGSr,
 .DVBcpUzJ0x6kaRMfug0OJ, ._1kdinbVqPuXSbJRQa_pAuw,
 ._13fGPw2BaM5wWIahr2xNKt, ._2qm05e8tWSAb-_fAHytQCP {
-  color: var(--rp-text) !important; text-shadow: none !important;
+  color: var(--rp-text) !important;
+  text-shadow: none !important;
 }
+
 ._26RbFDzzMplRhf211ujl5A, ._5PJElx6vly7dqkwVaao_b,
 .N8aJrSpxQ6II4CY_aFdYI {
-  background: var(--rp-overlay) !important; color: var(--rp-text) !important;
+  background: var(--rp-overlay) !important;
+  color: var(--rp-text) !important;
 }
+
 ._2oJt3qYLAqr6xMjnpmBFLN, ._2cTiGDjpUyBonh9hRHHcwz,
-._1CA44fHFH68DkHIPoniGpz { color: var(--rp-text) !important; }
-._3iV2vMTw_vwWJ_gmiz1Q1k { color: var(--rp-link) !important; }
-._3gzh_NvTKey56JeHY7Q1WW {
-  background: var(--rp-pine) !important; color: var(--rp-on-accent, #fffaf3) !important;
+._1CA44fHFH68DkHIPoniGpz {
+  color: var(--rp-text) !important;
 }
-._3gzh_NvTKey56JeHY7Q1WW div { color: inherit !important; }
+
+._3iV2vMTw_vwWJ_gmiz1Q1k {
+  color: var(--rp-link) !important;
+}
+
+._3gzh_NvTKey56JeHY7Q1WW {
+  background: var(--rp-pine) !important;
+  color: var(--rp-on-accent, #fffaf3) !important;
+}
+
+._3gzh_NvTKey56JeHY7Q1WW div {
+  color: inherit !important;
+}
+
 /* Horizontal library resize gutter below the main navigation. */
 ._2CmrnGY-Amtd83ScJkFvx2 {
   background: var(--rp-base) !important;
   box-shadow: none !important;
 }
+
 /* Sidebar type selector and adjacent sorting control. */
 ._2PF_m-I5yte3WnQhpcz8RC, .uE7Pj4tb2n3_Bx4vjEX0a {
   background: var(--rp-overlay) !important;
@@ -361,82 +613,115 @@ button:disabled, .DialogButton.Disabled { opacity: .5 !important; }
   box-shadow: none !important;
   border-color: var(--rp-highlight-high) !important;
 }
+
 ._2PF_m-I5yte3WnQhpcz8RC:hover, .uE7Pj4tb2n3_Bx4vjEX0a:hover {
   background: var(--rp-highlight-med) !important;
 }
+
 ._3kSh7qVSTDcPDePx9kya8C, ._15aGnszAf3gHD-PFdJBoFD {
-  color: var(--rp-text) !important; opacity: 1 !important;
+  color: var(--rp-text) !important;
+  opacity: 1 !important;
 }
-._15aGnszAf3gHD-PFdJBoFD svg { fill: var(--rp-text) !important; }
-.uE7Pj4tb2n3_Bx4vjEX0a svg { opacity: 1 !important; }
-.uE7Pj4tb2n3_Bx4vjEX0a svg polyline { stroke: var(--rp-text) !important; }
+
+._15aGnszAf3gHD-PFdJBoFD svg {
+  fill: var(--rp-text) !important;
+}
+
+.uE7Pj4tb2n3_Bx4vjEX0a svg {
+  opacity: 1 !important;
+}
+
+.uE7Pj4tb2n3_Bx4vjEX0a svg polyline {
+  stroke: var(--rp-text) !important;
+}
+
 /* Collections shortcut beside Library Home, including its four tile glyphs. */
 .xeuK3OqQYpIbPs1mCIS0k a._3pSPluBgf0NeR1kkCLWMhR {
   background: var(--rp-overlay) !important;
   color: var(--rp-text) !important;
   box-shadow: none !important;
 }
+
 .xeuK3OqQYpIbPs1mCIS0k a._3pSPluBgf0NeR1kkCLWMhR:hover,
 .xeuK3OqQYpIbPs1mCIS0k a._3pSPluBgf0NeR1kkCLWMhR:focus-visible {
   background: var(--rp-highlight-med) !important;
 }
+
 .nC-pL16iUnIRcaj1UVnwq ._2tyaVs9BpqcW068aaOrO56 {
-  background: var(--rp-pine) !important; opacity: 1 !important;
+  background: var(--rp-pine) !important;
+  opacity: 1 !important;
 }
-._15aGnszAf3gHD-PFdJBoFD svg polygon { fill: var(--rp-text) !important; }
+
+._15aGnszAf3gHD-PFdJBoFD svg polygon {
+  fill: var(--rp-text) !important;
+}
 
 /* Vertical library resize gutter and desktop notification controls. */
 ._276E6ijBpjMA2_iTxNhhjc {
   background-color: var(--rp-highlight-med) !important;
 }
+
 ._276E6ijBpjMA2_iTxNhhjc:hover {
   background-color: var(--rp-highlight-high) !important;
 }
+
 ._2Szzh5sKyGgnLUR870zbDE:is(.RtSv39ZoBOySnb8XQ5hJf, ._5wILZhsLODVwGfcJ0hKmJ) {
   background-color: var(--rp-overlay) !important;
   color: var(--rp-text) !important;
 }
+
 ._2Szzh5sKyGgnLUR870zbDE:is(.RtSv39ZoBOySnb8XQ5hJf, ._5wILZhsLODVwGfcJ0hKmJ):hover {
   background-color: var(--rp-highlight-med) !important;
 }
+
 .RtSv39ZoBOySnb8XQ5hJf._3L1c8C0o_xXzPy26aoLBFd,
 ._5wILZhsLODVwGfcJ0hKmJ._1oEwirQksXfZ-3RWWslbAR {
   background-color: var(--rp-pine) !important;
   color: var(--rp-on-accent) !important;
 }
+
 .RtSv39ZoBOySnb8XQ5hJf._3L1c8C0o_xXzPy26aoLBFd:hover,
 ._5wILZhsLODVwGfcJ0hKmJ._1oEwirQksXfZ-3RWWslbAR:hover {
   background-color: var(--rp-pine) !important;
   color: var(--rp-on-accent) !important;
 }
-._2Szzh5sKyGgnLUR870zbDE ._34bQcTHo5QKzuujoEyU1tm { color: inherit !important; }
+
+._2Szzh5sKyGgnLUR870zbDE ._34bQcTHo5QKzuujoEyU1tm {
+  color: inherit !important;
+}
 
 /* Collection creation cards use translucent white text in the native theme. */
 ._34I5HgBL6QP2CcuI4emtaM {
   background: var(--rp-overlay) !important;
   color: var(--rp-text) !important;
 }
+
 ._34I5HgBL6QP2CcuI4emtaM:hover {
   background: var(--rp-highlight-med) !important;
 }
+
 ._34I5HgBL6QP2CcuI4emtaM ._2890MptFADbe-IUQFQ8L1O {
   color: var(--rp-secondary) !important;
 }
+
 /* Nested labels follow the control's foreground, including selected states. */
 :is(.contextMenuItem, .ContextMenuItem, .DialogDropDown, .DialogDropDownMenu_Item,
-    [class*="contextmenu_contextMenuItem"], [role="menuitem"], [role="option"],
-    ._2Szzh5sKyGgnLUR870zbDE) :where(div,span,label,b,strong,em) {
+[class*=contextmenu_contextMenuItem], [role=menuitem], [role=option],
+._2Szzh5sKyGgnLUR870zbDE) :where(div, span, label, b, strong, em) {
   color: inherit !important;
   text-shadow: none !important;
 }
+
 .DialogButton.Primary ._3Wb9yDmYPUJksCr7HmaT9H {
   color: inherit !important;
 }
+
 /* Collection labels need an opaque surface above the cover collage. */
 ._3IWn-2rn7x98o5fDd0rAxb {
   background: var(--rp-overlay) !important;
   color: var(--rp-text) !important;
 }
+
 ._3IWn-2rn7x98o5fDd0rAxb ._1J1LQ0vGtpM3n0xw7XwQM6 {
   background: var(--rp-surface) !important;
   color: var(--rp-text) !important;
@@ -451,18 +736,22 @@ button:disabled, .DialogButton.Disabled { opacity: .5 !important; }
   color: var(--rp-text) !important;
   box-shadow: none !important;
 }
+
 ._1oERP7bVictkby2hP4BBva:hover, ._3k90ug209sE23xAMqcM74s:hover,
 ._3B8wRA4H7e_oSksYNqpSPv:hover {
   background: var(--rp-highlight-med) !important;
 }
+
 ._3k90ug209sE23xAMqcM74s .h-lNlCUnCRbIcn38-Oqaw,
 ._3B8wRA4H7e_oSksYNqpSPv ._26v9mHAi56x63OwY-jxett {
   color: var(--rp-text) !important;
 }
+
 ._3B8wRA4H7e_oSksYNqpSPv :is(._2MGSmn9lIFnmLVIX49POSx, ._1N5mcKPHLaAfi4MA2HzjuQ, ._3hEeummFKRey8l5VXxZwxz),
 ._3B8wRA4H7e_oSksYNqpSPv ._3hEeummFKRey8l5VXxZwxz span {
   color: var(--rp-secondary) !important;
 }
+
 /* Notification menu shell and desktop toast popups (achievement, card drop, friend events). */
 ._1UgM1Pm8SbTWX7_2f-crGt,
 ._1OOQPJx0nCNP9ME9toCmV7 {
@@ -471,36 +760,49 @@ button:disabled, .DialogButton.Disabled { opacity: .5 !important; }
   color: var(--rp-text) !important;
   box-shadow: none !important;
 }
-._1OOQPJx0nCNP9ME9toCmV7::before { background: none !important; }
-._1OOQPJx0nCNP9ME9toCmV7 ._3RkGkNRNheAkoRA3migph5 { opacity: .08 !important; }
+
+._1OOQPJx0nCNP9ME9toCmV7::before {
+  background: none !important;
+}
+
+._1OOQPJx0nCNP9ME9toCmV7 ._3RkGkNRNheAkoRA3migph5 {
+  opacity: 0.08 !important;
+}
+
 ._1xvIUtLkTrdEk2Ob1MqFcQ,
 ._3Ak7cNRtzpDWtFgnn6n0-J {
   background: var(--rp-overlay) !important;
   color: var(--rp-text) !important;
 }
+
 ._1xvIUtLkTrdEk2Ob1MqFcQ:hover,
 ._3Ak7cNRtzpDWtFgnn6n0-J:hover {
   background: var(--rp-highlight-med) !important;
 }
+
 ._1xvIUtLkTrdEk2Ob1MqFcQ._1YAQHDHv4hsPaauccvAFtn,
 ._3Ak7cNRtzpDWtFgnn6n0-J._1X5wHQgKhsyFOBfnka56DP {
   background: var(--rp-surface) !important;
   border-color: var(--rp-line) !important;
 }
+
 ._3ENh9LzRnZgfTyfxp_J2rr :is(._3uSbhtY3vHtdj-3tpua_Pb, ._2XSwzNWGiJvW0zTgqT0DUI),
 ._2NdiftmP-B3C4LPWnNGTCB :is(.rN6p14MiFEoCZvdjnfpgQ, ._10165iFPxrqzt0kfV00tbu) {
   color: var(--rp-link) !important;
 }
+
 ._3ENh9LzRnZgfTyfxp_J2rr ._3bqD-bBMgrGwLsBY2L1gSL,
 ._2NdiftmP-B3C4LPWnNGTCB ._35uWYHT2zJoSv9PE_euqxo {
   color: var(--rp-status-game) !important;
 }
+
 ._3ENh9LzRnZgfTyfxp_J2rr :is(._2hs2ZR_wYkRHWdtlr681Z6, ._3fUrGm-WHq3qxIpSqRZDgc),
 ._2NdiftmP-B3C4LPWnNGTCB ._3m94SADycX0JIk8urdZQ2X,
 ._1xvIUtLkTrdEk2Ob1MqFcQ ._3fUrGm-WHq3qxIpSqRZDgc,
 ._3Ak7cNRtzpDWtFgnn6n0-J .zB56AM55vMjPKSZPL0A24 {
   color: var(--rp-text) !important;
 }
+
 ._3ENh9LzRnZgfTyfxp_J2rr :is(._3AbCrY-d5NpL5E5DUfgdQ8, ._2yUEtF_eCucoxdu85zlOCp),
 ._2NdiftmP-B3C4LPWnNGTCB ._1XTFkmspXcukxWSFz5Fn61,
 ._1xvIUtLkTrdEk2Ob1MqFcQ ._2yUEtF_eCucoxdu85zlOCp,
@@ -514,98 +816,122 @@ button:disabled, .DialogButton.Disabled { opacity: .5 !important; }
   background-image: none !important;
   border-color: var(--rp-line) !important;
 }
+
 .friendlist :is(.friend, .friendGroup) {
   background: var(--rp-surface) !important;
 }
+
 .friendlist :is(.friend:hover, .friend.gpfocus) {
   background: var(--rp-overlay) !important;
 }
+
 .friendlist :is(.nOdcT-MoOaXGePXLyPe0H, ._2saJTAocZ9TnYXTGvnqUMC) {
   color: var(--rp-text) !important;
 }
+
 .friendlist :is(.in-game, .ingame) :is(._2n0EiKMGRP-r_BI5tDtttu,
-    ._2-pwJCHlrc7zxN4iup2TR7 ._1FgWIOIaRCAekjhGj0zFWq) {
+._2-pwJCHlrc7zxN4iup2TR7 ._1FgWIOIaRCAekjhGj0zFWq) {
   color: var(--rp-link) !important;
 }
+
 .friendlist .in-game ._1YdpXFoH7P9pEEXDMITSHu._1k5YkN8kx48i2TZ6kG9muA {
   background: var(--rp-foam) !important;
 }
+
 .friendlist :is(.friend.inGroup .SteamPlayerGroupLines,
-    .friend.firstInGroup .SteamPlayerGroupLines,
-    .friend.lastInGroup .SteamPlayerGroupLines) {
+.friend.firstInGroup .SteamPlayerGroupLines,
+.friend.lastInGroup .SteamPlayerGroupLines) {
   border-color: var(--rp-foam) !important;
 }
-.friendlist .friendGroup.gameGroup:not(.OtherGamesGroup) .SteamPlayerGroupFooter.lastInGroup
-    :is(.SteamPlayerGroupFooterLabel, .count) {
+
+.friendlist .friendGroup.gameGroup:not(.OtherGamesGroup) .SteamPlayerGroupFooter.lastInGroup :is(.SteamPlayerGroupFooterLabel, .count) {
   color: var(--rp-link) !important;
 }
 
 /* Friends/chat retain native gradients unless the whole background is reset. */
 .friendsui-container :is(.friendlistListContainer, .chatRoomListContainer,
-    .friendGroup, .friendListFooter, .chatHistoryScroll, .chatWindow,
-    .chatRoom, .chatEntry, .chatRoomHeader, .ChatRoomGroupHeader,
-    .ChatRoomGroupAvatar, .socialListTab, .friendsListSectionTitle) {
+.friendGroup, .friendListFooter, .chatHistoryScroll, .chatWindow,
+.chatRoom, .chatEntry, .chatRoomHeader, .ChatRoomGroupHeader,
+.ChatRoomGroupAvatar, .socialListTab, .friendsListSectionTitle) {
   background: var(--rp-surface) !important;
   color: var(--rp-text) !important;
   border-color: var(--rp-highlight-med) !important;
 }
+
 .friendsui-container :is(.activeTab, .friend:hover, .ChatRoomListGroupItem:hover) {
   background: var(--rp-overlay) !important;
 }
+
 .friendsui-container :is(.title-area-highlight, .singleWindowFocusBar) {
   background: var(--rp-pine) !important;
 }
+
 .friendsui-container :is(._1osHa9KHOmdCDNrA232z4N, ._2OoTJwlWvzvAysWOOEQaXS) {
   background: none !important;
 }
+
 .friendsui-container :is(.groupName, .groupCount, .gameGroupContainer, .tabLabel,
-    .groupChatSectionTitle, .chatRoomName, .ChatRoomGroupAvatar_initials,
-    .chatMessageBody, .chatEntry textarea, .quickAccessFriendsMessage) {
+.groupChatSectionTitle, .chatRoomName, .ChatRoomGroupAvatar_initials,
+.chatMessageBody, .chatEntry textarea, .quickAccessFriendsMessage) {
   color: var(--rp-text) !important;
   text-shadow: none !important;
 }
+
 .friendsui-container .ChatRoomGroupAvatar_initials {
   background: none !important;
   -webkit-text-fill-color: var(--rp-text) !important;
 }
+
 .friendsui-container :is(._1cB0qtF0paHWWyj1XNcnbG, ._2saJTAocZ9TnYXTGvnqUMC) {
   color: var(--rp-secondary) !important;
 }
+
 .friendsui-container :is(.in-game, .ingame) ._2n0EiKMGRP-r_BI5tDtttu {
   color: var(--rp-link) !important;
 }
+
 .friendsui-container .quickAccessFriendsMessageDismiss {
   background: var(--rp-pine) !important;
   color: var(--rp-on-accent) !important;
 }
+
 /* Private/group chat tabs, composer toolbar and history decorations. */
 .friendsui-container :is(.ChatTabs, .chatDialogs, .chatHeader,
-    ._2XZq-_f6npaQdAgeRzKIkz, ._3Ule3rolhZJiBN4yNNtk1s,
-    ._2WfNoLBdfKwyutA6ho4aSH, .ChatMessageEntryVoice,
-    .inviteAnotherFriendButton) {
+._2XZq-_f6npaQdAgeRzKIkz, ._3Ule3rolhZJiBN4yNNtk1s,
+._2WfNoLBdfKwyutA6ho4aSH, .ChatMessageEntryVoice,
+.inviteAnotherFriendButton) {
   background: var(--rp-surface) !important;
   color: var(--rp-text) !important;
   border-color: var(--rp-highlight-med) !important;
   box-shadow: none !important;
 }
+
 .friendsui-container :is(.RVIs84dAE6wHcjH9tkinc, .VoiceToggle) {
   background: var(--rp-overlay) !important;
   color: var(--rp-text) !important;
 }
+
 .friendsui-container :is(.RVIs84dAE6wHcjH9tkinc, .VoiceToggle):hover {
   background: var(--rp-highlight-med) !important;
 }
+
 .friendsui-container :is(.RVIs84dAE6wHcjH9tkinc, .VoiceToggle) svg {
   color: var(--rp-text) !important;
 }
+
 .friendsui-container .chatHistory :is(.msg, .msgText, .chatMessageBody, .chatMessageContent) {
   color: var(--rp-text) !important;
 }
-.friendsui-container .chatHistory a { color: var(--rp-link) !important; }
+
+.friendsui-container .chatHistory a {
+  color: var(--rp-link) !important;
+}
+
 .friendsui-container :is(.timeDivision, .timestamp, .chatmsgtime, .FriendChatTypingNotification) {
   background: none !important;
   color: var(--rp-secondary) !important;
 }
+
 .friendsui-container :is(.preHorizDivider, .horizDivider) {
   background: var(--rp-highlight-med) !important;
 }
