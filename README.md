@@ -30,7 +30,7 @@ The [installer](install.sh) checks `~/.steam/steam` and `~/.local/share/Steam`. 
 bash install.sh /path/to/Steam
 ```
 
-The script copies the theme into `<Steam>/millennium/themes/rose-pine-dawn/`. If that directory exists, it first creates a sibling backup named `rose-pine-dawn.backup-YYYYMMDD-HHMMSS`.
+The script installs the theme into `<Steam>/millennium/themes/rose-pine-dawn/`, replacing the existing directory on updates. After installation succeeds, it deletes old `rose-pine-dawn.backup-*` copies so Millennium lists only one copy of this theme. Other themes are left untouched.
 
 ### Manual installation
 
@@ -80,8 +80,6 @@ Run `npm test` with Node.js 22 or newer for local checks. With Steam's local CEF
 ## Restore the default appearance
 
 Select the default theme in Millennium and restart Steam. You can then remove `<Steam>/millennium/themes/rose-pine-dawn/`.
-
-To restore an installer backup, select the default theme first. Replace the theme directory with the backup, rename it to `rose-pine-dawn`, then enable the theme again.
 
 ## Credits
 
