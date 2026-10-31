@@ -6,6 +6,17 @@ body:has(.awGgT3ZKumU-, .cE9cj0nbqpY-, ._22xtsolKcQit92o-LBeRWD) {
   color: var(--rp-text) !important;
 }
 
+/* The cart's decorative game backdrop is a sibling of the content root.
+   Paint that wrapper too; leave product covers and the license image intact. */
+:where(body:has(.cE9cj0nbqpY-)) ._68SYvTNlZNs- {
+  background: var(--rp-base) !important;
+  color: var(--rp-text) !important;
+}
+
+:where(body:has(.cE9cj0nbqpY-)) .otLXAz3VIiY- {
+  background: none !important;
+}
+
 /* These routes also serve the new store header instead of #global_header. */
 :where(body:has(.awGgT3ZKumU-, .cE9cj0nbqpY-)) :is(._7urhuKLYiUk-, .WCG-2-OYepA-, .t-LlQicBZjE-) {
   background: var(--rp-surface) !important;
@@ -128,6 +139,43 @@ body:has(.awGgT3ZKumU-, .cE9cj0nbqpY-, ._22xtsolKcQit92o-LBeRWD) {
   border-color: var(--rp-line) !important;
 }
 
+/* Current account/country selectors use ControlBox rather than the old
+   dropdown classes. Their PopoverList options are portalled outside the cart. */
+:where(.cE9cj0nbqpY-) [role=combobox] {
+  background: var(--rp-overlay) !important;
+  color: var(--rp-text) !important;
+  border-color: var(--rp-line) !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+:where(.cE9cj0nbqpY-) [role=combobox]:hover {
+  background: var(--rp-highlight-med) !important;
+}
+:where(.cE9cj0nbqpY-) [role=combobox]:focus-visible {
+  outline: 2px solid var(--rp-pine) !important;
+  outline-offset: 2px;
+}
+:where(.cE9cj0nbqpY-) [role=combobox] svg {
+  color: var(--rp-text) !important;
+}
+
+:where(body:has(.cE9cj0nbqpY-)) .UBjkU6geb1U-[role=listbox] {
+  background: var(--rp-surface) !important;
+  color: var(--rp-text) !important;
+  border-color: var(--rp-line) !important;
+  box-shadow: var(--rp-shadow) !important;
+}
+:where(body:has(.cE9cj0nbqpY-)) .UBjkU6geb1U-[role=listbox] [role=option] {
+  background: var(--rp-surface) !important;
+  color: var(--rp-text) !important;
+}
+:where(body:has(.cE9cj0nbqpY-)) .UBjkU6geb1U-[role=listbox] [role=option]:is(:hover, :focus-visible, [data-selected=true], [data-focused=true]) {
+  background: var(--rp-overlay) !important;
+}
+:where(body:has(.cE9cj0nbqpY-)) .UBjkU6geb1U-[role=listbox] [role=option] :is(div, span) {
+  color: inherit !important;
+}
+
 /* Secondary actions and remove controls retain readable hover states. */
 :is(.VZx5flX71DI- a, .p0Gsr94HawQ-, ._7AZI-0r5FAs-,
 ._7AZI-0r5FAs- > span, .z4nYR-MCfbI-) {
@@ -170,6 +218,15 @@ body:has(.awGgT3ZKumU-, .cE9cj0nbqpY-, ._22xtsolKcQit92o-LBeRWD) {
 .O7UR3Sc3EmM-, .kkZ9PsIE60o-, .X3eWtXr50WY-) {
   background: var(--rp-pine) !important;
   color: var(--rp-on-accent) !important;
+  text-shadow: none !important;
+}
+
+/* Cart item/compact recommendation badges paint their own inner fills,
+   including a black bundle-discount variant and a translucent old discount. */
+:where(.cE9cj0nbqpY-) .rsMD9WnTopA- :is(.hPiY1A-1izA-, .YLLe1vrKgVE-) {
+  background: var(--rp-pine) !important;
+  color: var(--rp-on-accent) !important;
+  opacity: 1 !important;
   text-shadow: none !important;
 }
 

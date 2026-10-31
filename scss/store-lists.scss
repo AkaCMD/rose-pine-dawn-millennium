@@ -7,6 +7,15 @@ body:has(.awGgT3ZKumU-, .cE9cj0nbqpY-, ._22xtsolKcQit92o-LBeRWD) {
   @include theme.surface(base, text);
 }
 
+/* The cart's decorative game backdrop is a sibling of the content root.
+   Paint that wrapper too; leave product covers and the license image intact. */
+:where(body:has(.cE9cj0nbqpY-)) ._68SYvTNlZNs- {
+  @include theme.surface(base, text);
+}
+:where(body:has(.cE9cj0nbqpY-)) .otLXAz3VIiY- {
+  background: none !important;
+}
+
 /* These routes also serve the new store header instead of #global_header. */
 :where(body:has(.awGgT3ZKumU-, .cE9cj0nbqpY-))
     :is(._7urhuKLYiUk-, .WCG-2-OYepA-, .t-LlQicBZjE-) {
@@ -116,6 +125,39 @@ body:has(.awGgT3ZKumU-, .cE9cj0nbqpY-, ._22xtsolKcQit92o-LBeRWD) {
   border-color: var(--rp-line) !important;
 }
 
+/* Current account/country selectors use ControlBox rather than the old
+   dropdown classes. Their PopoverList options are portalled outside the cart. */
+:where(.cE9cj0nbqpY-) [role="combobox"] {
+  @include theme.surface(overlay, text);
+  border-color: var(--rp-line) !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  &:hover {
+    background: var(--rp-highlight-med) !important;
+  }
+  &:focus-visible {
+    outline: 2px solid var(--rp-pine) !important;
+    outline-offset: 2px;
+  }
+  svg {
+    color: var(--rp-text) !important;
+  }
+}
+:where(body:has(.cE9cj0nbqpY-)) .UBjkU6geb1U-[role="listbox"] {
+  @include theme.surface(surface, text);
+  border-color: var(--rp-line) !important;
+  box-shadow: var(--rp-shadow) !important;
+  [role="option"] {
+    @include theme.surface(surface, text);
+    &:is(:hover, :focus-visible, [data-selected="true"], [data-focused="true"]) {
+      background: var(--rp-overlay) !important;
+    }
+    :is(div, span) {
+      color: inherit !important;
+    }
+  }
+}
+
 /* Secondary actions and remove controls retain readable hover states. */
 :is(.VZx5flX71DI- a, .p0Gsr94HawQ-, ._7AZI-0r5FAs-,
     ._7AZI-0r5FAs- > span, .z4nYR-MCfbI-) {
@@ -153,6 +195,13 @@ body:has(.awGgT3ZKumU-, .cE9cj0nbqpY-, ._22xtsolKcQit92o-LBeRWD) {
     :is(.rsMD9WnTopA-, .KY4Cd9W1L6Q-, .OgxPLTiqRYA-,
         .O7UR3Sc3EmM-, .kkZ9PsIE60o-, .X3eWtXr50WY-) {
   @include theme.surface(pine, on-accent);
+  text-shadow: none !important;
+}
+/* Cart item/compact recommendation badges paint their own inner fills,
+   including a black bundle-discount variant and a translucent old discount. */
+:where(.cE9cj0nbqpY-) .rsMD9WnTopA- :is(.hPiY1A-1izA-, .YLLe1vrKgVE-) {
+  @include theme.surface(pine, on-accent);
+  opacity: 1 !important;
   text-shadow: none !important;
 }
 /* Descendant text must inherit the foreground of primary buttons/badges. */
