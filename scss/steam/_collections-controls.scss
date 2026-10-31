@@ -44,13 +44,15 @@
   background: var(--rp-base) !important;
   box-shadow: none !important;
 }
-/* Sidebar type selector and adjacent sorting control. */
-._2PF_m-I5yte3WnQhpcz8RC, .uE7Pj4tb2n3_Bx4vjEX0a {
+/* Sidebar type selector and scroll-to-top control, including its SVG surface. */
+._2PF_m-I5yte3WnQhpcz8RC, .uE7Pj4tb2n3_Bx4vjEX0a,
+.uE7Pj4tb2n3_Bx4vjEX0a .SVGIcon_Arrow {
   @include theme.surface(overlay, text);
   box-shadow: none !important;
   border-color: var(--rp-highlight-high) !important;
 }
-._2PF_m-I5yte3WnQhpcz8RC:hover, .uE7Pj4tb2n3_Bx4vjEX0a:hover {
+._2PF_m-I5yte3WnQhpcz8RC:hover, .uE7Pj4tb2n3_Bx4vjEX0a:hover,
+.uE7Pj4tb2n3_Bx4vjEX0a:hover .SVGIcon_Arrow {
   background: var(--rp-highlight-med) !important;
 }
 ._3kSh7qVSTDcPDePx9kya8C, ._15aGnszAf3gHD-PFdJBoFD {

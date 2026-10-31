@@ -30,3 +30,12 @@
   @include theme.surface(surface, secondary);
 }
 :is(._2m_orETo6AghzAnc0sISCt, .MZPxEZcxAGtPDf1NYtouS) { color: var(--rp-secondary) !important; }
+.UkR3sY319PuaUNuUWks2K :is(._3KaB94Jl4r0hFkthDPJy09, ._2m_orETo6AghzAnc0sISCt):hover {
+  @include theme.surface(overlay, text);
+}
+.UkR3sY319PuaUNuUWks2K ._2m_orETo6AghzAnc0sISCt:hover .MZPxEZcxAGtPDf1NYtouS {
+  color: var(--rp-text) !important;
+}
+.UkR3sY319PuaUNuUWks2K ._2m_orETo6AghzAnc0sISCt ._3izqEKa-zuPIrUDSm1bRvf:not(._2T8z7cCQDhMeevnGu74365) {
+  color: var(--rp-secondary) !important;
+}

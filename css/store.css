@@ -137,8 +137,25 @@ body.v6 :is(h1, h2, h3, h4), body.v7 :is(h1, h2, h3, h4) {
   box-shadow: none !important;
 }
 
-:is(.home_page_takeover_sizer, .home_page_takeover_link, .home_page_takeover_ctn) {
+.home_page_takeover_ctn {
   background-color: var(--rp-base) !important;
+}
+
+/* The link and sizer sit above the promotional artwork. */
+.home_page_takeover_sizer, .home_page_takeover_link {
+  background-color: transparent !important;
+}
+
+.home_page_body_ctn .store_bg_overlay {
+  max-width: 100% !important;
+}
+
+.home_page_body_ctn .store_bg_overlay .gradient_left {
+  background: linear-gradient(to left, transparent, var(--rp-base)) !important;
+}
+
+.home_page_body_ctn .store_bg_overlay .gradient_right {
+  background: linear-gradient(to right, transparent, var(--rp-base)) !important;
 }
 
 :is(.store_main_capsule .app_name, .store_main_capsule .app_name > div,
@@ -244,6 +261,47 @@ body.v6 :is(.btn_green_white_innerfade, .btnv6_green_white_innerfade) a {
 ._16jZ3HEbtaJTl80pQINN2Y input {
   background: var(--rp-base) !important;
   color: var(--rp-text) !important;
+}
+
+/* Current store-menu-v7 uses a new module namespace. Keep the outer positioning
+   layers transparent and paint the navigation panel and its dropdowns. */
+[data-featuretarget=store-menu-v7] :is(.XLbP8xOkCYw-, .O2jUvAs3OiU-) {
+  background: var(--rp-surface) !important;
+  color: var(--rp-text) !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  border-bottom: 1px solid var(--rp-line) !important;
+}
+[data-featuretarget=store-menu-v7] :is(a, button, span, div, p, label, h2, h3) {
+  color: var(--rp-text) !important;
+  text-shadow: none !important;
+}
+[data-featuretarget=store-menu-v7] :is(.dUvJZktS6bk-, .JhiIqI-S0Js-, .a-U-GT11cxQ-, .Eo26qLDIMO0-) {
+  background: var(--rp-overlay) !important;
+  color: var(--rp-text) !important;
+  box-shadow: none !important;
+}
+[data-featuretarget=store-menu-v7] button[aria-expanded=true], [data-featuretarget=store-menu-v7] button[aria-expanded=true] :is(div, span) {
+  color: var(--rp-link) !important;
+}
+[data-featuretarget=store-menu-v7] .vph-SVDaiKo- {
+  background: var(--rp-pine) !important;
+}
+[data-featuretarget=store-menu-v7] form[role=search], [data-featuretarget=store-menu-v7] form[role=search] input {
+  background: var(--rp-base) !important;
+  color: var(--rp-text) !important;
+  border-color: var(--rp-line) !important;
+  box-shadow: none !important;
+}
+[data-featuretarget=store-menu-v7] form[role=search] input::placeholder {
+  color: var(--rp-secondary) !important;
+  opacity: 1 !important;
+}
+[data-featuretarget=store-menu-v7] form[role=search] button[type=submit], [data-featuretarget=store-menu-v7] a[href*="/cart"],
+[data-featuretarget=store-menu-v7] a[href*="/cart"] :is(div, span) {
+  background: var(--rp-pine) !important;
+  color: var(--rp-on-accent) !important;
+  box-shadow: none !important;
 }
 
 /* Small text, filtering controls and secondary menu items. */

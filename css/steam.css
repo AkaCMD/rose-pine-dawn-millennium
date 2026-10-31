@@ -94,6 +94,19 @@ a:hover {
   color: var(--rp-secondary) !important;
 }
 
+.UkR3sY319PuaUNuUWks2K :is(._3KaB94Jl4r0hFkthDPJy09, ._2m_orETo6AghzAnc0sISCt):hover {
+  background: var(--rp-overlay) !important;
+  color: var(--rp-text) !important;
+}
+
+.UkR3sY319PuaUNuUWks2K ._2m_orETo6AghzAnc0sISCt:hover .MZPxEZcxAGtPDf1NYtouS {
+  color: var(--rp-text) !important;
+}
+
+.UkR3sY319PuaUNuUWks2K ._2m_orETo6AghzAnc0sISCt ._3izqEKa-zuPIrUDSm1bRvf:not(._2T8z7cCQDhMeevnGu74365) {
+  color: var(--rp-secondary) !important;
+}
+
 /* Library: keep artwork, video and achievement images in their original colours. */
 :is([class*=gamelistbar_Container], [class*=gamelist_Container],
 [class*=gamelistbar_GameListHomeAndSearch], [class*=gamelistsectionheader_Container],
@@ -501,6 +514,29 @@ button:disabled, .DialogButton.Disabled {
   background: var(--rp-love) !important;
 }
 
+/* Steam mounts text and rich tooltips in a separate popup document. */
+._2FxbHJzYoH024ko7zqcJOf, ._3XGRklQrZMakU2xaYB0cLD {
+  background: var(--rp-surface) !important;
+  color: var(--rp-text) !important;
+  border: 1px solid var(--rp-line) !important;
+  box-shadow: var(--rp-shadow) !important;
+  text-shadow: none !important;
+}
+
+._2FxbHJzYoH024ko7zqcJOf :is(div, span, p),
+._3XGRklQrZMakU2xaYB0cLD ._1LhVfNukndDa_XWzq0vdg1 {
+  color: var(--rp-text) !important;
+  text-shadow: none !important;
+}
+
+._3XGRklQrZMakU2xaYB0cLD .i4LuYcvtfPgYKx3qqvKUq {
+  color: var(--rp-secondary) !important;
+}
+
+._2FxbHJzYoH024ko7zqcJOf a, ._3XGRklQrZMakU2xaYB0cLD a {
+  color: var(--rp-link) !important;
+}
+
 /* Context menus, nested popouts and dropdowns are separate Steam documents. */
 .PP7LM0Ow1K5qkR8WElLpt, ._2EstNjFIIZm_WUSKm5Wt7n,
 ._14wqdluDeDnnEcg3OSLEmd, ._3pofGqV0buiKAfMPEs3_82,
@@ -670,15 +706,17 @@ button:disabled, .DialogButton.Disabled {
   box-shadow: none !important;
 }
 
-/* Sidebar type selector and adjacent sorting control. */
-._2PF_m-I5yte3WnQhpcz8RC, .uE7Pj4tb2n3_Bx4vjEX0a {
+/* Sidebar type selector and scroll-to-top control, including its SVG surface. */
+._2PF_m-I5yte3WnQhpcz8RC, .uE7Pj4tb2n3_Bx4vjEX0a,
+.uE7Pj4tb2n3_Bx4vjEX0a .SVGIcon_Arrow {
   background: var(--rp-overlay) !important;
   color: var(--rp-text) !important;
   box-shadow: none !important;
   border-color: var(--rp-highlight-high) !important;
 }
 
-._2PF_m-I5yte3WnQhpcz8RC:hover, .uE7Pj4tb2n3_Bx4vjEX0a:hover {
+._2PF_m-I5yte3WnQhpcz8RC:hover, .uE7Pj4tb2n3_Bx4vjEX0a:hover,
+.uE7Pj4tb2n3_Bx4vjEX0a:hover .SVGIcon_Arrow {
   background: var(--rp-highlight-med) !important;
 }
 

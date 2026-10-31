@@ -45,8 +45,21 @@ body.v6 :is(h1,h2,h3,h4), body.v7 :is(h1,h2,h3,h4) { color: var(--rp-text) !impo
   border-color: var(--rp-highlight-med) !important;
   box-shadow: none !important;
 }
-:is(.home_page_takeover_sizer, .home_page_takeover_link, .home_page_takeover_ctn) {
+.home_page_takeover_ctn {
   background-color: var(--rp-base) !important;
+}
+/* The link and sizer sit above the promotional artwork. */
+.home_page_takeover_sizer, .home_page_takeover_link {
+  background-color: transparent !important;
+}
+.home_page_body_ctn .store_bg_overlay {
+  max-width: 100% !important;
+}
+.home_page_body_ctn .store_bg_overlay .gradient_left {
+  background: linear-gradient(to left, transparent, var(--rp-base)) !important;
+}
+.home_page_body_ctn .store_bg_overlay .gradient_right {
+  background: linear-gradient(to right, transparent, var(--rp-base)) !important;
 }
 :is(.store_main_capsule .app_name, .store_main_capsule .app_name > div,
     .store_main_capsule .reason, .store_main_capsule .reason .main,

@@ -1,5 +1,24 @@
 @use "../shared/theme";
 
+/* Steam mounts text and rich tooltips in a separate popup document. */
+._2FxbHJzYoH024ko7zqcJOf, ._3XGRklQrZMakU2xaYB0cLD {
+  @include theme.surface(surface, text);
+  border: 1px solid var(--rp-line) !important;
+  box-shadow: var(--rp-shadow) !important;
+  text-shadow: none !important;
+}
+._2FxbHJzYoH024ko7zqcJOf :is(div,span,p),
+._3XGRklQrZMakU2xaYB0cLD ._1LhVfNukndDa_XWzq0vdg1 {
+  color: var(--rp-text) !important;
+  text-shadow: none !important;
+}
+._3XGRklQrZMakU2xaYB0cLD .i4LuYcvtfPgYKx3qqvKUq {
+  color: var(--rp-secondary) !important;
+}
+._2FxbHJzYoH024ko7zqcJOf a, ._3XGRklQrZMakU2xaYB0cLD a {
+  color: var(--rp-link) !important;
+}
+
 /* Context menus, nested popouts and dropdowns are separate Steam documents. */
 .PP7LM0Ow1K5qkR8WElLpt, ._2EstNjFIIZm_WUSKm5Wt7n,
 ._14wqdluDeDnnEcg3OSLEmd, ._3pofGqV0buiKAfMPEs3_82,

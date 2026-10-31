@@ -10,6 +10,42 @@
   color: var(--rp-text) !important;
 }
 ._16jZ3HEbtaJTl80pQINN2Y input { @include theme.surface(base, text); }
+/* Current store-menu-v7 uses a new module namespace. Keep the outer positioning
+   layers transparent and paint the navigation panel and its dropdowns. */
+[data-featuretarget="store-menu-v7"] {
+  :is(.XLbP8xOkCYw-, .O2jUvAs3OiU-) {
+    @include theme.surface(surface, text);
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    border-bottom: 1px solid var(--rp-line) !important;
+  }
+  :is(a,button,span,div,p,label,h2,h3) {
+    color: var(--rp-text) !important;
+    text-shadow: none !important;
+  }
+  :is(.dUvJZktS6bk-, .JhiIqI-S0Js-, .a-U-GT11cxQ-, .Eo26qLDIMO0-) {
+    @include theme.surface(overlay, text);
+    box-shadow: none !important;
+  }
+  button[aria-expanded="true"], button[aria-expanded="true"] :is(div,span) {
+    color: var(--rp-link) !important;
+  }
+  .vph-SVDaiKo- { background: var(--rp-pine) !important; }
+  form[role="search"], form[role="search"] input {
+    @include theme.surface(base, text);
+    border-color: var(--rp-line) !important;
+    box-shadow: none !important;
+  }
+  form[role="search"] input::placeholder {
+    color: var(--rp-secondary) !important;
+    opacity: 1 !important;
+  }
+  form[role="search"] button[type="submit"], a[href*="/cart"],
+  a[href*="/cart"] :is(div,span) {
+    @include theme.surface(pine, on-accent);
+    box-shadow: none !important;
+  }
+}
 /* Small text, filtering controls and secondary menu items. */
 #global_header :is(.menuitem,.global_action_link,.persona,.playerAvatar),
 #global_actions, #global_actions a,
