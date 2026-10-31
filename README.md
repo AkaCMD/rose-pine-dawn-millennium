@@ -1,18 +1,22 @@
-# Rosé Pine Dawn for Millennium
+# Rosé Pine Dawn for Steam
 
-A light theme for the Steam desktop client, built with the [Rosé Pine Dawn palette](https://rosepinetheme.com/palette/). It uses warm cream surfaces, purple-gray text, and pine-blue accents across the library and store.
+**A light theme for the Steam store and desktop client, powered by [Millennium](https://steambrew.app/).**
 
-This theme is loaded by [Millennium](https://steambrew.app/). It has one light appearance and includes compiled CSS, so installation requires no additional plugin or build step.
+Built with the [Rosé Pine Dawn palette](https://rosepinetheme.com/palette/), it brings warm cream surfaces, purple-gray text, and pine-blue accents to Steam. The theme covers store browsing and game pages, with matching styles for the library and client interface. See [Coverage and compatibility](#coverage-and-compatibility) for details.
+
+The package includes compiled CSS and one light appearance. With Millennium installed, you can use the theme without an additional plugin or build step.
+
+[Preview](#preview) · [Install](#install) · [Coverage and compatibility](#coverage-and-compatibility)
 
 ## Preview
+
+![Rosé Pine Dawn light theme on the Steam store's Godot Engine page](docs/images/store-preview.png)
+
+Public store page shown while signed out, with no Steam account or personal library information.
 
 ![Rosé Pine Dawn theme on the Steam library home](docs/images/library-preview.png)
 
 Library home example from an earlier screenshot, with AI-assisted privacy edits. Account names, the account avatar, custom category names, and playtime statistics are obscured. Game artwork and the library list remain visible.
-
-![Rosé Pine Dawn theme on the Steam store's Godot Engine page](docs/images/store-preview.png)
-
-Public store page shown while signed out, with no Steam account or personal library information.
 
 ## Install
 
@@ -23,8 +27,8 @@ Install Millennium before installing this theme. The theme package contains `ski
 Clone the repository and run the installer from the checkout:
 
 ```bash
-git clone https://github.com/AkaCMD/rose-pine-dawn-millennium.git
-cd rose-pine-dawn-millennium
+git clone https://github.com/AkaCMD/rose-pine-dawn-steam-store-theme.git
+cd rose-pine-dawn-steam-store-theme
 bash install.sh
 ```
 
