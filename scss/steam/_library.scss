@@ -30,3 +30,55 @@
     [class*="appportrait_AppName"], [class*="libraryhome_SectionHeader"],
     [class*="appdetailssection_Title"]) { color: var(--rp-text) !important; }
 :is([class*="gamelistentry_Playing"], [class*="gamelistentry_Downloading"]) { color: var(--rp-link) !important; }
+
+/* Recent-game and recommendation footers, plus the portrait hover popup. */
+._2d1hSvdpY5L2-GN1EnUb9Z, ._1CmuxC6KBmGPJ77aSRQfEq, ._2sGn0cBsD44TjnUIh-lx9d {
+  @include theme.surface(surface, text);
+}
+/* These are decorative blurred copies behind labels, not the visible artwork. */
+:is(._2d1hSvdpY5L2-GN1EnUb9Z, ._1CmuxC6KBmGPJ77aSRQfEq) .RhmvOTLHkomDhCTDX9hLA,
+._2sGn0cBsD44TjnUIh-lx9d .Yts2cS2BIbHJoh5UorpDq {
+  display: none !important;
+}
+:is(._2d1hSvdpY5L2-GN1EnUb9Z, ._1CmuxC6KBmGPJ77aSRQfEq) ._3gwMkKp82bb5aZj4EeQnpi {
+  color: var(--rp-text) !important;
+  text-shadow: none !important;
+}
+:is(._2d1hSvdpY5L2-GN1EnUb9Z, ._1CmuxC6KBmGPJ77aSRQfEq) ._3DR9f2B3JQKviESgdrHp1u {
+  color: var(--rp-secondary) !important;
+}
+._2a9SnCjTTOhX5y6SfbKFkC ._3AjoLnMNKxYmNTGTJCLfgs:not(._1aml4h4CSJbtrNbX4brUYs):not(._2mDBhx6RW__a_uRpmFziSW) {
+  @include theme.surface(pine, on-accent);
+  box-shadow: none !important;
+
+  svg {
+    color: var(--rp-on-accent) !important;
+    fill: currentColor !important;
+  }
+}
+._2d1hSvdpY5L2-GN1EnUb9Z ._3bkuozxKIatrWG3aeisthc,
+._2d1hSvdpY5L2-GN1EnUb9Z ._3bkuozxKIatrWG3aeisthc :is(div,span),
+._2sGn0cBsD44TjnUIh-lx9d ._1Kdi2PBxcdQwDpa-48hrf2,
+._2sGn0cBsD44TjnUIh-lx9d ._1VGPO4xU5sgRK6DFt4t74O,
+._2sGn0cBsD44TjnUIh-lx9d ._1VGPO4xU5sgRK6DFt4t74O :is(div,span) {
+  color: var(--rp-text) !important;
+  text-shadow: none !important;
+}
+._2sGn0cBsD44TjnUIh-lx9d ._1RfxlV1H3JsSs-aRaXVJQt {
+  @include theme.surface(overlay, text);
+}
+._2sGn0cBsD44TjnUIh-lx9d .My_SveQxVY_oRxfkK5mqN,
+._2sGn0cBsD44TjnUIh-lx9d .My_SveQxVY_oRxfkK5mqN :is(div,li),
+._2sGn0cBsD44TjnUIh-lx9d ._2RX1dsh68v-P0H9Am9Ufy1 {
+  color: var(--rp-secondary) !important;
+}
+._2sGn0cBsD44TjnUIh-lx9d ._3_0Qbu8IAsqsv_6W5AxRhe {
+  background: var(--rp-overlay) !important;
+}
+._2sGn0cBsD44TjnUIh-lx9d ._1hOV3SIw5_c3VcGS_sZ_yU {
+  color: var(--rp-link) !important;
+}
+._2sGn0cBsD44TjnUIh-lx9d ._1dJq5WU2D3uW42_ty9aPwP {
+  background: var(--rp-pine) !important;
+  box-shadow: none !important;
+}

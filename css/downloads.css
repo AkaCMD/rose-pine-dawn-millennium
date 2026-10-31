@@ -10,14 +10,27 @@
 }
 
 ._1bq4x9pa4-9RLY-dXWUZTp :is(._3Mbhnlk1Go2j8yCdjthzc7, ._32eLZRkdi_FgZPoefB5zMS,
-._1CTr1yKRkOXnJ4gSS1-1A3) {
+._1CTr1yKRkOXnJ4gSS1-1A3, ._1VNuYHM6BPBOJspC6zPf5r) {
   background: var(--rp-surface) !important;
   border-color: var(--rp-highlight-med) !important;
   box-shadow: none !important;
 }
 
-._1bq4x9pa4-9RLY-dXWUZTp ._3Mbhnlk1Go2j8yCdjthzc7:hover {
+/* Section is the whole list; SectionItem owns the active and hover backgrounds. */
+._1bq4x9pa4-9RLY-dXWUZTp ._1VNuYHM6BPBOJspC6zPf5r:hover,
+._1bq4x9pa4-9RLY-dXWUZTp ._1VNuYHM6BPBOJspC6zPf5r:focus-within,
+._1bq4x9pa4-9RLY-dXWUZTp ._1VNuYHM6BPBOJspC6zPf5r._3-SbBb63lDnu6LzKV-q3Cg,
+._1bq4x9pa4-9RLY-dXWUZTp ._21P7c4MWmsU2QSZeL-uyZo.gpfocus ._1VNuYHM6BPBOJspC6zPf5r,
+._1bq4x9pa4-9RLY-dXWUZTp ._21P7c4MWmsU2QSZeL-uyZo:focus-within ._1VNuYHM6BPBOJspC6zPf5r {
   background: var(--rp-overlay) !important;
+}
+
+._1bq4x9pa4-9RLY-dXWUZTp ._1vMU1vG5ZtLihr3mfXUymR {
+  background: var(--rp-highlight-med) !important;
+}
+
+._1bq4x9pa4-9RLY-dXWUZTp ._1vMU1vG5ZtLihr3mfXUymR > div {
+  background: var(--rp-pine) !important;
 }
 
 ._1bq4x9pa4-9RLY-dXWUZTp :is(._1iulCOMUxV6sBbqoKo_yXw, ._1CGnw50aAma6AYKF51Qzsm,
