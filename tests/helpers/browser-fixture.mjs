@@ -61,7 +61,11 @@ export async function withBrowserFixture({
         await client.call('CSS.forcePseudoState', { nodeId, forcedPseudoClasses: pseudoClasses });
       }
     };
-    return await scenario({ evaluate, addStyles, forcePseudoState });
+    const screenshot = async () => {
+      const { data } = await client.call('Page.captureScreenshot', { format: 'png' });
+      return data;
+    };
+    return await scenario({ evaluate, addStyles, forcePseudoState, screenshot });
   } catch (error) {
     failure = error;
     throw error;

@@ -127,3 +127,33 @@ test('desktop store URL pill keeps a light hover background and readable text', 
     assert.equal(actual.color, ink);
   });
 });
+
+test('wide takeover gutters match the page while desktop and mobile artwork keep their original pixels', browser, async () => {
+  const artwork = `data:image/svg+xml,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="1854" height="220"><rect width="1854" height="220" fill="#907aa9"/></svg>')}`;
+  for (const className of ['page_background_holder', 'page_background_holder_mobile']) {
+    for (const width of [2560, 1280]) {
+      await withBrowserFixture({
+        viewport: { width, height: 260 },
+        html: `<main class="home_page_body_ctn"><div class="static_takeover_ctn">
+          <div class="${className}" style="background-image:url('${artwork}'),linear-gradient(to right,black 50%,black 50%)"></div>
+        </div></main>`,
+        nativeCss: `body { margin:0; }
+          .${className} { height:220px; background-repeat:no-repeat; background-position:center top; }`,
+      }, async page => {
+        await page.evaluate(`(async()=>{const image=new Image();image.src=${JSON.stringify(artwork)};await image.decode();return true})()`);
+        const screenshot = await page.screenshot();
+        const pixels = await page.evaluate(`(async()=>{
+          const image=new Image();image.src=${JSON.stringify(`data:image/png;base64,${screenshot}`)};
+          await image.decode();
+          const canvas=document.createElement('canvas');canvas.width=image.width;canvas.height=image.height;
+          const context=canvas.getContext('2d');context.drawImage(image,0,0);
+          return [10,${width / 2},${width - 10}].map(x=>[...context.getImageData(x,100,1,1).data]);
+        })()`);
+        const context = `${className} / ${width}px`;
+        const art = [144, 122, 169, 255];
+        const gutter = width > 1854 ? [250, 244, 237, 255] : art;
+        assert.deepEqual(pixels, [gutter, art, gutter], context);
+      });
+    }
+  }
+});

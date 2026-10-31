@@ -52,6 +52,12 @@ body.v6 :is(h1,h2,h3,h4), body.v7 :is(h1,h2,h3,h4) { color: var(--rp-text) !impo
 .home_page_takeover_sizer, .home_page_takeover_link {
   background-color: transparent !important;
 }
+/* Steam adds a black gradient behind the centered takeover image. Screen only
+   that backing layer against Dawn; the first artwork layer keeps normal blending. */
+.home_page_body_ctn .static_takeover_ctn :is(.page_background_holder, .page_background_holder_mobile) {
+  background-color: var(--rp-base) !important;
+  background-blend-mode: normal, screen !important;
+}
 .home_page_body_ctn .store_bg_overlay {
   max-width: 100% !important;
 }
