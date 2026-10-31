@@ -1,5 +1,20 @@
 @use "../shared/theme";
 
+/* Featured recommendations use plain spans rather than .app_tag. Paint the
+   badge and its copy together, including the adjacent tab-preview links. */
+.store_main_capsule .reason .main .tags > span,
+.tab_preview .tags > a {
+  @include theme.surface(overlay, text);
+  text-shadow: none !important;
+  &:is(:hover, :focus-visible) {
+    background: var(--rp-highlight-med) !important;
+  }
+}
+.store_main_capsule .reason .main strong,
+.store_main_capsule .main_reason_topseller .topseller_title {
+  color: var(--rp-link) !important;
+}
+
 /* React store home: section titles, personal calendar and curator tiles. */
 :is(._2RxJB5bupbx0mkW8dYJQRE, ._2RnIwgy025bixjWk2UTw40,
     ._7Qc_eWjn_s3VWDe79FmEq, .y5728HUyiI5XdCDBm5D7A) {

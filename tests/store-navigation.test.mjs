@@ -9,6 +9,45 @@ const overlay = 'rgb(242, 233, 225)';
 const ink = 'rgb(70, 66, 97)';
 const pine = 'rgb(40, 105, 131)';
 
+test('recommendations-menu calendar promotion uses light artwork overlays and readable actions', browser, async () => {
+  const artwork = `data:image/svg+xml,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="400" height="180"><rect width="400" height="180" fill="#907aa9"/></svg>')}`;
+  await withBrowserFixture({
+    html: `<div data-featuretarget="store-menu-v7"><a href="/personalcalendar/" class="Yb-8AFgzlLQ- dPiF1RTfiwA-">
+      <div class="MJuLsnGKMuY-"><div class="dEjz5hc6LZk-" style="background-image:url('${artwork}')"></div><div class="YEIG5t1R8UY-"></div></div>
+      <div class="D99kHv4fRj8-">全新</div><div class="vaMjSHdU4fo-">
+        <div class="_99TzhmB02TI-"><svg><path d="M0 0H16V16H0Z"/></svg></div><div class="O3BsMbnLwug-">
+          <div class="jPReweCNKrQ-">您的个人日历</div><div class="O4mC93OYTTQ-">探索个性化游戏列表。</div>
+          <div class="_7LZ74DkC-IQ-"><span class="m07F-6-CvWk-">探索我的日历</span><svg><path d="M0 0H16V16H0Z"/></svg></div>
+        </div></div></a></div>`,
+    nativeCss: `.Yb-8AFgzlLQ- .MJuLsnGKMuY- .YEIG5t1R8UY- { background:linear-gradient(270deg,#2a323e91 37.15%,#1a212c 81.31%); }
+      .Yb-8AFgzlLQ-:hover .MJuLsnGKMuY- .YEIG5t1R8UY- { background:linear-gradient(270deg,#32374091 37.15%,#424b58 81.31%); }
+      .Yb-8AFgzlLQ- .vaMjSHdU4fo- .jPReweCNKrQ- { color:white; }
+      .Yb-8AFgzlLQ- .vaMjSHdU4fo- .O4mC93OYTTQ- { color:#b8bcbf; }
+      .Yb-8AFgzlLQ- .vaMjSHdU4fo- ._7LZ74DkC-IQ- { background:linear-gradient(90deg,#06bfff,#2d73ff); }
+      .Yb-8AFgzlLQ- .vaMjSHdU4fo- ._7LZ74DkC-IQ- .m07F-6-CvWk- { color:#f3f3f3; }
+      .dPiF1RTfiwA- .vaMjSHdU4fo- ._99TzhmB02TI- svg { fill:white; }
+      .dPiF1RTfiwA- .D99kHv4fRj8- { color:black;background:#51da2e; }`,
+  }, async page => {
+    const css = (selector, property) => page.evaluate(`getComputedStyle(document.querySelector(${JSON.stringify(selector)}))[${JSON.stringify(property)}]`);
+    for (const state of [[], ['hover'], ['focus', 'focus-visible']]) {
+      await page.forcePseudoState('a', state);
+      const overlay = await css('.YEIG5t1R8UY-', 'backgroundImage');
+      assert.ok(overlay.includes(surface), overlay);
+      assert.ok(!overlay.includes('rgb(26, 33, 44)'), overlay);
+      assert.equal(await css('.jPReweCNKrQ-', 'color'), ink);
+      assert.equal(await css('.O4mC93OYTTQ-', 'color'), 'rgb(86, 82, 106)');
+      assert.equal(await css('._7LZ74DkC-IQ-', 'backgroundColor'), pine);
+      assert.equal(await css('._7LZ74DkC-IQ-', 'backgroundImage'), 'none');
+      for (const selector of ['.m07F-6-CvWk-', '._7LZ74DkC-IQ- svg']) assert.equal(await css(selector, 'color'), surface, selector);
+      assert.equal(await css('._99TzhmB02TI- svg', 'fill'), 'rgb(32, 87, 109)');
+      assert.equal(await css('.D99kHv4fRj8-', 'backgroundColor'), 'rgb(242, 233, 225)');
+      assert.equal(await css('.D99kHv4fRj8-', 'color'), 'rgb(32, 87, 109)');
+      assert.ok((await css('.dEjz5hc6LZk-', 'backgroundImage')).includes('data:image/svg+xml'));
+      assert.equal(await css('.dEjz5hc6LZk-', 'filter'), 'none');
+    }
+  });
+});
+
 // Current store-menu-v7 classes from the public store. The old navigation
 // classes do not match this root, its radial background or its search controls.
 test('current store navigation, menus and search actions use Dawn colors', browser, async () => {

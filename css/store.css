@@ -310,6 +310,46 @@ body.v6 :is(.btn_green_white_innerfade, .btnv6_green_white_innerfade) a {
   color: var(--rp-on-accent) !important;
   box-shadow: none !important;
 }
+[data-featuretarget=store-menu-v7] {
+  /* Recommendations-menu calendar promotion: preserve its decorative image
+     under a light veil and give the action its own contrasting foreground. */
+}
+[data-featuretarget=store-menu-v7] .Yb-8AFgzlLQ- {
+  background: var(--rp-overlay) !important;
+  color: var(--rp-text) !important;
+  box-shadow: none !important;
+}
+[data-featuretarget=store-menu-v7] .Yb-8AFgzlLQ- .YEIG5t1R8UY- {
+  background: linear-gradient(270deg, rgba(255, 250, 243, 0.92), var(--rp-surface) 65%) !important;
+}
+[data-featuretarget=store-menu-v7] .Yb-8AFgzlLQ- .jPReweCNKrQ- {
+  color: var(--rp-text) !important;
+}
+[data-featuretarget=store-menu-v7] .Yb-8AFgzlLQ- .O4mC93OYTTQ- {
+  color: var(--rp-secondary) !important;
+}
+[data-featuretarget=store-menu-v7] .Yb-8AFgzlLQ- ._99TzhmB02TI- svg {
+  color: var(--rp-link) !important;
+  fill: currentColor !important;
+}
+[data-featuretarget=store-menu-v7] .Yb-8AFgzlLQ- .D99kHv4fRj8- {
+  background: var(--rp-overlay) !important;
+  color: var(--rp-link) !important;
+}
+[data-featuretarget=store-menu-v7] .Yb-8AFgzlLQ- ._7LZ74DkC-IQ- {
+  background: var(--rp-pine) !important;
+  color: var(--rp-on-accent) !important;
+}
+[data-featuretarget=store-menu-v7] .Yb-8AFgzlLQ- ._7LZ74DkC-IQ- :is(div, span, svg) {
+  color: var(--rp-on-accent) !important;
+}
+[data-featuretarget=store-menu-v7] .Yb-8AFgzlLQ- ._7LZ74DkC-IQ- svg {
+  fill: currentColor !important;
+}
+[data-featuretarget=store-menu-v7] .Yb-8AFgzlLQ-:focus-visible {
+  outline: 2px solid var(--rp-pine) !important;
+  outline-offset: 2px;
+}
 
 /* Small text, filtering controls and secondary menu items. */
 #global_header :is(.menuitem, .global_action_link, .persona, .playerAvatar),
@@ -638,6 +678,97 @@ body.v6 :is(.btn_green_white_innerfade, .btnv6_green_white_innerfade) a {
   color: var(--rp-on-accent) !important;
 }
 
+/* Current CapsuleHover popovers can live outside the cart/homepage root.
+   Repaint their panels and loading placeholder, leaving media pixels intact. */
+.tWdu3iqQbcE- {
+  background: var(--rp-surface) !important;
+  color: var(--rp-text) !important;
+  box-shadow: var(--rp-shadow) !important;
+  --original-price-color: var(--rp-secondary);
+  --final-price-color: var(--rp-text);
+}
+.tWdu3iqQbcE- :is(.XYegsy7Crd8-, .spBDBpjPZo8-) {
+  background: var(--rp-surface) !important;
+  color: var(--rp-text) !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+.tWdu3iqQbcE- .NWpi8EWX2Q8- {
+  box-shadow: none !important;
+}
+.tWdu3iqQbcE- .XYegsy7Crd8- :is(div, span, p, a, h2, h3) {
+  color: var(--rp-text) !important;
+  text-shadow: none !important;
+}
+.tWdu3iqQbcE- .XYegsy7Crd8- .Mqd3yjra1cQ- {
+  color: var(--rp-text) !important;
+}
+.tWdu3iqQbcE- .XYegsy7Crd8- ._2tJ15BcsjnE- :is(.CMAk-Lj-B-c-, .Y8-xMgjFr6A-, .MqX-UEo7sDI-) {
+  color: var(--rp-secondary) !important;
+}
+.tWdu3iqQbcE- .XYegsy7Crd8- ._2tJ15BcsjnE- :is(.CMAk-Lj-B-c-, .Y8-xMgjFr6A-, .MqX-UEo7sDI-) :is(div, span, svg) {
+  color: inherit !important;
+}
+.tWdu3iqQbcE- .XYegsy7Crd8- ._2tJ15BcsjnE- :is(.CMAk-Lj-B-c-, .Y8-xMgjFr6A-, .MqX-UEo7sDI-) svg {
+  fill: currentColor !important;
+}
+.tWdu3iqQbcE- .XYegsy7Crd8- ._2tJ15BcsjnE- .Y8-xMgjFr6A- {
+  opacity: 1 !important;
+}
+.tWdu3iqQbcE- .XYegsy7Crd8- .sWBwy-DWHc0- {
+  background: var(--rp-overlay) !important;
+  color: var(--rp-text) !important;
+}
+.tWdu3iqQbcE- :is(.K2UfkCIuEhY-, .YHonIqDIZys-) {
+  background: var(--rp-overlay) !important;
+  color: var(--rp-text) !important;
+}
+.tWdu3iqQbcE- .K2UfkCIuEhY- :is(.QYFii1vIT5Q-, .Y9w82-bhx7g-) {
+  color: var(--rp-text) !important;
+  text-shadow: none !important;
+}
+.tWdu3iqQbcE- .K2UfkCIuEhY- .Y9w82-bhx7g- {
+  color: var(--rp-secondary) !important;
+}
+.tWdu3iqQbcE- .K2UfkCIuEhY- :is(.gXsTTmkhkp8-, .KY4Cd9W1L6Q-) {
+  background: var(--rp-pine) !important;
+  color: var(--rp-on-accent) !important;
+}
+.tWdu3iqQbcE- .K2UfkCIuEhY- :is(.gXsTTmkhkp8-, .KY4Cd9W1L6Q-) :is(div, span) {
+  color: inherit !important;
+}
+.tWdu3iqQbcE- .vlV-ugrnJq4- {
+  background: var(--rp-pine) !important;
+  color: var(--rp-on-accent) !important;
+  box-shadow: none !important;
+}
+.tWdu3iqQbcE- .vlV-ugrnJq4- :is(svg, .dbXwRg0gpXw-) {
+  color: var(--rp-on-accent) !important;
+  text-shadow: none !important;
+}
+.tWdu3iqQbcE- .vlV-ugrnJq4-:focus-visible {
+  outline: 2px solid var(--rp-pine) !important;
+  outline-offset: 2px;
+}
+
+/* Featured recommendations use plain spans rather than .app_tag. Paint the
+   badge and its copy together, including the adjacent tab-preview links. */
+.store_main_capsule .reason .main .tags > span,
+.tab_preview .tags > a {
+  background: var(--rp-overlay) !important;
+  color: var(--rp-text) !important;
+  text-shadow: none !important;
+}
+.store_main_capsule .reason .main .tags > span:is(:hover, :focus-visible),
+.tab_preview .tags > a:is(:hover, :focus-visible) {
+  background: var(--rp-highlight-med) !important;
+}
+
+.store_main_capsule .reason .main strong,
+.store_main_capsule .main_reason_topseller .topseller_title {
+  color: var(--rp-link) !important;
+}
+
 /* React store home: section titles, personal calendar and curator tiles. */
 :is(._2RxJB5bupbx0mkW8dYJQRE, ._2RnIwgy025bixjWk2UTw40,
 ._7Qc_eWjn_s3VWDe79FmEq, .y5728HUyiI5XdCDBm5D7A) {
@@ -750,6 +881,63 @@ body.v6 :is(.btn_green_white_innerfade, .btnv6_green_white_innerfade) a {
 
 :is(.steam_curator_recommendation_readmore, .curator_review_date) {
   color: var(--rp-secondary) !important;
+}
+
+/* The current personalcalendarhome module has its own namespace. Keep the
+   earlier calendar rules in home.scss for clients serving the previous build. */
+.nHdn-Ea4zSg- {
+  color: var(--rp-text) !important;
+}
+.nHdn-Ea4zSg- .IdjQXo6E9yc- {
+  color: var(--rp-text) !important;
+}
+.nHdn-Ea4zSg- .sGDLZ2AYREY- {
+  color: var(--rp-secondary) !important;
+  text-shadow: none !important;
+}
+.nHdn-Ea4zSg- .maxz19gKOQc- {
+  background: var(--rp-surface) !important;
+  color: var(--rp-text) !important;
+}
+.nHdn-Ea4zSg- .maxz19gKOQc-:is(._8XPG-IbvHHs-, .N3v3VnhKgU8-) {
+  background: var(--rp-overlay) !important;
+}
+.nHdn-Ea4zSg- .maxz19gKOQc-._8XPG-IbvHHs- {
+  box-shadow: inset 0 2px 0 var(--rp-pine) !important;
+}
+.nHdn-Ea4zSg- :is(.FeN6na6SvAg-, .bLQQ-syFWHg-, .lGsGMjZ-9IE-) {
+  color: var(--rp-text) !important;
+  border-color: var(--rp-line) !important;
+}
+.nHdn-Ea4zSg- :is(.MDx-yf8h-Ww-, .rsPEubiF9HI-) {
+  background: var(--rp-overlay) !important;
+  color: var(--rp-text) !important;
+  box-shadow: none !important;
+}
+.nHdn-Ea4zSg- .MDx-yf8h-Ww- a, .nHdn-Ea4zSg- .rsPEubiF9HI- {
+  color: var(--rp-link) !important;
+}
+.nHdn-Ea4zSg- .rsPEubiF9HI-:is(:hover, :focus-visible) {
+  background: var(--rp-highlight-med) !important;
+}
+.nHdn-Ea4zSg- .rsPEubiF9HI-:focus-visible {
+  outline: 2px solid var(--rp-pine) !important;
+  outline-offset: 2px;
+}
+.nHdn-Ea4zSg- .x8jWPgfdVoI- {
+  background: var(--rp-pine) !important;
+  color: var(--rp-on-accent) !important;
+}
+.nHdn-Ea4zSg- {
+  /* This flag's background image is the white wishlist star. Preserve it. */
+}
+.nHdn-Ea4zSg- .ds_flag.ds_wishlist_flag {
+  background-color: var(--rp-pine) !important;
+  color: var(--rp-on-accent) !important;
+  box-shadow: none !important;
+}
+.nHdn-Ea4zSg- .ds_flag.ds_wishlist_flag :is(div, span, svg) {
+  color: var(--rp-on-accent) !important;
 }
 
 /* Bundle purchase area: package content rows, previews and dropdowns. */

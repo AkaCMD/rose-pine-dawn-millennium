@@ -15,6 +15,55 @@
   color: var(--rp-text) !important;
 }
 
+/* Post-game summary: Steam paints a translucent gradient on the carousel
+   and an inset black shadow on ::after, independently of the details root. */
+._1OMmVJHDgNwOt0Wqn0hrf9 ._2MKO5j24KqDdD-92hH5FXi {
+  background: var(--rp-surface) !important;
+  color: var(--rp-text) !important;
+  box-shadow: none !important;
+}
+._1OMmVJHDgNwOt0Wqn0hrf9 ._2MKO5j24KqDdD-92hH5FXi::after {
+  box-shadow: none !important;
+}
+._1OMmVJHDgNwOt0Wqn0hrf9 ._22q2XMkRbHZD96i_GXOaHh {
+  box-shadow: none !important;
+}
+._1OMmVJHDgNwOt0Wqn0hrf9 :is(.P_gQ8X-yCsgXeXpP68KS0, ._39Y01uSRcLiDg5DneTTR0m) {
+  color: var(--rp-text) !important;
+}
+._1OMmVJHDgNwOt0Wqn0hrf9 :is(._3ugJ_KPVlOd9oeYm-fYC_w, ._2gLHbXukQBdrIKhqEYVvOe,
+.VKo9pLPbwpF3xIzL8Wnou) {
+  color: var(--rp-secondary) !important;
+}
+._1OMmVJHDgNwOt0Wqn0hrf9 :is(._1ms0i1dxwTqiqcXV59nenw:not(._1I8mXP1uH7vUUbbc6_-nHR),
+._284XbL-B7aHiK4XgyI2DPS) {
+  background: var(--rp-highlight-high) !important;
+}
+._1OMmVJHDgNwOt0Wqn0hrf9 ._2rFZPzLu-BjxsrVUj5lhNI:is(:hover, :focus-visible) {
+  background: var(--rp-overlay) !important;
+}
+._1OMmVJHDgNwOt0Wqn0hrf9 :is(._2dB1oJFsqNThak1cFya2-q, ._14b-hQsLwSwYcELtknxCUX,
+._3IIEUTw03Vm3Mk54jlnUaT):not(._16nHYucq6xgfe67DrVWLCI) {
+  color: var(--rp-link) !important;
+  opacity: 1 !important;
+}
+._1OMmVJHDgNwOt0Wqn0hrf9 :is(._2dB1oJFsqNThak1cFya2-q, ._14b-hQsLwSwYcELtknxCUX,
+._3IIEUTw03Vm3Mk54jlnUaT):not(._16nHYucq6xgfe67DrVWLCI) svg {
+  color: var(--rp-link) !important;
+}
+._1OMmVJHDgNwOt0Wqn0hrf9 :is(._2dB1oJFsqNThak1cFya2-q, ._14b-hQsLwSwYcELtknxCUX,
+._3IIEUTw03Vm3Mk54jlnUaT):not(._16nHYucq6xgfe67DrVWLCI) svg line {
+  stroke: currentColor !important;
+}
+._1OMmVJHDgNwOt0Wqn0hrf9 :is(._2dB1oJFsqNThak1cFya2-q, ._14b-hQsLwSwYcELtknxCUX,
+._3IIEUTw03Vm3Mk54jlnUaT):not(._16nHYucq6xgfe67DrVWLCI):hover {
+  background: var(--rp-overlay) !important;
+}
+._1OMmVJHDgNwOt0Wqn0hrf9 :is(._2dB1oJFsqNThak1cFya2-q, ._2rFZPzLu-BjxsrVUj5lhNI):focus-visible {
+  outline: 2px solid var(--rp-pine) !important;
+  outline-offset: 2px;
+}
+
 /* Play bar, overview, side widgets, news and activity cards. */
 ._3fLo166MlaNqP8r8tTyRz, ._2jPMy2QZr8bWi6yrk5ZzHA,
 ._31ptFGGMZrSQc5BCX1e5lm, .By7D93oEZkZtBeg23NDoR,

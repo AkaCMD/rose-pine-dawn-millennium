@@ -1,0 +1,42 @@
+@use "../shared/theme";
+
+/* The current personalcalendarhome module has its own namespace. Keep the
+   earlier calendar rules in home.scss for clients serving the previous build. */
+.nHdn-Ea4zSg- {
+  color: var(--rp-text) !important;
+  .IdjQXo6E9yc- { color: var(--rp-text) !important; }
+  .sGDLZ2AYREY- {
+    color: var(--rp-secondary) !important;
+    text-shadow: none !important;
+  }
+  .maxz19gKOQc- {
+    @include theme.surface(surface, text);
+    &:is(._8XPG-IbvHHs-, .N3v3VnhKgU8-) {
+      background: var(--rp-overlay) !important;
+    }
+    &._8XPG-IbvHHs- { box-shadow: inset 0 2px 0 var(--rp-pine) !important; }
+  }
+  :is(.FeN6na6SvAg-, .bLQQ-syFWHg-, .lGsGMjZ-9IE-) {
+    color: var(--rp-text) !important;
+    border-color: var(--rp-line) !important;
+  }
+  :is(.MDx-yf8h-Ww-, .rsPEubiF9HI-) {
+    @include theme.surface(overlay, text);
+    box-shadow: none !important;
+  }
+  .MDx-yf8h-Ww- a, .rsPEubiF9HI- { color: var(--rp-link) !important; }
+  .rsPEubiF9HI-:is(:hover, :focus-visible) {
+    background: var(--rp-highlight-med) !important;
+  }
+  .rsPEubiF9HI-:focus-visible {
+    outline: 2px solid var(--rp-pine) !important;
+    outline-offset: 2px;
+  }
+  .x8jWPgfdVoI- { @include theme.surface(pine, on-accent); }
+  /* This flag's background image is the white wishlist star. Preserve it. */
+  .ds_flag.ds_wishlist_flag {
+    @include theme.surface(pine, on-accent, $property: background-color);
+    box-shadow: none !important;
+    :is(div, span, svg) { color: var(--rp-on-accent) !important; }
+  }
+}

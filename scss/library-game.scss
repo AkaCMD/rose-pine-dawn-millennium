@@ -13,6 +13,42 @@
 ._2l416KfEtI4CL0mCUEmOBw, ._3FmxxjyWNHU1PrBGnBe6tm {
   @include theme.surface(base, text);
 }
+/* Post-game summary: Steam paints a translucent gradient on the carousel
+   and an inset black shadow on ::after, independently of the details root. */
+._1OMmVJHDgNwOt0Wqn0hrf9 {
+  ._2MKO5j24KqDdD-92hH5FXi {
+    @include theme.surface(surface, text);
+    box-shadow: none !important;
+    &::after { box-shadow: none !important; }
+  }
+  ._22q2XMkRbHZD96i_GXOaHh { box-shadow: none !important; }
+  :is(.P_gQ8X-yCsgXeXpP68KS0, ._39Y01uSRcLiDg5DneTTR0m) {
+    color: var(--rp-text) !important;
+  }
+  :is(._3ugJ_KPVlOd9oeYm-fYC_w, ._2gLHbXukQBdrIKhqEYVvOe,
+      .VKo9pLPbwpF3xIzL8Wnou) {
+    color: var(--rp-secondary) !important;
+  }
+  :is(._1ms0i1dxwTqiqcXV59nenw:not(._1I8mXP1uH7vUUbbc6_-nHR),
+      ._284XbL-B7aHiK4XgyI2DPS) {
+    background: var(--rp-highlight-high) !important;
+  }
+  ._2rFZPzLu-BjxsrVUj5lhNI:is(:hover, :focus-visible) {
+    background: var(--rp-overlay) !important;
+  }
+  :is(._2dB1oJFsqNThak1cFya2-q, ._14b-hQsLwSwYcELtknxCUX,
+      ._3IIEUTw03Vm3Mk54jlnUaT):not(._16nHYucq6xgfe67DrVWLCI) {
+    color: var(--rp-link) !important;
+    opacity: 1 !important;
+    svg { color: var(--rp-link) !important; }
+    svg line { stroke: currentColor !important; }
+    &:hover { background: var(--rp-overlay) !important; }
+  }
+  :is(._2dB1oJFsqNThak1cFya2-q, ._2rFZPzLu-BjxsrVUj5lhNI):focus-visible {
+    outline: 2px solid var(--rp-pine) !important;
+    outline-offset: 2px;
+  }
+}
 /* Play bar, overview, side widgets, news and activity cards. */
 ._3fLo166MlaNqP8r8tTyRz, ._2jPMy2QZr8bWi6yrk5ZzHA,
 ._31ptFGGMZrSQc5BCX1e5lm, .By7D93oEZkZtBeg23NDoR,

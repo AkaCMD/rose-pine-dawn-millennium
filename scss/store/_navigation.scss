@@ -45,6 +45,31 @@
     @include theme.surface(pine, on-accent);
     box-shadow: none !important;
   }
+  /* Recommendations-menu calendar promotion: preserve its decorative image
+     under a light veil and give the action its own contrasting foreground. */
+  .Yb-8AFgzlLQ- {
+    @include theme.surface(overlay, text);
+    box-shadow: none !important;
+    .YEIG5t1R8UY- {
+      background: linear-gradient(270deg, rgba(theme.color("surface"), .92), var(--rp-surface) 65%) !important;
+    }
+    .jPReweCNKrQ- { color: var(--rp-text) !important; }
+    .O4mC93OYTTQ- { color: var(--rp-secondary) !important; }
+    ._99TzhmB02TI- svg {
+      color: var(--rp-link) !important;
+      fill: currentColor !important;
+    }
+    .D99kHv4fRj8- { @include theme.surface(overlay, link); }
+    ._7LZ74DkC-IQ- {
+      @include theme.surface(pine, on-accent);
+      :is(div, span, svg) { color: var(--rp-on-accent) !important; }
+      svg { fill: currentColor !important; }
+    }
+    &:focus-visible {
+      outline: 2px solid var(--rp-pine) !important;
+      outline-offset: 2px;
+    }
+  }
 }
 /* Small text, filtering controls and secondary menu items. */
 #global_header :is(.menuitem,.global_action_link,.persona,.playerAvatar),

@@ -51,3 +51,32 @@ test('homepage row titles, tags, dates and ranks stay readable in both row layou
       }
     });
   });
+
+test('featured recommendations and preview tags have readable text on light badges',
+  { skip: !process.env.STEAM_CDP_TEST, timeout: 30000 }, async () => {
+    await withBrowserFixture({
+      html: `<body class="v7"><div class="home_page_body_ctn"><div class="store_main_capsule">
+        <div class="reason"><div class="main bytags"><strong>为您推荐</strong>，因为您玩过有以下标签的游戏：
+          <div class="tags"><span>故事架构丰富</span><span>由剧情推动</span></div>
+        </div></div><div class="main_reason_topseller"><div class="topseller_title">热销商品</div></div>
+        <div class="discount_pct">-30%</div>
+      </div><div class="tab_preview"><div class="tags"><a href="#tag">开放世界</a></div></div></div></body>`,
+      nativeCss: `.store_main_capsule .reason .main strong { color:#a4d007; }
+        .store_main_capsule .main_reason_topseller .topseller_title { color:#a4d007; }
+        .store_main_capsule .reason .main .tags > span, .tab_preview .tags > a {
+          background:rgba(255,255,255,.1); color:white; display:inline-block; padding:2px 8px;
+        }`,
+    }, async page => {
+      const css = (selector, property) => page.evaluate(`getComputedStyle(document.querySelector(${JSON.stringify(selector)}))[${JSON.stringify(property)}]`);
+      for (const selector of ['.reason strong', '.topseller_title']) assert.equal(await css(selector, 'color'), 'rgb(32, 87, 109)', selector);
+      for (const state of [[], ['hover'], ['focus', 'focus-visible']]) {
+        await page.forcePseudoState('.tags > span, .tags > a', state);
+        for (const selector of ['.reason .tags > span', '.tab_preview .tags > a']) {
+          assert.equal(await css(selector, 'color'), 'rgb(70, 66, 97)', selector);
+          assert.equal(await css(selector, 'backgroundColor'), state.length ? 'rgb(223, 218, 217)' : 'rgb(242, 233, 225)', selector);
+          assert.equal(await css(selector, 'textShadow'), 'none', selector);
+        }
+        assert.equal(await css('.discount_pct', 'color'), 'rgb(255, 250, 243)', 'discount badges retain their accent foreground');
+      }
+    });
+  });

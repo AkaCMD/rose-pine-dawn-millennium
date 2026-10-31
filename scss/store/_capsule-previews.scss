@@ -1,0 +1,57 @@
+@use "../shared/theme";
+
+/* Current CapsuleHover popovers can live outside the cart/homepage root.
+   Repaint their panels and loading placeholder, leaving media pixels intact. */
+.tWdu3iqQbcE- {
+  @include theme.surface(surface, text);
+  box-shadow: var(--rp-shadow) !important;
+  --original-price-color: var(--rp-secondary);
+  --final-price-color: var(--rp-text);
+
+  :is(.XYegsy7Crd8-, .spBDBpjPZo8-) {
+    @include theme.surface(surface, text);
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+  .NWpi8EWX2Q8- { box-shadow: none !important; }
+  .XYegsy7Crd8- :is(div, span, p, a, h2, h3) {
+    color: var(--rp-text) !important;
+    text-shadow: none !important;
+  }
+  .XYegsy7Crd8- .Mqd3yjra1cQ- { color: var(--rp-text) !important; }
+  .XYegsy7Crd8- ._2tJ15BcsjnE- :is(.CMAk-Lj-B-c-, .Y8-xMgjFr6A-, .MqX-UEo7sDI-) {
+    color: var(--rp-secondary) !important;
+    :is(div, span, svg) { color: inherit !important; }
+    svg { fill: currentColor !important; }
+  }
+  .XYegsy7Crd8- ._2tJ15BcsjnE- .Y8-xMgjFr6A- { opacity: 1 !important; }
+  .XYegsy7Crd8- .sWBwy-DWHc0- {
+    @include theme.surface(overlay, text);
+  }
+  :is(.K2UfkCIuEhY-, .YHonIqDIZys-) {
+    @include theme.surface(overlay, text);
+  }
+  .K2UfkCIuEhY- :is(.QYFii1vIT5Q-, .Y9w82-bhx7g-) {
+    color: var(--rp-text) !important;
+    text-shadow: none !important;
+  }
+  .K2UfkCIuEhY- .Y9w82-bhx7g- {
+    color: var(--rp-secondary) !important;
+  }
+  .K2UfkCIuEhY- :is(.gXsTTmkhkp8-, .KY4Cd9W1L6Q-) {
+    @include theme.surface(pine, on-accent);
+    :is(div, span) { color: inherit !important; }
+  }
+  .vlV-ugrnJq4- {
+    @include theme.surface(pine, on-accent);
+    box-shadow: none !important;
+    :is(svg, .dbXwRg0gpXw-) {
+      color: var(--rp-on-accent) !important;
+      text-shadow: none !important;
+    }
+    &:focus-visible {
+      outline: 2px solid var(--rp-pine) !important;
+      outline-offset: 2px;
+    }
+  }
+}
